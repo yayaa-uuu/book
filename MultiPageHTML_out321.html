@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_348.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_348.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.036em;">and you really need to start splitting this data set to support more parallel write load. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:77;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">u can do that using sharding, which we discuss next. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.2631em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Scaling Writes with Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.5333em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2606em;">If you cannot manage write traffic growth with optimized queries and queuing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.5833em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">writes, then sharding is your next option. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.1219em;"><span class="stl_155 stl_41 stl_303" style="word-spacing:0.1793em;">Sharding </span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1599em;">means splitting your data into different, smaller database clusters so that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.1833em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0899em;">you can execute more writes on more source hosts at the same time. There are two &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.2333em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1355em;">different kinds of sharding or partitioning you can do: functional partitioning and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.2833em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0035em;">data sharding. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.8219em;"><span class="stl_155 stl_41 stl_42" style="word-spacing:0.0138em;">Functional partitioning</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0279em;">, or division of duties, means dedicating different nodes to dif‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.8833em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.147em;">ferent tasks. An example of this might be putting user records on one cluster and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.9333em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1349em;">their billing on a different cluster. This approach allows each cluster to scale inde‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.9833em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0971em;">pendently. A surge in user registrations might put a strain on the user cluster. With &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.0333em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1268em;">separate systems, your billing cluster is less loaded, allowing you to bill customers. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.0833em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0941em;">Conversely, if your billing cycle is the first of the month, you can run that knowing &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.1333em;"><span class="stl_154 stl_32 stl_107" style="word-spacing:0.009em;">you won’t be affecting user registration. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.6719em;z-index:1002;"><span class="stl_155 stl_41 stl_110" style="word-spacing:0.1119em;">Data sharding </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0909em;">is the most common and successful approach for scaling today</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0891em;">s </span><span class="stl_154 stl_32 stl_28">v</span><span class="stl_154 stl_32 stl_498">ery &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.7333em;z-index:1031;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1281em;">large MySQL applications. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1233em;">u shard the data by splitting it into smaller pieces, or &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.7833em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">shards, and storing them on different nodes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.3333em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0511em;">Most applications shard only the data that needs sharding—typically, the parts of the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.3833em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0806em;">data set that will grow very large. Suppose you’re building a blogging service. If you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.4333em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0928em;">expect 10 million users, you might not need to shard the user registration informa‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.4833em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1164em;">tion because you might be able to fit all of the users (or the active subset of them) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.5333em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0987em;">entirely in memory. If you expect 500 million users, on the other hand, you should &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.5833em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1081em;">probably shard this data. The user-generated content, such as posts and comments, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.6333em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0868em;">will almost certainly require sharding in either case because these records are much &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.6833em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0019em;">larger and there are many more of them. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.2333em;z-index:1715;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0683em;">Large applications might have several logical data sets that you can shard differently. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.2833em;z-index:1775;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1065em;">u can store them on different sets of servers, but you don’t have to. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0992em;">u can also &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.3333em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">shard the same data multiple ways, depending on how you access it. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.8833em;z-index:1886;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0803em;">Be wary when planning to “only shard what needs sharding</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0802em;">” That concept needs to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:41.9333em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.2363em;">include not just the data that is growing rapidly but also the data that logically &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:42.9833em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.129em;">belongs with it and will regularly be queried at the same time. If you are sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.0827em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1207em;">based on a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.134em;">user_id </span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1227em;">field but there is a set of other smaller tables that join on that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.1822em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2526em;">same </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0049em;">user_id </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.2535em;">in a majority of queries, it makes sense to shard all these tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.2322em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0103em;">together so that you can keep a majority of your application queries against one shard &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.2822em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0043em;">at a time and avoid cross database joins. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.3298em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Scaling Writes with Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">299 &nbsp;</span></div>
+					<a name="321_0" style="position:absolute;left:0em;top:7.6147em;">&nbsp;</a>
+					<a name="321_1" style="position:absolute;left:0em;top:24.9125em;">&nbsp;</a>
+					<a name="321_2" style="position:absolute;left:0em;top:17.0625em;">&nbsp;</a>
+					<a name="321_3" style="position:absolute;left:0em;top:9.7625em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

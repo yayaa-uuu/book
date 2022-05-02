@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_247.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_247.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3546em;"><span class="stl_170 stl_171 stl_28">IN(</span><span class="stl_170 stl_171 stl_259">)</span><span class="stl_155 stl_41 stl_139" style="word-spacing:0.0102em;">list comparisons &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:5.4655em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0419em;">In many database servers, </span><span class="stl_170 stl_171 stl_28">IN(</span><span class="stl_170 stl_171 stl_336">)</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0448em;">is just a synonym for multiple </span><span class="stl_170 stl_171 stl_28">O</span><span class="stl_170 stl_171 stl_336">R</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0467em;">clauses because &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.5155em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0729em;">the two are logically equivalent. Not so in MySQL, which sorts the values in the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:7.6149em;"><span class="stl_170 stl_171 stl_28">IN(</span><span class="stl_170 stl_171 stl_453">)</span><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0402em;">list and uses a fast binary search to see whether a value is in the list. This is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:8.703em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0585em;">O(log </span><span class="stl_155 stl_41 stl_28">n</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0596em;">) in the size of the list, whereas an equivalent series of </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1994em;">OR </span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0627em;">clauses is O(</span><span class="stl_155 stl_41 stl_28">n</span><span class="stl_154 stl_32 stl_28">) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:9.7643em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">in the size of the list (i.e., much slower for large lists). &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.3143em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0874em;">The preceding list is woefully incomplete because MySQL performs more optimiza‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.3643em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0827em;">tions than we could fit into this entire chapter, but it should give you an idea of the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.4143em;z-index:644;"><span class="stl_154 stl_32 stl_28">optimizer</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1821em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1889em;">omplexity and intelligence. If there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1821em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1861em;">ne thing you should take away &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.453em;z-index:737;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1086em;">from this discussion, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1056em;">s </span><span class="stl_155 stl_41 stl_243" style="word-spacing:0.1251em;">don’t preemptively try to outsmart the optimizer</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1056em;">. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_183" style="word-spacing:0.1151em;">u might &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.5143em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1851em;">end up just defeating it or making your queries more complicated and harder to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.5643em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">maintain for zero benefit. In general, you should let the optimizer do its work. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.1143em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0844em;">Of course, as smart as the optimizer is, there are times when it doesn’t give the best &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.1643em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2343em;">result. Sometimes you might know something about the data that the optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.2143em;"><span class="stl_154 stl_32 stl_111" style="word-spacing:0.0923em;">doesn’t, such as a fact that’s guaranteed to be true because of application logic. Also, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.2643em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.301em;">sometimes the optimizer doesn’t have the necessary functionality, such as hash &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.3143em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0896em;">indexes; at other times, as mentioned earlier, its cost estimates might prefer a query &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:23.3643em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">plan that turns out to be more expensive than an alternative. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.9143em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0469em;">If you know the optimizer isn’t giving a good result and you know why, you can help &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.9643em;z-index:1386;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1338em;">it. Some of the options are to add a hint to the query,</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out233.html#233_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3974em;">8 </span></a></sup><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1342em;">rewrite the query, redesign &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.0143em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">your schema, or add indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.0713em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Table and index statistics &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.5387em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1339em;">Recall the various layers in the MySQL server architecture, which we illustrated in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.5887em;"><a href="MultiPageHTML_out24.html#24_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0545em;">Figure 1-1</span></a><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0634em;">. The server layer, which contains the query optimizer, doesn’t store statis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.6387em;z-index:1630;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1484em;">tics on data and indexes. That</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1419em;">s a </span><span class="stl_154 stl_32 stl_28">j</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1431em;">ob for the storage engines because each storage &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.6887em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0034em;">engine might keep different kinds of statistics (or keep them in a different way). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.2387em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0602em;">Because the server doesn’t store statistics, the MySQL query optimizer has to ask the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.2887em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0349em;">engines for statistics on the tables in a query. The engines provide the optimizer with &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.3387em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0393em;">statistics such as the number of pages per table or index, the cardinality of tables and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.3887em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0006em;">indexes, the length of rows and keys, and key distribution information. The optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.4387em;z-index:2093;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1358em;">can use this information to help it decide on the best execution plan. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.135em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.135em;">ee how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.4887em;z-index:2137;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">these statistics influence the optimizer</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">hoices in later sections. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">8</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_132" style="word-spacing:0.0066em;">See both “Index Hints” and “Optimizer Hints” in the MySQL manual for version-specific details on what hints &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_95" style="word-spacing:0.0017em;">are available and how to use them. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.8407em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Query Execution Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">211 &nbsp;</span></div>
+					<a name="233_0" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="233_1" style="position:absolute;left:0em;top:5.6947em;">&nbsp;</a>
+					<a name="233_2" style="position:absolute;left:0em;top:30.7679em;">&nbsp;</a>
+					<a name="233_3" style="position:absolute;left:0em;top:27.2436em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

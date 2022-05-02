@@ -1,0 +1,72 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_222.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_222.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_96" style="word-spacing:0.0208em;">you’re corrupting InnoDB’s data by issuing queries against it, there’s a bug in InnoDB, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_56" style="word-spacing:0.0166em;">and it’s never your fault. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.9166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0273em;">If you experience data corruption, the most important thing to do is try to determine &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.9666em;z-index:239;"><span class="stl_154 stl_32 stl_145" style="word-spacing:0.1005em;">why it’s occurring; don’t simply repair the data, or the corruption could return. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.0166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.3869em;">can repair the data by putting InnoDB into forced recovery mode with the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.116em;"><span class="stl_170 stl_171 stl_28">innodb_force_recover</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">parameter; see the MySQL manual for details. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.0003em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Updating Index Statistics &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.9001em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0701em;">When the storage engine provides the optimizer with inexact information about the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.9501em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1059em;">number of rows a query might examine, or when the query plan is too complex to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.0001em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1127em;">know exactly how many rows will be matched at various stages, the optimizer uses &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.0501em;z-index:633;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0656em;">the index statistics to estimate the number of rows. MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2511em;">’s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0611em;">ptimizer is cost based, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.1001em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.021em;">and the main cost metric is how much data the query will access. If the statistics were &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.1501em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0368em;">never generated or if they are out of date, the optimizer can make bad decisions. The &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.2495em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">solution is to run </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ANALYZE TABLE</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">, which regenerates the statistics. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.849em;z-index:855;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1449em;">u can examine the cardinality of your indexes with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0605em;">SHOW INDEX FROM </span><span class="stl_154 stl_32 stl_28">com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.899em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0058em;">mand. For example: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:24.6609em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SHOW INDEX FROM sakila.actor\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:25.5116em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:26.3616em;"><span class="stl_200 stl_171 stl_28">Table: actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:27.2116em;"><span class="stl_200 stl_171 stl_28">Non_unique: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:28.0616em;"><span class="stl_200 stl_171 stl_28">Key_name: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:28.9116em;"><span class="stl_200 stl_171 stl_28">Seq_in_index: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:29.7616em;"><span class="stl_200 stl_171 stl_28">Column_name: actor_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:30.6116em;"><span class="stl_200 stl_171 stl_28">Collation: A &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:31.4616em;"><span class="stl_200 stl_171 stl_28">Cardinality: 200 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:32.3116em;"><span class="stl_200 stl_171 stl_28">Sub_part: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:33.1616em;"><span class="stl_200 stl_171 stl_28">Packed: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:34.0116em;"><span class="stl_200 stl_171 stl_28">Null: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:34.8616em;"><span class="stl_200 stl_171 stl_28">Index_type: BTREE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:35.7116em;"><span class="stl_200 stl_171 stl_28">Comment: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:36.5616em;"><span class="stl_200 stl_171 stl_28">*************************** 2. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:37.4116em;"><span class="stl_200 stl_171 stl_28">Table: actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:38.2616em;"><span class="stl_200 stl_171 stl_28">Non_unique: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:39.1116em;"><span class="stl_200 stl_171 stl_28">Key_name: idx_actor_last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:39.9616em;"><span class="stl_200 stl_171 stl_28">Seq_in_index: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:40.8116em;"><span class="stl_200 stl_171 stl_28">Column_name: last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:41.6616em;"><span class="stl_200 stl_171 stl_28">Collation: A &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:42.5116em;"><span class="stl_200 stl_171 stl_28">Cardinality: 200 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:43.3616em;"><span class="stl_200 stl_171 stl_28">Sub_part: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:44.2116em;"><span class="stl_200 stl_171 stl_28">Packed: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:45.0616em;"><span class="stl_200 stl_171 stl_28">Null: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:45.9116em;"><span class="stl_200 stl_171 stl_28">Index_type: BTREE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:46.7616em;"><span class="stl_200 stl_171 stl_28">Comment: &nbsp;</span></div>
+					<div class="stl_01" style="left:26.1609em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Index and Table Maintenance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">187 &nbsp;</span></div>
+					<a name="209_0" style="position:absolute;left:0em;top:12.2934em;">&nbsp;</a>
+					<a name="209_1" style="position:absolute;left:0em;top:19.3794em;">&nbsp;</a>
+					<a name="209_2" style="position:absolute;left:0em;top:22.0782em;">&nbsp;</a>
+					<a name="209_3" style="position:absolute;left:0em;top:14.1294em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_231.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_231.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_154 stl_32 stl_178" style="word-spacing:0.0761em;">This query will return 10 rows, and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1782em;">EXPLAIN </span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0851em;">shows that MySQL uses the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1782em;">ref </span><span class="stl_154 stl_32 stl_28">access &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.4655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">type on the </span><span class="stl_170 stl_171 stl_28">idx_fk_film_i</span><span class="stl_170 stl_171 stl_186">d</span><span class="stl_154 stl_32 stl_440" style="word-spacing:-0.0067em;">index to execute the query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:7.2273em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT * FROM sakila.film_actor WHERE film_id = 1\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:8.078em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:8.928em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:9.778em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:10.628em;"><span class="stl_200 stl_171 stl_28">table: film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:11.478em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:12.328em;"><span class="stl_200 stl_171 stl_28">type: ref &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:13.178em;"><span class="stl_200 stl_171 stl_28">possible_keys: idx_fk_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:14.028em;"><span class="stl_200 stl_171 stl_28">key: idx_fk_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:14.878em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">key_len: 2 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:15.728em;"><span class="stl_200 stl_171 stl_28">ref: const &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:16.578em;"><span class="stl_200 stl_171 stl_28">rows: 10 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:17.428em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:18.278em;"><span class="stl_200 stl_171 stl_28">Extra: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.4649em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0657em;">EXPLAIN </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1888em;">shows that MySQL estimated it needed to access only 10 rows. In other &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.5149em;"><span class="stl_154 stl_32 stl_185" style="word-spacing:0.0589em;">words, the query optimizer knew the chosen access type could satisfy the query effi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.5649em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1331em;">ciently. What would happen if there were no suitable index for the query? MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.6149em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0669em;">would have to use a less optimal access type, as we can see if we drop the index and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.6649em;"><span class="stl_154 stl_32 stl_146" style="word-spacing:-0.0045em;">run the query again: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:25.4268em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">ALTER TABLE sakila.film_actor DROP FOREIGN KEY fk_film_actor_film; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:26.2768em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">ALTER TABLE sakila.film_actor DROP KEY idx_fk_film_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:27.1268em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT * FROM sakila.film_actor WHERE film_id = 1\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:27.9775em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:28.8275em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:29.6775em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:30.5275em;"><span class="stl_200 stl_171 stl_28">table: film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:31.3775em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:32.2275em;"><span class="stl_200 stl_171 stl_28">type: ALL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:33.0775em;"><span class="stl_200 stl_171 stl_28">possible_keys: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:33.9275em;"><span class="stl_200 stl_171 stl_28">key: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:34.7775em;"><span class="stl_200 stl_171 stl_28">key_len: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:35.6275em;"><span class="stl_200 stl_171 stl_28">ref: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:36.4775em;"><span class="stl_200 stl_171 stl_28">rows: 5462 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:37.3275em;"><span class="stl_200 stl_171 stl_28">filtered: 10.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:38.1775em;"><span class="stl_200 stl_171 stl_28">Extra: Using where &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:39.0275em;"><span class="stl_200 stl_171 stl_28">1 row in set, 1 warning (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.2144em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0976em;">Predictably, the access type has changed to a full table scan (</span><span class="stl_170 stl_171 stl_28">ALL</span><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1012em;">), and MySQL now &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.2644em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0798em;">estimates it’ll have to examine 5,462 rows to satisfy the query. The “Using where” in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.3638em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0683em;">the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1892em;">Extra </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0697em;">column shows that the MySQL server is using the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1892em;">WHERE </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0714em;">clause to discard &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:43.4138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">rows after the storage engine reads them. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.0132em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0055em;">In general, MySQL can apply a </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">clause in three ways, from best to worst: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7208em;top:46.8966em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1556em;">• Apply the conditions to the index lookup operation to eliminate nonmatching &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:47.9466em;z-index:1490;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0074em;">rows. This happens at the storage engine layer. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">196 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="218_0" style="position:absolute;left:0em;top:42.593em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

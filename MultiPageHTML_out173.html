@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_179.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_179.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0516em;">and you already need to maintain an insert time trigger on it, MySQL before 8.0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.416em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0136em;">does not allow another insert trigger on that table. If you try to run a </span><span class="stl_170 stl_171 stl_28">pt-online- &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:6.5155em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1922em;">schema-change </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0654em;">schema change against it, the tool will produce an error when it &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:7.5655em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1141em;">attempts to add the triggers it needs to function. Although we generally highly &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:8.6155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.122em;">discourage using table triggers as part of your business logic, there will still be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:9.6655em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1946em;">cases where legacy choices create a constraint and this becomes part of your &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:10.7155em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">trade-off calculation when choosing a schema-change mechanism. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.3374em;"><span class="stl_155 stl_41 stl_98" style="word-spacing:0.015em;">Triggers have performance implications &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:13.3988em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2618em;">There are </span><a href="https://oreil.ly/aGdKk" target="_blank"><span class="stl_184 stl_32 stl_36" style="word-spacing:0.2656em;">some excellent benchmarks by Percona </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2618em;">showing the performance &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:14.4488em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0371em;">impact of even having triggers defined on a table. This performance penalty may &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:15.4988em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0598em;">be invisible to most installations, but if you happen to be running your database &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:16.5488em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0079em;">instances at a very high transaction-per-second throughput rate, you may need to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:17.6482em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0694em;">watch the impact of the triggers introduced by </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1919em;">pt-online-schema-change </span><span class="stl_154 stl_32 stl_28">more &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:18.6982em;z-index:865;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0037em;">closely and tune it to abort more conservatively. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.3202em;"><span class="stl_155 stl_41 stl_201" style="word-spacing:0.0201em;">Running concurrent migrations &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:21.3816em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1222em;">Because of its use of triggers and the limitations of triggers in pre-8.0 MySQL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:22.4316em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1453em;">you will find that you cannot run multiple schema changes on the same table &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:23.531em;z-index:1088;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1662em;">using </span><span class="stl_170 stl_171 stl_28">pt-online-schema-change</span><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1724em;">. This can be a minor inconvenience initially, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:24.581em;z-index:1150;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0644em;">but if you integrate the tool into a full schema-migration pipeline that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0659em;">s automa‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:25.631em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ted, it can become a bottleneck for your teams. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.253em;"><span class="stl_155 stl_41 stl_76" style="word-spacing:0.0172em;">Constraints around foreign keys &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:28.3143em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0537em;">Although the tool does have some level of support for schema changes with for‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:29.3643em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.066em;">eign keys in place, you will need to read the documentation carefully and deter‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:30.4143em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1386em;">mine which trade-off is the least impactful for your data and your transaction &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:31.4643em;"><span class="stl_154 stl_32 stl_36">throughput. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.0638em;"><span class="stl_170 stl_171 stl_28">gh-os</span><span class="stl_170 stl_171 stl_409">t</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0586em;">was created by the data engineering team at GitHub specifically as a solution &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.1138em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1671em;">for managing the schema-change process without service impact but also without &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.1638em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0775em;">using triggers at all. Instead of using triggers to track changes during the table-copy &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.2138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.008em;">phase, it connects as a replica to one of your cluster replicas and consumes row-based &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.2638em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">replication logs as a changelog. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.8632em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0784em;">One thing you need to consider carefully about using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1786em;">gh-ost </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0784em;">for schema changes is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.9627em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1005em;">whether or not your existing database uses foreign keys. While </span><span class="stl_170 stl_171 stl_28">pt-online-schema- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.0621em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.195em;">change </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0651em;">makes a solid attempt to support schema changes for tables that are the par‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.1121em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0335em;">ent or child in a foreign-key relationship, it is a complex choice and full of trade-offs. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.1621em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0722em;">(Do we sacrifice uptime for consistency? Or risk some window of possible inconsis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.2615em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2454em;">tency?) On the other hand, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0028em;">gh-ost </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2468em;">mostly makes that choice for you and bails &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:45.3115em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0381em;">entirely if foreign keys exist in the table you are looking to alter. As the primary con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.411em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0954em;">tributor on </span><span class="stl_170 stl_171 stl_28">gh-ost</span><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0951em;">, Shlomi Noach, explains in a long but very useful </span><a href="https://oreil.ly/6A10o" target="_blank"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0954em;">blog post</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0954em;">, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.461em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0127em;">use of foreign keys and online schema change tools that are ultimately still external to &nbsp;</span></div>
+					<div class="stl_01" style="left:28.0554em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Schema Management &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">151 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_224.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_224.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3052em;"><span class="stl_155 stl_41 stl_76" style="word-spacing:0.0173em;">Row fragmentation &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1104em;">This type of fragmentation occurs when the row is stored in multiple pieces in &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.4166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1781em;">multiple locations. Row fragmentation reduces performance even if the query &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:7.4666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">needs only a single row from the index. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:9.0885em;"><span class="stl_155 stl_41 stl_360" style="word-spacing:0.0226em;">Intra-row fragmentation &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:10.1499em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1363em;">This kind of fragmentation occurs when logically sequential pages or rows are &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:11.1999em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0842em;">not stored sequentially on disk. It affects operations such as full table scans and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:12.2499em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0072em;">clustered index range scans, which normally benefit from a sequential data layout &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:13.2999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">on disk. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.9219em;"><span class="stl_155 stl_41 stl_121" style="word-spacing:0.0191em;">Free space fragmentation &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:15.9833em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1722em;">This type of fragmentation occurs when there is a lot of empty space in data &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:17.0333em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0063em;">pages. It causes the server to read a lot of data it doesn’t need, which is wasteful. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.6327em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.3585em;">To </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1658em;">efragment data, you can either run </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0363em;">OPTIMIZE TABLE </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1654em;">or dump and reload the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.6827em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0442em;">data. These approaches work for most storage engines. For storage engines that don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.7821em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.09em;">support </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.09em;">OPTIMIZE TABLE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.09em;">, you can rebuild the table with a no-op </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.09em;">ALTER TABLE</span><span class="stl_154 stl_32 stl_393" style="word-spacing:0.1113em;">. Just &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.8321em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">alter the table to have the same engine it currently uses: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:23.594em;"><span class="stl_265 stl_173 stl_28">ALTER TABLE &lt;table&gt; ENGINE=&lt;engine&gt;; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.0787em;"><span class="stl_159 stl_27 stl_28">Summary &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.3488em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0182em;">As you can see, indexing is a complex topic! The way MySQL and the storage engines &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.3988em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1181em;">access data combined with the properties of indexes make indexes a very powerful &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.4488em;z-index:1055;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">and flexible tool for influencing data access, both on disk and in memory. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.9988em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1021em;">Most of the time you’ll use B-tree indexes with MySQL. The other types of indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.0488em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0978em;">are rather more suitable for special purposes, and it will generally be obvious when &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.0988em;z-index:1252;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0357em;">you ought to use them and how they can improve query response times. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_219">e</span><span class="stl_154 stl_32 stl_220">’</span><span class="stl_154 stl_32 stl_107" style="word-spacing:0.0442em;">ll say no &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.1488em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.1647em;">more about them in this chapter, but it’s worth wrapping up with a review of the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.1988em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">properties and uses of B-tree indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.7488em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0412em;">Here are three principles to keep in mind as you choose indexes and write queries to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.7988em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">take advantage of them: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:39.6822em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.273em;">• Single-row</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0517em;">&nbsp;</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0553em;">access is slow, especially on spindle-based storage. (SSDs are faster at &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:40.7322em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0249em;">random I/O, but this point remains true.) If the server reads a block of data from &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:41.7822em;z-index:1645;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1239em;">storage and then accesses only one row in it, it wastes a lot of work. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_82" style="word-spacing:0.1335em;">s much &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:42.8322em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0021em;">better to read in a block that contains lots of rows you need. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:44.2155em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.2789em;">• Accessing</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1226em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1202em;">ranges of rows in order is fast, for two reasons. First, sequential I/O &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:45.2655em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0723em;">doesn’t require disk seeks, so it is faster than random I/O, especially on spindle- &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:46.3155em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.058em;">based storage. Second, if the server can read the data in the order you need it, it &nbsp;</span></div>
+					<div class="stl_01" style="left:31.0601em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">Summary &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1741em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0816em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">189 &nbsp;</span></div>
+					<a name="211_0" style="position:absolute;left:0em;top:25.4302em;">&nbsp;</a>
+					<a name="211_1" style="position:absolute;left:0em;top:36.9781em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

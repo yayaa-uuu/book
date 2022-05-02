@@ -1,0 +1,76 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_276.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_276.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0001em;top:4.3166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0861em;">The more precise method would be to look at how busy each of the applier threads &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:5.3666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0121em;">are for your workload to determine how much parallelism you are getting. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0113em;">o </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0113em;">o this, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:6.4166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0801em;">we need to enable performance schema consumers and instruments, allow it to col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:7.4666em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">lect some information, and then review the results. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:9.0166em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.196em;">To </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tart, we need to enable the following:</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out258.html#258_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0em;">4 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:7.4167em;top:10.7792em;"><span class="stl_200 stl_171 stl_28">UPDATE performance_schema.setup_consumers SET ENABLED = 'YES' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:11.6292em;"><span class="stl_200 stl_171 stl_28">WHERE NAME LIKE 'events_transactions%'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:13.3292em;"><span class="stl_200 stl_171 stl_28">UPDATE performance_schema.setup_instruments SET ENABLED = 'YES', TIMED = 'YES' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:14.1792em;"><span class="stl_200 stl_171 stl_28">WHERE NAME = 'transaction'; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.3166em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0766em;">Allow replication to process events for a time period. Ideally, you would look at this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:16.3666em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">during your heaviest write workloads or any time you see replication lag increasing: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:18.1285em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">USE performance_schema; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:18.9785em;"><span class="stl_265 stl_173 stl_28">events_transactions_summary_by_thread_by_event_name.thread_id AS THREAD_ID, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:19.8285em;"><span class="stl_265 stl_173 stl_28">events_transactions_summary_by_thread_by_event_name.count_star AS COUNT_STAR &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:20.6785em;"><span class="stl_265 stl_173 stl_28">FROM events_transactions_summary_by_thread_by_event_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:21.5285em;"><span class="stl_265 stl_173 stl_28">WHERE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:22.3785em;"><span class="stl_265 stl_173 stl_28">events_transactions_summary_by_thread_by_event_name.thread_id IN (SELECT &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:23.2285em;"><span class="stl_265 stl_173 stl_28">replication_applier_status_by_worker.thread_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:24.0785em;"><span class="stl_265 stl_173 stl_28">FROM replication_applier_status_by_worker); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:24.9292em;"><span class="stl_200 stl_171 stl_28">+-----------+------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:25.7792em;"><span class="stl_200 stl_171 stl_28">| THREAD_ID | COUNT_STAR | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:26.6292em;"><span class="stl_200 stl_171 stl_28">+-----------+------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:27.4792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:28.3292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:29.1792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:30.0292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:30.8792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:31.7292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.8335em;top:27.4792em;"><span class="stl_200 stl_171 stl_28">1692957 | &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:28.3292em;"><span class="stl_200 stl_171 stl_28">1692958 | &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:29.1792em;"><span class="stl_200 stl_171 stl_28">1692959 | &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:30.0292em;"><span class="stl_200 stl_171 stl_28">1692960 | &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:30.8792em;"><span class="stl_200 stl_171 stl_28">1692961 | &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:31.7292em;"><span class="stl_200 stl_171 stl_28">1692962 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.146em;top:27.4792em;"><span class="stl_200 stl_171 stl_28">23413 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.5001em;top:28.3292em;"><span class="stl_200 stl_171 stl_28">7150 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.5001em;top:29.1792em;"><span class="stl_200 stl_171 stl_28">1568 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.8543em;top:30.0292em;"><span class="stl_200 stl_171 stl_28">291 | &nbsp;</span></div>
+					<div class="stl_01" style="left:15.2085em;top:30.8792em;"><span class="stl_200 stl_171 stl_28">46 | &nbsp;</span></div>
+					<div class="stl_01" style="left:15.5626em;top:31.7292em;"><span class="stl_200 stl_171 stl_28">9 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:32.5792em;"><span class="stl_200 stl_171 stl_28">+-----------+------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:33.4292em;"><span class="stl_200 stl_171 stl_28">6 rows in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.5666em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.2365em;">This query will help you identify how many transactions are processed by each &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.6166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0423em;">thread. As we can see from the results on this sample workload, our optimal usage is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.6666em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">somewhere between three and four threads, and anything over that is used very little. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.6036em;"><span class="stl_167 stl_32 stl_28">4</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.5212em;"><span class="stl_168 stl_32 stl_48" style="word-spacing:0.0036em;">Performance Schema consumers and instruments cause MySQL to collect additional data about its internals, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_72" style="word-spacing:0.0043em;">which can use additional CPU. As a reminder, you should always test how changes like this will affect produc‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_83" style="word-spacing:0.0024em;">tion workloads in a safe environment beforehand. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">236 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="258_0" style="position:absolute;left:0em;top:46.6125em;">&nbsp;</a>
+					<a name="258_1" style="position:absolute;left:0em;top:36.8958em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

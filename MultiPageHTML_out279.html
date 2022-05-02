@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_304.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_304.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:30.4983em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 10 &nbsp;</span></div>
+					<div class="stl_01" style="left:21.408em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Backup and Recovery &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.0094em;">If you don’t plan for backups up front, you might later find that you’ve ruled out some &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.0806em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0239em;">of the best options. For example, you might set up a server and then wish for LVM so &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.1306em;z-index:217;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1325em;">that you can take filesystem snapshots—but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1286em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_55" style="word-spacing:0.1362em;">oo late. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1313em;">u also might not notice &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.1806em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0646em;">some important performance impacts of configuring your systems for backups. And &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.2306em;"><span class="stl_154 stl_32 stl_181" style="word-spacing:0.1217em;">if you don’t plan for and practice recovery, it won’t go smoothly when you need to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.2806em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">do it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.8306em;z-index:379;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.3844em;">We </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1938em;">on’t cover all parts of a well-designed backup and recovery solution in this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.8806em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0461em;">chapter—just the parts that are relevant to MySQL. Here are some points we decided &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.9306em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1012em;">not to include here but that you should still absolutely be including in your overall &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.9806em;"><span class="stl_154 stl_32 stl_459" style="word-spacing:-0.0059em;">backup and recovery strategy: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7209em;top:31.8639em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2731em;">• Security</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.133em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1349em;">(access to the backup, privileges to restore data, and whether the files &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:32.9139em;"><span class="stl_154 stl_32 stl_142" style="word-spacing:-0.0041em;">need to be encrypted) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:34.2973em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Where</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0257em;">&nbsp;</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0273em;">to store the backups, including how far away from the source they should &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.3473em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.113em;">be (on a different disk, a different server, or offsite) and how to move the data &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:36.3973em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">from the source to the destination &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:37.7806em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.2776em;">• Retention</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0024em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">policies, auditing, legal requirements, and related subjects &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:39.1639em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Storage</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">solutions and media, compression, and incremental backups &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:40.5473em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Storage</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_99">formats &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:41.9306em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.2785em;">• Monitoring</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0029em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and reporting on your backups &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:43.3139em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Backup</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0397em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0417em;">capabilities built into storage layers or particular devices, such as prefab‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:44.3639em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0013em;">ricated file servers &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.2473em;z-index:1144;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0906em;">Before we begin, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0896em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0892em;">larify some key terms. First, you’ll often hear about so-called &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.2859em;z-index:1268;"><span class="stl_155 stl_41 stl_82">hot</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1061em;">, </span><span class="stl_155 stl_41 stl_143">warm</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1061em;">, and </span><span class="stl_155 stl_41 stl_65" style="word-spacing:0.1181em;">cold </span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1111em;">backups. People generally use these terms to denote a backup</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">257 &nbsp;</span></div>
+					<a name="279_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="279_1" style="position:absolute;left:0em;top:46.4765em;">&nbsp;</a>
+					<a name="279_2" style="position:absolute;left:0em;top:20.2598em;">&nbsp;</a>
+					<a name="279_3" style="position:absolute;left:0em;top:28.1098em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

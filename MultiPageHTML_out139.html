@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_145.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_145.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0942em;">files can actually result in more wasted space overall because it trades internal frag‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3552em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">mentation in the single InnoDB tablespace for wasted space in the </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.01em;">.ibd </span><span class="stl_154 stl_32 stl_28">files. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.966em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1926em;">Even if you enable the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0616em;">innodb_file_per_table </span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1902em;">option, you’ll still need the main &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.016em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1388em;">tablespace for the undo logs and other system data. It will be smaller if you’re not &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.066em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">storing all the data in it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.6655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0702em;">Some people like to use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1871em;">innodb_file_per_table </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0719em;">just because of the extra managea‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.7155em;z-index:413;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0764em;">bility and visibility it gives you. For example, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_19" style="word-spacing:0.0884em;">s much faster to find a table’s size by &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.8149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.113em;">examining a single file than it is to use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.113em;">SHOW TABLE STATUS</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.113em;">, which has to perform &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.8649em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">more complex work to determine how many pages are allocated to a table. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:16.2222em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.0042em;">There has always been a dark side to </span><span class="stl_212 stl_171 stl_28">innodb_file_per_table</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">: slow &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:17.2274em;"><span class="stl_212 stl_171 stl_28" style="word-spacing:0.0542em;">DROP TABLE </span><span class="stl_176 stl_32 stl_53" style="word-spacing:0.1812em;">performance. This can be severe enough to cause a &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:18.1874em;"><span class="stl_176 stl_32 stl_117" style="word-spacing:-0.0003em;">noticeable server-wide stall for two reasons. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:19.4808em;"><span class="stl_176 stl_32 stl_140" style="word-spacing:0.0643em;">Dropping the table unlinks (deletes) the file at the filesystem level, &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:20.4408em;"><span class="stl_176 stl_32 stl_84" style="word-spacing:0.0571em;">which can be very slow on some filesystems (ext3, we’re looking at &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:21.4008em;z-index:836;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">you). </span><span class="stl_176 stl_32 stl_109">Y</span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_88" style="word-spacing:0.001em;">u can shorten the duration of this with tricks on the filesys‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:22.3504em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.082em;">tem: link the </span><span class="stl_372 stl_41 stl_144" style="word-spacing:0.092em;">.ibd </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.082em;">file to a zero-sized file, then delete the file man‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:23.3208em;"><span class="stl_176 stl_32 stl_83" style="word-spacing:0.0024em;">ually instead of waiting for MySQL to do it. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:24.6141em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1685em;">When you enable this option, each table gets its own tablespace &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:25.5741em;"><span class="stl_176 stl_32 stl_77" style="word-spacing:0.1247em;">inside InnoDB. It turns out that removing the tablespace actually &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:26.5341em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0345em;">requires InnoDB to lock and scan the buffer pool while it looks for &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:27.4941em;"><span class="stl_176 stl_32 stl_178" style="word-spacing:0.0949em;">pages belonging to this tablespace, which is very slow on a server &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3988em;top:28.4541em;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.1121em;">with a large buffer pool. This is improved if you break the buffer &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3988em;top:29.4593em;"><span class="stl_176 stl_32 stl_114" style="word-spacing:0.0049em;">pool into many parts using </span><span class="stl_212 stl_171 stl_28">innodb_buffer_pool_instances</span><span class="stl_176 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3988em;top:30.7527em;"><span class="stl_176 stl_32 stl_97" style="word-spacing:0.0214em;">Several fixes have been applied to various versions of MySQL along &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3988em;top:31.7126em;"><span class="stl_176 stl_32 stl_24" style="word-spacing:0.0054em;">the way. As of 8.0.23, this should no longer be an issue. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.9599em;"><span class="stl_154 stl_32 stl_66" style="word-spacing:0.0798em;">What’s the final recommendation? We suggest that you use </span><span class="stl_170 stl_171 stl_28">innodb_file_per_table &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.0099em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0145em;">and cap the size of your shared tablespace to make your life easier. If you run into any &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.0599em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1102em;">circumstances that make this painful, as noted previously, consider one of the fixes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.1099em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">we suggested. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.1669em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Old row versions and the tablespace &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.6343em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1453em;">InnoDB’s tablespace can grow very large in a write-heavy environment. If transac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.6843em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0388em;">tions stay open for a long time (even if they’re not doing any work) and they’re using &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.7837em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1927em;">the default </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0623em;">REPEATABLE READ </span><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1952em;">transaction isolation level, InnoDB won’t be able to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.8337em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0894em;">remove old row versions because the uncommitted transactions will still need to be &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.8837em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0588em;">able to see them. InnoDB stores the old versions in the tablespace, so it continues to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:45.9337em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0132em;">grow as more data is updated. The purge process is multithreaded but may need to be &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:47.0331em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.5256em;">tuned for workloads if you experience problems with purge lag (</span><span class="stl_170 stl_171 stl_28">innodb_ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:48.1326em;"><span class="stl_170 stl_171 stl_28">purge_thread</span><span class="stl_170 stl_171 stl_186">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and </span><span class="stl_170 stl_171 stl_28">innodb_purge_batch_size</span><span class="stl_154 stl_32 stl_28">). &nbsp;</span></div>
+					<div class="stl_01" style="left:25.212em;top:50.8098em;"><span class="stl_233 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">MySQL’s I/O Behavior &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">117 &nbsp;</span></div>
+					<a name="139_0" style="position:absolute;left:0em;top:40.8635em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

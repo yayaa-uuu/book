@@ -1,0 +1,48 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_140.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_140.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1067em;"><span class="stl_160 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">MySQL’s I/O Behavior &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.3769em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1182em;">A few configuration options affect how MySQL synchronizes data to disk and per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.4269em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0821em;">forms recovery. These can affect performance dramatically because they involve I/O &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.4769em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0947em;">operations. They also represent a trade-off between performance and data safety. In &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:9.5269em;z-index:256;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.006em;">general, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">xpensive to ensure that your data is written to disk immediately and con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.5769em;"><span class="stl_154 stl_32 stl_25" style="word-spacing:0.0988em;">sistently. If you’re willing to risk the danger that a disk write won’t really make it to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.6269em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0358em;">permanent storage, you can increase concurrency and/or reduce I/O waits, but you’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.6769em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">have to decide for yourself how much risk you can tolerate. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.2269em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.096em;">InnoDB permits you to control not only how it recovers but also how it opens and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.2769em;z-index:649;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1885em;">flushes its data, which greatly affects recovery and overall performance. InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.3269em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0163em;">recovery process is automatic and always runs when InnoDB starts, although you can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.3769em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1477em;">influence what actions it takes. Leaving aside recovery and assuming nothing ever &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.4269em;z-index:815;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1352em;">crashes or goes wrong, there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1294em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1343em;">till a lot to configure for InnoDB. It has a complex &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.4769em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.2035em;">chain of buffers and files designed to increase performance and guarantee ACID &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.5269em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1526em;">properties, and each piece of the chain is configurable. </span><a href="MultiPageHTML_out134.html#134_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.1526em;">Figure 5-1 </span></a><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1554em;">illustrates these &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.5769em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">files and buffers. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.1269em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0564em;">A few of the most important things to change for normal usage are the InnoDB log‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:24.1769em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">file size, how InnoDB flushes its log buffer, and how InnoDB performs I/O. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.6314em;z-index:1161;"><span class="stl_155 stl_41 stl_366" style="word-spacing:0.0337em;">Figure 5-1. InnoDB’s </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">buﬀers </span><span class="stl_155 stl_41 stl_22" style="word-spacing:0.023em;">and </span><span class="stl_216 stl_41 stl_28">ﬁles &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">112 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="134_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="134_1" style="position:absolute;left:0em;top:25.8687em;">&nbsp;</a>
+					<a name="134_2" style="position:absolute;left:0em;top:20.7562em;">&nbsp;</a>
+					<a name="134_3" style="position:absolute;left:0em;top:6.6062em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

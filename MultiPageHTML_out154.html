@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_160.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_160.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:16.435em;top:5.8671em;"><span class="stl_239 stl_27 stl_28" style="word-spacing:0em;">Images in a Database? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:7.615em;"><span class="stl_31 stl_32 stl_78" style="word-spacing:0.0974em;">In the past, it was not uncommon for some applications to accept uploaded images &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:8.615em;"><span class="stl_31 stl_32 stl_72" style="word-spacing:0.0514em;">and store them as BLOB data in a MySQL database. This method was convenient for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:9.615em;z-index:225;"><span class="stl_31 stl_32 stl_222" style="word-spacing:0.1389em;">keeping the data for an application together; however, as the size of the data grew, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:10.615em;"><span class="stl_31 stl_32 stl_78" style="word-spacing:0.1em;">operations like schema changes got slower and slower due to the size of that BLOB &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:11.615em;"><span class="stl_31 stl_32 stl_85">data. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:13.115em;"><span class="stl_31 stl_32 stl_99" style="word-spacing:0.0402em;">If you can avoid it, don’t store data like images in a database. Instead, write them to a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:14.115em;"><span class="stl_31 stl_32 stl_73" style="word-spacing:0.0953em;">separate object data store and use the table to track the location or filename for the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:15.115em;"><span class="stl_31 stl_32 stl_28">image. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:18.0527em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Using ENUM instead of a string type &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.5695em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0054em;">Sometimes you can use an </span><span class="stl_170 stl_171 stl_28">ENU</span><span class="stl_170 stl_171 stl_199">M</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0078em;">column instead of conventional string types. An </span><span class="stl_170 stl_171 stl_28">ENUM &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.6195em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0688em;">column can store a predefined set of distinct string values. MySQL stores them very &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.6695em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0601em;">compactly, packed into 1 or 2 bytes depending on the number of values in the list. It &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.7195em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0655em;">stores each value internally as an integer representing its position in the field defini‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.7695em;"><span class="stl_154 stl_32 stl_157" style="word-spacing:0.0197em;">tion list. Here’s an example: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:25.5314em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CREATE TABLE enum_test( &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:26.3814em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">e ENUM('fish', 'apple', 'dog') NOT NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:27.2314em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:28.0814em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">INSERT INTO enum_test(e) VALUES('fish'), ('dog'), ('apple'); &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.2195em;z-index:959;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0477em;">The three rows actually store integers, not strings. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.049em;">u can see the dual nature of the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.2695em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">values by retrieving them in a numeric context: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:32.0314em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT e + 0 FROM enum_test; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:32.8821em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:33.7321em;"><span class="stl_200 stl_171 stl_28">| e + 0 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:34.5821em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:35.4321em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:36.2821em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:37.1321em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:9.5418em;top:35.4321em;"><span class="stl_200 stl_171 stl_28">1 | &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5418em;top:36.2821em;"><span class="stl_200 stl_171 stl_28">3 | &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5418em;top:37.1321em;"><span class="stl_200 stl_171 stl_28">2 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:37.9821em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.169em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0114em;">This duality can be terribly confusing if you specify numbers for your </span><span class="stl_170 stl_171 stl_28">ENU</span><span class="stl_170 stl_171 stl_335">M</span><span class="stl_154 stl_32 stl_33">constants, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.2684em;z-index:1191;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">as in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ENUM('1', '2', '3')</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_101" style="word-spacing:0.0145em;">uggest you don’t do this. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.8679em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0716em;">Another surprise is that an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1879em;">ENUM </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0717em;">field sorts by the internal integer values, not by the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.9179em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">strings themselves: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:44.6797em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">SELECT e FROM enum_test ORDER BY e; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:45.5304em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:46.3804em;"><span class="stl_200 stl_171 stl_28">| e &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:47.2304em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:48.0804em;"><span class="stl_200 stl_171 stl_28">| fish &nbsp;</span></div>
+					<div class="stl_01" style="left:10.2502em;top:46.3804em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.2502em;top:48.0804em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">132 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="154_0" style="position:absolute;left:0em;top:7.8333em;">&nbsp;</a>
+					<a name="154_1" style="position:absolute;left:0em;top:19.7988em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

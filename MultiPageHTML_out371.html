@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_401.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_401.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:30.553em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">APPENDIX B &nbsp;</span></div>
+					<div class="stl_01" style="left:21.0192em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">MySQL on Kubernetes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1379em;">If you have been working in tech at all in the past five years, you very likely have &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.0806em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0704em;">heard of Kubernetes, work with teams that run Kubernetes, or have watched a lot of &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0386em;">conference talks or read a lot of blog posts that explain Kubernetes. If your organiza‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.1806em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0532em;">tion runs its own Kubernetes clusters, you will at some point get asked whether run‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.2306em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2835em;">ning MySQL on them too is a good idea. And on the surface it seems like a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.2806em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.111em;">reasonable path to take. Managing many Kubernetes clusters is a complex task that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.3306em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0262em;">typically needs dedicated human resources, and it is reasonable for your organization &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.3806em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1044em;">to want to leverage that expertise for more than only stateless workloads. But there &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.4306em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0434em;">are good reasons to explore running MySQL on Kubernetes and not so good reasons &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.4806em;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0748em;">to do so. Let’s demystify some of the FUD (fear, uncertainty, doubt) around running &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.5306em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0087em;">MySQL on Kubernetes here. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.4271em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Provisioning Resources with Kubernetes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.6973em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.255em;">Before Kubernetes reached peak tech popularity, a lot of companies either built &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.7473em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.197em;">entirely bespoke tech stacks for provisioning and managing VMs and bare metal &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.7973em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0661em;">servers or glued together open source projects that did smaller parts of the life cycle &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.8473em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1357em;">of a resource. Then came Kubernetes as a more complete ecosystem for managing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.8973em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0449em;">both compute and storage resources, and the prospect of using it as the provisioning &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.9473em;z-index:1163;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0154em;">stack to rule them all has become more and more appealing. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0169em;">t stateful loads such as &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.9973em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0714em;">MySQL remained behind and left out of that added value because the common wis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.0473em;z-index:1293;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0088em;">dom had been “you can’t run databases on containers</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.9316em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Carefully Scope Your Goal &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:45.8314em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0588em;">The important thing to keep in mind is “What specific value do we want to get back &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.8814em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0747em;">here?” Kubernetes is powerful for stateless loads because it brings elasticity and effi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:47.9314em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0718em;">ciency of compute resources. However, it is reasonable to scope down the win when &nbsp;</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">349 &nbsp;</span></div>
+					<a name="371_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="371_1" style="position:absolute;left:0em;top:20.2598em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

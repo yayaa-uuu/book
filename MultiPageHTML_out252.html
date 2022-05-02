@@ -1,0 +1,53 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_269.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_269.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:20.4011em;"><span class="stl_155 stl_41 stl_58" style="word-spacing:0.0199em;">Figure 9-1. How MySQL replication works &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.309em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Replication Under the Hood &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:24.5792em;z-index:137;"><span class="stl_154 stl_32 stl_66" style="word-spacing:0.0885em;">Now that we’ve refreshed you on the replication basics, let’s dive deeper into it. Let’s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.6292em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0584em;">take a look at how replication really works, see what strengths and weaknesses it has &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.6792em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0013em;">as a result, and examine some more advanced options for replication configuration. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.5635em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Choosing Replication Format &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.4633em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.2245em;">MySQL offers three different binary log formats for replication: statement-based, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.5627em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1308em;">row-based, and mixed. These are controlled with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1245em;">binlog_format </span><span class="stl_154 stl_32 stl_77">configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.6127em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">parameter, which controls how the data is written to the binary log. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.1627em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0939em;">Statement-based replication works by recording the query that changed the data on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.2127em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0786em;">the source. When the replica reads the event from the relay log and executes it, it is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.2627em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1092em;">reexecuting the actual SQL query that the source executed. The main draw for this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.3127em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0924em;">format is that it is simple and compact. A query that updates large amounts of data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:38.3627em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0003em;">can be a few dozen bytes in the binary log. The largest downside to statement-based is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.4127em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.128em;">that it generally has problems with nondeterministic queries. Consider a statement &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.5121em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.034em;">that deletes one hundred rows of a one-thousand-row table with no </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0974em;">ORDER BY </span><span class="stl_154 stl_32 stl_99">clause. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.5621em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0647em;">If the rows are ordered differently between source and replica, you may delete a dif‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.6121em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">ferent one hundred rows on each, leading to inconsistencies. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.1621em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.084em;">Row-based replication writes events to the binary log that indicate how the row has &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.2121em;z-index:1223;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.212em;">changed. This sounds very simplistic, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.211em;">s a </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2143em;">ig change from statement-based &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.2621em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1558em;">because it’s deterministic. With row-based, you can look at the binary log and see &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:47.3121em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1182em;">exactly what rows changed and what the values became. With statement-based, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">230 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="252_0" style="position:absolute;left:0em;top:22.6606em;">&nbsp;</a>
+					<a name="252_1" style="position:absolute;left:0em;top:28.8565em;">&nbsp;</a>
+					<a name="252_2" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="252_3" style="position:absolute;left:0em;top:30.6925em;">&nbsp;</a>
+					<a name="252_4" style="position:absolute;left:0em;top:44.3914em;">&nbsp;</a>
+					<a name="252_5" style="position:absolute;left:0em;top:34.3919em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

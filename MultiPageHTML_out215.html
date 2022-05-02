@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_228.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_228.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">Here are a few typical mistakes: &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.9385em;"><span class="stl_155 stl_41 stl_438" style="word-spacing:0.0222em;">Fetching more rows than needed &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:6.9999em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2131em;">One common mistake is assuming that MySQL provides results on demand, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:8.0499em;z-index:165;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.006em;">rather than calculating and returning the full result set. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0042em;">e </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0069em;">ften see this in appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:9.0999em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0581em;">cations designed by people familiar with other database systems. These develop‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:10.1994em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0641em;">ers are used to techniques such as issuing a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1936em;">SELECT </span><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0721em;">statement that returns many &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:11.2988em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1043em;">rows, then fetching the first </span><span class="stl_174 stl_175 stl_28" style="word-spacing:-0.1512em;">N </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1043em;">rows and closing the result set (e.g., fetching the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:12.3488em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0507em;">100 most recent articles for a news site when they only need to show 10 of them &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:13.3988em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0369em;">on the front page). They think MySQL will provide them with these 10 rows and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:14.4488em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1042em;">stop executing the query, but what MySQL really does is generate the complete &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:15.4988em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0428em;">result set. The client library then fetches all the data and discards most of it. The &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:16.5982em;z-index:692;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">best solution is to add a </span><span class="stl_170 stl_171 stl_28">LIMI</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0097em;">clause to the query. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.2202em;"><span class="stl_155 stl_41 stl_251" style="word-spacing:0.0219em;">Fetching all columns from a multitable join &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:19.2702em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0313em;">If you want to retrieve all actors who appear in the film </span><span class="stl_155 stl_41 stl_20" style="word-spacing:0.0089em;">Academy Dinosaur</span><span class="stl_154 stl_32 stl_237" style="word-spacing:0.058em;">, don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:20.3316em;"><span class="stl_154 stl_32 stl_300" style="word-spacing:-0.0053em;">write the query this way: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.917em;top:22.0969em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">SELECT * FROM sakila.actor &nbsp;</span></div>
+					<div class="stl_01" style="left:8.917em;top:22.9895em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">INNER JOIN sakila.film_actor USING(actor_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.917em;top:23.882em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">INNER JOIN sakila.film USING(film_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.917em;top:24.7745em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">WHERE sakila.film.title = 'Academy Dinosaur'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:25.9516em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">That returns all columns from all three tables. Instead, write the query as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:27.717em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">SELECT sakila.actor.* FROM sakila.actor...; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.966em;"><span class="stl_155 stl_41 stl_234" style="word-spacing:0.024em;">Fetching all columns &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:30.0768em;z-index:1087;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0644em;">u should always be suspicious when you see </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0631em;">SELECT *</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0631em;">. Do you really need all &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:31.1268em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.19em;">the columns? Probably not. Retrieving all columns can prevent optimizations &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:32.1768em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0367em;">such as covering indexes, as well as add I/O, memory, and CPU overhead for the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:33.2763em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1056em;">server. Some DBAs discourage </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0278em;">SELECT * </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1016em;">universally because of this fact and to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:34.3263em;z-index:1393;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">reduce the risk of problems when someone alters the table</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">olumn list. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:35.8763em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0549em;">Of course, asking for more data than you really need is not always bad. In many &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:36.9263em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0786em;">cases we’ve investigated, people tell us the wasteful approach simplifies develop‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:37.9763em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1499em;">ment because it lets the developer use the same bit of code in more than one &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:39.0263em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1872em;">place. That’s a reasonable consideration as long as you know what it costs in &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:40.0763em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1764em;">terms of performance. It might also be useful to retrieve more data than you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:41.1263em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0739em;">actually need if you use some type of caching in your application or if you have &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:42.1763em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0309em;">another benefit in mind. Fetching and caching full objects might be preferable to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:43.2263em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">running many separate queries that retrieve only parts of the object. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.8482em;"><span class="stl_155 stl_41 stl_438" style="word-spacing:0.0223em;">Fetching the same data repeatedly &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:45.9096em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.1615em;">If you’re not careful, it’s quite easy to write application code that retrieves the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:46.9596em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0324em;">same data repeatedly from the database server, executing the same query to fetch &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:48.0096em;z-index:2127;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0284em;">it. For example, if you want to find out a user</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0242em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0259em;">rofile image URL to display next &nbsp;</span></div>
+					<div class="stl_01" style="left:23.5909em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Slow Query Basics: Optimize Data Access &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">193 &nbsp;</span></div>
+					<a name="215_0" style="position:absolute;left:0em;top:19.5108em;">&nbsp;</a>
+					<a name="215_1" style="position:absolute;left:0em;top:16.8275em;">&nbsp;</a>
+					<a name="215_2" style="position:absolute;left:0em;top:7.2292em;">&nbsp;</a>
+					<a name="215_3" style="position:absolute;left:0em;top:10.4286em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

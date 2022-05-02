@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_213.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_213.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:0.0919em;">The moral of the story is that you should strive to insert data in primary key order &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.2088em;">when using InnoDB, and you should try to use a clustering key that will give a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;z-index:178;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">monotonically increasing value for each new row. &nbsp;</span></div>
+					<div class="stl_01" style="left:14.1648em;top:9.0171em;"><span class="stl_239 stl_27 stl_28" style="word-spacing:0em;">When Primary Key Order Is Worse &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:10.765em;"><span class="stl_31 stl_32 stl_122" style="word-spacing:0.0989em;">For high-concurrency workloads, inserting in primary key order can actually create &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:11.765em;"><span class="stl_31 stl_32 stl_95" style="word-spacing:0.096em;">points of contention in InnoDB. The upper end of the primary key is one hot spot. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:12.765em;"><span class="stl_31 stl_32 stl_95" style="word-spacing:0.2271em;">Because all inserts take place there, concurrent inserts might fight over next-key &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:13.8121em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0351em;">locks. Another hot spot is the </span><span class="stl_349 stl_171 stl_28">AUTO_INCREMEN</span><span class="stl_349 stl_171 stl_430">T</span><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0351em;">locking mechanism; if you experience &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:14.8121em;"><span class="stl_31 stl_32 stl_46" style="word-spacing:0.0057em;">problems with that, you might be able to redesign your table or application, or config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:15.8592em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0584em;">ure </span><span class="stl_349 stl_171 stl_28">innodb_autoinc_lock_mode</span><span class="stl_31 stl_32 stl_99" style="word-spacing:0.0649em;">. If your server version doesn’t support </span><span class="stl_349 stl_171 stl_28">innodb_auto &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6876em;top:16.9063em;"><span class="stl_349 stl_171 stl_28">inc_lock_mode</span><span class="stl_31 stl_32 stl_88" style="word-spacing:0.1641em;">, you can upgrade to a newer version of InnoDB that will perform &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6876em;top:17.9063em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0em;">better for this specific workload. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.6713em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Covering Indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.6205em;z-index:786;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0175em;">A common suggestion is to create indexes for the query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.018em;">s </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_208">E</span><span class="stl_154 stl_32 stl_201" style="word-spacing:0.0381em;">clause, but that’s only &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.72em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0427em;">part of the story. Indexes need to be designed for the whole query, not just the </span><span class="stl_170 stl_171 stl_28">WHERE &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.77em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0711em;">clause. Indexes are indeed a way to find rows efficiently, but MySQL can also use an &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.82em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.0307em;">index to retrieve a column’s data, so it doesn’t have to read the row at all. After all, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.87em;z-index:1031;"><span class="stl_154 stl_32 stl_28">index</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0629em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0647em;">eaf nodes contain the values they index; why read the row when reading the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.92em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.1326em;">index can give you the data you want? An index that contains (or “covers”) all the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.9586em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0938em;">data needed to satisfy a query is called a </span><span class="stl_155 stl_41 stl_181" style="word-spacing:0.1053em;">covering index</span><span class="stl_154 stl_32 stl_129" style="word-spacing:0.1057em;">. It is important to note that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.02em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">only B-tree indexes can be used to cover indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.57em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0835em;">Covering indexes can be a very powerful tool and can dramatically improve perfor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.62em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">mance. Consider the benefits of reading only the index instead of the data: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:34.5033em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1852em;">• Index entries are usually much smaller than the full row size, so MySQL can &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.5533em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0584em;">access significantly less data if it reads only the index. This is very important for &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:36.6033em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1609em;">cached workloads, where much of the response time comes from copying the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:37.6533em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0868em;">data. It is also helpful for I/O-bound workloads because the indexes are smaller &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:38.7033em;z-index:1699;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0044em;">than the data and fit in memory better. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:40.0866em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.273em;">• Indexes</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0576em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0584em;">are sorted by their index values (at least within the page), so I/O-bound &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:41.1366em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1377em;">range accesses will need to do less I/O compared to fetching each row from a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:42.2361em;z-index:1851;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2843em;">random disk location. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.282em;">u can even </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0357em;">OPTIMIZE </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.282em;">the table to get fully sorted &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:43.2861em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2399em;">indexes, which will let simple range queries use completely sequential index &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:44.3361em;"><span class="stl_154 stl_32 stl_28">accesses. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:45.7194em;z-index:2034;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.273em;">• Covering</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1285em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1306em;">indexes are especially helpful for InnoDB tables because of InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:46.7694em;z-index:2087;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0291em;">clustered indexes. InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0262em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_106" style="word-spacing:0.0235em;">econdary indexes hold the row</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0262em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_204" style="word-spacing:0.0214em;">rimary key values &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">178 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="200_0" style="position:absolute;left:0em;top:20.9644em;">&nbsp;</a>
+					<a name="200_1" style="position:absolute;left:0em;top:14.0304em;">&nbsp;</a>
+					<a name="200_2" style="position:absolute;left:0em;top:18.1246em;">&nbsp;</a>
+					<a name="200_3" style="position:absolute;left:0em;top:22.8498em;">&nbsp;</a>
+					<a name="200_4" style="position:absolute;left:0em;top:10.9833em;">&nbsp;</a>
+					<a name="200_5" style="position:absolute;left:0em;top:6.6458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

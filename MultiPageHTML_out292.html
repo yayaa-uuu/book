@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_317.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_317.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Percona XtraBackup &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.065em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.049em;">Percona XtraBackup is quite similar to MySQL Enterprise Backup in many ways, but &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.115em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.2607em;">it’s open source and free. It supports features like streaming, incremental, com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.165em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0769em;">pressed, and multithreaded (parallel) backup operations. It also has a variety of spe‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.215em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0023em;">cial features to reduce the impact of backups on heavily loaded systems. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.765em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0809em;">Percona XtraBackup works by “tailing” the InnoDB logfiles in a background thread, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.815em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1356em;">then copying the InnoDB datafiles. This is a slightly involved process, with special &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.865em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0111em;">checks to ensure that data is copied consistently. When all the datafiles are copied, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.915em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1119em;">log-copying thread finishes, too. The result is a copy of all the data but at different &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.965em;z-index:643;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1386em;">points in time. The logs can now be applied to the datafiles, using InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.135em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28">rash &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.015em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0736em;">recovery routines, to bring all of the datafiles into a consistent state. This is referred &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.0537em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0598em;">to as the </span><span class="stl_155 stl_41 stl_234" style="word-spacing:0.0818em;">prepare </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0614em;">process. Once prepared, the backup is fully consistent and contains &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.115em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.058em;">all committed transactions as of the ending point of the file-copy process. All of this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.165em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.103em;">happens completely externally to MySQL, so it doesn’t need to connect to or access &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.215em;z-index:952;"><span class="stl_154 stl_32 stl_488" style="word-spacing:0.0292em;">MySQL in any way. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.0994em;"><span class="stl_180 stl_27 stl_28">mydumper &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.9878em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0284em;">Several current and former MySQL engineers created </span><a href="https://oreil.ly/i3AXj" target="_blank"><span class="stl_163 stl_41 stl_393" style="word-spacing:0.0444em;">mydumper </span></a><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0275em;">as a replacement for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.0378em;"><span class="stl_155 stl_41 stl_257">mysqldump</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0188em;">, based on their years of experience. It is a multithreaded (parallel) backup &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.0991em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0395em;">and restore tool set for MySQL with a lot of nice features. Many people will probably &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.1491em;z-index:1232;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0564em;">find the speed of multithreaded backups and restores to be this tool</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0544em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0579em;">ost attractive &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.1991em;"><span class="stl_154 stl_32 stl_24">feature. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:30.0835em;"><span class="stl_180 stl_27 stl_28">mysqldump &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.9832em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0165em;">Most people use the programs that ship with MySQL, so despite its shortcomings, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.0218em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0224em;">most common choice for creating logical backups of data and schemas is </span><span class="stl_155 stl_41 stl_257">mysqldump</span><span class="stl_154 stl_32 stl_257">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.0832em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">Refer to the official manual for details on how to use this tool. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:35.9797em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Backing Up Data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.2499em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0157em;">As with most things, there are better and worse ways to actually make a backup—and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.2999em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0346em;">the obvious ways are sometimes not so good. The trick is to maximize your network, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.3499em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0912em;">disk, and CPU capacity to make backups as fast as possible. This is a balancing act, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:41.3999em;z-index:1719;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0059em;">and you’ll have to experiment to find the “sweet spot</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.2842em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Logical SQL Backups &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.184em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.2052em;">Logical SQL dumps are what most people are familiar with because they’re what &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:46.2226em;"><span class="stl_155 stl_41 stl_230" style="word-spacing:0.1309em;">mysqldump </span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1206em;">creates by default. For example, dumping a small table with the default &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:47.284em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">options will produce the following (abridged) output: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">270 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="292_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="292_1" style="position:absolute;left:0em;top:22.3924em;">&nbsp;</a>
+					<a name="292_2" style="position:absolute;left:0em;top:30.3765em;">&nbsp;</a>
+					<a name="292_3" style="position:absolute;left:0em;top:36.3313em;">&nbsp;</a>
+					<a name="292_4" style="position:absolute;left:0em;top:43.5773em;">&nbsp;</a>
+					<a name="292_5" style="position:absolute;left:0em;top:38.4792em;">&nbsp;</a>
+					<a name="292_6" style="position:absolute;left:0em;top:24.2284em;">&nbsp;</a>
+					<a name="292_7" style="position:absolute;left:0em;top:32.2125em;">&nbsp;</a>
+					<a name="292_8" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="292_9" style="position:absolute;left:0em;top:45.4133em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

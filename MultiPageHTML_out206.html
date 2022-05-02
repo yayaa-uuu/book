@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_219.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_219.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.7708em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">closest_airport varchar(3) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">PRIMARY KEY (id), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">UNIQUE KEY email (email), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">KEY country_id (country_id), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:7.9292em;"><span class="stl_200 stl_171 stl_28">KEY state_id (state_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:8.7792em;"><span class="stl_200 stl_171 stl_28">) ENGINE=InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.966em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0889em;">This table contains one million rows, and for each </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1685em;">state_id </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0879em;">there are about 20,000 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:11.0655em;z-index:515;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0767em;">records. There is an index on </span><span class="stl_170 stl_171 stl_28">state_id</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.08em;">, which is useful for the following query. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_52">e &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.1155em;"><span class="stl_154 stl_32 stl_289" style="word-spacing:-0.0039em;">refer to this query as Q1: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:13.8773em;"><span class="stl_265 stl_173 stl_28">SELECT count(*) FROM userinfo WHERE state_id=5; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:15.0155em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.012em;">A simple benchmark shows an execution rate of almost 115 queries per second (QPS) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:16.0655em;z-index:661;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0739em;">for this query. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0651em;">e </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0663em;">lso have a related query that retrieves several columns instead of &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:17.1155em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">just counting rows. This is Q2: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:18.8773em;"><span class="stl_265 stl_173 stl_28">SELECT state_id, city, address FROM userinfo WHERE state_id=5; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.0155em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0109em;">For this query, the result is less than 10 QPS.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out206.html#206_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.1825em;">14 </span></a></sup><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0095em;">The simple solution to improve its per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.1149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0267em;">formance is to extend the index to (</span><span class="stl_170 stl_171 stl_28">state_id</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0266em;">, </span><span class="stl_170 stl_171 stl_28">city</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0266em;">, </span><span class="stl_170 stl_171 stl_28">address</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0267em;">), so the index will cover &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.1649em;"><span class="stl_154 stl_32 stl_434" style="word-spacing:-0.0171em;">the query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:23.9268em;"><span class="stl_265 stl_173 stl_28">ALTER TABLE userinfo DROP KEY state_id, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:24.7768em;"><span class="stl_265 stl_173 stl_28">ADD KEY state_id_2 (state_id, city, address); &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.9149em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.063em;">After extending the index, Q2 runs faster, but Q1 runs more slowly. If we really care &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.9649em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.2423em;">about making both queries fast, we should leave both indexes, even though the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.0149em;z-index:1193;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0983em;">single-column index is redundant. </span><a href="MultiPageHTML_out206.html#206_1"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out206.html#206_1"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out206.html#206_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0969em;">ble 7-2 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0969em;">shows detailed results for both queries &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.0649em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">and indexing strategies. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.1525em;"><span class="stl_40 stl_41 stl_22" style="word-spacing:0.0229em;">Table 7-2. Benchmark results in QPS for </span><span class="stl_286 stl_175 stl_28">SELEC</span><span class="stl_286 stl_175 stl_295">T</span><span class="stl_40 stl_41 stl_81" style="word-spacing:0.0116em;">queries with various index strategies &nbsp;</span></div>
+					<div class="stl_01" style="left:8.7967em;top:32.8684em;"><span class="stl_435 stl_173 stl_28" style="word-spacing:0.036em;">state_id only</span><span class="stl_435 stl_173 stl_28" style="word-spacing:0.3464em;">&nbsp;</span><span class="stl_435 stl_173 stl_28" style="word-spacing:0.036em;">state_id_2 only</span><span class="stl_435 stl_173 stl_28" style="word-spacing:0.3464em;">&nbsp;</span><span class="stl_435 stl_173 stl_28" style="word-spacing:0.0353em;">Both state_id and state_id_2 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:33.8127em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0.033em;">Query 1</span><span class="stl_80 stl_27 stl_28" style="word-spacing:0.6423em;">&nbsp;</span><span class="stl_206 stl_68 stl_28">108.55 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:34.9002em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0.033em;">Query 2</span><span class="stl_80 stl_27 stl_28" style="word-spacing:0.6423em;">&nbsp;</span><span class="stl_206 stl_68 stl_28">12.12 &nbsp;</span></div>
+					<div class="stl_01" style="left:14.0262em;top:33.8225em;"><span class="stl_206 stl_68 stl_28">100.33 &nbsp;</span></div>
+					<div class="stl_01" style="left:14.0262em;top:34.91em;"><span class="stl_206 stl_68 stl_28">28.04 &nbsp;</span></div>
+					<div class="stl_01" style="left:19.9637em;top:33.8225em;"><span class="stl_206 stl_68 stl_28">107.97 &nbsp;</span></div>
+					<div class="stl_01" style="left:19.9637em;top:34.91em;"><span class="stl_206 stl_68 stl_28">28.06 &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.8778em;z-index:1475;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1023em;">The drawback of having two indexes is the maintenance cost. </span><a href="MultiPageHTML_out206.html#206_2"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out206.html#206_2"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out206.html#206_2"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0995em;">ble 7-3 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0995em;">shows how &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.9278em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">long it takes to insert a million rows into the table. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.0154em;"><span class="stl_40 stl_41 stl_356" style="word-spacing:0.0167em;">Table 7-3. Speed of inserting a million rows with various index strategies &nbsp;</span></div>
+					<div class="stl_01" style="left:17.329em;top:41.7314em;"><span class="stl_435 stl_173 stl_28" style="word-spacing:0.036em;">state_id only</span><span class="stl_435 stl_173 stl_28" style="word-spacing:0.3464em;">&nbsp;</span><span class="stl_435 stl_173 stl_28" style="word-spacing:0.0353em;">Both state_id and state_id_2 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:42.6757em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0.0334em;">InnoDB, enough memory for both indexes</span><span class="stl_80 stl_27 stl_28" style="word-spacing:0.6417em;">&nbsp;</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">80 seconds &nbsp;</span></div>
+					<div class="stl_01" style="left:22.5584em;top:42.6854em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">136 seconds &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:46.4635em;z-index:23;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">14 </span><span class="stl_168 stl_32 stl_52">W</span><span class="stl_168 stl_32 stl_83" style="word-spacing:0.0024em;">e’ve used an in-memory example here. When the table is bigger and the workload becomes I/O bound, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_100" style="word-spacing:0.0105em;">difference between the numbers will be much larger. It’s not uncommon for </span><span class="stl_211 stl_171 stl_28">COUNT(</span><span class="stl_211 stl_171 stl_275">)</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">queries to become one &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_53" style="word-spacing:0.0011em;">hundred or more times faster with a covering index. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">184 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="206_0" style="position:absolute;left:0em;top:46.5548em;">&nbsp;</a>
+					<a name="206_1" style="position:absolute;left:0em;top:31.2983em;">&nbsp;</a>
+					<a name="206_2" style="position:absolute;left:0em;top:40.1612em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

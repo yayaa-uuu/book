@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_45.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_45.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1067em;"><span class="stl_160 stl_27 stl_28" style="word-spacing:-0.092em;">Dataﬁles </span><span class="stl_159 stl_27 stl_28">Structure &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.3769em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.2681em;">In version 8.0, MySQL redesigned table metadata into a data dictionary that is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.4155em;z-index:105;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0077em;">included with a table</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.023em;">s </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.015em;">.ibd </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0067em;">file. This makes information on the table structure support &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.5264em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0731em;">transactions and atomic data definition changes. Instead of relying only on </span><span class="stl_170 stl_171 stl_28">informa &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:9.6258em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.147em;">tion_schema </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1099em;">for retrieving table definition and metadata during operations, we are &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:10.6758em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0432em;">introduced to the dictionary object cache, which is a least recently used (LRU)-based &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:11.7258em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.145em;">in-memory cache of partition definitions, table definitions, stored program defini‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.7758em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.2849em;">tions, charset, and collation information. This major change in how the server &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.8258em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1229em;">accesses metadata about tables reduces I/O and is efficient, especially if a subset of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:14.8644em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0315em;">tables is what sees the most activity and therefore is in the cache most often. The </span><span class="stl_155 stl_41 stl_144">.ibd &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.9144em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and </span><span class="stl_155 stl_41 stl_217" style="word-spacing:-0.0133em;">.frm </span><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">files are replaced with serialized dictionary information (</span><span class="stl_155 stl_41 stl_114">.sdi</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">) per table. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.8223em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">The InnoDB Engine &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.0925em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0858em;">InnoDB is the default transactional storage engine for MySQL and the most impor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.1425em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1356em;">tant and broadly useful engine overall. It was designed for processing many short- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.1925em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.5289em;">lived transactions that usually complete rather than being rolled back. Its &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.2425em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.233em;">performance and automatic crash recovery make it popular for nontransactional &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.2925em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0619em;">storage needs too. If you want to study storage engines, it is well worth your time to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.3425em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0417em;">study InnoDB in depth to learn as much as you can about it, rather than studying all &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.3925em;z-index:1182;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0077em;">storage engines equally. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:28.7047em;"><span class="stl_176 stl_32 stl_35" style="word-spacing:0.1018em;">It is best practice to use the InnoDB storage engine as the default &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:29.6647em;"><span class="stl_176 stl_32 stl_71" style="word-spacing:0.2774em;">engine for any application. MySQL made that easy by making &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:30.6246em;"><span class="stl_176 stl_32 stl_54" style="word-spacing:0.0039em;">InnoDB the default engine a few major versions ago. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.1425em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.141em;">InnoDB is the default MySQL general-purpose storage engine. By default, InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.1811em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1469em;">stores its data in a series of datafiles that are collectively known as a </span><span class="stl_155 stl_41 stl_44">tablespace</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1444em;">. A &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.2425em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">tablespace is essentially a black box that InnoDB manages all by itself. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.7925em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1495em;">InnoDB uses MVCC to achieve high concurrency, and it implements all four SQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.8919em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0294em;">standard isolation levels. It defaults to the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">REPEATABLE REA</span><span class="stl_170 stl_171 stl_218">D</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0266em;">isolation level, and it has &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.9419em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0494em;">a next-key locking strategy that prevents phantom reads in this isolation level: rather &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.9919em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0156em;">than locking only the rows you’ve touched in a query, InnoDB locks gaps in the index &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.0419em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">structure as well, preventing phantoms from being inserted. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:43.5919em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0714em;">InnoDB tables are built on a clustered index, which we will cover in detail in </span><a href="MultiPageHTML_out213.html#213_0"><span class="stl_184 stl_32 stl_183">Chap‐ &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.0003em;top:44.6419em;z-index:1973;"><a href="MultiPageHTML_out213.html#213_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.1331em;">ter 8 </span></a><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1354em;">when we discuss schema design. InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1331em;">s </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_125" style="word-spacing:0.1323em;">ndex structures are very different &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.6919em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1161em;">from those of most other MySQL storage engines. As a result, it provides very fast &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.7419em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1388em;">primary key lookups. However, secondary indexes (indexes that aren’t the primary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:47.7919em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0551em;">key) contain the primary key columns, so if your primary key is large, other indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">16 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3616em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2691em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 1: MySQL Architecture &nbsp;</span></div>
+					<a name="38_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="38_1" style="position:absolute;left:0em;top:18.1739em;">&nbsp;</a>
+					<a name="38_2" style="position:absolute;left:0em;top:6.6062em;">&nbsp;</a>
+					<a name="38_3" style="position:absolute;left:0em;top:20.3217em;">&nbsp;</a>
+					<a name="38_4" style="position:absolute;left:0em;top:10.905em;">&nbsp;</a>
+					<a name="38_5" style="position:absolute;left:0em;top:39.1212em;">&nbsp;</a>
+					<a name="38_6" style="position:absolute;left:0em;top:16.155em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

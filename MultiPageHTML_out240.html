@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_256.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_256.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0645em;">In contrast to the optimization stage, the execution stage is usually not all that com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0186em;">plex: MySQL simply follows the instructions given in the query execution plan. Many &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1807em;">of the operations in the plan invoke methods implemented by the storage engine &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4552em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0273em;">interface, also known as the </span><span class="stl_155 stl_41 stl_71" style="word-spacing:0.0058em;">handler API</span><span class="stl_154 stl_32 stl_125" style="word-spacing:0.0246em;">. Each table in the query is represented by an &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:8.5166em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1499em;">instance of a handler. If a table appears three times in the query, for example, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.5666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0547em;">server creates three handler instances. Although we glossed over this before, MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:10.6166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0916em;">actually creates the handler instances early in the optimization stage. The optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:11.6666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0279em;">uses them to get information about the tables, such as their column names and index &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.7166em;"><span class="stl_154 stl_32 stl_36">statistics. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.2666em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0545em;">The storage engine interface has lots of functionality, but it needs only a dozen or so &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.3166em;z-index:856;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1137em;">“building-block” operations to execute most queries. For example, there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1081em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1081em;">n opera‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:16.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0108em;">tion to read the first row in an index and one to read the next row in an index. This is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.4166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0428em;">enough for a query that does an index scan. This simplistic execution method makes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:18.4666em;z-index:1008;"><span class="stl_154 stl_32 stl_93">MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3059em;">’s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1166em;">torage engine architecture possible, but it also imposes some of the opti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.5166em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0081em;">mizer limitations we’ve discussed. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:21.8287em;"><span class="stl_176 stl_32 stl_53" style="word-spacing:0.2433em;">Not everything is a handler operation. For example, the server &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:22.7887em;"><span class="stl_176 stl_32 stl_48" style="word-spacing:0.0697em;">manages table locks. The handler might implement its own lower- &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:23.7487em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1357em;">level locking, as InnoDB does with row-level locks, but this does &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:24.7087em;z-index:1286;"><span class="stl_176 stl_32 stl_247" style="word-spacing:0.0566em;">not replace the server</span><span class="stl_176 stl_32 stl_34">’</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0603em;">s </span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_36" style="word-spacing:0.0641em;">wn locking implementation. As explained &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:25.6687em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.2582em;">in </span><a href="MultiPageHTML_out23.html#23_0"><span class="stl_177 stl_32 stl_24" style="word-spacing:0.2636em;">Chapter 1</span></a><span class="stl_176 stl_32 stl_48" style="word-spacing:0.2618em;">, anything that all storage engines share is imple‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:26.6287em;"><span class="stl_176 stl_32 stl_39" style="word-spacing:0.1068em;">mented in the server, such as date and time functions, views, and &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:27.5887em;"><span class="stl_176 stl_32 stl_28">triggers. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.7866em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.259em;">To </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0649em;">xecute the query, the server just repeats the instructions until there are no more &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.8366em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">rows to examine. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.7209em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Returning Results to the Client &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.6207em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1165em;">The final step in executing a query is to reply to the client. Even queries that don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.6707em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1954em;">return a result set still reply to the client connection with information about the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:36.7207em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0052em;">query, such as how many rows it affected. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.2707em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.124em;">The server generates and sends results incrementally. As soon as MySQL processes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:39.3207em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0792em;">the last table and generates one row successfully, it can and should send that row to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.3707em;z-index:1935;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0701em;">the client. This has two benefits: it lets the server avoid holding the row in memory, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.4207em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0337em;">and it means the client starts getting the results as soon as possible.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out240.html#240_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.228em;">13 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0329em;">Each row in the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.4707em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0973em;">result set is sent in a separate packet in the MySQL client/server protocol, although &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.5207em;z-index:2145;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">protocol packets can be buffered and sent together at the TCP protocol layer. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.3545em;z-index:6;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">13 </span><span class="stl_168 stl_32 stl_109">Y</span><span class="stl_168 stl_32 stl_28">o</span><span class="stl_168 stl_32 stl_95" style="word-spacing:0.0018em;">u can influence this behavior if needed—for example, with the </span><span class="stl_211 stl_171 stl_28">SQL_BUFFER_RESUL</span><span class="stl_211 stl_171 stl_275">T</span><span class="stl_168 stl_32 stl_138" style="word-spacing:0.0073em;">hint. See “Optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_132" style="word-spacing:0.0065em;">Hints” in the official MySQL manual for more information. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">218 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="240_0" style="position:absolute;left:0em;top:33.014em;">&nbsp;</a>
+					<a name="240_1" style="position:absolute;left:0em;top:47.3882em;">&nbsp;</a>
+					<a name="240_2" style="position:absolute;left:0em;top:7.6958em;">&nbsp;</a>
+					<a name="240_3" style="position:absolute;left:0em;top:34.8499em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

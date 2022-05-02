@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_195.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_195.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3052em;"><span class="stl_154 stl_32 stl_194" style="word-spacing:0.0345em;">It’s not a good idea to look only at average selectivity. The caveat is that the </span><span class="stl_155 stl_41 stl_43">worst-case &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:5.3666em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1087em;">selectivity matters, too. The average selectivity may make you think a four- or five- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.4166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.043em;">character prefix is good enough, but if your data is very uneven, that could be a trap. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.4666em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1356em;">If you look at the number of occurrences of the most common city name prefixes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:8.566em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">using a value of </span><span class="stl_170 stl_171 stl_28">4</span><span class="stl_154 stl_32 stl_112" style="word-spacing:-0.0018em;">, you’ll see the unevenness clearly: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:10.3279em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">SELECT COUNT(*) AS c, LEFT(city, 4) AS pref &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:11.1779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.city_demo GROUP BY pref ORDER BY c DESC LIMIT 5; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:12.0286em;"><span class="stl_200 stl_171 stl_28">+-----+------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:12.8786em;"><span class="stl_200 stl_171 stl_28">| c &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:13.7286em;"><span class="stl_200 stl_171 stl_28">+-----+------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:14.5786em;"><span class="stl_200 stl_171 stl_28">| 205 | San &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5415em;top:12.8786em;"><span class="stl_200 stl_171 stl_28">| pref | &nbsp;</span></div>
+					<div class="stl_01" style="left:12.0207em;top:14.5786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4165em;top:15.4286em;"><span class="stl_200 stl_171 stl_28">| 200 | Sant | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:16.2786em;"><span class="stl_200 stl_171 stl_28">| 135 | Sout | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:17.1286em;"><span class="stl_200 stl_171 stl_28">| 104 | Chan | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:17.9786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">| 91</span><span class="stl_200 stl_171 stl_28">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Toul | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:18.8286em;"><span class="stl_200 stl_171 stl_28">+-----+------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.966em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0105em;">With four characters, the most frequent prefixes occur quite a bit more often than the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.016em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0528em;">most frequent full-length values. That is, the selectivity on those values is lower than &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.066em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0362em;">the average selectivity. If you have a more realistic data set than this randomly gener‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.116em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0851em;">ated sample, you’re likely to see this effect even more. For example, building a four- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0711em;">character prefix index on real-world city names will give terrible selectivity on cities &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.216em;z-index:936;"><span class="stl_154 stl_32 stl_360" style="word-spacing:0.0226em;">that begin with “San” and “New</span><span class="stl_154 stl_32 stl_161">,</span><span class="stl_154 stl_32 stl_153" style="word-spacing:0.0128em;">” of which there are many. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.766em;"><span class="stl_154 stl_32 stl_194" style="word-spacing:0.0667em;">Now that we’ve found a good value for our sample data, here’s how to create a prefix &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.816em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">index on the column: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:29.5779em;"><span class="stl_265 stl_173 stl_28">ALTER TABLE sakila.city_demo ADD KEY (city(7)); &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.716em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0961em;">Prefix indexes can be a great way to make indexes smaller and faster, but they have &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.8155em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0537em;">downsides too: MySQL cannot use prefix indexes for </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0519em;">ORDER B</span><span class="stl_170 stl_171 stl_424">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0519em;">or </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0519em;">GROUP B</span><span class="stl_170 stl_171 stl_424">Y</span><span class="stl_154 stl_32 stl_28">queries, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.8655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">nor can it use them as covering indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.4155em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.02em;">A common case we’ve found to benefit from prefix indexes is when long hexadecimal &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.4655em;z-index:1320;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0098em;">identifiers are used. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0074em;">e </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.009em;">iscussed more efficient techniques of storing such identifiers &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.5155em;"><span class="stl_154 stl_32 stl_152" style="word-spacing:0.1238em;">in the previous chapter, but what if you’re using a packaged solution that you can’t &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.5655em;z-index:1455;"><span class="stl_154 stl_32 stl_351" style="word-spacing:0.0207em;">modify? </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0264em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0307em;">ee this frequently with vBulletin and other applications that use MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.6155em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1587em;">to store website sessions, keyed on long hex strings. Adding an index on the first &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.6655em;z-index:1652;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1667em;">eight characters or so often boosts performance significantly, in a way that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1602em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28">om‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.7155em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">pletely transparent to the application. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:42.5998em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Multicolumn Indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:44.4996em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1739em;">Multicolumn indexes are often very poorly understood. Common mistakes are to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:45.5496em;z-index:1843;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">index many or all of the columns separately or to index columns in the wrong order. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2089em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">165 &nbsp;</span></div>
+					<a name="187_0" style="position:absolute;left:0em;top:42.8928em;">&nbsp;</a>
+					<a name="187_1" style="position:absolute;left:0em;top:44.7288em;">&nbsp;</a>
+					<a name="187_2" style="position:absolute;left:0em;top:40.9447em;">&nbsp;</a>
+					<a name="187_3" style="position:absolute;left:0em;top:32.0447em;">&nbsp;</a>
+					<a name="187_4" style="position:absolute;left:0em;top:4.5458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

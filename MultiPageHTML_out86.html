@@ -1,0 +1,73 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_93.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_93.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0215em;">The following example shows that a thread, visible in the process list with ID 5, holds &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">the lock that the thread with </span><span class="stl_170 stl_171 stl_28">processlist_id=</span><span class="stl_170 stl_171 stl_186">4</span><span class="stl_154 stl_32 stl_204" style="word-spacing:-0.0048em;">is waiting for: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:7.1779em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT processlist_id, object_type, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:8.0279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">lock_type, lock_status, source &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:8.8779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM metadata_locks JOIN threads ON (owner_thread_id=thread_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:9.7279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE object_schema='employees' AND object_name='titles'\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:10.5786em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:11.4286em;"><span class="stl_200 stl_171 stl_28">processlist_id: 4 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:12.2786em;"><span class="stl_200 stl_171 stl_28">object_type: TABLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:13.1286em;"><span class="stl_200 stl_171 stl_28">lock_type: EXCLUSIVE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:13.9786em;"><span class="stl_200 stl_171 stl_28">lock_status: PENDING -- waits &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:14.8286em;"><span class="stl_200 stl_171 stl_28">source: mdl.cc:3263 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:15.6786em;"><span class="stl_200 stl_171 stl_28">*************************** 2. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:16.5286em;"><span class="stl_200 stl_171 stl_28">processlist_id: 5 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:17.3786em;"><span class="stl_200 stl_171 stl_28">object_type: TABLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:18.2286em;"><span class="stl_200 stl_171 stl_28">lock_type: SHARED_READ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:19.0786em;"><span class="stl_200 stl_171 stl_28">lock_status: GRANTED -- holds &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:19.9286em;"><span class="stl_200 stl_171 stl_28">source: sql_parse.cc:5707 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.4003em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Examining Memory Usage &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.3495em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2655em;">To </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0703em;">urn on memory instrumentation in </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0719em;">, enable instruments of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.449em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0578em;">the class </span><span class="stl_170 stl_171 stl_28">memory</span><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0564em;">. Once enabled, you can find details on exactly how memory is used &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.499em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">by the internal MySQL structures. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.5559em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Using performance_schema directly &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.0233em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">Performance Schema stores memory usage statistics in the digest tables, whose names &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.1227em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2681em;">start with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0211em;">memory_summary_ </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.269em;">prefix. Memory use aggregation is described in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.1727em;z-index:1000;"><a href="MultiPageHTML_out86.html#86_1"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out86.html#86_1"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out86.html#86_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">ble 3-8</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.2603em;"><span class="stl_40 stl_41 stl_44" style="word-spacing:0.0162em;">Table 3-8. Aggregation parameters for memory use &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3003em;top:34.8327em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Aggregation parameter</span><span class="stl_205 stl_27 stl_28" style="word-spacing:0.6423em;">&nbsp;</span><span class="stl_205 stl_27 stl_28">Description &nbsp;</span></div>
+					<div class="stl_01" style="left:12.7517em;top:35.9091em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">Globally per event name &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3003em;top:36.0437em;"><span class="stl_200 stl_171 stl_28">global &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3001em;top:37.1524em;"><span class="stl_200 stl_171 stl_28">thread &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:38.2612em;"><span class="stl_200 stl_171 stl_28">account &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2998em;top:39.3699em;"><span class="stl_200 stl_171 stl_28">host &nbsp;</span></div>
+					<div class="stl_01" style="left:12.7517em;top:37.0178em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">Per thread: includes both background and user threads &nbsp;</span></div>
+					<div class="stl_01" style="left:12.7517em;top:38.1266em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">User account &nbsp;</span></div>
+					<div class="stl_01" style="left:12.7517em;top:39.2353em;"><span class="stl_206 stl_68 stl_28">Host &nbsp;</span></div>
+					<div class="stl_01" style="left:12.7517em;top:40.3441em;"><span class="stl_206 stl_68 stl_28">Username &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:40.4787em;"><span class="stl_200 stl_171 stl_28">user &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.3332em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0931em;">For example, to find InnoDB structures that use most of the memory, issue the fol‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.3832em;"><span class="stl_154 stl_32 stl_310" style="word-spacing:-0.012em;">lowing query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:45.145em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT EVENT_NAME, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:45.995em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">CURRENT_NUMBER_OF_BYTES_USED/1024/1024 AS CURRENT_MB, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:46.8451em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">HIGH_NUMBER_OF_BYTES_USED/1024/1024 AS HIGH_MB &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:47.6951em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM performance_schema.memory_summary_global_by_event_name &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:48.5451em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE EVENT_NAME LIKE 'memory/innodb/%' &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">64 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3622em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2697em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+					<a name="86_0" style="position:absolute;left:0em;top:21.6934em;">&nbsp;</a>
+					<a name="86_1" style="position:absolute;left:0em;top:33.4062em;">&nbsp;</a>
+					<a name="86_2" style="position:absolute;left:0em;top:23.5788em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

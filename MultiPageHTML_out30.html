@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_35.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_35.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9993em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Isolation Levels &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.065em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0825em;">Isolation is more complex than it looks. The ANSI SQL standard defines four isola‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.115em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0913em;">tion levels. If you are new to the world of databases, we highly recommend you get &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.165em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2098em;">familiar with the general standard of ANSI SQL</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out30.html#30_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.5374em;">6 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2098em;">before coming back to reading &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.215em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0671em;">about the specific MySQL implementation. The goal of this standard is to define the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.265em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0424em;">rules for which changes are and aren’t visible inside and outside a transaction. Lower &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.315em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0013em;">isolation levels typically allow higher concurrency and have lower overhead. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:13.6272em;z-index:597;"><span class="stl_176 stl_32 stl_120" style="word-spacing:0.0545em;">Each storage engine implements isolation levels slightly differently, &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:14.5872em;"><span class="stl_176 stl_32 stl_103" style="word-spacing:0.1372em;">and they don’t necessarily match what you might expect if you’re &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:15.5472em;"><span class="stl_176 stl_32 stl_107" style="word-spacing:0.115em;">used to another database product (thus, we won’t go into exhaus‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:16.5072em;z-index:732;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.3488em;">tive detail in this section). </span><span class="stl_176 stl_32 stl_109">Y</span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_57" style="word-spacing:0.3509em;">u should read the manuals for &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:17.4672em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">whichever storage engines you decide to use. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.665em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0094em;">Let’s take a quick look at the four isolation levels: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.5233em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">READ UNCOMMITTED &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:22.4473em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2034em;">In the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0782em;">READ UNCOMMITTED </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.2044em;">isolation level, transactions can view the results of &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:23.4973em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1578em;">uncommitted transactions. At this level, many problems can occur unless you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:24.5473em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.059em;">really, really know what you are doing and have a good reason for doing it. This &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:25.5973em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0444em;">level is rarely used in practice because its performance isn’t much better than the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:26.6473em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1943em;">other levels, which have many advantages. Reading uncommitted data is also &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:27.6859em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">known as a </span><span class="stl_155 stl_41 stl_150" style="word-spacing:0.0097em;">dirty read</span><span class="stl_154 stl_32 stl_150" style="word-spacing:0.0097em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.5555em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">READ COMMITTED &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:30.4795em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1073em;">The default isolation level for most database systems (but not MySQL!) is </span><span class="stl_170 stl_171 stl_28">READ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:31.5789em;"><span class="stl_170 stl_171 stl_28">COMMITTED</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0163em;">. It satisfies the simple definition of isolation used earlier: a transaction &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:32.6289em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1095em;">will continue to see changes made by transactions that were committed after it &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:33.6789em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0137em;">began, and its changes won’t be visible to others until it has committed. This level &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:34.7289em;z-index:1508;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1248em;">still allows what</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1177em;">s </span><span class="stl_154 stl_32 stl_28">k</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1188em;">nown as a nonrepeatable read. This means you can run the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:35.7789em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0049em;">same statement twice and see different data. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.6371em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">REPEATABLE READ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:38.5611em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0553em;">REPEATABLE REA</span><span class="stl_170 stl_171 stl_203">D</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0575em;">solves the problems that </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0553em;">READ UNCOMMITTE</span><span class="stl_170 stl_171 stl_203">D</span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0613em;">allows. It guaran‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:39.6111em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1095em;">tees that any rows a transaction reads will “look the same” in subsequent reads &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:40.6611em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.063em;">within the same transaction, but in theory it still allows another tricky problem: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:41.7111em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.104em;">phantom reads. Simply put, a phantom read can happen when you select some &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:42.7611em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0032em;">range of rows, another transaction inserts a new row into the range, and then you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:43.8111em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.1034em;">select the same range again; you will then see the new “phantom” row. InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">6</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_54" style="word-spacing:0.004em;">For more information, read </span><a href="https://oreil.ly/joikF" target="_blank"><span class="stl_187 stl_32 stl_204" style="word-spacing:-0.0048em;">a summary of ANSI SQL </span></a><span class="stl_168 stl_32 stl_54" style="word-spacing:0.004em;">by Adrian Coyler and </span><a href="http://jepsen.io/consistency" target="_blank"><span class="stl_187 stl_32 stl_95" style="word-spacing:0.0017em;">an explanation of consistency &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:108;"><a href="http://jepsen.io/consistency" target="_blank"><span class="stl_187 stl_32 stl_28" style="word-spacing:0em;">models </span></a><span class="stl_168 stl_32 stl_121" style="word-spacing:0.0189em;">by Kyle Kingsbury. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">8</span></div>
+					<div class="stl_01" style="left:7.0557em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.9632em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 1: MySQL Architecture &nbsp;</span></div>
+					<a name="30_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="30_1" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="30_2" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="30_3" style="position:absolute;left:0em;top:30.7087em;">&nbsp;</a>
+					<a name="30_4" style="position:absolute;left:0em;top:22.6765em;">&nbsp;</a>
+					<a name="30_5" style="position:absolute;left:0em;top:38.7904em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_270.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_270.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0004em;top:4.3166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0965em;">SQL is interpreted at execution time, and whatever rows the server found at execu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:5.3666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0279em;">tion time are what get changed. The drawback to row-based is that writing the events &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.4166em;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.1219em;">for row data changes for every row affected can increase the size of the binary log &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.4666em;z-index:551;"><span class="stl_154 stl_32 stl_226">dramatically. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:9.0166em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1426em;">The mixed method attempts to combine the best of both worlds, using statement- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.0666em;z-index:683;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0225em;">based format as the default and only switching to row-based when it needs to. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0198em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_468">ay &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.1166em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.1483em;">“attempts” because while it tries really hard, it has a lot of conditions</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out253.html#253_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.4181em;">1 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1416em;">to meet for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.1666em;z-index:823;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0532em;">when to write each, and this leads to unpredictable events in the binary log. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0528em;">e </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28">ake &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.2166em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">the opinion that binary log data should be one or the other, not a mix of both. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.7666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2566em;">Our recommendation is to stick with row-based replication unless you have an &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.8166em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.2787em;">express need to use statement-based temporarily. Row-based provides the safest &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.8666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0033em;">method of replicating your data. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.7509em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Global Transaction </span><span class="stl_236 stl_27 stl_28">Identiﬁers &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.6507em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0214em;">Until MySQL 5.6, a replica had to keep track of what binary logfile and log position it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.7007em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0777em;">was reading from when connecting to a source. For example, a replica connected to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.8001em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0516em;">an upstream source and read data from </span><span class="stl_170 stl_171 stl_28">binlog.00000</span><span class="stl_170 stl_171 stl_418">2</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0548em;">at position </span><span class="stl_170 stl_171 stl_28">2749</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0501em;">. As the rep‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.8501em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0072em;">lica read in events from that binary log, it advanced the position each time. Then, dis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.9001em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0585em;">aster struck! The source has crashed and you had to rebuild the data from a backup. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.9501em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0743em;">The question became: how could you reattach your replica if the binary logs started &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.0001em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0632em;">over again? This was a fairly complicated process of reading events and determining &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:28.0501em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.13em;">where to attach to. If you made a mistake and went too early, you might duplicate &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.1001em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0186em;">events, and if too late, you skipped events. Either way, it was very easy to attach a rep‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.1501em;z-index:1723;"><span class="stl_154 stl_32 stl_100" style="word-spacing:0.0104em;">lica incorrectly. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.7001em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.3067em;">To </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1132em;">olve this, MySQL added an alternate method for tracking replication positions: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.7501em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0973em;">global transaction identifiers (GTIDs). With GTIDs, every transaction that a source &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.8001em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0409em;">server commits is assigned a unique identifier. This identifier is a combination of the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.8996em;"><span class="stl_170 stl_171 stl_28">server_uuid</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out253.html#253_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.5756em;">2 </span></a></sup><span class="stl_154 stl_32 stl_72" style="word-spacing:0.236em;">and an incrementing transaction number. When the transaction is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.9496em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0431em;">written to the binary log, the GTID is also written with it. From our refresher earlier &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.9996em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0265em;">in the chapter, you’ll remember that a replica copies the binary log event into its local &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.0496em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0634em;">relay log and uses the SQL thread to apply changes to the local copy. When the SQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.0996em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">thread commits a transaction, it records the GTID as being completed as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:44.5716em;"><span class="stl_167 stl_32 stl_28">1</span></div>
+					<div class="stl_01" style="left:6.0948em;top:46.5459em;"><span class="stl_167 stl_32 stl_28">2</span></div>
+					<div class="stl_01" style="left:6.6667em;top:44.4892em;"><span class="stl_168 stl_32 stl_74" style="word-spacing:0.0017em;">As expected, we refer you to the manual to make sure you see the latest in how </span><span class="stl_211 stl_171 stl_28">MIXE</span><span class="stl_211 stl_171 stl_186">D</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">mode works with differ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:45.3225em;"><span class="stl_168 stl_32 stl_47" style="word-spacing:0.006em;">ent types of SQL statements. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.4635em;"><span class="stl_168 stl_32 stl_164" style="word-spacing:0.0147em;">Note that </span><span class="stl_211 stl_171 stl_28">server_uui</span><span class="stl_211 stl_171 stl_186">d</span><span class="stl_168 stl_32 stl_78" style="word-spacing:0.0015em;">is different from the similarly named </span><span class="stl_211 stl_171 stl_28">server_id</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">. The </span><span class="stl_211 stl_171 stl_28">server_i</span><span class="stl_211 stl_171 stl_275">d</span><span class="stl_168 stl_32 stl_48" style="word-spacing:0.0037em;">parameter is a user- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_87" style="word-spacing:0.0005em;">defined value that you designate for your server whereas </span><span class="stl_211 stl_171 stl_28">server_uui</span><span class="stl_211 stl_171 stl_275">d</span><span class="stl_168 stl_32 stl_84" style="word-spacing:0.0046em;">is generated the first time MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1792em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">starts if it does not detect the file </span><span class="stl_229 stl_41 stl_438">auto.cnf</span><span class="stl_168 stl_32 stl_438">. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.6347em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Under the Hood &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">231 &nbsp;</span></div>
+					<a name="253_0" style="position:absolute;left:0em;top:19.044em;">&nbsp;</a>
+					<a name="253_1" style="position:absolute;left:0em;top:44.5228em;">&nbsp;</a>
+					<a name="253_2" style="position:absolute;left:0em;top:46.4972em;">&nbsp;</a>
+					<a name="253_3" style="position:absolute;left:0em;top:20.8799em;">&nbsp;</a>
+					<a name="253_4" style="position:absolute;left:0em;top:9.2458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

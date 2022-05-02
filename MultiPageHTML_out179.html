@@ -1,0 +1,48 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_186.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_186.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0001em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">B-tree indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:5.7109em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0612em;">When people talk about an index without mentioning a type, they’re probably refer‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.7495em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1036em;">ring to a </span><span class="stl_155 stl_41 stl_81" style="word-spacing:0.1152em;">B-tree index</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1054em;">, which typically uses a B-tree data structure to store its data.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out179.html#179_0"><span class="stl_166 stl_32 stl_97" style="word-spacing:0.1844em;">2 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9997em;top:7.8109em;z-index:365;"><span class="stl_154 stl_32 stl_164" style="word-spacing:0.0145em;">Most of MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">torage engines support this index type. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:9.399em;z-index:446;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.2783em;">We </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0843em;">se the term </span><span class="stl_155 stl_41 stl_214" style="word-spacing:0.0959em;">B-tree </span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0902em;">for these indexes because that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0843em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_139" style="word-spacing:0.0945em;">hat MySQL uses in </span><span class="stl_170 stl_171 stl_28">CREATE &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.5098em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0773em;">TABLE </span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1805em;">and other statements. However, storage engines might use different storage &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:11.5598em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.051em;">structures internally. For example, the NDB Cluster storage engine uses a T-tree data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.6592em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0805em;">structure for these indexes, even though they’re labeled </span><span class="stl_170 stl_171 stl_28">BTREE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0779em;">, and InnoDB uses B+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.7092em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0714em;">trees. The variations in the structures and algorithms are out of scope for this book, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.7592em;"><span class="stl_154 stl_32 stl_28">though. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.3092em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1201em;">The general idea of a B-tree is that all the values are stored in order, and each leaf &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.3592em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0568em;">page is the same distance from the root. </span><a href="MultiPageHTML_out179.html#179_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0568em;">Figure 7-1 </span></a><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0599em;">shows an abstract representation &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.4092em;z-index:950;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">of a B-tree index, which corresponds roughly to how InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ndexes work. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.3438em;"><span class="stl_155 stl_41 stl_76" style="word-spacing:0.0171em;">Figure 7-1. An index built on a B-tree (technically, a B+ tree) structure &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.6036em;"><span class="stl_167 stl_32 stl_28">2</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.5212em;"><span class="stl_168 stl_32 stl_95" style="word-spacing:0.0017em;">Many storage engines actually use a B+ tree index, in which each leaf node contains a link to the next for fast &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_73" style="word-spacing:0.002em;">range traversals through nodes. Refer to computer science literature for a detailed explanation of B-tree &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28">indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:29.6338em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1743em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0818em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">157 &nbsp;</span></div>
+					<a name="179_0" style="position:absolute;left:0em;top:46.6125em;">&nbsp;</a>
+					<a name="179_1" style="position:absolute;left:0em;top:20.101em;">&nbsp;</a>
+					<a name="179_2" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="179_3" style="position:absolute;left:0em;top:5.9402em;">&nbsp;</a>
+					<a name="179_4" style="position:absolute;left:0em;top:9.6396em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_244.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_244.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1614em;">rest of the query. Similarly, to find the maximum value in a B-tree index, the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1308em;">server reads the last row. If the server uses this optimization, you’ll see “Select &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:6.466em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1259em;">tables optimized away” in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1323em;">EXPLAIN </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1223em;">plan. This literally means the optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:7.516em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">has removed the table from the query plan and replaced it with a constant. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.138em;"><span class="stl_155 stl_41 stl_422" style="word-spacing:0.0206em;">Evaluating and reducing constant expressions &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:10.1994em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.052em;">When MySQL detects that an expression can be reduced to a constant, it will do &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:11.2494em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0361em;">so during optimization. For example, a user-defined variable can be converted to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:12.2994em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1465em;">a constant if it’s not changed in the query. Arithmetic expressions are another &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:13.3494em;"><span class="stl_154 stl_32 stl_24">example. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:14.8994em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1257em;">Perhaps surprisingly, even something you might consider to be a query can be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:15.9988em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0402em;">reduced to a constant during the optimization phase. One example is a </span><span class="stl_170 stl_171 stl_28">MIN(</span><span class="stl_170 stl_171 stl_447">)</span><span class="stl_154 stl_32 stl_28">on &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:17.0488em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1016em;">an index. This can even be extended to a constant lookup on a primary key or &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:18.1482em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0217em;">unique index. If a </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_261">E</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0247em;">clause applies a constant condition to such an index, the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:19.1982em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0772em;">optimizer knows MySQL can look up the value at the beginning of the query. It &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:20.2482em;z-index:890;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0079em;">will then treat the value as a constant in the rest of the query. Here</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">n example: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9169em;top:22.0136em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">mysql&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">EXPLAIN SELECT film.film_id, film_actor.actor_id &nbsp;</span></div>
+					<div class="stl_01" style="left:10.4044em;top:22.9061em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:10.4044em;top:23.7986em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">INNER JOIN sakila.film_actor USING(film_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:10.4044em;top:24.6911em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">WHERE film.film_id = 1\G &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9169em;top:25.5844em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:26.4769em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:27.3694em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:28.2619em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">table: film &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:29.1544em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:30.0469em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">type: const &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:30.9394em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">possible_keys: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:31.8319em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">key: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:32.7244em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">key_len: 2 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:33.6169em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">ref: const &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:34.5094em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">rows: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:35.4019em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:36.2944em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">Extra: Using index &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9169em;top:37.1869em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">*************************** 2. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:38.0794em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:38.9719em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:39.8644em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">table: film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:40.7569em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:41.6494em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">type: index &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:42.5419em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">possible_keys: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:43.4343em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">key: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:44.3268em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">key_len: 4 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:45.2194em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">ref: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:46.1118em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">rows: 5462 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:47.0043em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">filtered: 10.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2888em;top:47.8968em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">Extra: Using where; Using index &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">208 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="230_0" style="position:absolute;left:0em;top:10.4286em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

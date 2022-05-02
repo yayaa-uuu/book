@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_67.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_67.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.098em;">Instead of talking about specific tools here, we will instead list some important fea‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0995em;">tures and aspects to think about when considering if a tool is good for this kind of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">long-term trending. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.4735em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Say no to averages &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.9409em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0266em;">Whether you are self-managing your metrics solution as an engineering organization &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.9909em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0427em;">or using a software as a service (SaaS), be careful how your metrics solution normal‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.0409em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.035em;">izes data for long-term storage. A lot of solutions aggregate long-term data into aver‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:13.0909em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0814em;">ages by default (Graphite is one of the first to do that), and that is a big problem. If &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:14.1409em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0676em;">you need to look at the trend of a metric over a period longer than a few weeks, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.1795em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.082em;">average will smooth </span><span class="stl_155 stl_41 stl_46" style="word-spacing:0.0801em;">down </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0794em;">peaks, which means if you are looking to see if your disk &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.2409em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0833em;">I/O utilization can double for the next year, a graph of average data points will very &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.2909em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0671em;">likely give you a false sense of security. Always look at peaks when trending months’ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.3409em;z-index:794;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">data, so you can keep the fidelity of occasional spikes in your view. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.3979em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Percentiles are your friend &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.8653em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1111em;">Percentiles rely on ordering the data points in a given time span and removing the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.9153em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0098em;">highest value ones depending on the target percentile (i.e., if you are looking for 95th, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.9653em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0536em;">remove the top 5%). This is an excellent way to make the data you are looking at get &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.0153em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1082em;">visually more similar to how we look at SLIs and SLOs. If you can make the graph &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.0653em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0551em;">showing your query response time show the 95th percentile, you can far more easily &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.1153em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1209em;">match that to the SLO you want to achieve for application-request completion and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.1653em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0575em;">make the database metrics make sense to folks like your customer support team and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.2153em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0009em;">your engineers, not just your database-engineering team. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.2722em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Long retention period and performance &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.7396em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0021em;">This may seem obvious, but the performance of a monitoring tool when trying to dis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.7896em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0424em;">play long time spans is important. If you are evaluating solutions for business-metric &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.8396em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0971em;">trending, you need to make sure to test out how the user experience changes when &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.8896em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0289em;">asking for longer and longer time spans of data. A metrics solution is only as good as &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.9396em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.06em;">it can be at making that data available, not just the speed of ingestion or how long it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.9896em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">keeps it. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.5396em;z-index:1807;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0671em;">Now that we have described what a long-term monitoring tool should look like, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:40.5896em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0801em;">discuss how all we’ve covered so far in choosing SLIs and SLOs can guide your data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.6396em;"><span class="stl_154 stl_32 stl_28">architecture. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.5239em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Using SLOs to Guide Your Overall Architecture &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.4237em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0162em;">Keeping a consistent and good customer experience while your business is also grow‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:46.4737em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0827em;">ing is no small feat. As the size of the business grows, keeping even the same SLOs, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:47.5237em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0576em;">much less setting more ambitious ones, becomes harder and harder. Take something &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">38 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3618em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2693em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 2: Monitoring in a Reliability Engineering World &nbsp;</span></div>
+					<a name="60_0" style="position:absolute;left:0em;top:43.817em;">&nbsp;</a>
+					<a name="60_1" style="position:absolute;left:0em;top:10.1702em;">&nbsp;</a>
+					<a name="60_2" style="position:absolute;left:0em;top:13.3202em;">&nbsp;</a>
+					<a name="60_3" style="position:absolute;left:0em;top:45.6529em;">&nbsp;</a>
+					<a name="60_4" style="position:absolute;left:0em;top:22.0945em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

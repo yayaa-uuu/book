@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_343.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_343.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">global &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">log 127.0.0.1 local0 notice &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">user haproxy &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">group haproxy &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:8.7792em;"><span class="stl_200 stl_171 stl_28">defaults &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:9.6292em;"><span class="stl_200 stl_171 stl_28">log global &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:10.4792em;"><span class="stl_200 stl_171 stl_28">retries 2 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">timeout connect 3000 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:12.1792em;"><span class="stl_200 stl_171 stl_28">timeout server 5000 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">timeout client 5000 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">listen mysql-readpool &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">bind 127.0.0.1:3306 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">mode tcp &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">option mysql-check user haproxy_check &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:18.1292em;"><span class="stl_200 stl_171 stl_28">balance leastconn &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:18.9792em;"><span class="stl_200 stl_171 stl_28">server mysql-1 10.0.0.1:3306 check &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:19.8292em;"><span class="stl_200 stl_171 stl_28">server mysql-2 10.0.0.2:3306 check &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.9666em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.021em;">Typically, you use configuration management to auto populate such a file. There are a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.0166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1636em;">few things to note in this configuration. Balancing between your pool nodes with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.0552em;"><span class="stl_155 stl_41 stl_93" style="word-spacing:0.041em;">leastconn </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0287em;">is the recommended way in MySQL. Random balancing such as </span><span class="stl_155 stl_41 stl_255">roundrobin &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.1166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0066em;">in times of elevated load will not help you use the hosts that are not overloaded. Make &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.1666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0484em;">sure you have the proper database user created on your MySQL instances to run this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.2166em;z-index:686;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0047em;">health check, or else all your nodes will be marked unhealthy. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.7666em;"><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0217em;">oling that facilitates sharding, such as Vitess and ProxySQL, can also act like a load &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.8166em;z-index:814;"><span class="stl_154 stl_32 stl_96" style="word-spacing:0.0131em;">balancer. We’ll cover these tools toward the end of the chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.7009em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Managing </span><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguration </span><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">for Read Pools &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.6007em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.012em;">Now that you have a “gate” between the application nodes and your replicas, you need &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.6507em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0899em;">a way to easily manage the nodes included, or not included, in this read pool using &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.7007em;z-index:1011;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0288em;">your load balancer of choice. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0314em;">u do not want this to be a manually managed config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.7507em;z-index:1062;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1031em;">uration. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0981em;">u are already on a trajectory of scaling to lots of database instances, and &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.8007em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1047em;">managing configuration files manually will lead to mistakes, slower response times, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.8507em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">and host failures, and it simply does not scale. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.4007em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1691em;">Service discovery is a good option to use here for automatically discovering what &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.4507em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.008em;">hosts can be in this list. This may mean deploying a service-discovery solution as part &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.5007em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.1241em;">of your tech stack or relying on a managed service-discovery option at your cloud &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.5507em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.045em;">provider, if that is available. The important thing to be careful with here is to be very &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.6007em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0372em;">specific on the criteria that make a read replica qualify for this read pool. Ideally, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:44.6507em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0195em;">exclude the source node and potentially one or more replicas dedicated for reporting. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:45.7007em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1351em;">But maybe you need something even more complex where the replicas are further &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.7507em;z-index:1781;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1769em;">segmented to serve different application read loads? </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1745em;">e </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1799em;">ecommend at minimum &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">294 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="316_0" style="position:absolute;left:0em;top:30.994em;">&nbsp;</a>
+					<a name="316_1" style="position:absolute;left:0em;top:22.2458em;">&nbsp;</a>
+					<a name="316_2" style="position:absolute;left:0em;top:32.8299em;">&nbsp;</a>
+					<a name="316_3" style="position:absolute;left:0em;top:23.2958em;">&nbsp;</a>
+					<a name="316_4" style="position:absolute;left:0em;top:39.6299em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

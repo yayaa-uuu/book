@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_300.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_300.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Undeﬁned </span><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Server IDs &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:6.1145em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0158em;">If you don’t define the server ID, MySQL will appear to set up replication with </span><span class="stl_170 stl_171 stl_28">CHANGE &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.2139em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">REPLICATION SOURCE T</span><span class="stl_170 stl_171 stl_186">O</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">but will not let you start the replica: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:8.9758em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">START REPLICA; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:9.8265em;"><span class="stl_200 stl_171 stl_28">ERROR 1200 (HY000): The server is not configured as replica; fix in config file &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:10.6765em;"><span class="stl_200 stl_171 stl_28">or with CHANGE REPLICATION SOURCE TO &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:11.8634em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0245em;">This error is especially confusing if you’ve just used </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0214em;">CHANGE REPLICATION SOURCE TO &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.9628em;z-index:374;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1233em;">and verified your settings with </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1233em;">SHOW REPLICA STATUS</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1233em;">. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1262em;">u might get a value from &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:14.0622em;z-index:462;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">SELECT @@server_id</span><span class="stl_154 stl_32 stl_59" style="word-spacing:0.0188em;">, but it’s just a default. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0083em;">u have to set the value explicitly. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.9465em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Missing Temporary Tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.8463em;z-index:486;"><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1434em;">mporary tables are handy for some uses, but unfortunately, they’re incompatible &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.8963em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0381em;">with statement-based replication. If a replica crashes or if you shut it down, any tem‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.9463em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1297em;">porary tables the replica thread was using disappear. When you restart the replica, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.9963em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">any further statements that refer to the missing temporary tables will fail. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.5463em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0569em;">The best approach here is to use row-based replication. The second-best approach is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.6458em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1484em;">to name your temporary tables consistently (prefix with </span><span class="stl_170 stl_171 stl_28">temporary_</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1522em;">, for example) &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.6958em;z-index:957;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.006em;">and use replication rules to skip replicating them entirely. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.5801em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Not Replicating All Updates &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.5293em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0554em;">If you misuse </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0554em;">SET SQL_LOG_BIN=</span><span class="stl_170 stl_171 stl_462">0</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0623em;">or don’t understand the replication filtering rules, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.5793em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1519em;">your replica might not execute some updates that have taken place on the source. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:30.6293em;z-index:1169;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1116em;">Sometimes you want this for archiving purposes, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1092em;">s </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1113em;">sually accidental and has &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.6793em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">bad consequences. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.2787em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0687em;">For example, suppose you have a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1946em;">replicate_do_db </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0654em;">rule to replicate only the </span><span class="stl_170 stl_171 stl_28">sakila &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.3287em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2055em;">database to one of your replicas. If you execute the following commands on the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.3787em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0089em;">source, the replica’s data will become different from the data on the source: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.1406em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">USE test; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.9906em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE sakila.actor ... &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.1287em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0764em;">Other types of statements can even cause replication to fail with an error because of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.1787em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">nonreplicated dependencies. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:42.063em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Excessive Replication Lag &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.9628em;z-index:1617;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0441em;">Replication lag is a frequent problem. No matter what, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0375em;">s a </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0375em;">ood idea to design your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.0128em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0469em;">applications to tolerate some lag on the replicas. Here are some common approaches &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.0628em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">to reducing replication lag: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">252 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="274_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="274_1" style="position:absolute;left:0em;top:16.2396em;">&nbsp;</a>
+					<a name="274_2" style="position:absolute;left:0em;top:26.8731em;">&nbsp;</a>
+					<a name="274_3" style="position:absolute;left:0em;top:42.3561em;">&nbsp;</a>
+					<a name="274_4" style="position:absolute;left:0em;top:44.1921em;">&nbsp;</a>
+					<a name="274_5" style="position:absolute;left:0em;top:6.3437em;">&nbsp;</a>
+					<a name="274_6" style="position:absolute;left:0em;top:18.0756em;">&nbsp;</a>
+					<a name="274_7" style="position:absolute;left:0em;top:28.7585em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

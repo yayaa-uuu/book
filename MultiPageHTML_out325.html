@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_353.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_353.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;z-index:53;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.1304em;">Cross-shard queries can also benefit from summary tables. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1318em;">u can build them by &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1918em;">traversing all the shards and storing the results redundantly on each shard when &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0787em;">they’re complete. If duplicating the data on each shard is too wasteful, you can con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0034em;">solidate the summary tables onto another data store so that they’re stored only once. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.0166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0656em;">Nonsharded data often lives in the global node, with heavy caching to shield it from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.0666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the load. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.6166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0123em;">Some applications use essentially random sharding where consistent data distribution &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.6666em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0502em;">is important or when there is no good partitioning key. A distributed search applica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.7166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1992em;">tion is a good example. In this case, cross-shard queries and aggregation are the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.7666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">norm, not the exception. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.3166em;z-index:636;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0915em;">Querying across shards isn’t the only thing that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0837em;">s </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0866em;">arder with sharding. Maintaining &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.3666em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0901em;">data consistency is also difficult. Foreign keys won’t work across shards, so the nor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.4166em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0805em;">mal solution is to check referential integrity as needed in the application or use for‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.4666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1453em;">eign keys within a shard because internal consistency within a shard might be the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.5166em;"><span class="stl_154 stl_32 stl_42" style="word-spacing:0.0936em;">most important thing. It’s possible to use </span><a href="https://oreil.ly/Z5gSe" target="_blank"><span class="stl_184 stl_32 stl_289" style="word-spacing:0.0761em;">XA transactions</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0799em;">, but this is uncommon in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.5666em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">practice because of the overhead. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.1166em;z-index:1054;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0091em;">u can also design clean-up processes that run intermittently. For example, if a user</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.1666em;z-index:1114;"><span class="stl_154 stl_32 stl_139" style="word-spacing:0.061em;">book-club account expires, you don’t have to remove it immediately. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0508em;">u can write a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.2166em;z-index:1152;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1108em;">periodic job to remove the user</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1108em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1138em;">omments from the per-book shard, and you can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.2666em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1529em;">build a checker script that runs periodically and makes sure the data is consistent &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.3166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">across the shards. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.8666em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0144em;">Now that we have explained the different ways you can split your data across multiple &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.9166em;z-index:1391;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1544em;">clusters and how to choose a partitioning key, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1485em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1485em;">over two of the most popular &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.9666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">open source tools that can help facilitate both sharding and partitioning. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.8509em;"><span class="stl_180 stl_27 stl_28">Vitess &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.7507em;z-index:1548;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0471em;">Vitess is a database-clustering system for MySQL. It originated within </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_52">T</span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0412em;">be, then &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.8007em;z-index:1620;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0508em;">became PlanetScale, a separate product and company cofounded by Jiten </span><span class="stl_154 stl_32 stl_113">V</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0471em;">idya and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.8507em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">Sugu Sougoumarane. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.4007em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0063em;">Vitess enables a number of features: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:40.284em;"><span class="stl_154 stl_32 stl_150" style="word-spacing:0.2826em;">• Horizontal</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0049em;">&nbsp;</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0011em;">sharding support, including sharding the data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:41.6674em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_104">pology</span><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0048em;">&nbsp;</span><span class="stl_154 stl_32 stl_33">management &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:43.0507em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Source</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">node failover management &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:44.434em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Schema</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">change management &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:45.8173em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Connection</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28">pooling &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:47.2007em;"><span class="stl_154 stl_32 stl_353" style="word-spacing:0.2582em;">• Query</span><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0072em;">&nbsp;</span><span class="stl_154 stl_32 stl_28">rewriting &nbsp;</span></div>
+					<div class="stl_01" style="left:26.3296em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Scaling Writes with Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">303 &nbsp;</span></div>
+					<a name="325_0" style="position:absolute;left:0em;top:33.144em;">&nbsp;</a>
+					<a name="325_1" style="position:absolute;left:0em;top:34.9799em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

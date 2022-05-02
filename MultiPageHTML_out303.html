@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_329.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_329.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.7446em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Backup with encryption.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.5335em;">&nbsp;</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0235em;">The last example we want to cover is using encryption as part &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.8378em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0528em;">of your backup strategy. Using encryption will use more CPU, and your backup pro‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:6.8877em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2115em;">cess will take longer; however, this could be an acceptable trade-off given that a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:7.9378em;z-index:257;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.01em;">backup is an easy target to get a lot of data with one file. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_215" style="word-spacing:0.0212em;">e’re again using the backup &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:9.0372em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.1em;">mode and streaming, but we’re using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1656em;">encrypt </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0907em;">with a cipher and </span><span class="stl_170 stl_171 stl_28">encrypt-key-file &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:10.0872em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">to point to where the key is: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.8498em;"><span class="stl_200 stl_171 stl_28">$ xtrabackup --backup --encrypt=AES256 --encrypt-key- &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:12.6998em;"><span class="stl_200 stl_171 stl_28">file=/safe/key/location/encrypt.key --stream=xbstream &gt; /backups/backup- &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:13.5498em;"><span class="stl_200 stl_171 stl_28">encrypted.xbstream &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.6872em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0003em;">Our output changed again, indicating “Encrypting and streaming” for each file. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.2866em;z-index:639;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1em;">Note that you can also use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.162em;">--encrypt-key </span><span class="stl_154 stl_32 stl_227" style="word-spacing:0.0926em;">and specify it on the command line. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_52">e &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.3366em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0477em;">discourage doing this because the key will be exposed in the process list or as part of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.3753em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the </span><span class="stl_155 stl_41 stl_149" style="word-spacing:0.0145em;">/proc </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">filesystem on Linux. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.3647em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0.0001em;">Other important </span><span class="stl_491 stl_27 stl_28">ﬂags</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.5371em;">. </span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0319em;">One of the aspects you’ll want to pay attention to is how long it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.5072em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0182em;">takes your backup to complete. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0164em;">o </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0185em;">elp with this, take a look at the </span><span class="stl_170 stl_171 stl_28">--paralle</span><span class="stl_170 stl_171 stl_334">l</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0161em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.017em;">- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.6067em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0041em;">compress-threads </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.2545em;">options. Using these will increase the CPU usage but should &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.6567em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0676em;">reduce the overall time it takes to back up. Encryption also has a similar paralleliza‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.7067em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tion option. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.3061em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0871em;">If you have a large number of databases and tables, look at </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1738em;">--rsync </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0829em;">to optimize the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.3561em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">file-copy process. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9993em;top:29.2526em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Recovering from a Backup &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.5228em;z-index:1181;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0078em;">How you recover your data depends on how you backed it up. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0071em;">u might need to take &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.5728em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">some or all of the following steps: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4431em;top:34.4561em;z-index:1247;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2726em;">1. Stop</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_25" style="word-spacing:0.011em;">the MySQL server. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:35.8395em;z-index:1271;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">2. </span><span class="stl_154 stl_32 stl_127">T</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28">ke</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_146" style="word-spacing:-0.0045em;">notes on the server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">onfiguration and file permissions. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:37.2228em;z-index:1355;"><span class="stl_154 stl_32 stl_116" style="word-spacing:0.2857em;">3. Move</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0065em;">&nbsp;</span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0074em;">the data from the backup into the MySQL data directory. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:38.6061em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.2812em;">4. Make</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0043em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">configuration changes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:39.9895em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">5. Change</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">file permissions. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:41.3728em;z-index:1467;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">6. Restart</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">the server with limited access, and wait for it to start fully. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:42.7562em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">7. Reload</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">logical backup files. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:44.1395em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">8. Examine</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0014em;">and replay binary logs. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:45.5228em;z-index:1527;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">9. </span><span class="stl_154 stl_32 stl_52">V</span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_217">rify</span><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0057em;">&nbsp;</span><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0096em;">what you’ve restored. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.023em;top:46.9061em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">10. Restart</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_135" style="word-spacing:-0.0031em;">the server with full access. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0258em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Recovering from a Backup &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">281 &nbsp;</span></div>
+					<a name="303_0" style="position:absolute;left:0em;top:29.6042em;">&nbsp;</a>
+					<a name="303_1" style="position:absolute;left:0em;top:27.5854em;">&nbsp;</a>
+					<a name="303_2" style="position:absolute;left:0em;top:31.7521em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

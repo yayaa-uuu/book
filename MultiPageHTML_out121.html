@@ -1,0 +1,49 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_126.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_126.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:31.0702em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 5 &nbsp;</span></div>
+					<div class="stl_01" style="left:17.5956em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Optimizing Server Settings &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0759em;">In this chapter, we’ll explain a process by which you can create a suitable configura‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.0806em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0609em;">tion file for your MySQL server. It is a roundabout trip, with many points of interest &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1472em;">and side trips to scenic overlooks. These side trips are necessary. Determining the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.1806em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1986em;">shortest path to a suitable configuration doesn’t start with studying configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.2306em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0571em;">options and asking which ones you should set or how you should change them. Nor &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.2806em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0838em;">does it begin with examining server behavior and asking whether any configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.3306em;z-index:519;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0902em;">options can improve it. It’s best to start with an understanding of MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2714em;">’s </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_24">nternals &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.3806em;z-index:542;"><span class="stl_154 stl_32 stl_44" style="word-spacing:0.2238em;">and behavior. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.2087em;">u can then use that knowledge as a guide for how to configure &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.4306em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0326em;">MySQL. Finally, you can compare the desired configuration to the current configura‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.4806em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0029em;">tion and correct any significant and worthwhile differences. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.0306em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.071em;">People often ask, “What’s the optimal configuration file for my server with 32 GB of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.0806em;z-index:838;"><span class="stl_154 stl_32 stl_42" style="word-spacing:0.1191em;">RAM and 12 CPU cores?” Unfortunately, it’s not that simple. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1052em;">u should configure &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.1306em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1352em;">the server for the workload, data, and application requirements, not just the hard‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.1806em;"><span class="stl_154 stl_32 stl_103" style="word-spacing:0.0583em;">ware. MySQL has scores of settings that you can change—but you shouldn’t. It’s usu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.2306em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1805em;">ally better to configure the basic settings correctly (and there are only a few that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:36.2806em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1395em;">matter in most cases) and spend more time on schema optimization, indexes, and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.3306em;z-index:1164;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.2276em;">query design. After you’ve set MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.4127em;">’s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.2284em;">asic configuration options correctly, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.3806em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">potential gains from further changes are usually small. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.9306em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.067em;">On the other hand, the potential downside of fiddling with the configuration can be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.9806em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.2435em;">great. The MySQL defaults are there with good reason. Changing them without &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.0306em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1069em;">understanding the impact can lead to crashes, constant stalls, or slow performance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.0806em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.3293em;">As such, you should never blindly trust what someone reports as an optimal &nbsp;</span></div>
+					<div class="stl_01" style="left:35.3882em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">99 &nbsp;</span></div>
+					<a name="121_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="121_1" style="position:absolute;left:0em;top:20.2598em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

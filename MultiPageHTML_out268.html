@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_293.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_293.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;z-index:41;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1342em;">ning and buffer pool churn in a failover. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1294em;">u have additional steps in a failover to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">point one of the sources to a newly promoted replica on top of it. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.9166em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.1215em;">We’re definitely against this as well, largely for the data access concerns. Cosources &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.9666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">only lead to trouble. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.0235em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Ring replication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:11.4795em;"><span class="stl_155 stl_41 stl_250" style="word-spacing:0.0581em;">Ring replication </span><span class="stl_154 stl_32 stl_178" style="word-spacing:0.0345em;">has three or more sources where each server is a replica of the server &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.5409em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0782em;">before it in the ring and a source of the server after it, as shown in </span><a href="MultiPageHTML_out268.html#268_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0797em;">Figure 9-9</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0797em;">. This &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.5795em;"><span class="stl_154 stl_32 stl_135" style="word-spacing:-0.003em;">topology is also called </span><span class="stl_155 stl_41 stl_136" style="word-spacing:0.0177em;">circular replication</span><span class="stl_154 stl_32 stl_136" style="word-spacing:0.0177em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.4454em;"><span class="stl_155 stl_41 stl_96" style="word-spacing:0.0132em;">Figure 9-9. A replication ring topology &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.5068em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0635em;">If any server in this topology goes offline, your topology is broken and updates stop &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.5568em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1719em;">flowing around the ring. There are attached replica variations of this, where each &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.6068em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1029em;">source in </span><a href="MultiPageHTML_out268.html#268_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.1029em;">Figure 9-9 </span></a><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1058em;">has a dedicated replica to swap in. That still means the ring is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.6568em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">broken until you promote a replica into the former position. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.2068em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0007em;">This topology is the opposite of simple and has no advantages. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.2637em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Multisource replication &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.7311em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0307em;">While keeping your replication topology simple is important, there may be situations &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.7811em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0543em;">where you need to use more advanced features to handle one-off functions. Suppose &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.8311em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0524em;">you built a brand-new video upload and viewing site, which is now becoming popu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.8811em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.14em;">lar. One of your early design decisions was to separate data about videos and data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.9311em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1164em;">about users into two separate database clusters. As you’ve grown, you find yourself &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.9811em;z-index:1175;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0209em;">wanting to merge them back together in queries. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0232em;">u can accomplish this with multi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.0311em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1813em;">source replication to bring back both data sets together in a replica, as shown in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.0811em;"><a href="MultiPageHTML_out269.html#269_2"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 9-10</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">246 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="268_0" style="position:absolute;left:0em;top:15.2827em;">&nbsp;</a>
+					<a name="268_1" style="position:absolute;left:0em;top:8.1958em;">&nbsp;</a>
+					<a name="268_2" style="position:absolute;left:0em;top:33.9604em;">&nbsp;</a>
+					<a name="268_3" style="position:absolute;left:0em;top:11.7202em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_32.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_32.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0004em;top:4.3166em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0828em;">A locking strategy is a compromise between lock overhead and data safety, and that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:5.3666em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1306em;">compromise affects performance. Most commercial database servers don’t give you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.4166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0038em;">much choice: you get what is known as row-level locking in your tables, with a variety &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.4666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1481em;">of often complex ways to give good performance with many locks. Locks are how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.5166em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0362em;">databases implement consistency guarantees. An expert operator of a database would &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.5666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0471em;">have to go as far as reading the source code to determine the most appropriate set of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.6166em;z-index:590;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">tuning configurations to optimize this trade-off of speed versus data safety. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.1666em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1664em;">MySQL, on the other hand, does offer choices. Its storage engines can implement &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.2166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0531em;">their own locking policies and lock granularities. Lock management is a very impor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.2666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.16em;">tant decision in storage-engine design; fixing the granularity at a certain level can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0495em;">improve performance for certain uses yet make that engine less suited for other pur‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.3666em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.2129em;">poses. Because MySQL offers multiple storage engines, it doesn’t require a single &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.4166em;z-index:971;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">general-purpose solution. Let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0055em;">ave a look at the two most important lock strategies. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.4735em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Table locks &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.9409em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1706em;">The most basic locking strategy available in MySQL, and the one with the lowest &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.9796em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0815em;">overhead, is table locks. A </span><span class="stl_155 stl_41 stl_59" style="word-spacing:0.0994em;">table lock </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0815em;">is analogous to the spreadsheet locks described &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:23.0409em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0143em;">earlier: it locks the entire table. When a client wishes to write to a table (insert, delete, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.0909em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0178em;">update, etc.), it acquires a write lock. This keeps all other read and write operations at &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.1409em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0277em;">bay. When nobody is writing, readers can obtain read locks, which don’t conflict with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.1909em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">other read locks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.7409em;z-index:1406;"><span class="stl_154 stl_32 stl_127">T</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.2517em;">ble locks have variations for improved performance in specific situations. For &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.8404em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1525em;">example, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0204em;">READ LOCAL </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1489em;">table locks allow some types of concurrent write operations. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.8904em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0571em;">Write and read lock queues are separate with the write queue being wholly of higher &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.9404em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0001em;">priority than the read queue.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out27.html#27_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:-0.0001em;">3 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9999em;top:32.9973em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Row locks &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.4647em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0855em;">The locking style that offers the greatest concurrency (and carries the greatest over‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.5033em;z-index:1777;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0295em;">head) is the use of row locks. Going back to the spreadsheet analogy, </span><span class="stl_155 stl_41 stl_86" style="word-spacing:0.0438em;">row locks </span><span class="stl_154 stl_32 stl_28">would &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.5647em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0711em;">be the same as locking just the row in the spreadsheet. This strategy allows multiple &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.6147em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0148em;">people to edit different rows concurrently without blocking one another. This enables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.6647em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0322em;">the server to take more concurrent writes, but the cost is more overhead in having to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.7147em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0036em;">keep track of who has each row lock, how long they have been open, and what kind of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.7647em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">row locks they are as well as cleaning up locks when they are no longer needed. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">3</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;z-index:5;"><span class="stl_168 stl_32 stl_52" style="word-spacing:0.194em;">We </span><span class="stl_168 stl_32 stl_28">d</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">efinitely recommend you read </span><a href="https://oreil.ly/EPfwc" target="_blank"><span class="stl_187 stl_32 stl_35" style="word-spacing:0.0029em;">the documentation on exclusive versus shared locks, intention locking, &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><a href="https://oreil.ly/EPfwc" target="_blank"><span class="stl_187 stl_32 stl_28" style="word-spacing:0em;">and record locks</span></a><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:29.0916em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Concurrency Control &nbsp;</span></div>
+					<div class="stl_01" style="left:34.7864em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.6939em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">5</span></div>
+					<a name="27_0" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="27_1" style="position:absolute;left:0em;top:34.6939em;">&nbsp;</a>
+					<a name="27_2" style="position:absolute;left:0em;top:21.1702em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

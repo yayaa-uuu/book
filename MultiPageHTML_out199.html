@@ -1,0 +1,43 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_212.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_212.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:25.8211em;"><span class="stl_155 stl_41 stl_98" style="word-spacing:0.0151em;">Figure 7-7. Inserting nonsequential values into a clustered index &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.8825em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1184em;">Because each new row doesn’t necessarily have a larger primary key value than the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:28.9325em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0215em;">previous one, InnoDB cannot always place the new row at the end of the index. It has &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.9825em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0352em;">to find the appropriate place for the row—on average, somewhere near the middle of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.0325em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.009em;">the existing data—and make room for it. This causes a lot of extra work and results in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.0825em;"><span class="stl_154 stl_32 stl_151" style="word-spacing:0.01em;">a suboptimal data layout. Here’s a summary of the drawbacks: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:33.9658em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1833em;">• The destination page might have been flushed to disk and removed from the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.0158em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0198em;">caches or might not have ever been placed into the caches, in which case InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:36.0658em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0126em;">will have to find it and read it from the disk before it can insert the new row. This &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:37.1158em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0074em;">causes a lot of random I/O. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:38.4992em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• When</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0861em;">&nbsp;</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0895em;">insertions are done out of order, InnoDB has to split pages frequently to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:39.5492em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.013em;">make room for new rows. This requires moving around a lot of data and modify‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:40.5992em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0015em;">ing at least three pages instead of one. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:41.9825em;"><span class="stl_154 stl_32 stl_25" style="word-spacing:0.2839em;">• Pages</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0449em;">&nbsp;</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0408em;">become sparsely and irregularly filled because of splitting, so the final data &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:43.0325em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0035em;">is fragmented. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:44.9158em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0562em;">After loading such random values into a clustered index, you should probably do an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:46.0153em;z-index:977;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">OPTIMIZE TABL</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0044em;">to rebuild the table and fill the pages optimally. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.209em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">177 &nbsp;</span></div>
+					<a name="199_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

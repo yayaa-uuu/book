@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_262.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_262.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1615em;">A frequent problem is having a high value for the offset. If your query looks like &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:5.416em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0506em;">LIMIT 10000, 20</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0531em;">, it is generating 10,020 rows and throwing away the first 10,000 of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.466em;z-index:209;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0289em;">them, which is very expensive. Assuming all pages are accessed with equal frequency, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.516em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.111em;">such queries scan half the table on average. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1098em;">o </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1098em;">ptimize them, you can either limit &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.566em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0951em;">how many pages are permitted in a pagination view or try to make the high offsets &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.616em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">more efficient. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1005em;">One simple technique to improve efficiency is to do the offset on a covering index, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.216em;z-index:451;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0457em;">rather than the full rows. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0435em;">u can then join the result to the full row and retrieve the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.266em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0482em;">additional columns you need. This can be much more efficient. Consider the follow‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.316em;"><span class="stl_154 stl_32 stl_434" style="word-spacing:-0.0171em;">ing query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:16.0779em;"><span class="stl_265 stl_173 stl_28">SELECT film_id, description FROM sakila.film ORDER BY title LIMIT 50, 5; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.216em;"><span class="stl_154 stl_32 stl_178" style="word-spacing:-0.0027em;">If the table is very large, this query is better written as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:18.9779em;"><span class="stl_265 stl_173 stl_28">SELECT film.film_id, film.description &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:19.8279em;"><span class="stl_265 stl_173 stl_28">FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:20.6779em;"><span class="stl_265 stl_173 stl_28">INNER JOIN ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:21.5279em;"><span class="stl_265 stl_173 stl_28">SELECT film_id FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:22.3779em;"><span class="stl_265 stl_173 stl_28">ORDER BY title LIMIT 50, 5 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:23.2279em;"><span class="stl_265 stl_173 stl_28">) AS lim USING(film_id); &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.366em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.066em;">This “deferred join” works because it lets the server examine as little data as possible &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.416em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.089em;">in an index without accessing rows and then, once the desired rows are found, join &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.466em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0167em;">them against the full table to retrieve the other columns from the row. A similar tech‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.5655em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">nique applies to joins with </span><span class="stl_170 stl_171 stl_28">LIMI</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_24">clauses. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.1155em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0532em;">Sometimes you can also convert the limit to a positional query, which the server can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.1655em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0385em;">execute as an index range scan. For example, if you precalculate and index a position &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.2155em;"><span class="stl_154 stl_32 stl_185" style="word-spacing:-0.0019em;">column, you can rewrite the query as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:32.9773em;"><span class="stl_265 stl_173 stl_28">SELECT film_id, description FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:33.8273em;"><span class="stl_265 stl_173 stl_28">WHERE position BETWEEN 50 AND 54 ORDER BY position; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.0149em;z-index:1403;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0404em;">Ranked data poses a similar problem but usually mixes </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0403em;">GROUP B</span><span class="stl_170 stl_171 stl_465">Y</span><span class="stl_154 stl_32 stl_346" style="word-spacing:0.0648em;">into the fray. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_24">u’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.0649em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">almost certainly need to precompute and store ranks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.6643em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0686em;">The problem with </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1888em;">LIMIT </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0686em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1888em;">OFFSET </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0686em;">is really the </span><span class="stl_170 stl_171 stl_28">OFFSET</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0707em;">, which represents rows the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.7143em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0795em;">server is generating and throwing away. If you use a sort of cursor to remember the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.7643em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0326em;">position of the last row you fetched, you can generate the next set of rows by starting &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:40.8638em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0822em;">from that position instead of using an </span><span class="stl_170 stl_171 stl_28">OFFSET</span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0873em;">. For example, if you want to paginate &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.9138em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0896em;">through rental records starting from the newest rentals and working backward, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.9638em;z-index:1856;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0848em;">can rely on the fact that their primary keys are always increasing. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0844em;">u can fetch the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.0138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">first set of results like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:45.7757em;"><span class="stl_265 stl_173 stl_28">SELECT * FROM sakila.rental &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:46.6257em;"><span class="stl_265 stl_173 stl_28">ORDER BY rental_id DESC LIMIT 20; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">224 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="246_0" style="position:absolute;left:0em;top:24.5953em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

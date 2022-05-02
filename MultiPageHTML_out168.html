@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_174.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_174.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The ENUM in Disguise &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:6.1145em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.105em;">An </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1505em;">ENUM </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.105em;">permits the column to hold one value from a set of defined values. A </span><span class="stl_170 stl_171 stl_28">SET &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.1645em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0802em;">permits the column to hold one or more values from a set of defined values. Some‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.2145em;z-index:183;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0064em;">times these can be easy to confuse. Here</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">n example: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:9.9771em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE ...( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:10.8271em;"><span class="stl_200 stl_171 stl_28">is_default set('Y','N') NOT NULL default 'N' &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.0139em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0131em;">That almost surely ought to be an </span><span class="stl_170 stl_171 stl_28">ENU</span><span class="stl_170 stl_171 stl_402">M</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0092em;">instead of a </span><span class="stl_170 stl_171 stl_28">SET</span><span class="stl_154 stl_32 stl_66" style="word-spacing:0.0235em;">, assuming that it can’t be both &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.0639em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">true and false at the same time. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.9482em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">NULL Not Invented Here &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:16.8974em;z-index:364;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.2386em;">We </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0458em;">rote earlier about the benefits of avoiding </span><span class="stl_170 stl_171 stl_28">NULL</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0446em;">, and indeed, we suggest consid‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:17.9474em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0413em;">ering alternatives when possible. Even when you do need to store a “no value” fact in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.0469em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.044em;">a table, you might not need to use </span><span class="stl_170 stl_171 stl_28">NULL</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0478em;">. Perhaps you can use zero, a special value, or &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.0969em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">an empty string instead. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.6963em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0771em;">However, you can take this to extremes. Don’t be too afraid of using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1898em;">NULL </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0676em;">when you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.7958em;z-index:706;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1541em;">need to represent an unknown value. In some cases, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1514em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1514em;">etter to use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1016em;">NULL </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1514em;">than a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.8458em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0349em;">magical constant. Selecting one value from the domain of a constrained type, such as &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.8958em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0512em;">using −1 to represent an unknown integer, can complicate your code a lot, introduce &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.9952em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0872em;">bugs, and just generally make a total mess out of things. Handling </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1704em;">NULL </span><span class="stl_154 stl_32 stl_403" style="word-spacing:0.1159em;">isn’t always &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.0452em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.0126em;">easy, but it’s often better than the alternative. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.5952em;"><span class="stl_154 stl_32 stl_192" style="word-spacing:0.0157em;">Here’s one example we’ve seen pretty frequently: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:30.3578em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE ... ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:31.2078em;"><span class="stl_200 stl_171 stl_28">dt DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00' &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.3452em;z-index:1149;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1181em;">That bogus all-zeros value can cause lots of problems. (</span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1207em;">u can configure MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34">’s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.4446em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1768em;">SQL_MODE </span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0808em;">to disallow nonsense dates, which is an especially good practice for a new &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.4946em;"><span class="stl_154 stl_32 stl_100" style="word-spacing:0.0105em;">application that hasn’t yet created a database full of bad data.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.0941em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1369em;">On a related topic, MySQL does index </span><span class="stl_170 stl_171 stl_28">NULL</span><span class="stl_154 stl_32 stl_148" style="word-spacing:0.1408em;">s, unlike Oracle, which doesn’t include &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.1441em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0029em;">nonvalues in indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.6941em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.054em;">Now that we have covered a lot of practical advice around data types, how to choose &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.7441em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0793em;">them, and what not to do, let’s move on to the other piece of good, iterative schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.7941em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">design: schema management. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.6906em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Schema Management &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.9608em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0086em;">Running schema changes is one of the most common tasks a database engineer has to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:46.0108em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.153em;">undertake. When you get to the stage of running dozens or hundreds of database &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:47.0608em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0093em;">instances with varying business contexts and evolving features, you want to be careful &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:48.1108em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0202em;">that applying these schema changes is not a bottleneck for the entire organization but &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">146 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="168_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="168_1" style="position:absolute;left:0em;top:15.2413em;">&nbsp;</a>
+					<a name="168_2" style="position:absolute;left:0em;top:43.0422em;">&nbsp;</a>
+					<a name="168_3" style="position:absolute;left:0em;top:6.3437em;">&nbsp;</a>
+					<a name="168_4" style="position:absolute;left:0em;top:17.1267em;">&nbsp;</a>
+					<a name="168_5" style="position:absolute;left:0em;top:45.19em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

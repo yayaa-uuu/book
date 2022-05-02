@@ -1,0 +1,79 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_194.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_194.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">There are many more occurrences of each prefix, so there are many fewer unique pre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.3666em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0115em;">fixes than unique full-length city names. The idea is to increase the prefix length until &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.4166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0315em;">the prefix becomes nearly as selective as the full length of the column. A little experi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.516em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0076em;">mentation shows that </span><span class="stl_170 stl_171 stl_186">7</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">is a good value: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:9.2779em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT COUNT(*) AS c, LEFT(city, 7) AS pref &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:10.1279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.city_demo GROUP BY pref ORDER BY c DESC LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:10.9786em;"><span class="stl_200 stl_171 stl_28">+-----+---------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.8286em;"><span class="stl_200 stl_171 stl_28">| c &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5418em;top:11.8286em;"><span class="stl_200 stl_171 stl_28">| pref &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:11.8286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:12.6786em;"><span class="stl_200 stl_171 stl_28">+-----+---------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:13.5286em;"><span class="stl_200 stl_171 stl_28">| 70</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Santiag | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:14.3786em;"><span class="stl_200 stl_171 stl_28">| 68</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| San Fel | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:15.2286em;"><span class="stl_200 stl_171 stl_28">| 65</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| London &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:15.2286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:16.0786em;"><span class="stl_200 stl_171 stl_28">| 61</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Valle d | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:16.9286em;"><span class="stl_200 stl_171 stl_28">| 49</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Hiroshi | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:17.7786em;"><span class="stl_200 stl_171 stl_28">| 48</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Teboksa | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:18.6286em;"><span class="stl_200 stl_171 stl_28">| 48</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Pak Kre | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:19.4786em;"><span class="stl_200 stl_171 stl_28">| 48</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Yaound &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:19.4786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:20.3286em;"><span class="stl_200 stl_171 stl_28">| 47</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Tel Avi | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:21.1786em;"><span class="stl_200 stl_171 stl_28">| 47</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Shimoga | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:22.0286em;"><span class="stl_200 stl_171 stl_28">+-----+---------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.166em;z-index:585;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0204em;">Another way to calculate a good prefix length is by computing the full column</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.015em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28">elec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.216em;z-index:657;"><span class="stl_154 stl_32 stl_141" style="word-spacing:0.0312em;">tivity and trying to make the prefix</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0336em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0414em;">electivity close to that value. Here</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0336em;">s </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0336em;">ow to find &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.266em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.0127em;">the full column’s selectivity: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:27.0279em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT COUNT(DISTINCT city)/COUNT(*) FROM sakila.city_demo; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:27.8786em;"><span class="stl_200 stl_171 stl_28">+-------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:28.7286em;"><span class="stl_200 stl_171 stl_28">| COUNT(DISTINCT city)/COUNT(*) | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:29.5786em;"><span class="stl_200 stl_171 stl_28">+-------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:30.4286em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:11.5em;">| 0.0312</span><span class="stl_200 stl_171 stl_28">&nbsp;</span><span class="stl_200 stl_171 stl_28" style="word-spacing:11.5em;">| &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:31.2786em;"><span class="stl_200 stl_171 stl_28">+-------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.416em;z-index:934;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0418em;">The prefix will be about as good, on average (there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0372em;">s a </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0409em;">aveat here, though), if we tar‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.466em;z-index:1040;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0133em;">get a selectivity near .031. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0071em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0124em;">ossible to evaluate many different lengths in one query, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.516em;z-index:1077;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0306em;">which is useful on very large tables. Here</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0268em;">s </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0268em;">ow to find the selectivity of several prefix &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.566em;"><span class="stl_154 stl_32 stl_423" style="word-spacing:-0.0086em;">lengths in one query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.3279em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">SELECT COUNT(DISTINCT LEFT(city, 3))/COUNT(*) AS sel3, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:38.1779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">COUNT(DISTINCT LEFT(city, 4))/COUNT(*) AS sel4, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:39.0279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">COUNT(DISTINCT LEFT(city, 5))/COUNT(*) AS sel5, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:39.8779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">COUNT(DISTINCT LEFT(city, 6))/COUNT(*) AS sel6, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:40.7279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">COUNT(DISTINCT LEFT(city, 7))/COUNT(*) AS sel7 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:41.5779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.city_demo; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:42.4286em;"><span class="stl_200 stl_171 stl_28">+--------+--------+--------+--------+--------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:43.2786em;"><span class="stl_200 stl_171 stl_28">| sel3</span><span class="stl_200 stl_171 stl_28" style="word-spacing:1em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| sel4 &nbsp;</span></div>
+					<div class="stl_01" style="left:13.7914em;top:43.2786em;"><span class="stl_200 stl_171 stl_28">| sel5 &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9789em;top:43.2786em;"><span class="stl_200 stl_171 stl_28">| sel6 &nbsp;</span></div>
+					<div class="stl_01" style="left:20.1664em;top:43.2786em;"><span class="stl_200 stl_171 stl_28">| sel7 &nbsp;</span></div>
+					<div class="stl_01" style="left:23.3539em;top:43.2786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4164em;top:44.1286em;"><span class="stl_200 stl_171 stl_28">+--------+--------+--------+--------+--------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:44.9786em;"><span class="stl_200 stl_171 stl_28">| 0.0239 | 0.0293 | 0.0305 | 0.0309 | 0.0310 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:45.8286em;"><span class="stl_200 stl_171 stl_28">+--------+--------+--------+--------+--------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.966em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.2035em;">This query shows that increasing the prefix length results in successively smaller &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:48.016em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">improvements as it approaches seven characters. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">164 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

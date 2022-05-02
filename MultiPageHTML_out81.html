@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_88.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_88.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">1 row in set (1.44 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">-- Execute a few more times with different values &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">Then you can check the diagnostics: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:9.1285em;"><span class="stl_200 stl_171 stl_28">mysql2&gt; </span><span class="stl_265 stl_173 stl_28">SELECT statement_name, sql_text, owner_thread_id, &nbsp;</span></div>
+					<div class="stl_01" style="left:9.1878em;top:9.9785em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">count_reprepare, count_execute, sum_timer_execute &nbsp;</span></div>
+					<div class="stl_01" style="left:9.1878em;top:10.8285em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM prepared_statements_instances\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:11.6792em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:12.5292em;"><span class="stl_200 stl_171 stl_28">statement_name: stmt &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:13.3792em;"><span class="stl_200 stl_171 stl_28">sql_text: select count(*) from employees where hire_date &gt; ? &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:14.2292em;"><span class="stl_200 stl_171 stl_28">owner_thread_id: 22 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:15.0792em;"><span class="stl_200 stl_171 stl_28">count_reprepare: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:15.9292em;"><span class="stl_200 stl_171 stl_28">count_execute: 3 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:16.7792em;"><span class="stl_200 stl_171 stl_28">sum_timer_execute: 4156561368000 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:17.6292em;"><span class="stl_200 stl_171 stl_28">1 row in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:18.816em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1064em;">Note that you will see the statements in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1554em;">prepared_statements_instances </span><span class="stl_154 stl_32 stl_28">table &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.866em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.111em;">only when they exist in the server. Once they are dropped, you cannot access their &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.916em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0052em;">statistics anymore: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:22.6779em;"><span class="stl_200 stl_171 stl_28">mysql1&gt; </span><span class="stl_265 stl_173 stl_28">DROP PREPARE stmt; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:23.5286em;"><span class="stl_200 stl_171 stl_28">Query OK, 0 rows affected (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:25.2279em;"><span class="stl_200 stl_171 stl_28">mysql2&gt; </span><span class="stl_265 stl_173 stl_28">SELECT * FROM prepared_statements_instances\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:26.0786em;"><span class="stl_200 stl_171 stl_28">Empty set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:27.723em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Stored routines &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.2398em;"><span class="stl_154 stl_32 stl_18" style="word-spacing:0.0712em;">With </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_307">a</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0449em;">you can retrieve information about how your stored rou‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.3392em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0653em;">tines were executed: for example, which of the branches of the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0215em;">IF … ELSE </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0643em;">flow con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.3892em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">trol statement has been chosen or if an error handler was called. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.9392em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2814em;">To </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.088em;">nable stored routines instrumentation, you need to enable instruments that fol‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.0387em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.072em;">low the pattern </span><span class="stl_170 stl_171 stl_28">'statement/sp/%'</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0717em;">. The instrument </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1892em;">statement/sp/stmt </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0682em;">is responsi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:35.0887em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.3763em;">ble for the statements, called inside the routine, while other instruments are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.1387em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1329em;">responsible for tracking events, such as entering or leaving the procedure, loop, or &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.1887em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0037em;">any other control instruction. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.7387em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.6812em;">To </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.4874em;">emonstrate how stored routines instrumentation works, use the stored &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.7887em;"><span class="stl_154 stl_32 stl_28">procedure: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:41.5513em;"><span class="stl_200 stl_171 stl_28">CREATE DEFINER='root'@'localhost' PROCEDURE 'sp_test'(val int) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:42.4013em;"><span class="stl_200 stl_171 stl_28">BEGIN &nbsp;</span></div>
+					<div class="stl_01" style="left:8.1249em;top:43.2513em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">DECLARE CONTINUE HANDLER FOR 1364, 1048, 1366 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.1249em;top:44.1013em;"><span class="stl_200 stl_171 stl_28">BEGIN &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:44.9513em;"><span class="stl_200 stl_171 stl_28">INSERT IGNORE INTO t1 VALUES('Some string'); &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:45.8013em;"><span class="stl_200 stl_171 stl_28">GET STACKED DIAGNOSTICS CONDITION 1 @stacked_state = RETURNED_SQLSTATE; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:46.6513em;"><span class="stl_200 stl_171 stl_28">GET STACKED DIAGNOSTICS CONDITION 1 @stacked_msg = MESSAGE_TEXT; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.1249em;top:47.5013em;"><span class="stl_200 stl_171 stl_28">END; &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0038em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4806em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3881em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">59 &nbsp;</span></div>
+					<a name="81_0" style="position:absolute;left:0em;top:29.469em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

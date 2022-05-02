@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_200.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_200.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4168em;top:4.5285em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT COUNT(*), SUM(groupId = 10137), &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:5.3785em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SUM(userId = 1288826), SUM(anonymous = 0) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:6.2285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM Message\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:7.9292em;"><span class="stl_200 stl_171 stl_28">count(*): 4142217 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:8.7792em;"><span class="stl_200 stl_171 stl_28">sum(groupId = 10137): 4092654 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:9.6292em;"><span class="stl_200 stl_171 stl_28">sum(userId = 1288826): 1288496 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:10.4792em;"><span class="stl_200 stl_171 stl_28">sum(anonymous = 0): 4141934 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.6166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0771em;">It turned out that this group owned almost every row in the table, and the user had &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.6666em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1603em;">1.3 million rows—in this case, there simply isn’t an index that can help! This was &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.7166em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.023em;">because the data was migrated from another application, and all of the messages were &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.7666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0095em;">assigned to the administrative user and group as part of the import process. The solu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.8166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0318em;">tion to this problem was to change the application code to recognize this special-case &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.8666em;z-index:769;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">user ID and group ID and not issue this query for that user. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.4166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0776em;">The moral of this little story is that rules of thumb and heuristics can be useful, but &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.4666em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0544em;">you have to be careful not to assume that average-case performance is representative &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.5166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2489em;">of special-case performance. Special cases can wreck performance for the whole &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.5666em;"><span class="stl_154 stl_32 stl_124">application. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.1166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0453em;">In the end, although the rule of thumb about selectivity and cardinality is interesting &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.1666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0123em;">to explore, other factors—such as sorting, grouping, and the presence of range condi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.266em;z-index:1156;"><span class="stl_154 stl_32 stl_204" style="word-spacing:0.2436em;">tions in the query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2484em;">s </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0004em;">WHERE </span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.2489em;">clause—can make a much bigger difference to query &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.316em;"><span class="stl_154 stl_32 stl_28">performance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.2003em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Clustered Indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.0887em;"><span class="stl_155 stl_41 stl_181" style="word-spacing:0.0723em;">Clustered indexes</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out192.html#192_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2779em;">5 </span></a></sup><span class="stl_154 stl_32 stl_153" style="word-spacing:0.0744em;">aren’t a separate type of index. Rather, they’re an approach to data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.1501em;z-index:1364;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2983em;">storage. The exact details vary among implementations, but InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.296em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28">lustered &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.2001em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">indexes actually store a B-tree index and the rows together in the same structure. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.7501em;z-index:1507;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1478em;">When a table has a clustered index, its rows are actually stored in the index</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1478em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_28">eaf &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.7887em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1588em;">pages. The term </span><span class="stl_155 stl_41 stl_149" style="word-spacing:0.1733em;">clustered </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1609em;">refers to the fact that rows with adjacent key values are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.8501em;z-index:1607;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0408em;">stored close to one another.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out192.html#192_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2307em;">6 </span></a></sup><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0367em;">u can have only one clustered index per table because &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.8887em;z-index:1698;"><span class="stl_154 stl_32 stl_215" style="word-spacing:0.0156em;">you can’t store the rows in two places at once. (However, </span><span class="stl_155 stl_41 stl_100" style="word-spacing:0.013em;">covering indexes </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">allow you to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.9501em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0068em;">emulate multiple clustered indexes; more on this later.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.5001em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1838em;">Because storage engines are responsible for implementing indexes, not all storage &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.5501em;z-index:1876;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">engines support clustered indexes. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">e </span><span class="stl_154 stl_32 stl_28">f</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">ocus on InnoDB in this section, but the prin‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.6001em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0229em;">ciples we discuss are likely to be at least partially true for any storage engine that sup‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.6501em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ports clustered indexes now or in the future. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.1869em;"><span class="stl_167 stl_32 stl_28">5</span></div>
+					<div class="stl_01" style="left:6.0953em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">6</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.0958em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">Oracle users will be familiar with the term </span><span class="stl_229 stl_41 stl_116" style="word-spacing:0.0129em;">index-organized table</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">, which means the same thing. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_100" style="word-spacing:0.0104em;">This isn’t always true, as you’ll see in a moment. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">170 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="192_0" style="position:absolute;left:0em;top:28.4934em;">&nbsp;</a>
+					<a name="192_1" style="position:absolute;left:0em;top:47.1958em;">&nbsp;</a>
+					<a name="192_2" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+					<a name="192_3" style="position:absolute;left:0em;top:23.3458em;">&nbsp;</a>
+					<a name="192_4" style="position:absolute;left:0em;top:30.3294em;">&nbsp;</a>
+					<a name="192_5" style="position:absolute;left:0em;top:26.5453em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

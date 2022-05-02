@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_331.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_331.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0701em;">some things easier. For example, if you’re an administrative user in MySQL, you can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0628em;">turn off binary logging of the statements you’ll execute from within your client con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0008em;">nection and then load the file without needing to restart the MySQL server: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:8.1785em;"><span class="stl_265 stl_173 stl_28">SET SQL_LOG_BIN = 0; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:9.0285em;"><span class="stl_265 stl_173 stl_28">SOURCE sakila-backup.sql; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:9.8785em;"><span class="stl_265 stl_173 stl_28">SET SQL_LOG_BIN = 1; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:11.066em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0566em;">If you use </span><span class="stl_170 stl_171 stl_28">SOURCE</span><span class="stl_154 stl_32 stl_139" style="word-spacing:0.0669em;">, be aware that an error won’t abort a batch of statements, as it will &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.1047em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">by default when you redirect the file into </span><span class="stl_155 stl_41 stl_20">mysql</span><span class="stl_154 stl_32 stl_20">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.666em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.2416em;">If you compressed the backup, don’t separately decompress and load it. Instead, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.716em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0015em;">decompress and load it in a single operation. This is much faster: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:16.4779em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">gunzip -c sakila-backup.sql.gz | mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.6655em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0314em;">What if you want to restore only a single table (for example, the </span><span class="stl_170 stl_171 stl_28">acto</span><span class="stl_170 stl_171 stl_369">r</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0285em;">table)? If your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.7155em;z-index:628;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1226em;">data has no line breaks, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1172em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1183em;">ot hard to restore the data if the schema is already in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.7655em;"><span class="stl_154 stl_32 stl_28">place: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:21.5273em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">grep 'INSERT INTO `actor`' sakila-backup.sql | mysql sakila &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.6655em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0086em;">Or, if the file is compressed: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:24.4273em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">gunzip -c sakila-backup.sql.gz | grep 'INSERT INTO `actor`'| mysql sakila &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.5655em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0209em;">If you need to create the table as well as restore the data and you have the entire data‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.6155em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0455em;">base in a single file, you’ll have to edit the file. This is why some people like to dump &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.6655em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0358em;">each table into its own file. Most editors can’t deal with huge files, especially if they’re &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.7155em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1231em;">compressed. Besides, you don’t want to actually edit the file itself; you just want to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.7655em;z-index:1186;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0229em;">extract the relevant lines, so you’ll probably have to do some command-line work. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.8535em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.047em;">easy to use </span><span class="stl_155 stl_41 stl_152" style="word-spacing:0.0563em;">grep </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.047em;">to pull out only the </span><span class="stl_170 stl_171 stl_28">INSER</span><span class="stl_170 stl_171 stl_493">T</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.05em;">statements for a given table, as we did in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.9643em;z-index:1282;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0924em;">the previous commands, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0899em;">s </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0899em;">arder to get the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0383em;">CREATE TABLE </span><span class="stl_154 stl_32 stl_494" style="word-spacing:0.1207em;">statement. Here’s a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.003em;"><span class="stl_155 stl_41 stl_97" style="word-spacing:0.001em;">sed </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0025em;">script that extracts the paragraph you need: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:34.7762em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">sed -e '/./{H;$!d;}' -e 'x;/CREATE TABLE `actor`/!d;q' sakila-backup.sql &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.9143em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1102em;">That’s pretty cryptic, we admit. If you have to do this kind of work to restore data, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.9643em;z-index:1553;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0277em;">your backups are poorly designed. With a little planning, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0245em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0269em;">ossible to prevent a sit‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.003em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0316em;">uation in which you’re panicked and trying to figure out how </span><span class="stl_155 stl_41 stl_97" style="word-spacing:0.029em;">sed </span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0334em;">works. Just back up &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.0643em;z-index:1714;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0071em;">each table into its own file, or, better yet, back up the data and schema separately. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:40.9487em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Restoring Raw Files from Snapshot &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.8484em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0362em;">Restoring raw files tends to be pretty straightforward, which is another way of saying &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.8984em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1685em;">there aren’t many options. This can be a good or a bad thing depending on your &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.9484em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">recovery requirements. The usual procedure is simply to copy the files into place. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.4984em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0825em;">If you’re restoring a traditional InnoDB setup, where all tables are stored in a single &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:47.5484em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0963em;">tablespace, you’ll have to shut down MySQL, copy or move the files into place, and &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0253em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Recovering from a Backup &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1743em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0818em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">283 &nbsp;</span></div>
+					<a name="305_0" style="position:absolute;left:0em;top:41.2417em;">&nbsp;</a>
+					<a name="305_1" style="position:absolute;left:0em;top:43.0777em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

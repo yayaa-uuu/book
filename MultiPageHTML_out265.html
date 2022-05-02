@@ -1,0 +1,53 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_286.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_286.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:15.1611em;"><span class="stl_155 stl_41 stl_66" style="word-spacing:0.0142em;">Figure 9-5. A source with a read pool &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:17.2294em;"><span class="stl_308 stl_27 stl_28">Conﬁguration &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.6968em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0244em;">Ideally, you want an identical configuration between the source and at least one, pref‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.7468em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.043em;">erably two, of the replicas in the read pool. Again, you will at some point need to fail &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.7968em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">over to one of those replicas, and it should have enough capacity to keep up with your &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.8468em;"><span class="stl_154 stl_32 stl_28">traffic. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.3968em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0427em;">If you see this pool growing over time, you may optimize for cost and use a different &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.4468em;z-index:381;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0293em;">configuration for some of the members. If that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0252em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.026em;">he case, try to look at traffic weight‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.4968em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0082em;">ing as a way to balance traffic across them. If you have 32 cores for the failover targets &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.5468em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0332em;">and 8 cores for other replicas, try to send four times more traffic to the 32-core node &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.5968em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">to ensure you get utilization. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.6537em;"><span class="stl_193 stl_27 stl_28">Redundancy &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.1211em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0045em;">The number of servers you have in this pool should meet the requirements previously &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.1711em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0556em;">given, meaning at least one server can act as a failover target. Beyond that, you need &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.2211em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0168em;">enough nodes to accommodate your read traffic, plus a small buffer for node failures. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.2711em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0712em;">With reads, your most likely indicator of utilization will be CPU, and as such, target &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.3211em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0627em;">somewhere between 50%–60% utilization per node in the pool. As CPU increases, it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.3711em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0527em;">spends more time context switching between work and latency increases. Try to find &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.4211em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0214em;">the right balance between latency and utilization that meets your application expecta‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.4711em;"><span class="stl_154 stl_32 stl_28">tions. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.5281em;"><span class="stl_193 stl_27 stl_28">Caveats &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.9955em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0212em;">When you use a read pool, your application must have some tolerance for stale reads. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.0455em;z-index:1177;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1907em;">u will never be able to guarantee that a write you complete on the source has &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:44.0955em;z-index:1273;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0146em;">already been replicated to a replica. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0174em;">u may also need a way to depool nodes that fall &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:45.1455em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">too far behind on replication. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:46.6955em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0105em;">The size of the read pool also has an impact on how much administration you have to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:47.7455em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0136em;">do and when you should look at automation. A 16-node pool will mean that you have &nbsp;</span></div>
+					<div class="stl_01" style="left:27.8353em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Topologies &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1743em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0818em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">243 &nbsp;</span></div>
+					<a name="265_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

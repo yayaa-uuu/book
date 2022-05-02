@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_78.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_78.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7213em;top:4.6994em;"><span class="stl_154 stl_32 stl_279" style="word-spacing:0.3257em;">• Use</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0265em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the </span><span class="stl_170 stl_171 stl_28">setup_instrument</span><span class="stl_170 stl_171 stl_186">s</span><span class="stl_154 stl_32 stl_28">table. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7212em;top:6.1321em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Call</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the </span><span class="stl_170 stl_171 stl_28">ps_setup_enable_instrumen</span><span class="stl_170 stl_171 stl_186">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">stored procedure in the </span><span class="stl_170 stl_171 stl_28">sy</span><span class="stl_170 stl_171 stl_186">s</span><span class="stl_154 stl_32 stl_28">schema. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:7.5649em;"><span class="stl_154 stl_32 stl_279" style="word-spacing:0.3257em;">• Use</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0265em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the startup parameter </span><span class="stl_170 stl_171 stl_28">performance-schema-instrument</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.4552em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">UPDATE statement &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.972em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">The first method is to use an </span><span class="stl_170 stl_171 stl_28">UPDAT</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">statement to change the column value: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:13.7339em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE performance_schema.setup_instruments &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:14.5839em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SET ENABLED='YES' WHERE NAME='statement/sql/select'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:15.4346em;"><span class="stl_200 stl_171 stl_28">Query OK, 1 rows affected (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:16.2846em;"><span class="stl_200 stl_171 stl_28">Rows matched: 1 Changed: 1 Warnings: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.422em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1212em;">Since this is standard SQL, you can also use wildcards to enable all SQL statement &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:18.472em;"><span class="stl_154 stl_32 stl_39">instruments: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:20.2339em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE performance_schema.setup_instruments &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:21.0839em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SET ENABLED='YES' WHERE NAME LIKE statement/sql/%'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:21.9346em;"><span class="stl_200 stl_171 stl_28">Query OK, 167 rows affected (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:22.7846em;"><span class="stl_200 stl_171 stl_28">Rows matched: 167 Changed: 167 Warnings: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.922em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">This method does not persist between restarts. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9995em;top:25.9789em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">sys stored procedure &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.4958em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2845em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0384em;">sys </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2845em;">schema provides two stored procedures—</span><span class="stl_170 stl_171 stl_28">ps_setup_enable_instrument &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.5952em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0651em;">and </span><span class="stl_170 stl_171 stl_28">ps_setup_disable_instrument</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0673em;">—that enable and disable instruments, passed as &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.6452em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0073em;">their parameters. Both routines support wildcards. If you want to enable or disable all &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.7446em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">supported instruments, use wildcard </span><span class="stl_170 stl_171 stl_28">'%'</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:32.5065em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CALL sys.ps_setup_enable_instrument('statement/sql/select'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:33.3572em;"><span class="stl_200 stl_171 stl_28">+----------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.2072em;"><span class="stl_200 stl_171 stl_28">| summary &nbsp;</span></div>
+					<div class="stl_01" style="left:15.5622em;top:34.2072em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.0572em;"><span class="stl_200 stl_171 stl_28">+----------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.9072em;"><span class="stl_200 stl_171 stl_28">| Enabled 1 instrument | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:36.7572em;"><span class="stl_200 stl_171 stl_28">+----------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.6072em;"><span class="stl_200 stl_171 stl_28">1 row in set (0.01 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.7447em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.08em;">This method is effectively the exact same as the previous one, including that it does &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.7947em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">not persist between restarts. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.8516em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Startup options &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.3684em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.14em;">As mentioned before, both methods allow you to change the </span><span class="stl_170 stl_171 stl_28">performance_schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:44.4184em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0129em;">configuration online but do not store that change between server restarts. If you want &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:45.4684em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.2029em;">to save options for particular instruments between restarts, use the configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:46.5679em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">parameter </span><span class="stl_170 stl_171 stl_28">performance-schema-instrument</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:30.3233em;top:50.8098em;"><span class="stl_233 stl_27 stl_28">Conﬁguration &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4805em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.388em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">49 &nbsp;</span></div>
+					<a name="71_0" style="position:absolute;left:0em;top:45.6977em;">&nbsp;</a>
+					<a name="71_1" style="position:absolute;left:0em;top:27.725em;">&nbsp;</a>
+					<a name="71_2" style="position:absolute;left:0em;top:12.2013em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

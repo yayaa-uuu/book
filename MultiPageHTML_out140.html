@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_146.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_146.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0632em;">The output of </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0227em;">SHOW INNODB STATUS </span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0671em;">can help you pinpoint the problem. Look at the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.4655em;"><span class="stl_154 stl_32 stl_133" style="word-spacing:-0.0034em;">history list length in the </span><span class="stl_170 stl_171 stl_28">TRANSACTION</span><span class="stl_170 stl_171 stl_186">S</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">section; it shows the size of the undo log: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:7.228em;"><span class="stl_200 stl_171 stl_28">------------ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:8.078em;"><span class="stl_200 stl_171 stl_28">TRANSACTIONS &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:8.928em;"><span class="stl_200 stl_171 stl_28">------------ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:9.778em;"><span class="stl_200 stl_171 stl_28">Trx id counter 1081043769321 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:10.628em;"><span class="stl_200 stl_171 stl_28">Purge done for trx's n:o &lt; 1081041974531 undo n:o &lt; 0 state: running but idle &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:11.478em;"><span class="stl_200 stl_171 stl_28">History list length 697068 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.6155em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1185em;">If you have a large undo log and your tablespace is growing because of it, you can &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.6655em;z-index:385;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.016em;">force MySQL to slow down enough for InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0116em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0161em;">urge thread to keep up. This might &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.7155em;z-index:443;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.075em;">not sound attractive, but there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0683em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0678em;">o alternative. Otherwise, InnoDB will keep writing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.7655em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0213em;">data and filling up your disk until the disk runs out of space or the tablespace reaches &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.8155em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0061em;">the limits you’ve defined. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.4149em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2206em;">To </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0246em;">hrottle the writes, set the </span><span class="stl_170 stl_171 stl_28">innodb_max_purge_la</span><span class="stl_170 stl_171 stl_373">g</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0248em;">variable to a value other than </span><span class="stl_170 stl_171 stl_28">0</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.4649em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.077em;">This value indicates the maximum number of transactions that can be waiting to be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.5149em;z-index:786;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0607em;">purged before InnoDB starts to delay further queries that update data. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0651em;">u’ll have to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.5649em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0197em;">know your workload to decide on a good value. As an example, if your average trans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.6149em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0918em;">action affects 1 KB of rows and you can tolerate 100 MB of unpurged rows in your &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.7143em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tablespace, you could set the value to </span><span class="stl_170 stl_171 stl_28">100000</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.2643em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1263em;">Bear in mind that unpurged row versions affect all queries because they effectively &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.3143em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0388em;">make your tables and indexes larger. If the purge thread simply can’t keep up, perfor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.4138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0381em;">mance can decrease. Setting the </span><span class="stl_170 stl_171 stl_28">innodb_max_purge_la</span><span class="stl_170 stl_171 stl_374">g</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0381em;">variable will slow down per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.4638em;z-index:1200;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.008em;">formance too, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">he lesser of the two evils. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.3481em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Other I/O </span><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguration </span><span class="stl_180 stl_27 stl_28">Options &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.2973em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2051em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0452em;">sync_binlog </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.2081em;">option controls how MySQL flushes the binary log to disk. Its &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.3967em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1088em;">default value is </span><span class="stl_170 stl_171 stl_28">1</span><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1055em;">, which means MySQL will perform flushing and keep binary logs &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.4467em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0914em;">durable and safe. This is the recommended setting, and we caution you against set‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.4967em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">ting this to any other value. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.0962em;"><span class="stl_154 stl_32 stl_375" style="word-spacing:0.1139em;">If you don’t keep </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1656em;">sync_binlog </span><span class="stl_154 stl_32 stl_82" style="word-spacing:0.1033em;">set at </span><span class="stl_170 stl_171 stl_28">1</span><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0994em;">, it’s likely that a crash will cause your binary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.1462em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1032em;">log to be out of sync with your transactional data. This can easily break replication &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.1962em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0856em;">and make recovery impossible, especially if your databases are using global transac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.2956em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0271em;">tion IDs (more on this in </span><a href="MultiPageHTML_out249.html#249_0"><span class="stl_184 stl_32 stl_134" style="word-spacing:-0.0023em;">Chapter 9</span></a><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0299em;">). The safety provided by leaving this at </span><span class="stl_170 stl_171 stl_285">1</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">far out‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.3456em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">weighs the I/O performance penalty that is incurred. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.8956em;z-index:1807;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.3648em;">We </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1708em;">overed RAID in more depth in </span><a href="MultiPageHTML_out97.html#97_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.1762em;">Chapter 4</span></a><span class="stl_154 stl_32 stl_65" style="word-spacing:0.1847em;">, but it’s worth repeating here that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.9456em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0326em;">good-quality RAID controllers, with battery-backed write caches set to use the write- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.9956em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1664em;">back policy, can handle thousands of writes per second and still give you durable &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.0456em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0732em;">storage. The data gets written to a fast cache with a battery, so it will survive even if &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.0956em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0583em;">the system loses power. When the power comes back, the RAID controller will write &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:48.1456em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0688em;">the data from the cache to the disk before making the disk available for use. Thus, a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">118 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="140_0" style="position:absolute;left:0em;top:30.6412em;">&nbsp;</a>
+					<a name="140_1" style="position:absolute;left:0em;top:28.693em;">&nbsp;</a>
+					<a name="140_2" style="position:absolute;left:0em;top:32.5266em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_297.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_297.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7213em;top:4.3166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0442em;">&nbsp;</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0497em;">replica sometimes can’t calculate the lag even if the replication processes are &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.416em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">running. If this happens, the replica might report either </span><span class="stl_170 stl_171 stl_186">0</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">or </span><span class="stl_170 stl_171 stl_28">NULL</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:6.7994em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• A</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1056em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1073em;">very long transaction can cause the reported lag to fluctuate. For example, if &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:7.8494em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0687em;">you have a transaction that updates data, stays open for an hour, and then com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:8.8994em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1188em;">mits, the update will go into the binary log an hour after it actually happened. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:9.9494em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0786em;">When the replica processes the statement, it will temporarily report that it is an &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:10.9994em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">hour behind the source, and then it will jump back to zero seconds behind. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.9321em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1643em;">The solution to these problems is to ignore </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0881em;">Seconds_behind_source </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1643em;">and monitor &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.9821em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0203em;">replica lag with something you can observe and measure directly. The best solution is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.0321em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1579em;">a heartbeat record, which is a timestamp that you update once per second on the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.0821em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0991em;">source. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0991em;">o </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1022em;">alculate the lag, you can simply subtract the heartbeat from the current &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.1321em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.084em;">timestamp on the replica. This method is immune to all the problems we just men‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.1821em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0188em;">tioned, and it has the added benefit of creating a handy timestamp that shows at what &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.2816em;"><span class="stl_154 stl_32 stl_98" style="word-spacing:0.0851em;">point in time the replica’s data is current. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1872em;">pt-heartbeat </span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.074em;">script, included in Per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.3316em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">cona </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">olkit, is the most popular implementation of a replication heartbeat. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.8816em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1222em;">A heartbeat has other benefits, too. The replication heartbeat records in the binary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.9316em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0047em;">log are useful for many purposes, such as disaster recovery in otherwise hard-to-solve &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.9816em;"><span class="stl_154 stl_32 stl_28">scenarios. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.5316em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0396em;">None of the lag metrics we just mentioned gives a sense of how long it will take for a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.5816em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0289em;">replica to actually catch up to the source. This depends on many factors, such as how &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.6316em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0711em;">powerful the replica is and how many write queries the source continues to process. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.6816em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0399em;">See the subsection “Excessive Replication Lag” in the “Replication Problems and Sol‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.7316em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">utions” section for more on that topic. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.6159em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Determining Whether Replicas Are Consistent with the Source &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.5157em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.082em;">In a perfect world, a replica would always be an exact copy of its source, minus any &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.5657em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0378em;">replication delay. But in the real world, discrepancies can be introduced into replicas. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.6157em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">Some possible causes are: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:37.499em;"><span class="stl_154 stl_32 stl_151" style="word-spacing:0.283em;">• Accidental</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.005em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">writes to the replica &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:38.8823em;"><span class="stl_154 stl_32 stl_283" style="word-spacing:0.2992em;">• Using</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0133em;">&nbsp;</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">dual source replication with both sides taking writes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:40.2657em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.276em;">• Nondeterministic</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0017em;">&nbsp;</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">queries and statement-based replication &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:41.649em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1573em;">• MySQL crashes while you run in a less-than-durable mode (see </span><a href="MultiPageHTML_out121.html#121_0"><span class="stl_184 stl_32 stl_99" style="word-spacing:0.1504em;">Chapter 5 </span></a><span class="stl_154 stl_32 stl_28">for &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:42.699em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">durability configurations) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:44.0823em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Bugs</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_153" style="word-spacing:0.0128em;">in MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.9657em;z-index:1933;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.194em;">We </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">uggest the following rules: &nbsp;</span></div>
+					<div class="stl_01" style="left:22.3816em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Administration and Maintenance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">249 &nbsp;</span></div>
+					<a name="271_0" style="position:absolute;left:0em;top:31.909em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

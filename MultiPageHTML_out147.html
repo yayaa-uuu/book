@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_153.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_153.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:31.0702em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 6 &nbsp;</span></div>
+					<div class="stl_01" style="left:12.953em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Schema Design and Management &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.136em;">Good logical and physical design is the cornerstone of high performance, and you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.0806em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1354em;">must design your schema for the specific queries you will run. This often involves &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0736em;">trade-offs. For example, a denormalized schema can speed up some types of queries &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.1806em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0173em;">but slow down others. Adding counter and summary tables is a great way to optimize &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.2306em;z-index:356;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2454em;">queries, but they can be expensive to maintain. MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.4326em;">’s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2448em;">articular features and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.2806em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0031em;">implementation details influence this quite a bit. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.8306em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0164em;">Likewise, your schema will evolve over time—as a result of what you learn about how &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.8806em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.159em;">you store and access data as well as how your business requirements change over &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.9306em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0509em;">time. This means that you should plan for schema changes as a frequent event. Later &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.9806em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0781em;">in this chapter, we help guide you through how to keep this activity from becoming &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.0306em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0021em;">an operational bottleneck for your organization. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.5806em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0326em;">This chapter—and the following one, which focuses on indexing—cover the MySQL- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.6306em;z-index:833;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0302em;">specific bits of schema design. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0302em;">e </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0327em;">ssume that you know how to design databases, so &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.6806em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0496em;">this is not an introductory chapter, or even an advanced chapter, on database design. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.7306em;z-index:981;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0849em;">As a chapter on MySQL database design, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0777em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0806em;">bout what is different when designing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.7806em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.048em;">databases with MySQL rather than other RDBMSs. If you need to study the basics of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.8192em;z-index:1120;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.3608em;">database design, we suggest Clare Churcher</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.3584em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.3584em;">ook </span><span class="stl_155 stl_41 stl_214" style="word-spacing:0.372em;">Beginning Database Design &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.8806em;"><span class="stl_154 stl_32 stl_139">(Apress). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.4306em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1227em;">This chapter is preparation for the two that follow. In these three chapters, we will &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.4806em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0977em;">explore the interaction of logical design, physical design, and query execution. This &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.5306em;z-index:1358;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.009em;">requires a big-picture approach as well as attention to details. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0065em;">u need to understand &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:43.5806em;z-index:1432;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0824em;">the whole system to understand how each piece will affect others. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0872em;">u might find it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.6306em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0938em;">useful to review this chapter after reading </span><a href="MultiPageHTML_out177.html#177_0"><span class="stl_184 stl_32 stl_99" style="word-spacing:0.0989em;">Chapter 7 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0925em;">on indexing and </span><a href="MultiPageHTML_out213.html#213_0"><span class="stl_184 stl_32 stl_99" style="word-spacing:0.0989em;">Chapter 8 </span></a><span class="stl_154 stl_32 stl_28">on &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:45.6806em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0056em;">query optimization. Many of the topics discussed can’t be considered in isolation. &nbsp;</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">125 &nbsp;</span></div>
+					<a name="147_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="147_1" style="position:absolute;left:0em;top:20.2598em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

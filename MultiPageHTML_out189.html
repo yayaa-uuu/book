@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_197.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_197.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7213em;top:4.6994em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• When</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0396em;">&nbsp;</span><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0389em;">the server intersects indexes (usually for </span><span class="stl_170 stl_171 stl_28">AN</span><span class="stl_170 stl_171 stl_426">D</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0396em;">conditions), it usually means &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.7494em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0778em;">that you need a single index with all the relevant columns, not multiple indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:6.7994em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">that have to be combined. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:8.2321em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• When</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0302em;">&nbsp;</span><span class="stl_154 stl_32 stl_134" style="word-spacing:0.0281em;">the server unions indexes (usually for </span><span class="stl_170 stl_171 stl_28">O</span><span class="stl_170 stl_171 stl_359">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0302em;">conditions), sometimes the algo‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:9.2821em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0754em;">rithm’s buffering, sorting, and merging operations use lots of CPU and memory &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:10.3321em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0377em;">resources. This is especially true if not all of the indexes are very selective, so the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:11.3821em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">scans return lots of rows to the merge operation. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:12.7655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2726em;">• Recall</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0111em;">&nbsp;</span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0178em;">that the optimizer doesn’t account for this cost—it optimizes just the num‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:13.8155em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.041em;">ber of random page reads. This can make it “underprice” the query, which might &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:14.8655em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0498em;">in fact run more slowly than a plain table scan. The intensive memory and CPU &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:15.9155em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.085em;">usage also tends to affect concurrent queries, but you won’t see this effect when &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:17.0149em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1111em;">you run the query in isolation. Sometimes rewriting such queries with a </span><span class="stl_170 stl_171 stl_28">UNION &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:18.0649em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">clause is more optimal. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.9977em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0828em;">When you see an index merge in </span><span class="stl_170 stl_171 stl_28">EXPLAIN</span><span class="stl_154 stl_32 stl_141" style="word-spacing:0.0805em;">, you should examine the query and table &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.0477em;z-index:871;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">structure to see if this is really the best you can get. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">u can disable index merges with &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.1471em;z-index:935;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the </span><span class="stl_170 stl_171 stl_28">optimizer_switc</span><span class="stl_170 stl_171 stl_186">h</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">option or variable. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">u can also use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">IGNORE INDEX</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.0314em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Choosing a Good Column Order &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.9312em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0748em;">One of the most common causes of confusion we’ve seen is the order of columns in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.9812em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0782em;">an index. The correct order depends on the queries that will use the index, and you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.0312em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0395em;">must think about how to choose the index order such that rows are sorted and grou‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.0812em;z-index:1215;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0067em;">ped in a way that will benefit the query. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.6312em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0772em;">The order of columns in a multicolumn B-tree index means that the index is sorted &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.6812em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1739em;">first by the leftmost column, then by the next column, and so on. Therefore, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.7806em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0394em;">index can be scanned in either forward or reverse order to satisfy queries with </span><span class="stl_170 stl_171 stl_28">ORDER &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.8801em;z-index:1479;"><span class="stl_170 stl_171 stl_28">BY</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">GROUP BY</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, and </span><span class="stl_170 stl_171 stl_28">DISTINC</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0084em;">clauses that match the column order exactly. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.4301em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.098em;">As a result, the column order is vitally important in multicolumn indexes. The col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.4801em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0806em;">umn order either enables or prevents the index from earning “stars” in Lahdenmaki &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.5301em;"><span class="stl_154 stl_32 stl_66" style="word-spacing:0.1481em;">and Leach’s three-star system (see </span><a href="MultiPageHTML_out183.html#183_0"><span class="stl_184 stl_32 stl_73" style="word-spacing:0.1359em;">“Benefits of Indexes” on page 161 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.134em;">earlier in this &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.5801em;z-index:1728;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0341em;">chapter for more on the three-star system). </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0328em;">e </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0368em;">ill show many examples of how this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.6301em;z-index:1793;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0057em;">works throughout the rest of this chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.1801em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.1236em;">There is an old rule of thumb for choosing column order: place the most selective &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:42.2301em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1019em;">columns first in the index. How useful is this suggestion? It can be helpful in some &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.2801em;z-index:1942;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0571em;">cases, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0511em;">s </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0542em;">sually much less important than avoiding random I/O and sorting, all &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.3301em;z-index:2046;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0779em;">things considered. (Specific cases vary, so there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0723em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0737em;">o one-size-fits-all rule. That alone &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:45.3801em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">should tell you that this rule of thumb is probably less important than you think.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:46.9301em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0672em;">Placing the most selective columns first can be a good idea when there is no sorting &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:48.0295em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0502em;">or grouping to consider, and thus the purpose of the index is only to optimize </span><span class="stl_170 stl_171 stl_28">WHERE &nbsp;</span></div>
+					<div class="stl_01" style="left:23.209em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">167 &nbsp;</span></div>
+					<a name="189_0" style="position:absolute;left:0em;top:24.3245em;">&nbsp;</a>
+					<a name="189_1" style="position:absolute;left:0em;top:26.1604em;">&nbsp;</a>
+					<a name="189_2" style="position:absolute;left:0em;top:33.0099em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

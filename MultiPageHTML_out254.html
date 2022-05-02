@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_271.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_271.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9998em;top:4.3166em;z-index:159;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2435em;">To </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0521em;">etter illustrate this, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0475em;">s </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0469em;">se an example. Suppose our source server has just been &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:5.3666em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0629em;">set up and has no data in it—not even a database created. On this source server, our &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.466em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0282em;">server_uuid </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.2773em;">was also generated to be </span><span class="stl_170 stl_171 stl_28">b9acac5a-7bbe-11eb-a043-42010af8001a</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.516em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0743em;">We’ve done the same to our replica, and used the appropriate commands to instruct &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:8.566em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0006em;">our replica to use the source server for replication. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.116em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">On our source server, we would need to create a new database: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.8909em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">CREATE DATABASE misc; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.2655em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0047em;">This event will be written to the binary log so that our replica can also create the data‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.3155em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">base. In the binary log, we would see a single event identified by the GTID: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:16.078em;"><span class="stl_200 stl_171 stl_28">b9acac5a-7bbe-11eb-a043-42010af8001a:1 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.2155em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0947em;">As the replica server applies this event, it remembers that it has completed transac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.3149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tion </span><span class="stl_170 stl_171 stl_28">b9acac5a-7bbe-11eb-a043-42010af8001a:1</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:19.8649em;z-index:838;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0357em;">In our contrived example, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0295em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_183" style="word-spacing:0.039em;">ay that we stop MySQL on our replica at this point. It &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.9149em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0467em;">has committed a single transaction. If our source continues to take writes, our trans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.9649em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0318em;">action list will continue to grow: 2, 3, 4, 5, and so on. When we start our replica back &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.0149em;"><span class="stl_154 stl_32 stl_121">up,</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out254.html#254_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3973em;">3 </span></a></sup><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1305em;">it knows that it has already seen transaction 1, and can begin with processing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.0649em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">transaction 2. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.6149em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.135em;">GTIDs solve one of the more painful parts of running MySQL replication: dealing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.6649em;z-index:1201;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.113em;">with logfiles and positions. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.113em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1152em;">trongly recommend that you always enable GTIDs &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.7149em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0033em;">for your databases following the guide in the official MySQL documentation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9995em;top:29.5992em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Making Replication Crash Safe &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.499em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1162em;">Although GTIDs solved the logfile and position problem, a number of other prob‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.549em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0684em;">lems also plagued administrators of MySQL. Later in this chapter, we’ll touch on the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.599em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.107em;">common failure modes; however, before that, there are a few configuration settings &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.649em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0035em;">that can greatly improve your experience using replication. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.199em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.5419em;">To </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.3467em;">inimize the chances for replication to break, we recommend setting the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:37.249em;"><span class="stl_154 stl_32 stl_28">following: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.1072em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">innodb_flush_log_at_trx_commit = 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:39.9818em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0778em;">Although not strictly a replication setting, this ensures that logs are written and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:41.0318em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0387em;">synchronized to disk at each transaction. This is the full ACID-compliant setting &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:42.0818em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0265em;">and will go the furthest toward protecting your data—even with replication. This &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:43.1318em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.06em;">is because binary log events are committed first and then the transaction will be &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.3793em;"><span class="stl_167 stl_32 stl_28">3</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.2968em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">This assumes you used the </span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">SOURCE_AUTO_POSITION = </span><span class="stl_211 stl_171 stl_186">1</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">option when issuing the </span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">CHANGE REPLICATION &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">SOURCE T</span><span class="stl_211 stl_171 stl_186">O</span><span class="stl_168 stl_32 stl_35" style="word-spacing:0.0028em;">command, which you should typically always do. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">232 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="254_0" style="position:absolute;left:0em;top:29.8923em;">&nbsp;</a>
+					<a name="254_1" style="position:absolute;left:0em;top:47.3305em;">&nbsp;</a>
+					<a name="254_2" style="position:absolute;left:0em;top:40.211em;">&nbsp;</a>
+					<a name="254_3" style="position:absolute;left:0em;top:31.7282em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

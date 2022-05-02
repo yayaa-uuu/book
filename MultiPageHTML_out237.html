@@ -1,0 +1,73 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_253.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_253.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4166em;top:4.5285em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT STRAIGHT_JOIN film.film_id...\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:7.9292em;"><span class="stl_200 stl_171 stl_28">table: film &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:8.7792em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:9.6292em;"><span class="stl_200 stl_171 stl_28">type: ALL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:10.4792em;"><span class="stl_200 stl_171 stl_28">possible_keys: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">key: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:12.1792em;"><span class="stl_200 stl_171 stl_28">key_len: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">ref: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">rows: 1000 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">Extra: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">*************************** 2. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:18.1292em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:18.9792em;"><span class="stl_200 stl_171 stl_28">table: film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:19.8292em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:20.6792em;"><span class="stl_200 stl_171 stl_28">type: ref &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:21.5292em;"><span class="stl_200 stl_171 stl_28">possible_keys: PRIMARY,idx_fk_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:22.3792em;"><span class="stl_200 stl_171 stl_28">key: idx_fk_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:23.2292em;"><span class="stl_200 stl_171 stl_28">key_len: 2 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:24.0792em;"><span class="stl_200 stl_171 stl_28">ref: sakila.film.film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:24.9292em;"><span class="stl_200 stl_171 stl_28">rows: 5 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:25.7792em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:26.6292em;"><span class="stl_200 stl_171 stl_28">Extra: Using index &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:27.4792em;"><span class="stl_200 stl_171 stl_28">*************************** 3. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:28.3292em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:29.1792em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:30.0292em;"><span class="stl_200 stl_171 stl_28">table: actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:30.8792em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:31.7292em;"><span class="stl_200 stl_171 stl_28">type: eq_ref &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:32.5792em;"><span class="stl_200 stl_171 stl_28">possible_keys: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:33.4292em;"><span class="stl_200 stl_171 stl_28">key: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:34.2792em;"><span class="stl_200 stl_171 stl_28">key_len: 2 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:35.1292em;"><span class="stl_200 stl_171 stl_28">ref: sakila.film_actor.actor_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:35.9792em;"><span class="stl_200 stl_171 stl_28">rows: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:36.8292em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:37.6792em;"><span class="stl_200 stl_171 stl_28">Extra: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.8166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1335em;">This shows why MySQL wants to reverse the join order: doing so will enable it to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.8666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1006em;">examine fewer rows in the first table.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out237.html#237_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3462em;">12 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1006em;">In both cases, it will be able to perform fast &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:40.9166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0546em;">indexed lookups in the second and third tables. The difference is how many of these &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.016em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0342em;">indexed lookups it will have to do. Placing </span><span class="stl_170 stl_171 stl_28">fil</span><span class="stl_170 stl_171 stl_359">m</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0308em;">first will require about one thousand &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.1155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0748em;">probes (see the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1823em;">rows </span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0796em;">field) into </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1823em;">film_actor </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0748em;">and </span><span class="stl_170 stl_171 stl_28">actor</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0748em;">, one for each row in the first &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.3545em;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">12 </span><span class="stl_168 stl_32 stl_36" style="word-spacing:0.0038em;">Strictly speaking, MySQL doesn’t try to reduce the number of rows it reads. Instead, it tries to optimize for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_37" style="word-spacing:-0.0004em;">fewer page reads. But a row count can often give you a rough idea of the query cost. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.8409em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Query Execution Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">215 &nbsp;</span></div>
+					<a name="237_0" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

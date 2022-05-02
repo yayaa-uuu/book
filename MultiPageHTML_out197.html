@@ -1,0 +1,79 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_208.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_208.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE userinfo ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">id int unsigned NOT NULL AUTO_INCREMENT, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">name varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">email varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:7.9292em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">password varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:8.7792em;"><span class="stl_200 stl_171 stl_28">dob date DEFAULT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:9.6292em;"><span class="stl_200 stl_171 stl_28">address varchar(255) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:10.4792em;"><span class="stl_200 stl_171 stl_28">city varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">state_id tinyint unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:12.1792em;"><span class="stl_200 stl_171 stl_28">zip varchar(8) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">country_id smallint unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">gender ('M','F')NOT NULL DEFAULT 'M', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">account_type varchar(32) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">verified tinyint NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">allow_mail tinyint unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">parrent_account int unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:18.1292em;"><span class="stl_200 stl_171 stl_28">closest_airport varchar(3) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:18.9792em;"><span class="stl_200 stl_171 stl_28">PRIMARY KEY (id), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:19.8292em;"><span class="stl_200 stl_171 stl_28">UNIQUE KEY email (email), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:20.6792em;"><span class="stl_200 stl_171 stl_28">KEY country_id (country_id), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:21.5292em;"><span class="stl_200 stl_171 stl_28">KEY state_id (state_id), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:22.3792em;"><span class="stl_200 stl_171 stl_28">KEY state_id_2 (state_id,city,address) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:23.2292em;"><span class="stl_200 stl_171 stl_28">) ENGINE=InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.3666em;z-index:963;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0064em;">Notice the auto-incrementing integer primary key.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out197.html#197_0"><span class="stl_166 stl_32 stl_129" style="word-spacing:0.0113em;">8 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:6.0003em;top:25.966em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0141em;">The second case is a table named </span><span class="stl_170 stl_171 stl_28">userinfo_uuid</span><span class="stl_154 stl_32 stl_107" style="word-spacing:0.023em;">. It is identical to the </span><span class="stl_170 stl_171 stl_28">userinf</span><span class="stl_170 stl_171 stl_262">o</span><span class="stl_154 stl_32 stl_28">table, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.016em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0008em;">except that its primary key is a UUID instead of an integer: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:28.7786em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE userinfo_uuid ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:29.6286em;"><span class="stl_200 stl_171 stl_28">uuid varchar(36) NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:30.4786em;"><span class="stl_200 stl_171 stl_28">... &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.616em;z-index:1138;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.3214em;">We </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1281em;">enchmarked both table designs. First, we inserted a million records into both &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.666em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0635em;">tables on a server with enough memory to hold the indexes. Next, we inserted three &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.716em;z-index:1342;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1181em;">million rows into the same tables, which made the indexes bigger than the server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.766em;z-index:1351;"><span class="stl_154 stl_32 stl_164" style="word-spacing:0.0147em;">memory. </span><a href="MultiPageHTML_out197.html#197_1"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out197.html#197_1"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out197.html#197_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">ble 7-1 </span></a><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">compares the benchmark results. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.8536em;"><span class="stl_40 stl_41 stl_393" style="word-spacing:0.0215em;">Table 7-1. Benchmark results for inserting rows into InnoDB tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2997em;top:38.4259em;"><span class="stl_205 stl_27 stl_28">Table &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3001em;top:39.6369em;"><span class="stl_200 stl_171 stl_28">userinfo &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5039em;top:38.4259em;"><span class="stl_205 stl_27 stl_28">Rows &nbsp;</span></div>
+					<div class="stl_01" style="left:14.4161em;top:38.4259em;"><span class="stl_205 stl_27 stl_140" style="word-spacing:0.0349em;">Time (sec)</span><span class="stl_205 stl_27 stl_28" style="word-spacing:0.6418em;">&nbsp;</span><span class="stl_205 stl_27 stl_28" style="word-spacing:0.0335em;">Index size (MB) &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5042em;top:39.5024em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.643em;">1,000,000 137 &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5042em;top:40.6111em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.643em;">1,000,000 180 &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5042em;top:41.7199em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.643em;">3,000,000 1233 &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5042em;top:42.8286em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.643em;">3,000,000 4525 &nbsp;</span></div>
+					<div class="stl_01" style="left:17.5239em;top:39.5024em;"><span class="stl_206 stl_68 stl_28">342 &nbsp;</span></div>
+					<div class="stl_01" style="left:17.5239em;top:40.6111em;"><span class="stl_206 stl_68 stl_28">544 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:40.7457em;"><span class="stl_200 stl_171 stl_28">userinfo_uuid &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:41.8544em;"><span class="stl_200 stl_171 stl_28">userinfo &nbsp;</span></div>
+					<div class="stl_01" style="left:17.5239em;top:41.7199em;"><span class="stl_206 stl_68 stl_28">1036 &nbsp;</span></div>
+					<div class="stl_01" style="left:17.5239em;top:42.8286em;"><span class="stl_206 stl_68 stl_28">1707 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:42.9632em;"><span class="stl_200 stl_171 stl_28">userinfo_uuid &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">8</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_114" style="word-spacing:0.0049em;">It’s worth pointing out that this is a real table, with secondary indexes and lots of columns. If we removed &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:191;"><span class="stl_168 stl_32 stl_88" style="word-spacing:0.001em;">these and benchmarked only the primary key performance, the difference would be even larger. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2088em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">175 &nbsp;</span></div>
+					<a name="197_0" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="197_1" style="position:absolute;left:0em;top:36.9994em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

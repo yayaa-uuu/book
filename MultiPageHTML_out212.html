@@ -1,0 +1,56 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_225.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_225.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.366em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.1789em;">doesn’t need to perform any follow-up work to sort it, and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0454em;">GROUP BY </span><span class="stl_154 stl_32 stl_28">queries &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.416em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0062em;">don’t need to sort and group rows together to compute aggregates over them. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:6.7994em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1916em;">• Index-only access is fast. If an index contains all the columns that the query &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:7.8494em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0946em;">needs, the storage engine doesn’t need to find the other columns by looking up &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:8.8994em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.081em;">rows in the table. This avoids lots of single-row access, which as we know from &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:9.9494em;z-index:342;"><span class="stl_154 stl_32 stl_111" style="word-spacing:0.0123em;">the first point is slow. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:11.8327em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1602em;">In sum, try to choose indexes and write queries so that you can avoid single-row &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.8827em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0093em;">lookups, use the inherent ordering of the data to avoid sorting operations, and exploit &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.9327em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2645em;">index-only access. This corresponds to the three-star ranking system set out in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.9827em;z-index:612;"><span class="stl_154 stl_32 stl_81" style="word-spacing:0.0116em;">Lahdenmaki and Leach’s book, mentioned at the beginning of this chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.5327em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1412em;">It would be great to be able to create perfect indexes for every query against your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.5827em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0386em;">tables. Unfortunately, sometimes this would require an impractically large number of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.6327em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0942em;">indexes, and at other times there simply is no way to create a three-star index for a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.6827em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0287em;">given query (for example, if the query is ordered by two columns, one ascending and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.7327em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1157em;">the other descending). In these cases, you have to settle for the best you can do or &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.7827em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">pursue alternative strategies, such as denormalization or summary tables. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.3327em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.165em;">It’s very important to be able to reason through how indexes work and to choose &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.3827em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0285em;">them based on that understanding, not on rules of thumb or heuristics such as “place &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.4327em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0574em;">the most selective columns first in multicolumn indexes” or “you should index all of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.5321em;z-index:1269;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">the columns that appear in the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_99">clause</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.0821em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0488em;">How do you know whether your schema is indexed well enough? As always, we sug‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.1321em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1688em;">gest that you frame the question in terms of response time. Find queries that are &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.1821em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2049em;">either taking too long or contributing too much load to the server. Examine the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.2321em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1683em;">schema, SQL, and index structures for the queries that need attention. Determine &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.2821em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.1128em;">whether the query has to examine too many rows, perform postretrieval sorting or &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.3321em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1481em;">use temporary tables, access data with random I/O, or look up full rows from the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.3821em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">table to retrieve columns not included in the index. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.9321em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0386em;">If you find a query that doesn’t benefit from all of the possible advantages of indexes, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.9821em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0426em;">see if a better index can be created to improve performance. If not, perhaps a rewrite &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.0321em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0329em;">can transform the query so that it can use an index that either already exists or could &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.0821em;"><span class="stl_154 stl_32 stl_144" style="word-spacing:0.012em;">be created. That’s what the next chapter is about. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">190 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

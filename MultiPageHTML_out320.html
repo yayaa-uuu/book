@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_347.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_347.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_100" style="word-spacing:0.129em;">We’ve described only instant-provisioning algorithms here, which don’t queue con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0928em;">nection requests. Sometimes algorithms that use queuing can be more efficient. For &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;z-index:213;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1197em;">example, an algorithm might maintain a given concurrency on the database server, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4552em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0191em;">such as allowing no more than </span><span class="stl_155 stl_41 stl_28" style="word-spacing:0.017em;">N </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0202em;">active transactions at the same time. If there are too &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.5166em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0215em;">many active transactions, the algorithm can put a new request in a queue and serve it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.5666em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0414em;">from the first server that becomes “available” according to the criteria. Some connec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.6166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tion pools support queuing algorithms. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.1666em;z-index:530;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.017em;">Now that we have covered how to scale your read load and how to health-check it, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:13.2166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0392em;">time to discuss scaling writes. Before looking for how to scale the writes directly, you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.2666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0812em;">can look at places where queuing can make the write traffic growth more managea‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.3166em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0051em;">ble. Let’s discuss how queuing can help scale your write performance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:17.2131em;"><span class="stl_159 stl_27 stl_28">Queuing &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.4833em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0456em;">Scaling your application layer becomes a lot more complex when scaling write trans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.5333em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1773em;">actions with a data store that favors consistency over availability by design. More &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.5833em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.038em;">application nodes writing to the one source node will lead to a database system more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.6333em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0304em;">susceptible to lock timeouts, deadlocks, and failed writes to have to retry. All this will &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.6833em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0023em;">ultimately lead to customer-facing errors or unacceptable latencies. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.2333em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0058em;">Before looking into sharding the data, which we discuss next, you should examine the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.2833em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0716em;">write hotspots in your data and consider whether all the writes are truly required to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.3333em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0358em;">persist to the database actively. Can some of them be placed into a queue and written &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.3833em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">to the database within an acceptable time frame? &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.9333em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.1279em;">Let’s say you have a database that stores large data sets of customer historical data. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.9833em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0703em;">Customers occasionally send API requests to retrieve this data, but you also need to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.0333em;z-index:1513;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1647em;">support an API to delete this data. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_125" style="word-spacing:0.1622em;">u can plausibly serve read API calls from a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.0833em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1496em;">growing number of replicas, but what about deletes? The HTTP RFC allows for a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.1333em;z-index:1641;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0198em;">response code, “202 Accepted</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0174em;">” </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0186em;">u can return that, place the request in a queue (e.g., &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.1833em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1032em;">Apache Kafka or Amazon Simple Queue Service), and process these requests at the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.2333em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0056em;">pace that doesn’t lead to overloading the database directly with delete calls. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.7833em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1215em;">This is obviously not the same as a 200 response code that implies the request has &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.8333em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1279em;">been instantaneously fulfilled. This is a common spot where negotiation with your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.8833em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0753em;">product team is crucial for making the guarantees of the API plausible and achieva‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.9333em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1516em;">ble. The difference between the 200 and 202 response codes is all the engineering &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.9833em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">work of sharding this data to support a lot more parallel writes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.5333em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1057em;">One important design choice to make if you do apply queuing to a write load is to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.5833em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0174em;">determine up front the desired time frame within which these calls are expected to be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:45.6333em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1598em;">fulfilled after being placed in queue. Monitoring the growth of the time a request &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:46.6833em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0306em;">spends in a queue is going to be your metric for when this strategy has run its course &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">298 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="320_0" style="position:absolute;left:0em;top:17.5647em;">&nbsp;</a>
+					<a name="320_1" style="position:absolute;left:0em;top:19.7125em;">&nbsp;</a>
+					<a name="320_2" style="position:absolute;left:0em;top:15.5458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

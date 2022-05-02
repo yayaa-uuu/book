@@ -1,0 +1,50 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_351.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_351.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9999em;top:4.3166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0916em;">Some data models are easier to shard than others, depending on the degree of con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:5.3666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0901em;">nectivity in the entity-relationship graph. </span><a href="MultiPageHTML_out323.html#323_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0868em;">Figure 11-2 </span></a><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0886em;">depicts an easily sharded data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.4166em;z-index:251;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0051em;">model on the left and one that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0019em;">ifficult to shard on the right. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.5911em;"><span class="stl_155 stl_41 stl_59" style="word-spacing:0.0188em;">Figure 11-2. Two data models, one easy to shard and the other </span><span class="stl_216 stl_41 stl_28">diﬃcult</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out323.html#323_1"><span class="stl_343 stl_41 stl_28">5 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9999em;top:24.6525em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0446em;">The data model on the left is easy to shard because it has many connected subgraphs &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.7025em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1014em;">consisting mostly of nodes with just one connection and you can “cut” the connec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.7525em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0409em;">tions between the subgraphs relatively easily. The model on the right is hard to shard &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.8025em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1137em;">because there are no such subgraphs. Most data models, luckily, look more like the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.8525em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">lefthand diagram than the righthand one. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.4025em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1188em;">When choosing a partitioning key, try to pick something that lets you avoid cross- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.4525em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0357em;">shard queries as much as possible but also makes shards small enough that you won’t &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.5025em;z-index:841;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0808em;">have problems with disproportionately large chunks of data. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0808em;">u want the shards to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.5525em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.045em;">end up uniformly small, if possible, and if not, at least small enough that they’re easy &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.6025em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1513em;">to balance by grouping different numbers of shards together. For example, if your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.6525em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.006em;">application is US only and you want to divide your data set into 20 shards, you proba‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.7025em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.094em;">bly shouldn’t shard by state because California has such a huge population. But you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.7525em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1167em;">could shard by county or telephone area code, because even though those won’t be &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.8025em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0686em;">uniformly populated, there are enough of them that you can still choose 20 sets that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:39.8525em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0659em;">will be roughly equally populated in total, and you can choose them with an affinity &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.9025em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">that helps avoid cross-shard queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">5</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_95" style="word-spacing:0.0018em;">Thanks to the HiveDB project and Britt Crawford for contributing these elegant diagrams. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.3292em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Scaling Writes with Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">301 &nbsp;</span></div>
+					<a name="323_0" style="position:absolute;left:0em;top:8.1083em;">&nbsp;</a>
+					<a name="323_1" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+					<a name="323_2" style="position:absolute;left:0em;top:41.1317em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

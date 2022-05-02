@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_248.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_248.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9995em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">MySQL’s join execution strategy &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.6995em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0111em;">MySQL uses the term </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.0193em;">join </span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0084em;">more broadly than you might be used to. In sum, it consid‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.7609em;"><span class="stl_154 stl_32 stl_135" style="word-spacing:0.0707em;">ers every query a join—not just every query that matches rows from two tables, but &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.8604em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0869em;">every query, period (including subqueries and even a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1705em;">SELECT </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0861em;">against a single table). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.9104em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0094em;">Consequently, it’s very important to understand how MySQL executes joins. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:10.5098em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0446em;">Consider the example of a </span><span class="stl_170 stl_171 stl_28">UNIO</span><span class="stl_170 stl_171 stl_456">N</span><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0517em;">query. MySQL executes a </span><span class="stl_170 stl_171 stl_28">UNIO</span><span class="stl_170 stl_171 stl_456">N</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0422em;">as a series of single &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:11.5598em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0144em;">queries whose results are spooled into a temporary table, then read out again. Each of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.6098em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0984em;">the individual queries is a join, in MySQL terminology, and so is the act of reading &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:13.6598em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0008em;">from the resulting temporary table. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.2098em;z-index:831;"><span class="stl_154 stl_32 stl_93">MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2811em;">’s </span><span class="stl_154 stl_32 stl_28">j</span><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0912em;">oin execution strategy used to be simple: it treated every join as a nested- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:16.2598em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1304em;">loop join. This means MySQL runs a loop to find a row from a table, then runs a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:17.3098em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0434em;">nested loop to find a matching row in the next table. It continues until it has found a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:18.3598em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0324em;">matching row in each table in the join. It then builds and returns a row from the col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:19.4592em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1332em;">umns named in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1205em;">SELECT </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1358em;">list. It tries to build the next row by looking for more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:20.5092em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0218em;">matching rows in the last table. If it doesn’t find any, it backtracks one table and looks &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.5592em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0261em;">for more rows there. It keeps backtracking until it finds another row in some table, at &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:22.6092em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">which point it looks for a matching row in the next table, and so on.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out234.html#234_0"><span class="stl_166 stl_32 stl_77" style="word-spacing:0.0032em;">9 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9996em;top:24.1592em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0611em;">As of version 8.0.20, block nested-loop joins are no longer used; instead, a </span><a href="https://oreil.ly/WdIQm" target="_blank"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0611em;">hash join &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.0002em;top:25.2092em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0547em;">has replaced it. This makes the join process perform as fast as, or faster, than before, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.2592em;z-index:1554;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0037em;">especially if one of the sets of data can live in memory. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9995em;top:28.3162em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">The execution plan &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.7836em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.0988em;">MySQL doesn’t generate bytecode to execute a query, as many other database prod‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.8336em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0794em;">ucts do. Instead, the query execution plan is actually a tree</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out234.html#234_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3093em;">10 </span></a></sup><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0817em;">of instructions that the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.8836em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0556em;">query execution engine follows to produce the query results. The final plan contains &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.983em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0496em;">enough information to reconstruct the original query. If you execute </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.047em;">EXPLAIN EXTEN &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.0824em;z-index:1921;"><span class="stl_170 stl_171 stl_28">DE</span><span class="stl_170 stl_171 stl_186">D</span><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0063em;">on a query, followed by </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">SHOW WARNINGS</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">, you’ll see the reconstructed query.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out234.html#234_2"><span class="stl_166 stl_32 stl_28">11 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9999em;top:35.6324em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0197em;">Any multitable query can conceptually be represented as a tree. For example, it might &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.6824em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">be possible to execute a four-table join as shown in </span><a href="MultiPageHTML_out235.html#235_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 8-2</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:44.3793em;"><span class="stl_167 stl_32 stl_28">9</span></div>
+					<div class="stl_01" style="left:6.6667em;top:44.2968em;z-index:24;"><span class="stl_168 stl_32 stl_44" style="word-spacing:0.0163em;">As we show later, MySQ</span><span class="stl_168 stl_32 stl_94">L</span><span class="stl_168 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_168 stl_32 stl_28">q</span><span class="stl_168 stl_32 stl_99" style="word-spacing:0.0064em;">uery execution isn’t quite this simple; there are many optimizations that compli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:45.1302em;"><span class="stl_168 stl_32 stl_55" style="word-spacing:0.0076em;">cate it. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.8152em;top:46.2712em;z-index:106;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.2726em;">10 </span><span class="stl_168 stl_32 stl_109">Y</span><span class="stl_168 stl_32 stl_28">o</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">u can see this by using </span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">EXPLAIN FORMAT=TREE </span><span class="stl_211 stl_171 stl_186">…</span><span class="stl_168 stl_32 stl_72" style="word-spacing:0.0045em;">before your statement. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.3545em;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">11 </span><span class="stl_168 stl_32 stl_88" style="word-spacing:0.0011em;">The server generates the output from the execution plan. It thus has the same semantics as the original query &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">but not necessarily the same text. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">212 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="234_0" style="position:absolute;left:0em;top:44.3882em;">&nbsp;</a>
+					<a name="234_1" style="position:absolute;left:0em;top:46.3048em;">&nbsp;</a>
+					<a name="234_2" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="234_3" style="position:absolute;left:0em;top:5.9402em;">&nbsp;</a>
+					<a name="234_4" style="position:absolute;left:0em;top:30.0128em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

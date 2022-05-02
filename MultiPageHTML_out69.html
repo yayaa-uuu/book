@@ -1,0 +1,95 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_76.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_76.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1196em;">example, in the output of the Linux </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0113em;">`ps -eLf` </span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1211em;">command, and an internal MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.4655em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0456em;">thread ID. This internal MySQL thread ID is called </span><span class="stl_170 stl_171 stl_28">THREAD_I</span><span class="stl_170 stl_171 stl_271">D</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0401em;">in most of the </span><span class="stl_170 stl_171 stl_28">perfor &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.5649em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1764em;">mance_schema </span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0848em;">tables. Additionally, each foreground thread has an assigned </span><span class="stl_170 stl_171 stl_28">PROCESS &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.6643em;"><span class="stl_170 stl_171 stl_28">LIST_ID</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0495em;">: connection identifier, visible in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0437em;">SHOW PROCESSLIS</span><span class="stl_170 stl_171 stl_272">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0437em;">command output or &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.7638em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0829em;">in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0315em;">“Your MySQL connection id is” </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0854em;">string when you connect with the MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.8138em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">command-line client. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:12.1711em;"><span class="stl_212 stl_171 stl_28">THREAD_I</span><span class="stl_212 stl_171 stl_186">D</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">is not equal to </span><span class="stl_212 stl_171 stl_28">PROCESSLIST_ID</span><span class="stl_176 stl_32 stl_28">! &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:17.6132em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1662em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0861em;">threads </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1662em;">table in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0861em;">performance_schema </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1677em;">contains all the threads existing in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:18.6632em;"><span class="stl_154 stl_32 stl_273">server: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:20.4251em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT NAME, THREAD_ID, PROCESSLIST_ID, THREAD_OS_ID &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:21.2751em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM performance_schema.threads; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:22.1258em;"><span class="stl_200 stl_171 stl_28">+------------------------+-----------+----------------+--------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:22.9758em;"><span class="stl_200 stl_171 stl_28">| NAME</span><span class="stl_200 stl_171 stl_28" style="word-spacing:9em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| THREAD_ID | PROCESSLIST_ID | THREAD_OS_ID | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:23.8258em;"><span class="stl_200 stl_171 stl_28">+------------------------+-----------+----------------+--------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:24.6758em;"><span class="stl_200 stl_171 stl_28">| thread/sql/main &nbsp;</span></div>
+					<div class="stl_01" style="left:16.2705em;top:24.6758em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:24.6758em;"><span class="stl_200 stl_171 stl_28">1 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.8122em;top:25.5258em;"><span class="stl_200 stl_171 stl_28">3 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.8122em;top:26.3758em;"><span class="stl_200 stl_171 stl_28">4 | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7705em;top:24.6758em;"><span class="stl_200 stl_171 stl_28">NULL | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7705em;top:25.5258em;"><span class="stl_200 stl_171 stl_28">NULL | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7705em;top:26.3758em;"><span class="stl_200 stl_171 stl_28">NULL | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:24.6758em;"><span class="stl_200 stl_171 stl_28">797580 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:25.5258em;"><span class="stl_200 stl_171 stl_28">797583 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:26.3758em;"><span class="stl_200 stl_171 stl_28">797584 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:25.5258em;"><span class="stl_200 stl_171 stl_28">| thread/innodb/io_ib... | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:26.3758em;"><span class="stl_200 stl_171 stl_28">| thread/innodb/io_lo... | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:27.2258em;"><span class="stl_200 stl_171 stl_28">... &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:28.0758em;"><span class="stl_200 stl_171 stl_28">| thread/sql/slave_io &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:28.9258em;"><span class="stl_200 stl_171 stl_28">| thread/sql/slave_sql &nbsp;</span></div>
+					<div class="stl_01" style="left:16.2705em;top:28.0758em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:16.2705em;top:28.9258em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.458em;top:28.0758em;"><span class="stl_200 stl_171 stl_28">42 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.458em;top:28.9258em;"><span class="stl_200 stl_171 stl_28">43 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.458em;top:29.7758em;"><span class="stl_200 stl_171 stl_28">44 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.458em;top:30.6258em;"><span class="stl_200 stl_171 stl_28">45 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.833em;top:28.0758em;"><span class="stl_200 stl_171 stl_28">5 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.833em;top:28.9258em;"><span class="stl_200 stl_171 stl_28">6 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.833em;top:29.7758em;"><span class="stl_200 stl_171 stl_28">7 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:28.0758em;"><span class="stl_200 stl_171 stl_28">797618 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:28.9258em;"><span class="stl_200 stl_171 stl_28">797619 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:29.7758em;"><span class="stl_200 stl_171 stl_28">797620 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:30.6258em;"><span class="stl_200 stl_171 stl_28">797621 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:31.4758em;"><span class="stl_200 stl_171 stl_28">797623 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:32.3258em;"><span class="stl_200 stl_171 stl_28">797695 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:33.1758em;"><span class="stl_200 stl_171 stl_28">797624 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:29.7758em;"><span class="stl_200 stl_171 stl_28">| thread/sql/event_sc... | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:30.6258em;"><span class="stl_200 stl_171 stl_28">| thread/sql/signal_h... | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:31.4758em;"><span class="stl_200 stl_171 stl_28">| thread/mysqlx/accep... | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:32.3258em;"><span class="stl_200 stl_171 stl_28">| thread/sql/one_conn... | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:33.1758em;"><span class="stl_200 stl_171 stl_28">| thread/sql/compress... | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7705em;top:30.6258em;"><span class="stl_200 stl_171 stl_28">NULL | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7706em;top:31.4758em;"><span class="stl_200 stl_171 stl_28">NULL | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.4164em;top:32.3258em;"><span class="stl_200 stl_171 stl_28">27784 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8331em;top:33.1758em;"><span class="stl_200 stl_171 stl_28">9 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.4581em;top:31.4758em;"><span class="stl_200 stl_171 stl_28">46 | &nbsp;</span></div>
+					<div class="stl_01" style="left:18.3956em;top:32.3258em;"><span class="stl_200 stl_171 stl_28">27823 | &nbsp;</span></div>
+					<div class="stl_01" style="left:19.4581em;top:33.1758em;"><span class="stl_200 stl_171 stl_28">48 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.0258em;"><span class="stl_200 stl_171 stl_28">+------------------------+-----------+----------------+--------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.8758em;"><span class="stl_200 stl_171 stl_28">44 rows in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.9127em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0611em;">Besides thread number information, the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.198em;">threads </span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0633em;">table contains the same data as the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.0121em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0361em;">SHOW PROCESSLIS</span><span class="stl_170 stl_171 stl_274">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0361em;">output and a few additional columns, such as </span><span class="stl_170 stl_171 stl_28">RESOURCE_GROU</span><span class="stl_170 stl_171 stl_274">P</span><span class="stl_154 stl_32 stl_28">or &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:39.1115em;"><span class="stl_170 stl_171 stl_28">PARENT_THREAD_ID</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:41.4689em;"><span class="stl_176 stl_32 stl_48" style="word-spacing:0.1908em;">Performance Schema uses </span><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.064em;">THREAD_ID </span><span class="stl_176 stl_32 stl_146" style="word-spacing:0.1827em;">everywhere while </span><span class="stl_212 stl_171 stl_28">PROCESS &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:42.4741em;"><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.1346em;">LIST_ID </span><span class="stl_176 stl_32 stl_83" style="word-spacing:0.1226em;">is available only in the </span><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.1346em;">threads </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1202em;">table. If you need to get &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:43.4793em;"><span class="stl_212 stl_171 stl_28">PROCESSLIST_ID</span><span class="stl_176 stl_32 stl_53" style="word-spacing:0.2435em;">—for example, to kill a connection holding the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:44.4845em;"><span class="stl_176 stl_32 stl_133" style="word-spacing:-0.0034em;">lock—you need to query the </span><span class="stl_212 stl_171 stl_28">thread</span><span class="stl_212 stl_171 stl_275">s</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">table to obtain its value. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.6556em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Introduction to Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4806em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3881em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">47 &nbsp;</span></div>
+					<a name="69_0" style="position:absolute;left:0em;top:6.7941em;">&nbsp;</a>
+					<a name="69_1" style="position:absolute;left:0em;top:7.8936em;">&nbsp;</a>
+					<a name="69_2" style="position:absolute;left:0em;top:5.6947em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_316.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_316.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1067em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Managing and Backing Up Binary Logs &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.3769em;z-index:43;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_446" style="word-spacing:0.0187em;">ur server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0267em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0285em;">inary logs are one of the most important things you can back up. They &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.4269em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1789em;">are necessary for point-in-time recovery, and because they’re usually smaller than &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.4769em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0991em;">your data, they’re easier to back up frequently. If you have a backup of your data at &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.5269em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0175em;">some point and all the binary logs since then, you can replay the binary logs and “roll &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.5769em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0015em;">forward” changes made since the last full backup. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.1269em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1471em;">MySQL uses the binary log for replication, too. That means that your backup and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.1769em;z-index:484;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0418em;">recovery policy often interacts with your replication configuration. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0384em;">s a </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0384em;">ood idea to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.2269em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.1953em;">back up binary logs frequently. If you can’t afford to lose more than 30 minutes’ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.2769em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">worth of data, back them up at least every 30 minutes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.8269em;z-index:609;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0185em;">u’ll need to decide on a log-expiration policy to keep MySQL from filling your disk &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.8769em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0745em;">with binary logs. How large your logs grow depends on your workload and the log‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.9269em;z-index:800;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1448em;">ging format (row-based logging results in larger log entries). </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1431em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1431em;">uggest you keep &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.9769em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0429em;">logs as long as they’re useful, if possible. Keeping them is helpful for setting up repli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.0269em;z-index:914;"><span class="stl_154 stl_32 stl_135" style="word-spacing:0.2283em;">cas, analyzing your server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2312em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.2317em;">orkload, auditing, and point-in-time recovery from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.0769em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0125em;">your last full backup. Consider all of these needs when you decide how long you want &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.1269em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to keep your logs. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.7264em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0581em;">A common setup is to use the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1999em;">binlog_expire_logs_seconds </span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0623em;">variable to tell MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.7764em;z-index:1136;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to purge logs after a while. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">u should not remove these files by hand. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.3758em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1059em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1496em;">binlog_expire_logs_seconds </span><span class="stl_154 stl_32 stl_112" style="word-spacing:0.1041em;">setting takes effect upon server startup or when &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.4258em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1446em;">MySQL rotates the binary log, so if your binary log never fills up and rotates, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.4758em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0604em;">server will not purge older entries. It decides which files to purge by looking at their &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.5258em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">modification times, not their contents. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.4223em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Backup and Recovery Tools &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.6925em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1035em;">A variety of good and not-so-good backup tools are available. For raw backups, we &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.7425em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.2954em;">recommend Percona XtraBackup. It’s open source, widely used, and well docu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.7811em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1058em;">mented. For logical backups, we prefer </span><span class="stl_155 stl_41 stl_59">mydumper</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.103em;">. Although </span><span class="stl_155 stl_41 stl_230" style="word-spacing:0.118em;">mysqldump </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.103em;">ships with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.8425em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0725em;">MySQL, its single-threaded nature can make for some very long backup and restore &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.8811em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1431em;">times out of the box. </span><span class="stl_155 stl_41 stl_393" style="word-spacing:0.1626em;">mydumper </span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1443em;">has parallelism built in, which can make it much &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.9425em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0029em;">faster to get a logical backup. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.8268em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">MySQL Enterprise Backup &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.7266em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0773em;">This tool is part of a MySQL Enterprise subscription from Oracle. Using it does not &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.7766em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2769em;">require stopping MySQL, setting locks, or interrupting normal database activity &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.8266em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0286em;">(although it will cause some extra load on your server). It supports features like com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.8766em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0332em;">pressed backups, incremental backups, and streaming backups to another server. It is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:47.9266em;"><span class="stl_154 stl_32 stl_181" style="word-spacing:0.0108em;">the “official” backup tool for MySQL. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.0225em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Managing and Backing Up Binary Logs &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">269 &nbsp;</span></div>
+					<a name="291_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="291_1" style="position:absolute;left:0em;top:32.7739em;">&nbsp;</a>
+					<a name="291_2" style="position:absolute;left:0em;top:42.1199em;">&nbsp;</a>
+					<a name="291_3" style="position:absolute;left:0em;top:6.6062em;">&nbsp;</a>
+					<a name="291_4" style="position:absolute;left:0em;top:43.9558em;">&nbsp;</a>
+					<a name="291_5" style="position:absolute;left:0em;top:37.0218em;">&nbsp;</a>
+					<a name="291_6" style="position:absolute;left:0em;top:34.9218em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_260.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_260.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0003em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Simple optimizations &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:5.7109em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0809em;">A commonly asked question is how to retrieve counts for several different values in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.7609em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0588em;">the same column with just one query, to reduce the number of queries required. For &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.8109em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.024em;">example, say you want to create a single query that counts how many items have each &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.9104em;z-index:318;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0273em;">of several colors. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_384" style="word-spacing:0.0605em;">u can’t use an </span><span class="stl_170 stl_171 stl_28">O</span><span class="stl_170 stl_171 stl_285">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0275em;">(e.g., </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0273em;">SELECT COUNT(color = 'blue' OR color &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.0098em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0636em;">= 'red') FROM items;</span><span class="stl_154 stl_32 stl_151" style="word-spacing:0.0737em;">) because that won’t separate the different counts for the dif‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.1092em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0271em;">ferent colors. And you can’t put the colors in the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_208">E</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0222em;">clause (e.g., </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">SELECT COUNT(*) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.2087em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0996em;">FROM items WHERE color = 'blue' AND color = 'red';</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1021em;">) because the colors are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.2587em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">mutually exclusive. Here is a query that solves this problem:</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out244.html#244_0"><span class="stl_166 stl_32 stl_28">14 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:7.417em;top:15.0205em;"><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">SELECT SUM(IF(color = 'blue', 1, 0)) AS blue,SUM(IF(color = 'red', 1, 0)) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:15.8705em;"><span class="stl_265 stl_173 stl_28">AS red FROM items; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.0581em;z-index:724;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0413em;">And here is another that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0356em;">s </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0373em;">quivalent, but instead of using </span><span class="stl_170 stl_171 stl_28">SUM()</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0356em;">, it uses </span><span class="stl_170 stl_171 stl_28">COUNT(</span><span class="stl_170 stl_171 stl_267">)</span><span class="stl_154 stl_32 stl_28">and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.1081em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0059em;">ensures that the expressions won’t have values when the criteria are false: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:19.87em;"><span class="stl_265 stl_173 stl_28">SELECT COUNT(color = 'blue' OR NULL) AS blue, COUNT(color = 'red' OR NULL) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:20.72em;"><span class="stl_265 stl_173 stl_28">AS red FROM items; &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.365em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Using an approximation &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:23.8324em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0773em;">Sometimes you don’t need an accurate count, so you can just use an approximation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.9319em;z-index:1017;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0976em;">The optimizer</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0976em;">s </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.101em;">stimated rows in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1583em;">EXPLAIN </span><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0978em;">often serve well for this. Just execute an &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.0313em;z-index:1108;"><span class="stl_170 stl_171 stl_28">EXPLAI</span><span class="stl_170 stl_171 stl_186">N</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">query instead of the real query. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.5813em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0253em;">At other times, an exact count is much less efficient than an approximation. One cus‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.6313em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1148em;">tomer asked for help counting the number of active users on his website. The user &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.6813em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1037em;">count was cached and displayed for 30 minutes, after which it was regenerated and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.7313em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1573em;">cached again. This was inaccurate by nature, so an approximation was acceptable. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.8308em;"><span class="stl_154 stl_32 stl_135" style="word-spacing:0.1161em;">The query included several </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1356em;">WHERE </span><span class="stl_154 stl_32 stl_20" style="word-spacing:0.1279em;">conditions to ensure that it didn’t count inactive &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.8808em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0698em;">users or the “default” user, which was a special user ID in the application. Removing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.9308em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0183em;">these conditions changed the count only slightly but made the query much more effi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.0302em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0577em;">cient. A further optimization was to eliminate an unnecessary </span><span class="stl_170 stl_171 stl_28">DISTINC</span><span class="stl_170 stl_171 stl_328">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0565em;">to remove a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.0802em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0957em;">filesort. The rewritten query was much faster and returned almost exactly the same &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.1302em;"><span class="stl_154 stl_32 stl_28">results. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.1871em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">More complex optimizations &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:40.704em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0178em;">In general, </span><span class="stl_170 stl_171 stl_28">COUNT(</span><span class="stl_170 stl_171 stl_208">)</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0196em;">queries are hard to optimize because they usually need to count a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.754em;z-index:1873;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1112em;">lot of rows (i.e., access a lot of data). </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1096em;">ur only other option for optimizing within &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.804em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0139em;">MySQL itself is to use a covering index. If that doesn’t help enough, you need to make &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.854em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1026em;">changes to your application architecture. Consider an external caching system such &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:48.1878em;z-index:6;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">14 </span><span class="stl_168 stl_32 stl_109">Y</span><span class="stl_168 stl_32 stl_28">o</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">u can also write the </span><span class="stl_211 stl_171 stl_28">SUM(</span><span class="stl_211 stl_171 stl_186">)</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">expressions as </span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">SUM(color = 'blue'), SUM(color ='red')</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">222 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="244_0" style="position:absolute;left:0em;top:48.2215em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

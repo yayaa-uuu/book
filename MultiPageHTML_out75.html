@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_82.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_82.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28">Defaults &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.065em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1208em;">Default values for different parts of MySQL change from version to version; there‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.115em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2236em;">fore, it is better to consult the user reference manual prior to relying on values &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:8.165em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.019em;">described here. However, for Performance Schema, they affect overall performance of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.215em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0059em;">the server, so I want to cover the important ones. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.765em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0377em;">Since version 5.7, Performance Schema is enabled by default with most of the instru‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.815em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1229em;">ments disabled. Only global, thread, statements, and transaction instrumentation is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.865em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.036em;">enabled. Since version 8.0, metadata lock and memory instrumentation are addition‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.915em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">ally enabled by default. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:15.5145em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0386em;">The </span><span class="stl_170 stl_171 stl_28">mysql</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0386em;">, </span><span class="stl_170 stl_171 stl_28">information_schema</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0386em;">, and </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_292">a</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0407em;">databases are not instru‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:16.5645em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">mented. All other objects, threads, and actors are instrumented. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.1639em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.2154em;">Most of the instances, handles, and setup tables are autosized. For the </span><span class="stl_170 stl_171 stl_28">_history &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.2634em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0477em;">tables, the last 10 events per thread are stored. For the </span><span class="stl_170 stl_171 stl_28">_history_lon</span><span class="stl_170 stl_171 stl_293">g</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.049em;">tables, the lat‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.3134em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0135em;">est 10,000 events per thread are stored. The maximum stored SQL text length is 1,024 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.3634em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0167em;">bytes. The maximum SQL digest length is also 1,024 bytes. Everything that is larger is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.4134em;"><span class="stl_154 stl_32 stl_97">right-trimmed. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0006em;top:24.3099em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.5801em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1789em;">Now that I’ve covered how Performance Schema is configured, I want to provide &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.6301em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">examples to help you solve common troubleshooting cases. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.5144em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Examining SQL Statements &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.4141em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0367em;">As I mentioned in </span><a href="MultiPageHTML_out64.html#64_0"><span class="stl_184 stl_32 stl_132" style="word-spacing:0.0395em;">“Instrument Elements” on page 42</span></a><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0358em;">, Performance Schema supports &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.4642em;z-index:1219;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1175em;">a rich set of instruments to examine performance of SQL statements. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1151em;">u will find &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.5636em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.3479em;">tools for the standard prepared statements and stored routines. With </span><span class="stl_170 stl_171 stl_28">perfor &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.663em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.083em;">mance_schema </span><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1687em;">you can easily find which query causes performance issues and for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.713em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">what reason. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.3125em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2453em;">To </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0529em;">nable statements instrumentation, you need to enable instruments of type </span><span class="stl_170 stl_171 stl_28">state &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.4119em;z-index:1462;"><span class="stl_170 stl_171 stl_28">ment</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, as described in </span><a href="MultiPageHTML_out75.html#75_3"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out75.html#75_3"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out75.html#75_3"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">ble 3-3</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.4995em;"><span class="stl_40 stl_41 stl_294" style="word-spacing:0.038em;">Table 3-3. </span><span class="stl_286 stl_175 stl_28">Statemen</span><span class="stl_286 stl_175 stl_295">t</span><span class="stl_40 stl_41 stl_144" style="word-spacing:0.012em;">instruments and their descriptions &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3001em;top:42.0718em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Instrument class &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3001em;top:43.2828em;"><span class="stl_200 stl_171 stl_28">statement/sql &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9001em;top:42.0718em;"><span class="stl_205 stl_27 stl_28">Description &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:43.1695em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">SQL statements, such as </span><span class="stl_200 stl_171 stl_28">SELEC</span><span class="stl_200 stl_171 stl_288">T</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">or </span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">CREATE TABLE &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:44.257em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0335em;">Stored procedures control &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:45.3657em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">Event scheduler &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3002em;top:44.3916em;"><span class="stl_200 stl_171 stl_28">statement/sp &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2997em;top:45.5003em;"><span class="stl_200 stl_171 stl_28">statement/scheduler &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2997em;top:46.6091em;"><span class="stl_200 stl_171 stl_28">statement/com &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:46.4957em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">Commands, such as </span><span class="stl_200 stl_171 stl_28">quit</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0331em;">, </span><span class="stl_200 stl_171 stl_28">KILL</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.034em;">, </span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">DROP DATABASE</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0335em;">, or </span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">Binlog Dump</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">. Some &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9002em;top:47.3957em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">are not available for users and are called by the </span><span class="stl_296 stl_297 stl_28" style="word-spacing:-0.06em;">mysqld </span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.034em;">process itself. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.004em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4807em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3882em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">53 &nbsp;</span></div>
+					<a name="75_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="75_1" style="position:absolute;left:0em;top:24.6615em;">&nbsp;</a>
+					<a name="75_2" style="position:absolute;left:0em;top:29.8074em;">&nbsp;</a>
+					<a name="75_3" style="position:absolute;left:0em;top:40.6453em;">&nbsp;</a>
+					<a name="75_4" style="position:absolute;left:0em;top:37.5417em;">&nbsp;</a>
+					<a name="75_5" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="75_6" style="position:absolute;left:0em;top:31.6434em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

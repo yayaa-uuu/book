@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_324.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_324.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.7708em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">mysql vg owi-ao 225.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">tmp vg -wi-ao 10.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">var vg -wi-ao 10.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.3666em;"><span class="stl_154 stl_32 stl_153" style="word-spacing:0.1069em;">Notice that the snapshot’s attributes are different from the original device’s and that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.4166em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0514em;">the display shows a little extra information: its origin and how much of the allocated &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.4666em;z-index:246;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1042em;">16 GB is currently being used for copy-on-write. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0994em;">s a </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0994em;">ood idea to monitor this as &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.5166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0385em;">you make your backup, so you can see if the device is getting full and is about to fail. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.5666em;z-index:366;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0612em;">u can monitor your device</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0544em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0564em;">tatus interactively or with a monitoring system, such &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.6166em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0074em;">as Nagios: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:14.3785em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">watch 'lvs | grep backup' &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.566em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0404em;">As you saw from the output of </span><span class="stl_170 stl_171 stl_28">moun</span><span class="stl_170 stl_171 stl_489">t</span><span class="stl_154 stl_32 stl_65" style="word-spacing:0.0522em;">earlier, the </span><span class="stl_170 stl_171 stl_28">mysq</span><span class="stl_170 stl_171 stl_316">l</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0399em;">volume contains a filesystem. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.616em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.013em;">That means the snapshot volume does too, and you can mount and use it just like any &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:17.666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">other filesystem: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:19.4279em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">mkdir /tmp/backup &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:20.2779em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">mount /dev/mapper/vg-backup_mysql /tmp/backup &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:21.1279em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">ls -l /tmp/backup &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:21.9786em;"><span class="stl_200 stl_171 stl_28">total 188880 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:22.8286em;"><span class="stl_200 stl_171 stl_28">-rw-r-----. 1 mysql mysql 56 Jul 30 22:16 auto.cnf &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:23.6786em;"><span class="stl_200 stl_171 stl_28">-rw-r-----. 1 mysql mysql 475 Jul 30 22:31 binlog.000001 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:24.5286em;"><span class="stl_200 stl_171 stl_28">-rw-r-----. 1 mysql mysql 156 Jul 30 22:31 binlog.000002 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:25.3786em;"><span class="stl_200 stl_171 stl_28">-rw-r-----. 1 mysql mysql 32 Jul 30 22:31 binlog.index &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:26.2286em;"><span class="stl_200 stl_171 stl_28">-rw-------. 1 mysql mysql 1676 Jul 30 22:16 ca-key.pem &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:27.0786em;"><span class="stl_200 stl_171 stl_28">-rw-r--r--. 1 mysql mysql 1120 Jul 30 22:16 ca.pem &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:27.9286em;"><span class="stl_200 stl_171 stl_28">-rw-r--r--. 1 mysql mysql 1120 Jul 30 22:16 client-cert.pem &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:28.7786em;"><span class="stl_200 stl_171 stl_28">-rw-------. 1 mysql mysql 1676 Jul 30 22:16 client-key.pem &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:29.6286em;"><span class="stl_200 stl_171 stl_28">... omitted ... &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.766em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1484em;">This is just for practice, so we’ll unmount and remove the snapshot now with the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.8655em;"><span class="stl_170 stl_171 stl_28">lvremov</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_28">command: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:33.6273em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">umount /tmp/backup &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:34.4773em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">rmdir /tmp/backup &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:35.3273em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">lvremove --force /dev/vg/backup_mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:36.1781em;"><span class="stl_200 stl_171 stl_28">Logical volume "backup_mysql" successfully removed &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.8224em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Lock-free InnoDB backups with LVM snapshots &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.2898em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1454em;">When you run MySQL 8+ with only InnoDB tables, using GTIDs and full ACID- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.3398em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0549em;">compliant mode, making a backup is incredibly easy. While MySQL is running, sim‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:41.3898em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1798em;">ply take a snapshot, mount the snapshot, and then copy the files to your backup &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.4398em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0339em;">location. There’s no need to lock any files, capture any output, or do anything special. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.4898em;z-index:1644;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1158em;">Restoring the files from one of these backups will perform InnoDB crash recovery, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.5398em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0006em;">and the GTID settings will already know which transactions have been processed. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">276 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="298_0" style="position:absolute;left:0em;top:39.5191em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

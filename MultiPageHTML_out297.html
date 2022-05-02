@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_323.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_323.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.108em;">This output shows a volume group that has four logical volumes distributed across &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0833em;">one physical volume, with about 250 GB free. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1749em;">vgdisplay </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0818em;">command gives more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;z-index:162;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0058em;">detail if you need it. Now let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">ake a look at the logical volumes on the system: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:8.2279em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">lvs &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:9.0786em;"><span class="stl_200 stl_171 stl_28">LV VG Attr LSize Origin Snap% Move Log Copy% &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:9.9286em;"><span class="stl_200 stl_171 stl_28">home vg -wi-ao 40.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:10.7786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">mysql vg -wi-ao 225.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:11.6286em;"><span class="stl_200 stl_171 stl_28">tmp vg -wi-ao 10.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:12.4786em;"><span class="stl_200 stl_171 stl_28">var vg -wi-ao 10.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.6655em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1828em;">The output shows that the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0712em;">mysql </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1804em;">volume has 225 GB of space. The device name &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.7041em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0944em;">is </span><span class="stl_155 stl_41 stl_35">/dev/vg/mysql</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0953em;">. This is just a name, even though it looks like a filesystem path. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_105">o &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.7655em;z-index:470;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.012em;">add to the confusion, there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0059em;">s a </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0059em;">ymbolic link from the file of the same name to the real &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.8535em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.2388em;">device node at </span><span class="stl_155 stl_41 stl_114">/dev/mapper/vg-mysql</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2344em;">, which you can see with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0141em;">ls </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2346em;">and </span><span class="stl_170 stl_171 stl_28">mount &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.9149em;"><span class="stl_154 stl_32 stl_28">commands: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:19.6768em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">ls -l /dev/vg/mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:20.5275em;"><span class="stl_200 stl_171 stl_28">lrwxrwxrwx 1 root root 20 Sep 19 13:08 /dev/vg/mysql -&gt; /dev/mapper/vg-mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:21.3768em;"><span class="stl_200 stl_171 stl_28"># </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">mount | grep mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:22.2275em;"><span class="stl_200 stl_171 stl_28">/dev/mapper/vg-mysql on /var/lib/mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.3649em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0051em;">Armed with this information, you’re ready to create a filesystem snapshot. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.4218em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Creating, mounting, and removing an LVM snapshot &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.8892em;z-index:876;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0182em;">u can create the snapshot with a single command. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0157em;">u just need to decide where to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.9392em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0752em;">put it and how much space to allocate for copy-on-write. Don’t hesitate to use more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.9892em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0225em;">space than you think you’ll need. LVM doesn’t use the space you specify right away; it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.0392em;z-index:1076;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0279em;">just reserves it for future use, so there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0257em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_185" style="word-spacing:0.0237em;">o harm in reserving lots of space, unless you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.0892em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">need to leave space for other snapshots at the same time. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.6392em;z-index:1200;"><span class="stl_154 stl_32 stl_25" style="word-spacing:0.0207em;">Let’s create a snapshot just for practice. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_219">e</span><span class="stl_154 stl_32 stl_220">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0096em;">ll give it 16 GB of space for copy-on-write, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.7387em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.008em;">and we’ll call it </span><span class="stl_170 stl_171 stl_28">backup_mysql</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:35.5006em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">lvcreate --size 16G --snapshot --name backup_mysql /dev/vg/mysql &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:36.3513em;"><span class="stl_200 stl_171 stl_28">Logical volume "backup_mysql" created &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:38.296em;z-index:1358;"><span class="stl_176 stl_32 stl_52" style="word-spacing:0.6943em;">We </span><span class="stl_176 stl_32 stl_28">d</span><span class="stl_176 stl_32 stl_95" style="word-spacing:0.502em;">eliberately called the volume </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0.2656em;">backup_mysql </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.5003em;">instead of &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:39.3012em;"><span class="stl_212 stl_171 stl_28">mysql_backu</span><span class="stl_212 stl_171 stl_362">p</span><span class="stl_176 stl_32 stl_57" style="word-spacing:0.034em;">so that tab completion would be unambiguous. This &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:40.2612em;"><span class="stl_176 stl_32 stl_83" style="word-spacing:0.0778em;">helps avoid the possibility of tab completion causing you to delete &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3996em;top:41.2664em;z-index:1549;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">the </span><span class="stl_212 stl_171 stl_28">mysq</span><span class="stl_212 stl_171 stl_186">l</span><span class="stl_176 stl_32 stl_20" style="word-spacing:0.0088em;">volume group accidentally. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.6887em;"><span class="stl_154 stl_32 stl_202" style="word-spacing:0.0205em;">Now let’s see the newly created volume’s status: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:45.4506em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">lvs &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:46.3013em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">LV VG Attr LSize Origin Snap% Move Log Copy% &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:47.1513em;"><span class="stl_200 stl_171 stl_28">backup_mysql vg swi-a- 16.00G mysql 0.01 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:48.0013em;"><span class="stl_200 stl_171 stl_28">home vg -wi-ao 40.00G &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3878em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Backing Up Data &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1743em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0818em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">275 &nbsp;</span></div>
+					<a name="297_0" style="position:absolute;left:0em;top:27.1185em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_234.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_234.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0662em;">queries very quickly. Modern networks are also significantly faster than they used to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.049em;">be, reducing network latency. Depending on the server version, MySQL can run well &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:6.4166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1185em;">over one hundred thousand simple queries per second on commodity server hard‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0172em;">ware and more than two thousand QPS from a single correspondent on a gigabit net‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.5166em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0056em;">work, so running multiple queries isn’t necessarily such a bad thing. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.0666em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0935em;">Connection response is still slow compared to the number of rows MySQL can tra‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.1166em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0926em;">verse per second internally, though, which is counted in millions per second for in- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.1666em;z-index:571;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2123em;">memory data. All else being equal, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.211em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.211em;">till a good idea to use as few queries as &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.2166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0465em;">possible, but sometimes you can make a query more efficient by decomposing it and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.2666em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0269em;">executing a few simple queries instead of one complex one. Don’t be afraid to do this; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.3166em;z-index:797;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0514em;">weigh the costs and go with the strategy that causes less work. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0498em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0498em;">how some exam‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.3666em;z-index:854;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0059em;">ples of this technique a little later in the chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.9166em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1317em;">That said, using too many queries is a common mistake in application design. For &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.9666em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1712em;">example, some applications perform 10 single-row queries to retrieve data from a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0166em;z-index:1031;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1148em;">table when they could use a single 10-row query. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_153" style="word-spacing:0.1248em;">e’ve even seen applications that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.0666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0029em;">retrieve each column individually, querying each row many times! &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.9509em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Chopping Up a Query &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.8507em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1064em;">Another way to slice up a query is to divide and conquer, keeping it essentially the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.9007em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0067em;">same but running it in smaller “chunks” that affect fewer rows each time. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.4507em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0148em;">Purging old data is a great example. Periodic purge jobs might need to remove quite a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.5007em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0966em;">bit of data, and doing this in one massive query could lock a lot of rows for a long &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.5507em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0333em;">time, fill up transaction logs, hog resources, and block small queries that shouldn’t be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.6501em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0889em;">interrupted. Chopping up the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1694em;">DELETE </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0894em;">statement and using medium-size queries can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.7001em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.064em;">improve performance considerably and reduce replication lag when a query is repli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.7501em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:-0.0001em;">cated. For example, instead of running this monolithic query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.512em;"><span class="stl_265 stl_173 stl_28">DELETE FROM messages &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.362em;"><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">WHERE created &lt; DATE_SUB(NOW(),INTERVAL 3 MONTH); &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.5001em;z-index:1729;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">u could do something like the following pseudocode: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:38.2627em;"><span class="stl_200 stl_171 stl_28">rows_affected = 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:39.1127em;"><span class="stl_200 stl_171 stl_28">do { &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:39.9627em;"><span class="stl_200 stl_171 stl_28">rows_affected = do_query( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:40.8127em;"><span class="stl_200 stl_171 stl_28">"DELETE FROM messages WHERE created &lt; DATE_SUB(NOW(),INTERVAL 3 MONTH) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:41.6627em;"><span class="stl_200 stl_171 stl_28">LIMIT 10000") &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:42.5127em;"><span class="stl_200 stl_171 stl_28">} while rows_affected &gt; 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.6501em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1154em;">Deleting 10,000 rows at a time is typically a large enough task to make each query &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.7001em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0128em;">efficient and a short enough task to minimize the impact on the server</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out221.html#221_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.193em;">3 </span></a></sup><span class="stl_154 stl_32 stl_28">(transactional &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">3</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1792em;z-index:19;"><span class="stl_168 stl_32 stl_145" style="word-spacing:0.0107em;">Percona </span><span class="stl_168 stl_32 stl_105">T</span><span class="stl_168 stl_32 stl_28">o</span><span class="stl_168 stl_32 stl_357" style="word-spacing:0.0407em;">olkit’s </span><span class="stl_229 stl_41 stl_121" style="word-spacing:0.017em;">pt-archiver </span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">tool makes these types of jobs easy and safe. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.521em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Ways to Restructure Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">199 &nbsp;</span></div>
+					<a name="221_0" style="position:absolute;left:0em;top:23.244em;">&nbsp;</a>
+					<a name="221_1" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+					<a name="221_2" style="position:absolute;left:0em;top:27.6799em;">&nbsp;</a>
+					<a name="221_3" style="position:absolute;left:0em;top:25.0799em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

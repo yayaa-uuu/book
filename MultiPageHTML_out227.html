@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_241.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_241.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The Query Optimization Process &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.065em;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.0279em;">The next step in the query life cycle turns a SQL query into an execution plan for the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.115em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0869em;">query execution engine. This has several substeps: parsing, preprocessing, and opti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.165em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">mization. Errors (for example, syntax errors) can be raised at any point in the process. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:9.215em;"><span class="stl_154 stl_32 stl_214" style="word-spacing:0.0583em;">We’re not trying to document the MySQL internals here, so we’re going to take some &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.265em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.227em;">liberties, such as describing steps separately even though they’re often combined &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:11.315em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1798em;">wholly or partially for efficiency. Our goal is simply to help you understand how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.365em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">MySQL executes queries so that you can write better ones. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.422em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">The parser and the preprocessor &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.878em;z-index:542;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2358em;">To </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0478em;">egin, MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2298em;">’s </span><span class="stl_155 stl_41 stl_115" style="word-spacing:0.0462em;">parser </span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0443em;">breaks the query into tokens and builds a “parse tree” from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.9394em;z-index:622;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0231em;">them. The parser uses MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2096em;">’s </span><span class="stl_154 stl_32 stl_28">S</span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0255em;">QL grammar to interpret and validate the query. For &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.9894em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0162em;">instance, it ensures that the tokens in the query are valid and in the proper order, and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.0394em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0064em;">it checks for mistakes such as quoted strings that aren’t terminated. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.578em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.021em;">The </span><span class="stl_155 stl_41 stl_50" style="word-spacing:0.0368em;">preprocessor </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0229em;">then checks the resulting parse tree for additional semantics that the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.6394em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.2217em;">parser can’t resolve. For example, it checks that tables and columns exist, and it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.6894em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0048em;">resolves names and aliases to ensure that column references aren’t ambiguous. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.2394em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0152em;">Next, the preprocessor checks privileges. This is normally very fast unless your server &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.2894em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">has large numbers of privileges. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.3463em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">The query optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.8137em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0369em;">The parse tree is now valid and ready for the optimizer to turn it into a query execu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.8637em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0552em;">tion plan. A query can often be executed many different ways and produce the same &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.9137em;z-index:1285;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">result. The optimizer</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">j</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ob is to find the best option. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.4637em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0763em;">MySQL uses a cost-based optimizer, which means it tries to predict the cost of vari‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.5137em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0557em;">ous execution plans and choose the least expensive. The unit of cost was originally a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.5637em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0939em;">single random 4 KB data page read, but it has become more sophisticated and now &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.6632em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1032em;">includes factors such as the estimated cost of executing a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1534em;">WHERE </span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1073em;">clause comparison. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:36.7132em;z-index:1589;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1585em;">u can see how expensive the optimizer estimated a query to be by running the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.8126em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">query, then inspecting the </span><span class="stl_170 stl_171 stl_28">Last_query_cos</span><span class="stl_170 stl_171 stl_186">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">session variable: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:39.5745em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT SQL_NO_CACHE COUNT(*) FROM sakila.film_actor; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:40.4252em;"><span class="stl_200 stl_171 stl_28">+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:41.2752em;"><span class="stl_200 stl_171 stl_28">| count(*) | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:42.1252em;"><span class="stl_200 stl_171 stl_28">+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:42.9752em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:2em;">| 5462</span><span class="stl_200 stl_171 stl_28">&nbsp;</span><span class="stl_200 stl_171 stl_28" style="word-spacing:2em;">| &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:43.8252em;"><span class="stl_200 stl_171 stl_28">+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:45.5245em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SHOW STATUS LIKE 'Last_query_cost'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:46.3752em;"><span class="stl_200 stl_171 stl_28">+-----------------+-------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:47.2252em;"><span class="stl_200 stl_171 stl_28">| Variable_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:48.0752em;"><span class="stl_200 stl_171 stl_28">+-----------------+-------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:13.7914em;top:47.2252em;"><span class="stl_200 stl_171 stl_28">| Value &nbsp;</span></div>
+					<div class="stl_01" style="left:18.7497em;top:47.2252em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:27.8407em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Query Execution Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">205 &nbsp;</span></div>
+					<a name="227_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="227_1" style="position:absolute;left:0em;top:32.693em;">&nbsp;</a>
+					<a name="227_2" style="position:absolute;left:0em;top:16.1186em;">&nbsp;</a>
+					<a name="227_3" style="position:absolute;left:0em;top:29.043em;">&nbsp;</a>
+					<a name="227_4" style="position:absolute;left:0em;top:20.8186em;">&nbsp;</a>
+					<a name="227_5" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

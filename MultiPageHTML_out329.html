@@ -1,0 +1,58 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_358.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_358.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1568em;">Let’s dig into some details about its architecture, configuration patterns, use cases, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">and features. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.4235em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">ProxySQL architecture overview &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.8909em;z-index:118;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0183em;">u can use ProxySQL as a layer in between any application code and MySQL instan‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:9.9409em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.098em;">ces. ProxySQL provides a session-aware, MySQL-protocol-based interface for appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.9909em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1497em;">cations to interact with the databases. Instead of applications opening connections &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.0409em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">directly to the database instances, ProxySQL opens them on the applications’ behalf. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.5909em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.2266em;">This design makes the proxy seem invisible to the application nodes. Its session &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.6409em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1448em;">awareness allows for moving these connections between MySQL instances without &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.6909em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0915em;">downtime. This is especially useful when you are dealing with applications that you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.7409em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0463em;">are no longer investing in because you can now utilize features in ProxySQL without &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.7909em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">needing to make any changes to code that you may not feel confident changing. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.3409em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0331em;">ProxySQL also provides powerful connection pooling. Connections opened by appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.3909em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0572em;">cations to ProxySQL are separate from the connections ProxySQL opens to database &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.4409em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1878em;">instances it is configured to connect to. This separation allows for protecting the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.4909em;z-index:1016;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0053em;">database instances from sudden traffic spikes in the application layer. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.0409em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1403em;">When you have the ability to manage client-side connections separately from how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.0909em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0166em;">many connections actually are made to the database, you introduce flexibility you did &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.1409em;z-index:1173;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0744em;">not have before. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0739em;">u can now scale out the application node pool without having to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.1909em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0649em;">worry that it will increase connection load to the database beyond what you want to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.2409em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1321em;">support. This allows for diverse scenarios of application and business needs, as we &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.2909em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">will explain in the common patterns when using ProxySQL. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.3479em;"><span class="stl_308 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_193 stl_27 stl_28">ProxySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.8153em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1003em;">ProxySQL uses a configuration file for startup but maintains its runtime configura‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.8653em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.012em;">tion both in memory and in an embedded SQLite file that you can access directly and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.9153em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:-0.0009em;">query using an admin interface. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.4653em;z-index:1608;"><span class="stl_154 stl_32 stl_28">ProxySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3527em;">’s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1636em;">dmin interface allows you to issue commands to change the running &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.5153em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1474em;">configuration, then dump that new configuration out to disk for persistence using &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.5653em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1257em;">MySQL commands. This allows you to make zero-downtime changes to a running &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.6153em;z-index:1816;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ProxySQL instance. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">u can also use this admin interface to make automated changes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.6653em;z-index:1931;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0561em;">issued by your configuration management or automated failover scripts. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0532em;">u can see &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.7153em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1133em;">in </span><a href="MultiPageHTML_out330.html#330_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.1133em;">Figure 11-4 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1133em;">how your architecture would generally leverage both ProxySQL and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:42.7653em;"><span class="stl_154 stl_32 stl_135" style="word-spacing:-0.0031em;">service discovery to provide a robust access layer for services. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.3295em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Scaling Writes with Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">307 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

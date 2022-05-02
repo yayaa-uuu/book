@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_40.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_40.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:11.3988em;top:4.3739em;"><span class="stl_176 stl_32 stl_57" style="word-spacing:0.031em;">The interaction between </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0em;">LOCK TABLE</span><span class="stl_212 stl_171 stl_213">S</span><span class="stl_176 stl_32 stl_95" style="word-spacing:0.0307em;">and transactions is complex, &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:5.3339em;"><span class="stl_176 stl_32 stl_37" style="word-spacing:-0.0005em;">and there are unexpected behaviors in some server versions. There‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:6.3391em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.134em;">fore, we recommend that you never use </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0.0054em;">LOCK TABLES </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1325em;">unless you &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:7.3443em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1632em;">are in a transaction and </span><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.0893em;">AUTOCOMMIT </span><span class="stl_176 stl_32 stl_33" style="word-spacing:0.1674em;">is disabled, no matter what &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:8.3043em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">storage engine you are using. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.2923em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Multiversion Concurrency Control &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.5625em;z-index:383;"><span class="stl_154 stl_32 stl_164" style="word-spacing:0.0215em;">Most of MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.197em;">’s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0125em;">ransactional storage engines don’t use a simple row-locking mecha‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:13.6125em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0143em;">nism. Instead, they use row-level locking in conjunction with a technique for increas‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.6511em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1188em;">ing concurrency known as </span><span class="stl_155 stl_41 stl_214" style="word-spacing:0.1323em;">multiversion concurrency control (MVCC)</span><span class="stl_154 stl_32 stl_215" style="word-spacing:0.1311em;">. MVCC is not &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.7125em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.091em;">unique to MySQL: Oracle, PostgreSQL, and some other database systems use it too, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.7625em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2823em;">although there are significant differences because there is no standard for how &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.8125em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0062em;">MVCC should work. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.3625em;z-index:736;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0161em;">u can think of MVCC as a twist on row-level locking; it avoids the need for locking &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.4125em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1669em;">at all in many cases and can have much lower overhead. Depending on how it is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.4625em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1359em;">implemented, it can allow nonlocking reads while locking only the necessary rows &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.5125em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">during write operations. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.0625em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0477em;">MVCC works by using snapshots of the data as it existed at some point in time. This &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.1125em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1272em;">means transactions can see a consistent view of the data, no matter how long they &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.1625em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1052em;">run. It also means different transactions can see different data in the same tables at &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.2125em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0904em;">the same time! If you’ve never experienced this before, it might be confusing, but it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.2625em;z-index:1277;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0039em;">will become easier to understand with familiarity. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.8125em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.141em;">Each storage engine implements MVCC differently. Some of the variations include &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:30.8625em;z-index:1391;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0736em;">optimistic and pessimistic concurrency control. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0726em;">e </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0804em;">llustrate one way MVCC works &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.9125em;z-index:1436;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">by explaining InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_123">ehavior</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out35.html#35_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.1702em;">10 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">in the form of a sequence diagram in </span><a href="MultiPageHTML_out36.html#36_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 1-2</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.4625em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1029em;">InnoDB implements MVCC by assigning a transaction ID for each transaction that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.5125em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">starts. That ID is assigned the first time the transaction reads any data. When a record &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.5625em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0851em;">is modified within that transaction, an undo record that explains how to revert that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.6125em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0311em;">change is written to the undo log, and the rollback pointer of the transaction is poin‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.6625em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">ted at that undo log record. This is how the transaction can find the way to roll back if &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.7125em;"><span class="stl_154 stl_32 stl_28">needed. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.3545em;z-index:6;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">10 </span><span class="stl_168 stl_32 stl_52">W</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_168 stl_32 stl_28">r</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">ecommend reading </span><a href="https://oreil.ly/jbljq" target="_blank"><span class="stl_187 stl_32 stl_28" style="word-spacing:0em;">this blog post </span></a><span class="stl_168 stl_32 stl_73" style="word-spacing:0.002em;">by Jeremy Cole to get a deeper understanding of records structure in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_143">InnoDB. &nbsp;</span></div>
+					<div class="stl_01" style="left:25.5567em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Multiversion Concurrency Control &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4802em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3877em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">13 &nbsp;</span></div>
+					<a name="35_0" style="position:absolute;left:0em;top:10.6439em;">&nbsp;</a>
+					<a name="35_1" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="35_2" style="position:absolute;left:0em;top:12.7918em;">&nbsp;</a>
+					<a name="35_3" style="position:absolute;left:0em;top:8.5139em;">&nbsp;</a>
+					<a name="35_4" style="position:absolute;left:0em;top:32.1418em;">&nbsp;</a>
+					<a name="35_5" style="position:absolute;left:0em;top:30.0418em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

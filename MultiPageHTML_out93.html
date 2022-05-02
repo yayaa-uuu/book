@@ -1,0 +1,81 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_100.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_100.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0503em;">Error digest tables can be useful for finding out which user accounts, hosts, users, or &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0121em;">threads send the most erroneous queries and perform an action. They could also help &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0972em;">with errors like </span><span class="stl_170 stl_171 stl_28">ER_DEPRECATED_UTF8_ALIAS</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1008em;">, which may show that some of the fre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.516em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2331em;">quently used queries were written for previous MySQL versions and need to be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.566em;"><span class="stl_154 stl_32 stl_24">updated. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.4503em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Examining Performance Schema Itself &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.3501em;z-index:318;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1446em;">u can examine Performance Schema itself using the same instruments and con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.4495em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2893em;">sumers as you do for your own schemas. Just note that by default, if </span><span class="stl_170 stl_171 stl_28">perfor &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.549em;"><span class="stl_170 stl_171 stl_28">mance_schem</span><span class="stl_170 stl_171 stl_322">a</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0551em;">is set as the default database, queries to it are not tracked. If you need &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.6484em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1378em;">to examine queries to </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1407em;">, you need to update the </span><span class="stl_170 stl_171 stl_28">setup_actors &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:16.6984em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">table first. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.2979em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0157em;">Once the </span><span class="stl_170 stl_171 stl_28">setup_actor</span><span class="stl_170 stl_171 stl_241">s</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0194em;">table is updated, all instruments can be used. For example, to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.3973em;z-index:731;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1293em;">find the 10 consumers in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1249em;">performance_schema </span><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1365em;">that allocated most of the memory, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.4473em;"><span class="stl_154 stl_32 stl_28">run: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:22.2092em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT SUBSTRING_INDEX(EVENT_NAME, '/', -1) AS EVENT, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:23.0592em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">CURRENT_NUMBER_OF_BYTES_USED/1024/1024 AS CURRENT_MB, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:23.9092em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">HIGH_NUMBER_OF_BYTES_USED/1024/1024 AS HIGH_MB &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:24.7592em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM performance_schema.memory_summary_global_by_event_name &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:25.6092em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE EVENT_NAME LIKE 'memory/performance_schema/%' &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:26.4592em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">ORDER BY CURRENT_NUMBER_OF_BYTES_USED DESC LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:27.3099em;"><span class="stl_200 stl_171 stl_28">+----------------------------------------+-------------+-------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:28.1599em;"><span class="stl_200 stl_171 stl_28">| EVENT &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:29.0099em;"><span class="stl_200 stl_171 stl_28">+----------------------------------------+-------------+-------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:21.9372em;top:28.1599em;"><span class="stl_200 stl_171 stl_28">| CURRENT_MB</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| HIGH_MB &nbsp;</span></div>
+					<div class="stl_01" style="left:31.8539em;top:28.1599em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4164em;top:29.8599em;"><span class="stl_200 stl_171 stl_28">| events_statements_summary_by_digest &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:30.7099em;"><span class="stl_200 stl_171 stl_28">| events_statements_history_long &nbsp;</span></div>
+					<div class="stl_01" style="left:21.9372em;top:29.8599em;"><span class="stl_200 stl_171 stl_28">| 39.67285156 | 39.67285156 | &nbsp;</span></div>
+					<div class="stl_01" style="left:21.9372em;top:30.7099em;"><span class="stl_200 stl_171 stl_28">| 13.88549805 | 13.88549805 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:31.5599em;"><span class="stl_200 stl_171 stl_28">| events_errors_summary_by_thread_by_... | 11.81640625 | 11.81640625 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:32.4099em;"><span class="stl_200 stl_171 stl_28">| events_statements_summary_by_thread... |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.79296875 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.79296875 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:33.2599em;"><span class="stl_200 stl_171 stl_28">| events_statements_history_long.dige... |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.76562500 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.76562500 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.1099em;"><span class="stl_200 stl_171 stl_28">| events_statements_summary_by_digest... |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.76562500 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.76562500 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.9599em;"><span class="stl_200 stl_171 stl_28">| events_statements_history_long.sql_... |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.76562500 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">9.76562500 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.8099em;"><span class="stl_200 stl_171 stl_28">| memory_summary_by_thread_by_event_name |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">7.91015625 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">7.91015625 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:36.6599em;"><span class="stl_200 stl_171 stl_28">| events_errors_summary_by_host_by_error |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">5.90820313 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">5.90820313 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.5099em;"><span class="stl_200 stl_171 stl_28">| events_errors_summary_by_account_by... |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">5.90820313 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">5.90820313 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:38.3599em;"><span class="stl_200 stl_171 stl_28">+----------------------------------------+-------------+-------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:39.2099em;"><span class="stl_200 stl_171 stl_28">10 rows in set (0,00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.3968em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">Or use </span><span class="stl_170 stl_171 stl_28">sy</span><span class="stl_170 stl_171 stl_186">s</span><span class="stl_154 stl_32 stl_28">schema: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:42.1586em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT SUBSTRING_INDEX(event_name, '/', -1), current_alloc &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:43.0086em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sys.memory_global_by_current_bytes &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:43.8586em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE event_name LIKE 'memory/performance_schema/%' LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:44.7093em;"><span class="stl_200 stl_171 stl_28">+---------------------------------------------------+---------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:45.5593em;"><span class="stl_200 stl_171 stl_28">| SUBSTRING_INDEX(event_name, '/', -1) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:46.4093em;"><span class="stl_200 stl_171 stl_28">+---------------------------------------------------+---------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8332em;top:45.5593em;"><span class="stl_200 stl_171 stl_28">| current_alloc | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:47.2593em;"><span class="stl_200 stl_171 stl_28">| events_statements_summary_by_digest &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:48.1093em;"><span class="stl_200 stl_171 stl_28">| events_statements_history_long &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8332em;top:47.2593em;"><span class="stl_200 stl_171 stl_28">| 39.67 MiB &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8332em;top:48.1093em;"><span class="stl_200 stl_171 stl_28">| 13.89 MiB &nbsp;</span></div>
+					<div class="stl_01" style="left:31.4998em;top:47.2593em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.4998em;top:48.1093em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:27.0037em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4805em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.388em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">71 &nbsp;</span></div>
+					<a name="93_0" style="position:absolute;left:0em;top:10.7434em;">&nbsp;</a>
+					<a name="93_1" style="position:absolute;left:0em;top:12.5794em;">&nbsp;</a>
+					<a name="93_2" style="position:absolute;left:0em;top:15.8777em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

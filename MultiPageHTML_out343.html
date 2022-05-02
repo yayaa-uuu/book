@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_373.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_373.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0004em;top:4.3166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0136em;">disk performance because memory access is orders of magnitude faster. If your work‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:5.3666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0646em;">ing set is larger than your InnoDB buffer pool, you will always end up going to disk &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.4166em;z-index:278;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0534em;">to read some data. Write-intensive workloads will always go to disk, and that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0463em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_28">here &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.4666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">most people will start to see their first disk bottlenecks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.5235em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Attachment types &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.9909em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0607em;">The first decision to make is whether you go with locally attached disks or network- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.0409em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0227em;">attached disks. Locally attached disks have the benefit of offering incredibly high per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:13.0909em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2156em;">formance and consistent throughput but are also vulnerable to data loss. This is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:14.1409em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1345em;">because they are treated as disks for ephemeral data only. If the hardware running &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.1909em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0556em;">your VM with locally attached data crashes, you could lose all your data on the local &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.2409em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1525em;">disk. Likewise, in some circumstances, even shutting down the instance can mean &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.2909em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0712em;">that when you start it up again, you’re on a different host machine and empty disks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.3409em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0499em;">Locally attached disks typically do not have any replication or RAID behind them. A &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.3909em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0517em;">host-level disk failure could cause you to lose your data. If you go this route, we rec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.4409em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.054em;">ommend strongly considering using software RAID to at least minimize the chances &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.4909em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">of data loss. See our discussion on RAID in </span><a href="MultiPageHTML_out97.html#97_0"><span class="stl_184 stl_32 stl_99" style="word-spacing:0.0063em;">Chapter 4 </span></a><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">for more information. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.0409em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0455em;">By contrast, network-attached disks go the other way, offering redundancy and relia‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.0909em;z-index:1212;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0071em;">bility over performance. That</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0031em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0063em;">ot to say that the performance on a network-attached &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.1409em;z-index:1300;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.201em;">disk is bad—it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1956em;">s </span><span class="stl_154 stl_32 stl_28">j</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1975em;">ust not as performant as local. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1991em;">ur network-attached disk may &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.1909em;z-index:1375;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0295em;">experience stalls where a locally attached disk may not. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0276em;">u can also typically achieve &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.2409em;z-index:1441;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0074em;">much higher throughput and IOPS numbers locally. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.7909em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.4259em;">Cloud providers provide convenient backup or snapshot tooling when using &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.8409em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0747em;">network-attached disks. These work fine for MySQL use, assuming you have ACID- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.8909em;z-index:1641;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1313em;">compliant settings</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out343.html#343_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3919em;">6 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1266em;">configured and your backup solution is properly designed. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.9409em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0878em;">can take a disk snapshot at any point and recover it through normal crash recovery &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.9909em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">with no issues. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.5296em;z-index:1725;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0407em;">u can also use disk snapshotting to make replicas </span><span class="stl_155 stl_41 stl_56" style="word-spacing:0.054em;">extremely </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0395em;">fast, even on disk sizes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.5909em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0251em;">in the many terabytes. By doing this, you minimize the amount of replication lag that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.6409em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">needs to catch up before the replica can be usable. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.1909em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0748em;">Note that if you use a locally attached disk instead of a network-attached one, you’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.2409em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0671em;">need to solve how to back up your data yourself with LVM or a third-party tool like &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.2909em;"><span class="stl_154 stl_32 stl_181" style="word-spacing:0.0108em;">XtraBackup. See </span><a href="MultiPageHTML_out279.html#279_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0054em;">Chapter 10 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">for a more thorough discussion of backups. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.8409em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0368em;">The last note on attachment types is that cloud providers do not offer something like &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.8909em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.235em;">a write cache (battery or flash backed) as one might see from a RAID card on &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.9409em;"><span class="stl_154 stl_32 stl_28">hardware. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">6</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_115" style="word-spacing:0.0084em;">As a reminder, these are </span><span class="stl_211 stl_171 stl_28">innodb_flush_log_at_trx_commit=</span><span class="stl_211 stl_171 stl_186">1</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">and </span><span class="stl_211 stl_171 stl_28">sync_binlog=1</span><span class="stl_168 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.7824em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">MySQL on Virtual Machines &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">321 &nbsp;</span></div>
+					<a name="343_0" style="position:absolute;left:0em;top:48.2215em;">&nbsp;</a>
+					<a name="343_1" style="position:absolute;left:0em;top:11.2202em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_361.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_361.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">INSERT INTO mysql_users &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">(username, password, active, default_hostgroup, comment) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">VALUES &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">('accounts', 'shard0_pass', 1, 0, 'Routed to the accounts shard'), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:7.9292em;"><span class="stl_200 stl_171 stl_28">('transactions', 'shard1_pass', 1, 1, 'Routed to the transactions shard'), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:8.7792em;"><span class="stl_200 stl_171 stl_28">('logging', 'shard2_pass', 1, 2, 'Routed to the logging shard'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:10.4792em;"><span class="stl_200 stl_171 stl_28">LOAD MYSQL USERS RULES TO RUNTIME; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">SAVE MYSQL USERS RULES TO DISK; &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:13.2287em;z-index:353;"><span class="stl_176 stl_32 stl_53" style="word-spacing:0.0763em;">Always make sure you are keeping ProxySQ</span><span class="stl_176 stl_32 stl_94">L</span><span class="stl_176 stl_32 stl_34" style="word-spacing:0.265em;">’s </span><span class="stl_176 stl_32 stl_28">r</span><span class="stl_176 stl_32 stl_35" style="word-spacing:0.0777em;">untime configura‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:14.1887em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.2188em;">tion and on-disk configuration in sync to avoid nasty surprises &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:15.1487em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">when a ProxySQL process restarts. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.6666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0221em;">This adds the convenience of also logging all operations done by these users for com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.7166em;z-index:568;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.056em;">pliance without causing any load on the database. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0524em;">u will see in </span><a href="MultiPageHTML_out347.html#347_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0578em;">Chapter 13 </span></a><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0619em;">that we &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.7666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1138em;">also recommend separate database users for compliance reasons, and therefore this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.8166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0011em;">design aligns with some compliance goals as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.7946em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Sharding by schema.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.5317em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0229em;">Another way you can use ProxySQL to support sharded data sets &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.8878em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">is using schema names as the rule to manage the traffic routing. Here is an example of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.9378em;z-index:877;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">how you would define that in ProxySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_77">onfiguration: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:27.7003em;"><span class="stl_200 stl_171 stl_28">INSERT INTO mysql_query_rules (rule_id, active, schemaname, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:28.5503em;"><span class="stl_200 stl_171 stl_28">destination_hostgroup, apply) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:29.4003em;"><span class="stl_200 stl_171 stl_28">VALUES &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:30.2503em;"><span class="stl_200 stl_171 stl_28">(1, 1, 'shard_0', 0, 1), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:31.1003em;"><span class="stl_200 stl_171 stl_28">(2, 1, 'shard_1', 1, 1), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:31.9503em;"><span class="stl_200 stl_171 stl_28">(3, 1, 'shard_2', 2, 1); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:33.6503em;"><span class="stl_200 stl_171 stl_28">LOAD MYSQL QUERY RULES TO RUNTIME; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.5003em;"><span class="stl_200 stl_171 stl_28">SAVE MYSQL QUERY RULES TO DISK; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.6378em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0647em;">Note that this configuration can be used for either horizontal sharding or functional &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.6878em;z-index:1210;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0043em;">sharding as long as you name your schemas properly. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.2378em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0505em;">A final important recommendation we have when using ProxySQL in this manner is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.2878em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0252em;">to make sure to use its native clustering feature, which ensures that a critical configu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.3872em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.038em;">ration table like </span><span class="stl_170 stl_171 stl_28">mysql_rule</span><span class="stl_170 stl_171 stl_501">s</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0388em;">is synced to all the ProxySQL nodes in the cluster, pro‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.4372em;z-index:1461;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0051em;">viding redundancy in your middleware layer. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.4941em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Other </span><span class="stl_308 stl_27 stl_28" style="word-spacing:-0.092em;">beneﬁts </span><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">of using ProxySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.9615em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0904em;">Let’s discuss some common patterns where using ProxySQL can help alleviate com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.0115em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">mon issues in fast-growing environments. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.3294em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Scaling Writes with Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">309 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

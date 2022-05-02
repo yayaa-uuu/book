@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_242.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_242.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">| Last_query_cost | 1040.599000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">+-----------------+-------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.5166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0629em;">This result means that the optimizer estimated it would need to do about 1,040 ran‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.5666em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0251em;">dom data page reads to execute the query. It bases the estimate on statistics: the num‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:8.6052em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1767em;">ber of pages per table or index, the </span><span class="stl_155 stl_41 stl_360" style="word-spacing:0.1973em;">cardinality </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1783em;">(number of distinct values) of the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.6666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0058em;">indexes, the length of the rows and keys, and the key distribution. The optimizer does &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.7166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0929em;">not include the effects of any type of caching in its estimates; it assumes every read &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.7666em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">will result in a disk I/O operation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.3166em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">The optimizer might not always choose the best plan, for many reasons: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:15.1999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0241em;">&nbsp;</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0244em;">statistics could be inaccurate. The server relies on storage engines to provide &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:16.2499em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0174em;">statistics, and they can range from exactly correct to wildly inaccurate. For exam‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:17.2999em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.2145em;">ple, the InnoDB storage engine doesn’t maintain accurate statistics about the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:18.3499em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0039em;">number of rows in a table because of its MVCC architecture. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:19.7333em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0287em;">&nbsp;</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0312em;">cost metric is not exactly equivalent to the true cost of running the query, so &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:20.7833em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0686em;">even when the statistics are accurate, the query might be more or less expensive &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:21.8333em;z-index:911;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.1657em;">than MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3466em;">’s </span><span class="stl_154 stl_32 stl_294">a</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1594em;">pproximation. A plan that reads more pages might actually be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:22.8833em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0997em;">cheaper in some cases, such as when the reads are sequential so the disk I/O is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:23.9333em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.2021em;">faster or when the pages are already cached in memory. MySQL also doesn’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:24.9833em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0076em;">understand which pages are in memory and which pages are on disk, so it doesn’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:26.0333em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0006em;">really know how much I/O the query will cause. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7209em;top:27.4166em;z-index:1235;"><span class="stl_154 stl_32 stl_93" style="word-spacing:0.2891em;">• MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34">’s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1437em;">&nbsp;</span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_152" style="word-spacing:0.06em;">dea of “optimal” might not match yours. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0508em;">u probably want the fastest &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:28.4666em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0208em;">execution time, but MySQL doesn’t really try to make queries fast; it tries to min‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:29.5166em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0035em;">imize their cost, and as we’ve seen, determining cost is not an exact science. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:30.8999em;"><span class="stl_154 stl_32 stl_93" style="word-spacing:0.2888em;">• MySQL</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0803em;">&nbsp;</span><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0811em;">doesn’t consider other queries that are running concurrently, which can &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:31.9499em;"><span class="stl_154 stl_32 stl_178" style="word-spacing:-0.0025em;">affect how quickly the query runs. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:33.3333em;"><span class="stl_154 stl_32 stl_93" style="word-spacing:0.2883em;">• MySQL</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0653em;">&nbsp;</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0631em;">doesn’t always do cost-based optimization. Sometimes it just follows the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:34.4327em;"><span class="stl_154 stl_32 stl_131" style="word-spacing:0.1343em;">rules, such as “if there’s a full-text </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1352em;">MATCH() </span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1244em;">clause, use a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1352em;">FULLTEXT </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1196em;">index if one &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:35.4827em;z-index:1633;"><span class="stl_154 stl_32 stl_28">exists</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0593em;">” It will do this even when it would be faster to use a different index and a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:36.5821em;"><span class="stl_154 stl_32 stl_28">non-</span><span class="stl_170 stl_171 stl_28">FULLTEX</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_446" style="word-spacing:-0.0083em;">query with a </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_99">clause. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:37.9655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0345em;">&nbsp;</span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0411em;">optimizer doesn’t take into account the cost of operations not under its con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:39.0155em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">trol, such as executing stored functions or user-defined functions. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:40.3988em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.182em;">• As we’ll see later, the optimizer can’t always estimate every possible execution &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:41.4488em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">plan, so it might miss an optimal plan. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:43.3321em;z-index:1964;"><span class="stl_154 stl_32 stl_93">MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3555em;">’s </span><span class="stl_154 stl_32 stl_28">q</span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1661em;">uery optimizer is a highly complex piece of software, and it uses many &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.3821em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1666em;">optimizations to transform the query into an execution plan. There are two basic &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:45.4208em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0854em;">types of optimizations, which we call </span><span class="stl_155 stl_41 stl_251" style="word-spacing:0.104em;">static </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.084em;">and </span><span class="stl_155 stl_41 stl_96">dynamic</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.084em;">. </span><span class="stl_155 stl_41 stl_49" style="word-spacing:0.1016em;">Static optimizations </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.084em;">can be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:46.4821em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0389em;">performed simply by inspecting the parse tree. For example, the optimizer can trans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:47.5816em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0138em;">form the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_262">E</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0178em;">clause into an equivalent form by applying algebraic rules. Static opti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">206 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="228_0" style="position:absolute;left:0em;top:8.8458em;">&nbsp;</a>
+					<a name="228_1" style="position:absolute;left:0em;top:43.5614em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

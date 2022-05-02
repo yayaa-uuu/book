@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_360.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_360.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:11.3992em;top:4.3287em;"><span class="stl_176 stl_32 stl_145" style="word-spacing:0.1011em;">It’s important to note that while we show ProxySQL as one object &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:5.2887em;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.1614em;">in this diagram, we strongly recommend in production environ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:6.2487em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.0654em;">ments leveraging its clustering mechanism and deploying multiple &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:7.2087em;"><span class="stl_176 stl_32 stl_57" style="word-spacing:0.2741em;">instances in a given stack. Never run a single point of failure &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:8.1687em;"><span class="stl_176 stl_32 stl_145">(SPoF). &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.9711em;"><span class="stl_155 stl_41 stl_129" style="word-spacing:0.0111em;">Figure 11-4. </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">e </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.012em;">interaction between application nodes, ProxySQL, and service &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0211em;"><span class="stl_155 stl_41 stl_96" style="word-spacing:0.0132em;">discovery (adapted from a diagram by Bill Sickles) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.0825em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0075em;">ProxySQL has independent and hierarchical health checking for databases it connects &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.1325em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0968em;">to. Based on the results of these health checks, ProxySQL adds or removes hosts or &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.1825em;z-index:504;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1779em;">adjusts traffic weights. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.176em;">u can specify replication-lag thresholds, time to connect &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.2325em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.2639em;">successfully, and connection retries on failure, among many other configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.2825em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0431em;">options, to control how much fault tolerance is acceptable within the context of your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.3325em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0845em;">service and application needs. These configuration options allow ProxySQL to react &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.3825em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1014em;">accurately to unresponsive hosts by either temporarily removing backend databases &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.4325em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1093em;">and then repeating the health check later, or fully removing the struggling backend &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.4825em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0047em;">member until an operator is involved. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.5394em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Using ProxySQL for sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.0068em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0224em;">ProxySQL is very useful for a number of sharding topologies. While it does not bring &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.0568em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1214em;">automation to the actual splitting of the data the way Vitess does, it can be a great &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.1068em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0912em;">lightweight middle layer that is sharding aware and can route your application con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.1568em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0191em;">nections accordingly. Let’s cover the different ways you can use it to be a routing layer &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.2068em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to your shards. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9995em;top:40.1848em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Sharding by user.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.5517em;">&nbsp;</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0446em;">If your data is split functionally or by business function in different &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.278em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0801em;">database clusters and different application fleets accessing these clusters, you should &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.328em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1809em;">also be using entirely different database credentials for each of these applications. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:43.378em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0649em;">ProxySQL can leverage this user parameter to route traffic to entirely separate back‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:44.428em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">end database pools for either writes or reads. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.978em;z-index:1604;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.036em;">u can configure such routing in ProxySQL by running these commands against its &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:47.028em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">admin interface, then saving the change to its disk configuration file: &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">308 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="330_0" style="position:absolute;left:0em;top:10.5083em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

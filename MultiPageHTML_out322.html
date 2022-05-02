@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_349.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_349.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Choosing a Partitioning Scheme &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.065em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0459em;">The most important challenge with sharding is finding and retrieving data. How you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.115em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0155em;">find data depends on how you shard it. There are many ways to do this, and some are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.165em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">better than others. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.715em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0257em;">The goal is to make your most important and frequent queries touch as few shards as &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.765em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1752em;">possible (remember, one of the scalability principles is to avoid crosstalk between &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.815em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0444em;">nodes). The most critical part of that process is choosing a partitioning key (or keys) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.865em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2169em;">for your data. The partitioning key determines which rows should go onto each &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.915em;z-index:484;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">shard. If you know an object</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0044em;">artitioning key, you can answer two questions: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7214em;top:15.7984em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2726em;">• Where</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">should I store this data? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:17.1817em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Where</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">can I find the data I need to fetch? &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.065em;z-index:655;"><span class="stl_154 stl_32 stl_348">We</span><span class="stl_154 stl_32 stl_220">’</span><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0626em;">ll show you a variety of ways to choose and use a partitioning key later. For now, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.115em;z-index:696;"><span class="stl_154 stl_32 stl_96" style="word-spacing:0.0413em;">let’s look at an example. Suppose we do as MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2181em;">’s </span><span class="stl_154 stl_32 stl_28">N</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0281em;">DB Cluster does and use a hash &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.165em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.102em;">of each table’s primary key to partition the data across all the shards. This is a very &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.215em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0707em;">simple approach, but it doesn’t scale well because it frequently requires you to check &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.2651em;z-index:922;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1505em;">all the shards for the data you want. For example, if you want user 3</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1459em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1459em;">log posts, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.3151em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1245em;">where can you find them? They are probably scattered evenly across all the shards &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.3651em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0716em;">because they’re partitioned by the primary key, not by the user. Using a primary key &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.4151em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0494em;">hash makes it simple to know where to store the data, but it might make it harder to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.4651em;z-index:1203;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0025em;">fetch it, depending on which data you need and whether you know the primary key. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.0151em;z-index:1205;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0442em;">u always want your queries localized to one shard. When sharding your data hori‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:30.0537em;"><span class="stl_154 stl_32 stl_192" style="word-spacing:0.0261em;">zontally, you want to </span><span class="stl_155 stl_41 stl_14" style="word-spacing:0.0292em;">always </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0116em;">avoid having to query across shards to accomplish a task. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.1151em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0178em;">Joining data across shards will add complexity to your application layer and eats away &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.1651em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0324em;">at the benefit of sharding the data in the first place. The worst case with sharded data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.2151em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1169em;">sets is when you have no idea where the desired data is stored so that you need to &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.2651em;"><span class="stl_154 stl_32 stl_133" style="word-spacing:-0.0034em;">scan every shard to find it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.8151em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.078em;">A good partitioning key is usually the primary key of a very important entity in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.8651em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1391em;">database. These keys determine the unit of sharding. For example, if you partition &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.9151em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0043em;">your data by a user ID or a client ID, the unit of sharding is the user or client. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.4651em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1133em;">A good way to start is to diagram your data model with an entity-relationship dia‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.5151em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0959em;">gram or an equivalent tool that shows all the entities and their relationships. Try to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.5651em;z-index:1979;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.2164em;">lay out the diagram so that the related entities are close together. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2103em;">u can often &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.6151em;z-index:2060;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.106em;">inspect such a diagram visually and find candidates for partitioning keys that you</span><span class="stl_154 stl_32 stl_161">’</span><span class="stl_154 stl_32 stl_161">d &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.6651em;z-index:2132;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.1481em;">otherwise miss. Don’t just look at the diagram, though; consider your application</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.7151em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0977em;">queries as well. Even if two entities are related in some way, if you seldom or never &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.7651em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">join on the relationship, you can break the relationship to implement the sharding. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">300 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="322_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="322_1" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

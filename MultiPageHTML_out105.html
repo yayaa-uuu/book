@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_111.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_111.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;z-index:3;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1162em;">u might also want to benchmark your system with the cache policy set to write- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1033em;">through so you’ll know what to expect. The preferred approach is to schedule your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0188em;">battery learning cycles at low traffic periods, typically at night or during the weekend. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0814em;">If performance suffers badly enough with write-through at any time, you could also &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_185" style="word-spacing:0.0325em;">failover to another server before your learning cycle begins. As a very last resort, you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.616em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:0.1343em;">could reconfigure your servers by changing the </span><span class="stl_170 stl_171 stl_28">innodb_flush_log_at_trx_commit &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.7155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0575em;">and </span><span class="stl_170 stl_171 stl_28">sync_binlo</span><span class="stl_170 stl_171 stl_326">g</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0575em;">variables to lower durability settings. This will reduce the disk uti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.7655em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1333em;">lization during write-through and may offer acceptable performance; however, this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.8155em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.102em;">should really be done as a last resort. Reducing durability has a big impact on how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.8655em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0031em;">much data you may lose during a database crash and your ability to recover it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.7498em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">RAID </span><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguration </span><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">and Caching &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:17.6495em;z-index:731;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0486em;">u can usually configure the RAID controller itself by entering its setup utility dur‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.6995em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.2846em;">ing the machine’s boot sequence or by running it from the command prompt. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.7382em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0897em;">Although most controllers offer a lot of options, the two we focus on are the </span><span class="stl_155 stl_41 stl_327">chunk &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.7882em;"><span class="stl_155 stl_41 stl_84" style="word-spacing:0.0589em;">size </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0583em;">for striped arrays and the </span><span class="stl_155 stl_41 stl_44" style="word-spacing:0.0713em;">on-controller cache </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0562em;">(also known as the </span><span class="stl_155 stl_41 stl_33" style="word-spacing:0.0604em;">RAID cache</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0562em;">; we &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.8496em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">use the terms interchangeably). &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.9065em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">The RAID stripe chunk size &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.3739em;z-index:1121;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0572em;">The optimal stripe chunk size is workload and hardware specific. In theory, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0539em;">s </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_28">ood &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.4239em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0346em;">to have a large chunk size for random I/O because that means more reads can be sat‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.4739em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">isfied from a single drive. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.0239em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.3152em;">To </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1222em;">ee why this is so, consider the size of a typical random I/O operation for your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.0739em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.067em;">workload. If the chunk size is at least that large and the data doesn’t span the border &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.1239em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0454em;">between chunks, only a single drive needs to participate in the read. But if the chunk &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.1739em;z-index:1472;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0846em;">size is smaller than the amount of data to be read, there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0791em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_51" style="word-spacing:0.087em;">o way to avoid involving &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.2239em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">more than one drive in the read. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.7739em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.1186em;">So much for theory. In practice, many RAID controllers don’t work well with large &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.8239em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0662em;">chunks. For example, the controller might use the chunk size as the cache unit in its &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:36.8739em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">cache, which could be wasteful. The controller might also match the chunk size, cache &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.9239em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0357em;">size, and read-unit size (the amount of data it reads in a single operation). If the read &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.9739em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0958em;">unit is too large, its cache might be less effective, and it might end up reading a lot &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:40.0239em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0023em;">more data than it really needs, even for tiny requests. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.5739em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0454em;">It’s also hard to know whether any given piece of data will span multiple drives. Even &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.6239em;z-index:2030;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0529em;">if the chunk size is 16 KB, which matches InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0472em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_25" style="word-spacing:0.0583em;">age size, you can’t be certain all &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.6739em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0541em;">of the reads will be aligned on 16 KB boundaries. The filesystem might fragment the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.7239em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1556em;">file, and it will typically align the fragments on the filesystem block size, which is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.7739em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0094em;">often 4 KB. Some filesystems might be smarter, but you shouldn’t count on it. &nbsp;</span></div>
+					<div class="stl_01" style="left:25.9018em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">RAID Performance Optimization &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4803em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3878em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">83 &nbsp;</span></div>
+					<a name="105_0" style="position:absolute;left:0em;top:16.0428em;">&nbsp;</a>
+					<a name="105_1" style="position:absolute;left:0em;top:17.8788em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

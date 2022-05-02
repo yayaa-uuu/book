@@ -1,0 +1,78 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_90.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_90.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0925em;">flow can help to understand why the same routine can finish almost immediately if &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">called once and can take much longer when called another time. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:7.4235em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Statements </span><span class="stl_308 stl_27 stl_28">proﬁling &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:8.9404em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.5199em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.2862em;">events_stages_[current|history|history_long] </span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.5219em;">table contains profiling &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.9904em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0479em;">information, such as how much time MySQL spent while creating a temporary table, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:11.0404em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0411em;">updating, or waiting for a lock. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0393em;">o </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0393em;">nable profiling, you need to enable said consum‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.1398em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1154em;">ers and also instruments that follow the pattern </span><span class="stl_170 stl_171 stl_28">'stage/%'</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.112em;">. Once enabled, you can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:13.1898em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.09em;">find answers to such questions as “Which stage of the query execution took a criti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.2398em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0542em;">cally long time?” The following example searches for stages that took more than one &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.2898em;"><span class="stl_154 stl_32 stl_28">second: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:17.0517em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT eshl.event_name, sql_text, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:17.9024em;"><span class="stl_200 stl_171 stl_28">-&gt; &nbsp;</span></div>
+					<div class="stl_01" style="left:12.3749em;top:17.9017em;"><span class="stl_265 stl_173 stl_28">eshl.timer_wait/10000000000 w_s &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:18.7517em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM performance_schema.events_stages_history_long eshl &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:19.6017em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">JOIN performance_schema.events_statements_history_long esthl &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:20.4517em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">ON (eshl.nesting_event_id = esthl.event_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:21.3017em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE eshl.timer_wait &gt; 1*10000000000\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:22.1524em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:23.0024em;"><span class="stl_200 stl_171 stl_28">event_name: stage/sql/Sending data &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:23.8524em;"><span class="stl_200 stl_171 stl_28">sql_text: SELECT COUNT(emp_no) FROM employees JOIN salaries &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:24.7024em;"><span class="stl_200 stl_171 stl_28">USING(emp_no) WHERE hire_date=from_date &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:25.5524em;"><span class="stl_200 stl_171 stl_28">w_s: 81.7 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:26.4024em;"><span class="stl_200 stl_171 stl_28">1 row in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.5892em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4419em;">Another technique for using </span><span class="stl_170 stl_171 stl_28">events_stages_[current|history|history_long] &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.6392em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0342em;">tables is to pay attention to those statements that spent more than a certain threshold &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.6892em;z-index:1226;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">in stages known to cause performance issues. </span><a href="MultiPageHTML_out83.html#83_0"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out83.html#83_0"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out83.html#83_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">ble 3-7 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">lists these stages. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.7768em;"><span class="stl_40 stl_41 stl_243" style="word-spacing:0.0194em;">Table 3-7. Stages that are indicators of performance issues &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2999em;top:33.3491em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.034em;">Stage class(es) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2999em;top:34.5602em;"><span class="stl_200 stl_171 stl_28">stage/sql/%tmp% &nbsp;</span></div>
+					<div class="stl_01" style="left:15.8999em;top:33.3491em;"><span class="stl_205 stl_27 stl_28">Description &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:34.4256em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">Everything related to the temporary tables. &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:35.5343em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">Everything related to locks. &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9002em;top:36.6431em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">Everything waiting for a resource. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3002em;top:35.6689em;"><span class="stl_200 stl_171 stl_28">stage/sql/%lock% &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2998em;top:36.7777em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.036em;">stage/%/Waiting for% &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:37.8864em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">stage/sql/Sending data &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:37.7731em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">This stage should be compared to the number of </span><span class="stl_200 stl_171 stl_28">ROWS_SEN</span><span class="stl_200 stl_171 stl_287">T</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0335em;">in the statements &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:38.6943em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0335em;">statistics. If </span><span class="stl_200 stl_171 stl_28">ROWS_SEN</span><span class="stl_200 stl_171 stl_287">T</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">is small, a statement spending a lot of time in this stage &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:39.5943em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">could mean that it has to create a temporary </span><span class="stl_284 stl_68 stl_28" style="word-spacing:-0.06em;">ﬁle </span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0335em;">or table to resolve intermediary &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:40.4943em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">results. This is often followed by </span><span class="stl_284 stl_68 stl_28" style="word-spacing:-0.06em;">ﬁltering </span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">the rows before sending data to the client. &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:41.3943em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">This is usually a symptom of a badly optimized query. &nbsp;</span></div>
+					<div class="stl_01" style="left:15.9em;top:42.4818em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">These are stages that clean resources. Unfortunately, they are not detailed enough, &nbsp;</span></div>
+					<div class="stl_01" style="left:15.8999em;top:43.3818em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">and each of them includes more than a single task. If you see that your queries &nbsp;</span></div>
+					<div class="stl_01" style="left:15.8999em;top:44.2818em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">spend a long time in these stages, you most likely hit resource contention due to &nbsp;</span></div>
+					<div class="stl_01" style="left:15.8999em;top:45.1818em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">high concurrency. You need to check your CPU, I/O, and memory usage as well as &nbsp;</span></div>
+					<div class="stl_01" style="left:15.8999em;top:46.0818em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">whether your hardware and MySQL options can handle concurrency that your &nbsp;</span></div>
+					<div class="stl_01" style="left:15.8999em;top:46.9818em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.033em;">application creates. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:42.6872em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">stage/sql/freeing items &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:43.6418em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">stage/sql/cleaning up &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:44.5964em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">stage/sql/closing tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:45.551em;"><span class="stl_200 stl_171 stl_28">stage/sql/end &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0037em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4804em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3879em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">61 &nbsp;</span></div>
+					<a name="83_0" style="position:absolute;left:0em;top:31.9227em;">&nbsp;</a>
+					<a name="83_1" style="position:absolute;left:0em;top:9.1696em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

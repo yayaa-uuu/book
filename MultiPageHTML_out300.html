@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_326.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_326.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Percona XtraBackup &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.065em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1741em;">XtraBackup is one of the most popular solutions for backing up MySQL, and for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.115em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0673em;">good reason. It is very configurable, including ways to back up compressed, encryp‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.165em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ted files. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.222em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">How XtraBackup works &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.6894em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0679em;">InnoDB is a crash-safe storage engine. If MySQL experiences a crash, it uses a crash &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.7394em;z-index:321;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0314em;">recovery mode, which is based on redo logs, to bring your data back online correctly. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:13.7894em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0847em;">Percona XtraBackup is based on this design. When you take a backup with Percona &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.8394em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0037em;">XtraBackup, it records the log sequence number (LSN) and uses that to perform crash &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.8894em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1583em;">recovery on your backed-up files. It also incorporates locking at specific points to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.9394em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1597em;">ensure that data about replication is consistent with the data. For a more detailed &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.9894em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">explanation, refer to the </span><a href="https://oreil.ly/8JWIB" target="_blank"><span class="stl_184 stl_32 stl_222" style="word-spacing:0.0067em;">XtraBackup documentation</span></a><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0067em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:19.5394em;"><span class="stl_154 stl_32 stl_190" style="word-spacing:0.0179em;">Here’s a sample XtraBackup process: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:21.302em;"><span class="stl_200 stl_171 stl_28">$ xtrabackup --backup --target-dir=/backups/ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:23.002em;"><span class="stl_200 stl_171 stl_28">xtrabackup version 8.0.25-17 based on MySQL server 8.0.25 Linux (x86_64) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:23.852em;"><span class="stl_200 stl_171 stl_28">(revision id: d27028b) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:24.702em;"><span class="stl_200 stl_171 stl_28">Using server version 8.0.25-15 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:25.552em;"><span class="stl_200 stl_171 stl_28">210821 17:01:40 Executing LOCK TABLES FOR BACKUP… &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.6894em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.2347em;">Up to here, we can see that XtraBackup has determined the running version of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.7394em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1059em;">MySQL. This helps it determine what capabilities it has and how it should back up &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.8388em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1436em;">files. In our case, the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0802em;">LOCK TABLES FOR BACKUP </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1454em;">command is available and is how &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.8888em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">XtraBackup will get a lock on tables: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:31.6514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] Copying ./ibdata1 to /backups/ibdata1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:32.5014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:33.3514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] Copying ./sys/sys_config.ibd to /backups/sys/sys_config.ibd &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:34.2014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:35.0514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] Copying ./test/t1.ibd to /backups/test/t1.ibd &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:35.9014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:36.7514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] Copying ./foo/t1.ibd to /backups/foo/t1.ibd &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:37.6014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:38.4514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] Copying ./sakila/actor.ibd to /backups/sakila/actor.ibd &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:39.3014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:41 [01] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.4388em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">XtraBackup is now copying the files from the source to destination: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:42.2014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 Finished backing up non-InnoDB tables and files &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:43.0514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 Executing FLUSH NO_WRITE_TO_BINLOG BINARY LOGS &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:43.9014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 Selecting LSN and binary log position from p_s.log_status &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:44.7514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 [00] Copying /var/lib/mysql/binlog.40 to /backups/binlog.04 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:45.6014em;"><span class="stl_200 stl_171 stl_28">up to position 156 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:46.4514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 [00] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:47.3014em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 [00] Writing /backups/binlog.index &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:48.1514em;"><span class="stl_200 stl_171 stl_28">210821 17:01:42 [00] ...done &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">278 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="300_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="300_1" style="position:absolute;left:0em;top:10.4368em;">&nbsp;</a>
+					<a name="300_2" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

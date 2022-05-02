@@ -1,0 +1,59 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_295.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_295.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:13.3211em;"><span class="stl_155 stl_41 stl_76" style="word-spacing:0.0172em;">Figure 9-10. Multisource replication &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.3711em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1047em;">This functionality is built off a concept called </span><span class="stl_155 stl_41 stl_475" style="word-spacing:0.1239em;">replication channels</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1047em;">. In the preceding &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.4324em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1255em;">example, you would need a third cluster for MySQL. This new third cluster would &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.4824em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.135em;">have two replication channels created: one for the video data and one for the user &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.5324em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0906em;">data. Once you’ve loaded and replicated data, you could take a very brief downtime &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.5825em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0267em;">where you freeze writes to the two sources and push your code to switch reading and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.6324em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0584em;">writing to the new combined database. </span><span class="stl_154 stl_32 stl_52">V</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0637em;">ila, you’ve now merged two databases into &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.6825em;"><span class="stl_154 stl_32 stl_28">one. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.2325em;z-index:480;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0367em;">Before we move on, there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0319em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.035em;">ne important limitation to know about: you cannot con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.2825em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">figure a replica to use multisource replication multiple times against the same source. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.8325em;z-index:662;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0496em;">This topology is very much intended for special-use circumstances. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0502em;">e </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0502em;">ite it as dis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.8825em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.1143em;">couraged only in the case where you build a permanent topology around this con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.9325em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1078em;">cept. Using it temporarily to merge data is still an acceptable use case with the end &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.9825em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">goal to go back to one of our two recommendations. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0006em;top:30.879em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Replication Administration and Maintenance &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.1492em;z-index:944;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.059em;">With a small amount of data and a consistent write workload, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0529em;">s </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0568em;">nlikely that you’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.1992em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1238em;">be called upon to look at replication lag or worse, replication breaking, very often. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.2492em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.2256em;">Most databases tend to grow in size over time, and with that growth will come &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.2992em;"><span class="stl_154 stl_32 stl_39">maintenance. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.1835em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Monitoring Replication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.0832em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.2165em;">Replication increases the complexity of MySQL monitoring. Although replication &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:41.1332em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0381em;">actually happens on both the source and the replica, most of the work is done on the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.1832em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1871em;">replica, and that is where the most common problems occur. Are all the replicas &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:43.2332em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0943em;">working? Has any replica had errors? How far behind is the slowest replica? Out of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:44.2832em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1227em;">the box, MySQL provides most of the information you need to answer these ques‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:45.3332em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.011em;">tions, but automating the monitoring process and making replication robust is left up &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.3832em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to you. &nbsp;</span></div>
+					<div class="stl_01" style="left:22.3812em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Administration and Maintenance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">247 &nbsp;</span></div>
+					<a name="269_0" style="position:absolute;left:0em;top:31.2306em;">&nbsp;</a>
+					<a name="269_1" style="position:absolute;left:0em;top:38.4765em;">&nbsp;</a>
+					<a name="269_2" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="269_3" style="position:absolute;left:0em;top:40.3125em;">&nbsp;</a>
+					<a name="269_4" style="position:absolute;left:0em;top:33.3784em;">&nbsp;</a>
+					<a name="269_5" style="position:absolute;left:0em;top:29.2117em;">&nbsp;</a>
+					<a name="269_6" style="position:absolute;left:0em;top:15.6117em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

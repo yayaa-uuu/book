@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_75.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_75.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28">Limitations &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:6.1145em;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.1991em;">Before discussing how to set up and use </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.2076em;">, it is important to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.1645em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">understand its limitations: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.7864em;"><span class="stl_155 stl_41 stl_59" style="word-spacing:0.0187em;">It must be supported by a MySQL component. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:9.8478em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0824em;">For example, let’s say you are using memory instrumentation to calculate which &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:10.8978em;z-index:250;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.143em;">MySQL component or thread uses most of the memory. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1393em;">u discover that the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:11.9478em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0639em;">component that uses the most memory is a storage engine, which does not sup‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:12.9978em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0518em;">port memory instrumentation. In this case, you would not be able to find where &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:14.0478em;"><span class="stl_154 stl_32 stl_146" style="word-spacing:-0.0045em;">the memory has gone. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:15.6698em;"><span class="stl_155 stl_41 stl_59" style="word-spacing:0.0187em;">It collects data only </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">wfer </span><span class="stl_155 stl_41 stl_93" style="word-spacing:0.016em;">the </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">speciﬁc </span><span class="stl_155 stl_41 stl_44" style="word-spacing:0.0162em;">instrument and consumer are enabled. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:16.7312em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0697em;">For example, if you started a server with all instrumentation disabled then deci‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:17.7812em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.2042em;">ded to instrument memory usage, you would not be able to know the exact &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:18.8312em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0122em;">amount allocated by a global buffer such as an InnoDB buffer pool because it was &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:19.8812em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">already allocated before you enabled memory instrumentation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.5031em;z-index:746;"><span class="stl_155 stl_41 stl_269" style="word-spacing:0.029em;">It is </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">diﬃcult </span><span class="stl_155 stl_41 stl_49" style="word-spacing:0.0186em;">to free memory. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:22.5645em;z-index:748;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.028em;">u can limit the size of consumers at startup or leave them autosized. In the lat‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:23.6145em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">ter case, they do not allocate memory at the startup but only when enabled data is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:24.6645em;z-index:951;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1088em;">collected. However, even if you disable specific instruments or consumers later, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:25.7145em;z-index:998;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0003em;">memory would not be freed unless you restart the server. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.2645em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0077em;">In the rest of the chapter, I will assume you are aware of these limitations, so I will not &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.3145em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">specifically focus on them. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.1988em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">sys Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.0986em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1622em;">Since version 5.7, standard MySQL distribution includes a companion schema for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.198em;"><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_270">a</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.034em;">data called </span><span class="stl_170 stl_171 stl_28">sy</span><span class="stl_170 stl_171 stl_270">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0292em;">schema. This schema consists only of views and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.2974em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0446em;">stored routines over </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0446em;">. While it is designed to make your experi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.3969em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ence with </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_186">a</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.007em;">smoother, it does not store any data by itself. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:37.7542em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0142em;">The </span><span class="stl_212 stl_171 stl_28">sy</span><span class="stl_212 stl_171 stl_262">s</span><span class="stl_176 stl_32 stl_95" style="word-spacing:0.016em;">schema is very convenient, but you need to remember that &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:38.7594em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.1563em;">it only accesses data stored in the </span><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.0984em;">performance_schema </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1546em;">tables. If &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:39.7646em;"><span class="stl_176 stl_32 stl_48" style="word-spacing:0.0732em;">you need data not available in the </span><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.1877em;">sys </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0697em;">schema, check if it exists in &nbsp;</span></div>
+					<div class="stl_01" style="left:11.399em;top:40.7698em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">the underlying table in </span><span class="stl_212 stl_171 stl_28">performance_schema</span><span class="stl_176 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.9956em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Understanding Threads &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:44.8953em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1987em;">MySQL server is multithreaded software. Each of its components uses threads. It &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:45.9453em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1382em;">could be a background thread created, for example, by a main thread or a storage &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:46.9953em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1549em;">engine, or a foreground thread created for a user connection. Each of the threads &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:48.0453em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0929em;">has at least two unique identifiers: an operating system thread ID that is visible, for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">46 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3624em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2699em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+					<a name="68_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="68_1" style="position:absolute;left:0em;top:30.4919em;">&nbsp;</a>
+					<a name="68_2" style="position:absolute;left:0em;top:43.2886em;">&nbsp;</a>
+					<a name="68_3" style="position:absolute;left:0em;top:6.3437em;">&nbsp;</a>
+					<a name="68_4" style="position:absolute;left:0em;top:32.3278em;">&nbsp;</a>
+					<a name="68_5" style="position:absolute;left:0em;top:45.1246em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

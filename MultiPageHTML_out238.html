@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_254.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_254.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_154 stl_32 stl_135" style="word-spacing:0.1316em;">table. If the server scans the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1193em;">actor </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1372em;">table first, it will have to do only two hundred &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1156em;">index lookups into later tables. In other words, the reversed join order will require &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">less backtracking and rereading. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.016em;z-index:203;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0428em;">This is a simple example of how MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2264em;">’s </span><span class="stl_154 stl_32 stl_28">j</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0364em;">oin optimizer can reorder queries to make &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.066em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0599em;">them less expensive to execute. Reordering joins is usually a very effective optimiza‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.116em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.085em;">tion. There are times when it won’t result in an optimal plan, though, and for those &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.2155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0024em;">times you can use </span><span class="stl_170 stl_171 stl_28">STRAIGHT_JOI</span><span class="stl_170 stl_171 stl_264">N</span><span class="stl_154 stl_32 stl_185" style="word-spacing:-0.0019em;">and write the query in the order you think is best— &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.2655em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">but such times are rare. In most cases, the join optimizer will outperform a human. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.8155em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0607em;">The join optimizer tries to produce a query execution plan tree with the lowest ach‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.8655em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">ievable cost. When possible, it examines all potential combinations of subtrees, begin‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.9155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ning with all one-table plans. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.4541em;"><span class="stl_154 stl_32 stl_66" style="word-spacing:0.025em;">Unfortunately, a join over </span><span class="stl_155 stl_41 stl_28" style="word-spacing:0.009em;">n </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0139em;">tables will have </span><span class="stl_155 stl_41 stl_28">n</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.012em;">-factorial combinations of join orders to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.5041em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0569em;">examine. This is called the </span><span class="stl_155 stl_41 stl_76" style="word-spacing:0.073em;">search space </span><span class="stl_154 stl_32 stl_412" style="word-spacing:0.0529em;">of all possible query plans, and it grows very &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.5655em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1476em;">quickly: a 10-table join can be executed up to 3,628,800 different ways! When the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.6155em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1211em;">search space grows too large, it can take far too long to optimize the query, so the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.6655em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1784em;">server stops doing a full analysis. Instead, it resorts to shortcuts such as “greedy” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.7649em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.354em;">searches when the number of tables exceeds the limit specified by the </span><span class="stl_170 stl_171 stl_28">opti &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.8643em;"><span class="stl_170 stl_171 stl_28">mizer_search_dept</span><span class="stl_170 stl_171 stl_186">h</span><span class="stl_154 stl_32 stl_112" style="word-spacing:-0.0018em;">variable (which you can change if necessary). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.4143em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0606em;">MySQL has many heuristics, accumulated through years of research and experimen‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.4643em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1051em;">tation, that it uses to speed up the optimization stage. This can be beneficial, but it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.5143em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.2107em;">can also mean that MySQL might (on rare occasions) miss an optimal plan and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.5643em;z-index:1400;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">choose a less optimal one because it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_119" style="word-spacing:-0.0054em;">rying not to examine every possible query plan. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.1143em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.184em;">Sometimes queries can’t be reordered, and the join optimizer can use this fact to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.2138em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0016em;">reduce the search space by eliminating choices. A </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">LEFT JOI</span><span class="stl_170 stl_171 stl_305">N</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">is a good example, as are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.2638em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1344em;">correlated subqueries (more about subqueries later). This is because the results for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.3138em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0638em;">one table depend on data retrieved from another table. These dependencies help the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.3638em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">join optimizer reduce the search space by eliminating choices. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:36.4207em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Sort optimizations &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.8881em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0952em;">Sorting results can be a costly operation, so you can often improve performance by &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.9381em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">avoiding sorts or by performing them on fewer rows. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.4881em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1457em;">When MySQL can’t use an index to produce a sorted result, it must sort the rows &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.5267em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0966em;">itself. It can do this in memory or on disk, but it always calls this process a </span><span class="stl_216 stl_41 stl_28">ﬁlesort</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.5881em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0097em;">even if it doesn’t actually use a file. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.1381em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.133em;">If the values to be sorted will fit into the sort buffer, MySQL can perform the sort &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:45.1767em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0995em;">entirely in memory with a </span><span class="stl_155 stl_41 stl_43">quicksort</span><span class="stl_154 stl_32 stl_131" style="word-spacing:0.1155em;">. If MySQL can’t do the sort in memory, it per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.2381em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0081em;">forms it on disk by sorting the values in chunks. It uses a quicksort to sort each chunk &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:47.2881em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">and then merges the sorted chunks into the results. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">216 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="238_0" style="position:absolute;left:0em;top:41.7674em;">&nbsp;</a>
+					<a name="238_1" style="position:absolute;left:0em;top:34.593em;">&nbsp;</a>
+					<a name="238_2" style="position:absolute;left:0em;top:38.1174em;">&nbsp;</a>
+					<a name="238_3" style="position:absolute;left:0em;top:45.4174em;">&nbsp;</a>
+					<a name="238_4" style="position:absolute;left:0em;top:18.7447em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

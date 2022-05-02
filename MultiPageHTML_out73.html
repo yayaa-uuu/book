@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_80.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_80.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0291em;">The examples given for instruments are repeatable for consumers, using the methods &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_28">noted. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.2509em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Tuning Monitoring for </span><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Speciﬁc </span><span class="stl_180 stl_27 stl_28">Objects &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.1507em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0543em;">Performance Schema allows you to enable and disable monitoring for specific object &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:10.2501em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">types, schemas, and names. This is done in the </span><span class="stl_170 stl_171 stl_28">setup_object</span><span class="stl_170 stl_171 stl_186">s</span><span class="stl_154 stl_32 stl_28">table. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:11.8495em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0712em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1862em;">OBJECT_TYPE </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0744em;">column may have one of five values: </span><span class="stl_170 stl_171 stl_28">EVENT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0712em;">, </span><span class="stl_170 stl_171 stl_28">FUNCTION</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0712em;">, </span><span class="stl_170 stl_171 stl_28">PROCEDURE</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.949em;"><span class="stl_170 stl_171 stl_28">TABLE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0627em;">, and </span><span class="stl_170 stl_171 stl_28">TRIGGER</span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0702em;">. Additionally, you can specify </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.195em;">OBJECT_SCHEMA </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0627em;">and </span><span class="stl_170 stl_171 stl_28">OBJECT_NAME</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.999em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0043em;">Wildcards are supported. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.5984em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0052em;">For example, to disable </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_186">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0007em;">for triggers in the </span><span class="stl_170 stl_171 stl_28">tes</span><span class="stl_170 stl_171 stl_275">t</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">database, use the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:16.6484em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">following statement: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:18.4103em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">INSERT INTO performance_schema.setup_objects &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8337em;top:19.2603em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">(OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, ENABLED) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8337em;top:20.1103em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">VALUES ('TRIGGER', 'test', '%', 'NO'); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.2979em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1474em;">If you want to make an exception for a trigger called </span><span class="stl_170 stl_171 stl_28">my_trigger</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1462em;">, add it with the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.3479em;"><span class="stl_154 stl_32 stl_115">statement: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:24.1097em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">INSERT INTO performance_schema.setup_objects &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:24.9597em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">(OBJECT_TYPE, OBJECT_SCHEMA, OBJECT_NAME, ENABLED) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:25.8097em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">VALUES ('TRIGGER', 'test', 'my_trigger', 'YES'); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.9973em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1012em;">When </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1545em;">performance_schema </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1022em;">decides if a specific object needs to be instrumented, it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.0473em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0443em;">first searches for the more specific rule, then falls back to the less specific. For exam‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.1467em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:0.0733em;">ple, if a user runs a query on a table that fires </span><span class="stl_170 stl_171 stl_28">test.my_trigger</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.074em;">, it will examine the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.1967em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0278em;">statements fired by the trigger. But if a user runs a query on a table that fires a trigger &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.2962em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.001em;">called </span><span class="stl_170 stl_171 stl_28">test.some_other_trigger</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, the trigger will not be examined. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.8462em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0314em;">There is no configuration file option for the objects. If you need to persist changes in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.9456em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0272em;">this table during restarts, you will need to write these </span><span class="stl_170 stl_171 stl_28">INSER</span><span class="stl_170 stl_171 stl_285">T</span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0322em;">statements in a SQL file &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.045em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and use the </span><span class="stl_170 stl_171 stl_28">init_fil</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">option to load the SQL file on startup. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:36.9294em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Tuning Threads Monitoring &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.8786em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0853em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1713em;">setup_threads </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0871em;">table contains a list of background threads that could be moni‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.978em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0693em;">tored. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1881em;">ENABLED </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0709em;">column specifies if the instrumentation for the specific thread is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.0774em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1722em;">enabled. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0798em;">HISTORY </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1739em;">column specifies if the instrumented events for the specific &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.1769em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">thread should also be stored in the </span><span class="stl_170 stl_171 stl_28">_histor</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and </span><span class="stl_170 stl_171 stl_28">_history_lon</span><span class="stl_170 stl_171 stl_186">g</span><span class="stl_154 stl_32 stl_28">tables. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:43.7763em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.3628em;">For example, to disable history logging for the event scheduler (</span><span class="stl_170 stl_171 stl_28">thread/sql/ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.8757em;"><span class="stl_170 stl_171 stl_28">event_scheduler</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">), run: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:46.6376em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE performance_schema.setup_threads SET HISTORY='NO' &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:47.4876em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE NAME='thread/sql/event_scheduler'; &nbsp;</span></div>
+					<div class="stl_01" style="left:30.3233em;top:50.8098em;"><span class="stl_233 stl_27 stl_28">Conﬁguration &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4805em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.388em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">51 &nbsp;</span></div>
+					<a name="73_0" style="position:absolute;left:0em;top:7.544em;">&nbsp;</a>
+					<a name="73_1" style="position:absolute;left:0em;top:37.2224em;">&nbsp;</a>
+					<a name="73_2" style="position:absolute;left:0em;top:9.3799em;">&nbsp;</a>
+					<a name="73_3" style="position:absolute;left:0em;top:39.1078em;">&nbsp;</a>
+					<a name="73_4" style="position:absolute;left:0em;top:10.4794em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

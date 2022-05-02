@@ -1,0 +1,104 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_91.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_91.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1952em;">It is very important to note that profiling is available only for the general server &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2274em;">stages. Storage engines do not support profiling with </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2274em;">. As a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.5155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0017em;">result, stages such as </span><span class="stl_170 stl_171 stl_28">stage/sql/updat</span><span class="stl_170 stl_171 stl_259">e</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">mean that the job is inside the storage engine &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.5655em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0122em;">and may include not only the update itself, but also waits for the engine-specific locks &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.6155em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">or other contention issues. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:10.4998em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Examining Read Versus Write Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.3995em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1534em;">Statement instrumentation in Performance Schema could be very useful to under‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:13.4495em;z-index:453;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1207em;">stand if your workload is read or write bound. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1246em;">u may start by counting types of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.4995em;"><span class="stl_154 stl_32 stl_55">statements: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:16.2614em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT EVENT_NAME, COUNT(EVENT_NAME) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:17.1114em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM events_statements_history_long &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:17.9614em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">GROUP BY EVENT_NAME; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:18.8121em;"><span class="stl_200 stl_171 stl_28">+----------------------+-------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:19.6621em;"><span class="stl_200 stl_171 stl_28">| EVENT_NAME</span><span class="stl_200 stl_171 stl_28" style="word-spacing:5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| COUNT(EVENT_NAME) | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:20.5121em;"><span class="stl_200 stl_171 stl_28">+----------------------+-------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:21.3621em;"><span class="stl_200 stl_171 stl_28">| statement/sql/insert | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:22.2121em;"><span class="stl_200 stl_171 stl_28">| statement/sql/delete | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:23.0621em;"><span class="stl_200 stl_171 stl_28">| statement/sql/select | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:23.9121em;"><span class="stl_200 stl_171 stl_28">| statement/sql/update | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:24.7621em;"><span class="stl_200 stl_171 stl_28">| statement/sql/commit | &nbsp;</span></div>
+					<div class="stl_01" style="left:21.2291em;top:21.3621em;"><span class="stl_200 stl_171 stl_28">504 | &nbsp;</span></div>
+					<div class="stl_01" style="left:21.2291em;top:22.2121em;"><span class="stl_200 stl_171 stl_28">502 | &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:23.0621em;"><span class="stl_200 stl_171 stl_28">6987 | &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:23.9121em;"><span class="stl_200 stl_171 stl_28">1007 | &nbsp;</span></div>
+					<div class="stl_01" style="left:21.2291em;top:24.7621em;"><span class="stl_200 stl_171 stl_28">500 | &nbsp;</span></div>
+					<div class="stl_01" style="left:21.2291em;top:25.6121em;"><span class="stl_200 stl_171 stl_28">500 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:25.6121em;"><span class="stl_200 stl_171 stl_28">| statement/sql/begin &nbsp;</span></div>
+					<div class="stl_01" style="left:15.5625em;top:25.6121em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:26.4621em;"><span class="stl_200 stl_171 stl_28">+----------------------+-------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:27.3121em;"><span class="stl_200 stl_171 stl_28">6 rows in set (0.03 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.499em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0271em;">In this example, the number of </span><span class="stl_170 stl_171 stl_28">SELEC</span><span class="stl_170 stl_171 stl_309">T</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.026em;">queries is larger than the number of any other &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.549em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">queries. This shows that most of the queries in this setup are read queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.1484em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0656em;">If you want to know the latency of your statements, aggregate by the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1966em;">LOCK_TIME </span><span class="stl_154 stl_32 stl_28">col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.1984em;"><span class="stl_154 stl_32 stl_28">umn: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:33.9603em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT EVENT_NAME, COUNT(EVENT_NAME), &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:34.8103em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SUM(LOCK_TIME/1000000) AS latency_ms &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:35.6603em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM events_statements_history &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:36.5103em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">GROUP BY EVENT_NAME ORDER BY latency_ms DESC; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:37.361em;"><span class="stl_200 stl_171 stl_28">+----------------------------------+-------------------+------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:38.211em;"><span class="stl_200 stl_171 stl_28">| EVENT_NAME</span><span class="stl_200 stl_171 stl_28" style="word-spacing:11em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| COUNT(EVENT_NAME) | latency_ms | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:39.061em;"><span class="stl_200 stl_171 stl_28">+----------------------------------+-------------------+------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:39.911em;"><span class="stl_200 stl_171 stl_28">| statement/sql/select &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:40.761em;"><span class="stl_200 stl_171 stl_28">| statement/sql/update &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:41.611em;"><span class="stl_200 stl_171 stl_28">| statement/sql/insert &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:42.461em;"><span class="stl_200 stl_171 stl_28">| statement/sql/delete &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:43.311em;"><span class="stl_200 stl_171 stl_28">| statement/sql/show_status &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:44.161em;"><span class="stl_200 stl_171 stl_28">| statement/sql/begin &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:45.011em;"><span class="stl_200 stl_171 stl_28">| statement/sql/commit &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:45.861em;"><span class="stl_200 stl_171 stl_28">| statement/com/Ping &nbsp;</span></div>
+					<div class="stl_01" style="left:19.8122em;top:39.911em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:40.761em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:41.611em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:42.461em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:43.311em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:44.161em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:45.011em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8122em;top:45.861em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:25.4788em;top:39.911em;"><span class="stl_200 stl_171 stl_28">194 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">7362.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.833em;top:40.761em;"><span class="stl_200 stl_171 stl_28">33 |</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">1276.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.833em;top:41.611em;"><span class="stl_200 stl_171 stl_28">16 | &nbsp;</span></div>
+					<div class="stl_01" style="left:25.833em;top:42.461em;"><span class="stl_200 stl_171 stl_28">16 | &nbsp;</span></div>
+					<div class="stl_01" style="left:26.1872em;top:43.311em;"><span class="stl_200 stl_171 stl_28">2 | &nbsp;</span></div>
+					<div class="stl_01" style="left:26.1872em;top:44.161em;"><span class="stl_200 stl_171 stl_28">4 | &nbsp;</span></div>
+					<div class="stl_01" style="left:26.1872em;top:45.011em;"><span class="stl_200 stl_171 stl_28">2 | &nbsp;</span></div>
+					<div class="stl_01" style="left:26.1872em;top:45.861em;"><span class="stl_200 stl_171 stl_28">2 | &nbsp;</span></div>
+					<div class="stl_01" style="left:26.1872em;top:46.711em;"><span class="stl_200 stl_171 stl_28">1 | &nbsp;</span></div>
+					<div class="stl_01" style="left:28.3122em;top:41.611em;"><span class="stl_200 stl_171 stl_28">599.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:28.3122em;top:42.461em;"><span class="stl_200 stl_171 stl_28">470.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:28.3122em;top:43.311em;"><span class="stl_200 stl_171 stl_28">176.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.0205em;top:44.161em;"><span class="stl_200 stl_171 stl_28">0.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.0205em;top:45.011em;"><span class="stl_200 stl_171 stl_28">0.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.0205em;top:45.861em;"><span class="stl_200 stl_171 stl_28">0.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:29.0205em;top:46.711em;"><span class="stl_200 stl_171 stl_28">0.0000 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:46.711em;"><span class="stl_200 stl_171 stl_28">| statement/sql/show_engine_status | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:47.561em;"><span class="stl_200 stl_171 stl_28">+----------------------------------+-------------------+------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:48.411em;"><span class="stl_200 stl_171 stl_28">9 rows in set (0.01 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">62 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3618em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2693em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+					<a name="84_0" style="position:absolute;left:0em;top:10.7928em;">&nbsp;</a>
+					<a name="84_1" style="position:absolute;left:0em;top:8.8447em;">&nbsp;</a>
+					<a name="84_2" style="position:absolute;left:0em;top:12.6288em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

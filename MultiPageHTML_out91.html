@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_98.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_98.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0728em;">This instrumentation is useful when you need to find sources of memory consump‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:119;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0554em;">tion because each variable takes bytes to hold its values. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0568em;">u may also use this infor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.3715em;">mation to solve tricky issues with persistence connections, using user-defined &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0255em;">variables. And, last but not least, this table is the only way to find out which variables &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">you defined in your own session. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.116em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.065em;">The table </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1927em;">variables_info </span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0703em;">does not contain any variable values. Rather, it has infor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0163em;">mation about where server variables originated and other documentation, such as the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.2655em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0594em;">variable default minimum and maximum values. The </span><span class="stl_170 stl_171 stl_28">SET_TIM</span><span class="stl_170 stl_171 stl_319">E</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0589em;">column contains the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.3649em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0841em;">timestamp of the latest variable change. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1751em;">SET_HOST </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0816em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1752em;">SET_USER </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0816em;">columns iden‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.4149em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0949em;">tify the user account that set the variable. For example, to find all the variables that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.4649em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0015em;">were changed dynamically since the server started, run: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:17.2268em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT * FROM performance_schema.variables_info &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:18.0768em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE VARIABLE_SOURCE = 'DYNAMIC'\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:18.9275em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:19.7775em;"><span class="stl_200 stl_171 stl_28">VARIABLE_NAME: foreign_key_checks &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:20.6275em;"><span class="stl_200 stl_171 stl_28">VARIABLE_SOURCE: DYNAMIC &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:21.4775em;"><span class="stl_200 stl_171 stl_28">VARIABLE_PATH: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:22.3275em;"><span class="stl_200 stl_171 stl_28">MIN_VALUE: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:23.1775em;"><span class="stl_200 stl_171 stl_28">MAX_VALUE: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:24.0275em;"><span class="stl_200 stl_171 stl_28">SET_TIME: 2021-07-18 03:14:15.560745 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:24.8775em;"><span class="stl_200 stl_171 stl_28">SET_USER: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:25.7275em;"><span class="stl_200 stl_171 stl_28">SET_HOST: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:26.5775em;"><span class="stl_200 stl_171 stl_28">*************************** 2. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:27.4275em;"><span class="stl_200 stl_171 stl_28">VARIABLE_NAME: sort_buffer_size &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:28.2775em;"><span class="stl_200 stl_171 stl_28">VARIABLE_SOURCE: DYNAMIC &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:29.1275em;"><span class="stl_200 stl_171 stl_28">VARIABLE_PATH: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:29.9775em;"><span class="stl_200 stl_171 stl_28">MIN_VALUE: 32768 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:30.8275em;"><span class="stl_200 stl_171 stl_28">MAX_VALUE: 18446744073709551615 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:31.6775em;"><span class="stl_200 stl_171 stl_28">SET_TIME: 2021-07-19 02:37:11.948190 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:32.5275em;"><span class="stl_200 stl_171 stl_28">SET_USER: sveta &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:33.3775em;"><span class="stl_200 stl_171 stl_28">SET_HOST: localhost &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:34.2275em;"><span class="stl_200 stl_171 stl_28">2 rows in set (0,00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.2644em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.0091em;">Possible </span><span class="stl_170 stl_171 stl_28">VARIABLE_SOURC</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">values include: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.1226em;"><span class="stl_170 stl_171 stl_28">COMMAND_LINE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:38.9971em;z-index:1312;"><span class="stl_154 stl_32 stl_113">V</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">riable set on the command line &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.8553em;"><span class="stl_170 stl_171 stl_28">COMPILED &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:41.7299em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">Compiled-in default value &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:43.5881em;"><span class="stl_170 stl_171 stl_28">PERSISTED &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:44.4513em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0005em;">Set from a server-specific </span><span class="stl_155 stl_41 stl_149" style="word-spacing:0.0144em;">mysqld-auto.cnf </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">option file &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.0127em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0654em;">There are also many options for variables, set in different option files. I will not dis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:47.0627em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0993em;">cuss them all: they are either self-descriptive or could be easily checked in the User &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:48.1126em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">Reference Manual. The number of details is also increasing from version to version. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0041em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4809em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3884em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">69 &nbsp;</span></div>
+					<a name="91_0" style="position:absolute;left:0em;top:48.3419em;">&nbsp;</a>
+					<a name="91_1" style="position:absolute;left:0em;top:10.3453em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_333.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_333.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1716em;">Once complete, the next step is to prepare the files. Preparing is the process that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1397em;">actually performs the crash-recovery actions and ensures that you’re recovering all &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_183">data: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:8.1792em;"><span class="stl_200 stl_171 stl_28">$ xtrabackup --prepare --target-dir=/restore &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:10.0787em;"><span class="stl_176 stl_32 stl_36" style="word-spacing:0.1062em;">If you’re not using streaming mode, you can perform the prepare &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:11.0387em;"><span class="stl_176 stl_32 stl_78" style="word-spacing:0.096em;">phase after you make the backup. This will result in backing up a &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:11.9987em;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.1117em;">prepared backup and reduce the amount of work you need to do &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:12.9587em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">when it comes time to restore. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.5166em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0047em;">Once completed and successful, you’re now ready to use these files to start MySQL: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">$ xtrabackup --move-back --target-dir=/restore &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3989em;top:19.2239em;z-index:485;"><span class="stl_176 stl_32 stl_109">Y</span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.2576em;">u can use the </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0.0101em;">--copy-back </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.2576em;">or </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0.0101em;">--move-back </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.2576em;">flags with </span><span class="stl_212 stl_171 stl_28">xtra &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:20.2291em;z-index:577;"><span class="stl_212 stl_171 stl_28">backu</span><span class="stl_212 stl_171 stl_186">p</span><span class="stl_176 stl_32 stl_120" style="word-spacing:0.0061em;">to copy or move the files into place correctly. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.666em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.2774em;">XtraBackup will automatically detect your </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.026em;">data-dir </span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.2765em;">variable from your MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.716em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0019em;">installation and move the files to the correct location. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.6003em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Starting MySQL After Restoring Raw Files &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.4887em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1389em;">There are a few things you’ll need to do </span><span class="stl_155 stl_41 stl_76" style="word-spacing:0.1534em;">before </span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.1457em;">you start the MySQL server you’re &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.5501em;"><span class="stl_154 stl_32 stl_28">recovering. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.1001em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0548em;">The first and most important thing, and one of the easiest to forget, is to check your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.1501em;z-index:881;"><span class="stl_154 stl_32 stl_104">server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1336em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1351em;">onfiguration and make sure the restored files have the correct owner and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.2001em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2415em;">permissions before you try to start the MySQL server. These attributes must be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.2501em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0814em;">exactly right, or MySQL might not start. The attributes vary from system to system, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.3001em;z-index:1129;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.167em;">so check your notes to see exactly what you’ll need to set. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1684em;">u typically want the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.3387em;"><span class="stl_155 stl_41 stl_25" style="word-spacing:0.0438em;">mysql </span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0356em;">user and group to own the files and directories, which you want to be readable &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.4001em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">and writable by that user and group but no others. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.9501em;z-index:1258;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.3161em;">We </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1248em;">lso suggest watching the MySQL error log while the server starts. On a Unix- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.0001em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0013em;">style system, you can watch the file like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:42.762em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">tail -f /var/log/mysql/mysql.err &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.9001em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0346em;">The exact location of the error log will vary. Once you’re monitoring the file, you can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.9501em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1704em;">start the MySQL server and watch for errors. If all goes well, you’ll have a nicely &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:46.0001em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0002em;">recovered server once MySQL starts. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0256em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Recovering from a Backup &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">285 &nbsp;</span></div>
+					<a name="307_0" style="position:absolute;left:0em;top:27.8934em;">&nbsp;</a>
+					<a name="307_1" style="position:absolute;left:0em;top:29.7294em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

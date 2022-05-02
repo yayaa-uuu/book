@@ -1,0 +1,59 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_320.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_320.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0153em;">A snapshot can be a great way to make a backup for specific uses. One example is as a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:110;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0916em;">fallback in case of a problem during an upgrade. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0935em;">u can take a snapshot, upgrade, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;z-index:186;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.0293em;">and, if there’s a problem, just roll back to the snapshot. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.02em;">u can do the same thing for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0328em;">any operation that’s uncertain and risky, such as altering a huge table (which will take &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">an unknown amount of time). &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:10.5735em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">How LVM snapshots work &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.0409em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0107em;">LVM uses copy-on-write technology to create a snapshot—that is, a logical copy of an &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.0909em;"><span class="stl_154 stl_32 stl_145" style="word-spacing:0.1536em;">entire volume at an instant in time. It’s a little like MVCC in a database, except it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.1409em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">keeps only one old version of the data. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.6796em;"><span class="stl_154 stl_32 stl_346" style="word-spacing:0.1307em;">Notice we didn’t say a </span><span class="stl_155 stl_41 stl_475" style="word-spacing:0.1234em;">physical </span><span class="stl_154 stl_32 stl_222" style="word-spacing:0.113em;">copy. A logical copy appears to contain all the same &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:16.7409em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0322em;">data as the volume you snapshotted, but initially it contains no data. Instead of copy‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.7909em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1385em;">ing the data to the snapshot, LVM simply notes the time at which you created the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:18.8409em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0911em;">snapshot, then it reads the data from the original volume when you request it from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.8909em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1331em;">the snapshot. So the initial copy is basically an instantaneous operation, no matter &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:20.9409em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.007em;">how large a volume you’re snapshotting. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.4909em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1103em;">When something changes the data in the original volume, LVM copies the affected &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.5409em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0099em;">blocks to an area reserved for the snapshot before it writes any changes to them. LVM &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.5909em;"><span class="stl_154 stl_32 stl_151" style="word-spacing:0.0286em;">doesn’t keep multiple “old versions” of the data, so additional writes to blocks that are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.6409em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.115em;">changed in the original volume don’t require any further work for the snapshot. In &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.6909em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0396em;">other words, only the first write to each block causes a copy-on-write to the reserved &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.7409em;"><span class="stl_154 stl_32 stl_28">area. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.2909em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.1172em;">Now, when you request these blocks in the snapshot, LVM reads the data from the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.3409em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0817em;">copied blocks instead of from the original volume. This lets you continue to see the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.3909em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.3264em;">same data in the snapshot without blocking anything on the original volume. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.4409em;"><a href="MultiPageHTML_out296.html#296_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 10-1 </span></a><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">depicts this arrangement. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.9796em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0927em;">The snapshot creates a new logical device in the </span><span class="stl_155 stl_41 stl_28" style="word-spacing:0.0883em;">/dev </span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0969em;">directory, and you can mount &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.0409em;z-index:1572;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0072em;">this device just as you would mount any other. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:36.5909em;z-index:1574;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0259em;">u can theoretically snapshot an enormous volume and consume very little physical &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.6409em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0064em;">space with this technique. However, you need to set aside enough space to hold all the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.6909em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0683em;">blocks you expect to be updated in the original volume while you hold the snapshot &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.7409em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0832em;">open. If you don’t reserve enough copy-on-write space, the snapshot will run out of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:40.7909em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0417em;">space, and the device will become unavailable. The effect is like unplugging an exter‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.8409em;z-index:1995;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0069em;">nal drive: any backup job that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0039em;">eading from the device will fail with an I/O error. &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3884em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Backing Up Data &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1749em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0824em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">273 &nbsp;</span></div>
+					<a name="295_0" style="position:absolute;left:0em;top:12.2702em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

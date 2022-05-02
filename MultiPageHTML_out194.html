@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_203.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_203.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7213em;top:4.3166em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.2854em;">• Data</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0674em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0619em;">access is fast. A clustered index holds both the index and the data together &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0444em;">in one B-tree, so retrieving rows from a clustered index is normally faster than a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:6.4166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">comparable lookup in a nonclustered index. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:7.7999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• Queries</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1241em;">&nbsp;</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1253em;">that use covering indexes can use the primary key values contained at &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:8.8499em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the leaf node. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:10.7333em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1483em;">These benefits can boost performance tremendously if you design your tables and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.7833em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.3031em;">queries to take advantage of them. However, clustered indexes also have some &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.8333em;"><span class="stl_154 stl_32 stl_97">disadvantages: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:14.7166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• Clustering</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1224em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1249em;">gives the largest improvement for I/O-bound workloads. If the data &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:15.7666em;z-index:499;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0202em;">fits in memory, the order in which it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.014em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_144" style="word-spacing:0.026em;">ccessed doesn’t really matter, so clustering &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:16.8166em;"><span class="stl_154 stl_32 stl_66" style="word-spacing:0.0142em;">doesn’t give much benefit. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:18.1999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2728em;">• Insert</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1091em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1112em;">speeds depend heavily on insertion order. Inserting rows in primary key &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:19.2499em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0194em;">order is the fastest way to load data into an InnoDB table. It might be a good idea &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:20.3494em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1439em;">to reorganize the table with </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0172em;">OPTIMIZE TABLE </span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1459em;">after loading a lot of data if you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:21.3994em;z-index:795;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0111em;">didn’t load the rows in primary key order. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:22.7827em;"><span class="stl_154 stl_32 stl_56" style="word-spacing:0.289em;">• Updating</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1026em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0951em;">the clustered index columns is expensive because it forces InnoDB to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:23.8327em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">move each updated row to a new location. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:25.2047em;z-index:898;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• </span><span class="stl_154 stl_32 stl_127">T</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1476em;">bles built on clustered indexes are subject to </span><span class="stl_155 stl_41 stl_149" style="word-spacing:0.1631em;">page splits </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1476em;">when new rows are &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:26.266em;z-index:981;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2032em;">inserted or when a row</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2032em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2052em;">rimary key is updated such that the row must be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:27.316em;z-index:1053;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0039em;">moved. A page split happens when a row</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0024em;">s </span><span class="stl_154 stl_32 stl_28">k</span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0073em;">ey value dictates that the row must be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:28.366em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0407em;">placed into a page that is full of data. The storage engine must split the page into &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:29.416em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0621em;">two to accommodate the row. Page splits can cause a table to use more space on &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:30.466em;"><span class="stl_154 stl_32 stl_28">disk. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7214em;top:31.8494em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.213em;">• Clustered tables can be slower for full table scans, especially if rows are less &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:32.8994em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">densely packed or stored nonsequentially because of page splits. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:34.2827em;"><span class="stl_154 stl_32 stl_277" style="word-spacing:0.265em;">• Secondary</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1062em;">&nbsp;</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1115em;">(nonclustered) indexes can be larger than you might expect because &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.3327em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">their leaf nodes contain the primary key columns of the referenced rows. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:36.716em;"><span class="stl_154 stl_32 stl_277" style="word-spacing:0.265em;">• Secondary</span><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0036em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">index accesses require two index lookups instead of one. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.5994em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.169em;">The last point can be a bit confusing. Why would a secondary index require two &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.6494em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1646em;">index lookups? The answer lies in the nature of the “row pointers” the secondary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.6994em;z-index:1732;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1279em;">index stores. Remember, a leaf node doesn’t store a pointer to the referenced row</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.7494em;z-index:1772;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0077em;">physical location; rather, it stores the row</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_146" style="word-spacing:-0.0045em;">rimary key values. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.2994em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0631em;">That means that to find a row from a secondary index, the storage engine first finds &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.3494em;"><span class="stl_154 stl_32 stl_134" style="word-spacing:0.1463em;">the leaf node in the secondary index and then uses the primary key values stored &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:45.3994em;z-index:1972;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1138em;">there to navigate the primary key and find the row. That</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1068em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1068em;">ouble work: two B-tree &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">172 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6676em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5751em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

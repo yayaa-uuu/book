@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_166.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_166.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0155em;">can make this easier by defining named constants for each bit in your application &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;"><span class="stl_154 stl_32 stl_28">code. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.966em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.063em;">The major advantage of this approach over </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.199em;">SET </span><span class="stl_154 stl_32 stl_153" style="word-spacing:0.0717em;">is that you can change the “enu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:8.0655em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.1863em;">meration” the field represents without an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1783em;">ALTER TABLE</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.184em;">. The drawback is that &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:9.1155em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.015em;">your queries are harder to write and understand (what does it mean when bit 5 is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:10.1655em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0843em;">set?). Some people are comfortable with bitwise manipulations and some aren’t, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:11.2155em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">so whether you’ll want to try this technique is largely a matter of taste. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.7655em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0263em;">An example application for packed bits is an access control list (ACL) that stores per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.8649em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0255em;">missions. Each bit or </span><span class="stl_170 stl_171 stl_28">SE</span><span class="stl_170 stl_171 stl_338">T</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0288em;">element represents a value such as </span><span class="stl_170 stl_171 stl_28">CAN_READ</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0256em;">, </span><span class="stl_170 stl_171 stl_28">CAN_WRITE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, or &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:14.9643em;"><span class="stl_170 stl_171 stl_28">CAN_DELETE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1048em;">. If you use a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1507em;">SET </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.108em;">column, you’ll let MySQL store the bit-to-value map‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.0143em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0332em;">ping in the column definition; if you use an integer column, you’ll store the mapping &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.1138em;"><span class="stl_154 stl_32 stl_151" style="word-spacing:0.01em;">in your application code. Here’s what the queries would look like with a </span><span class="stl_170 stl_171 stl_28">SE</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_28">column: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:18.8756em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CREATE TABLE acl ( &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:19.7257em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">perms SET('CAN_READ', 'CAN_WRITE', 'CAN_DELETE') NOT NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:20.5757em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:21.4256em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">INSERT INTO acl(perms) VALUES ('CAN_READ,CAN_DELETE'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:22.2756em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT perms FROM acl WHERE FIND_IN_SET('CAN_READ', perms); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:23.1264em;"><span class="stl_200 stl_171 stl_28">+---------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:23.9764em;"><span class="stl_200 stl_171 stl_28">| perms &nbsp;</span></div>
+					<div class="stl_01" style="left:15.2085em;top:23.9764em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4169em;top:24.8264em;"><span class="stl_200 stl_171 stl_28">+---------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:25.6764em;"><span class="stl_200 stl_171 stl_28">| CAN_READ,CAN_DELETE | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:26.5264em;"><span class="stl_200 stl_171 stl_28">+---------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.6638em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0059em;">If you used an integer, you could write that example as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:29.4257em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SET @CAN_READ := 1 &lt;&lt; 0, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:30.2757em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">@CAN_WRITE := 1 &lt;&lt; 1, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:31.1257em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">@CAN_DELETE := 1 &lt;&lt; 2; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:31.9757em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CREATE TABLE acl ( &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:32.8257em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">perms TINYINT UNSIGNED NOT NULL DEFAULT 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:33.6757em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:34.5257em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">INSERT INTO acl(perms) VALUES(@CAN_READ + @CAN_DELETE); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:35.3757em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT perms FROM acl WHERE perms &amp; @CAN_READ; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:36.2264em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:37.0764em;"><span class="stl_200 stl_171 stl_28">| perms | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:37.9264em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:38.7764em;"><span class="stl_200 stl_171 stl_28">| 5 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:39.6264em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:10.2502em;top:38.7764em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.7638em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.1644em;">We’ve used variables to define the values, but you can use constants in your code &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.8138em;"><span class="stl_154 stl_32 stl_28">instead. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">138 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="160_0" style="position:absolute;left:0em;top:12.9947em;">&nbsp;</a>
+					<a name="160_1" style="position:absolute;left:0em;top:42.043em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

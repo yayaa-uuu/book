@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_275.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_275.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.6875em;top:4.3233em;"><span class="stl_31 stl_32 stl_24" style="word-spacing:0.1035em;">That doesn’t matter; when the ferry arrives back at point A, it will only pick up the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:5.3233em;"><span class="stl_31 stl_32 stl_135" style="word-spacing:-0.0031em;">very next passenger in line. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:6.8233em;"><span class="stl_31 stl_32 stl_74" style="word-spacing:0.0486em;">In MySQL 5.6, the ferry will pick up all passengers from the line at point A and then &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:7.8233em;"><span class="stl_31 stl_32 stl_57" style="word-spacing:0.019em;">transfer them to point B. Each time it returns to point A to pick up new passengers, it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:8.8233em;"><span class="stl_31 stl_32 stl_122" style="word-spacing:0.0003em;">will collect everyone who is waiting and transfer them across to point B. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:10.3233em;"><span class="stl_31 stl_32 stl_78" style="word-spacing:0.0803em;">This is measurably better performance in real-life situations where many passengers &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:11.3233em;"><span class="stl_31 stl_32 stl_87" style="word-spacing:0.1992em;">tend to arrive while waiting for the ferry to arrive back at point A, and the trip &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:12.3233em;"><span class="stl_31 stl_32 stl_74" style="word-spacing:0.1253em;">between A and B tends to take some time. It is not so measurable in naive bench‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:13.3233em;"><span class="stl_31 stl_32 stl_95" style="word-spacing:0.0018em;">marks that run in a single thread. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:14.8233em;"><span class="stl_31 stl_32 stl_77" style="word-spacing:0.051em;">MySQL 5.7 and later behave similarly to 5.6 in that it will pick up all waiting passen‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:15.8233em;"><span class="stl_31 stl_32 stl_35" style="word-spacing:0.0028em;">gers from point A and transfer them to point B, but with one notable enhancement! &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:17.3233em;"><span class="stl_31 stl_32 stl_87" style="word-spacing:0.0003em;">When the ferry arrives back at point A to pick up waiting passengers, it can be config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:18.3233em;"><span class="stl_31 stl_32 stl_158" style="word-spacing:0.0466em;">ured to wait just a little bit longer with the knowledge that new passengers will likely &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:19.3233em;"><span class="stl_31 stl_32 stl_36" style="word-spacing:0.0626em;">arrive. For example: if you know the trip between point A and point B is 10 minutes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:20.3233em;"><span class="stl_31 stl_32 stl_36" style="word-spacing:0.0543em;">in duration, why not wait an extra 30 seconds at point A before departing? This may &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:21.3233em;"><span class="stl_31 stl_32 stl_97" style="word-spacing:0.1151em;">save you on round trips and improve the overall number of passengers that can be &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:22.3233em;"><span class="stl_31 stl_32 stl_28">transported. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:23.8704em;"><span class="stl_31 stl_32 stl_95" style="word-spacing:0.0176em;">The configuration variables for artificial delay are </span><span class="stl_349 stl_171 stl_28">binlog_group_commit_sync_delay &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:24.9175em;"><span class="stl_31 stl_32 stl_95" style="word-spacing:0.1012em;">(delay in microseconds) and </span><span class="stl_349 stl_171 stl_28" style="word-spacing:-0.1564em;">binlog_group_commit_sync_no_delay_count </span><span class="stl_31 stl_32 stl_99">(number &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:25.9175em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0em;">of transactions to wait for before deciding to abort waiting). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:27.4175em;"><span class="stl_31 stl_32 stl_37" style="word-spacing:0.0947em;">In this example passengers are obviously transactions, and the ferry is an expensive &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6874em;top:28.4646em;"><span class="stl_349 stl_171 stl_28" style="word-spacing:-0.1572em;">fsync() </span><span class="stl_31 stl_32 stl_107" style="word-spacing:0.1075em;">operation. It’s important to note that there is just one ferry in operation (a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6874em;top:29.4646em;"><span class="stl_31 stl_32 stl_189" style="word-spacing:0.0951em;">single set of ordered binary logs), so being able to tune this provides a nice level of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6874em;top:30.4646em;"><span class="stl_31 stl_32 stl_73" style="word-spacing:0.0019em;">advanced configuration. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.2287em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0623em;">In most cases, you can simply turn this feature on and see immediate benefit by set‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.3281em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0514em;">ting </span><span class="stl_170 stl_171 stl_28">replica_parallel_worker</span><span class="stl_170 stl_171 stl_472">s</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0526em;">to a nonzero value. If you are operating on a single &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.4275em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1445em;">database, you will also need to change </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1106em;">replica_parallel_type </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.143em;">to </span><span class="stl_170 stl_171 stl_28">LOGICAL_CLOCK</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.4775em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1115em;">Since multithreaded replication uses a coordinator thread, there will be some over‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:37.5275em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0419em;">head for that thread managing the states of all other threads. In addition, ensure that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.627em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1067em;">your replicas run with </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1487em;">replica_preserve_commit_order </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1091em;">so that committing out of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.677em;"><span class="stl_154 stl_32 stl_111" style="word-spacing:0.129em;">order won’t cause issues. See the </span><a href="https://oreil.ly/Tjb28" target="_blank"><span class="stl_184 stl_32 stl_148" style="word-spacing:0.1249em;">“Gaps” section of the official documentation </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1167em;">for a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.727em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0048em;">detailed explanation of why this is important. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.3264em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.2678em;">There are two ways you can determine the optimal </span><span class="stl_170 stl_171 stl_28">replica_parallel_workers &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.3764em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1639em;">value. The imprecise method would be to stop replication and then measure how &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.4264em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.015em;">long it takes to catch up using differing amounts of threads until you find the optimal &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.4764em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0904em;">setting. This is flawed because it assumes a consistent number of data manipulation &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:46.5264em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0573em;">language (DML) statements are being sent over replication and that they all perform &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:47.5764em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">relatively the same. In practice, this is hardly true. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.6345em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Under the Hood &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">235 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

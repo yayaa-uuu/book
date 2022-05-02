@@ -1,0 +1,44 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_202.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_202.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><a href="MultiPageHTML_out193.html#193_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0984em;">Figure 7-3 </span></a><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1004em;">shows how records are laid out in a clustered index. Notice that the leaf &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0188em;">pages contain full rows, but the node pages contain only the indexed columns. In this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">case, the indexed column contains integer values. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.9911em;"><span class="stl_155 stl_41 stl_19" style="word-spacing:0.0156em;">Figure 7-3. Clustered index data layout &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.0525em;z-index:290;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1305em;">Some database servers let you choose which index to cluster, but none of MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34">’s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.1025em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0621em;">built-in storage engines does at the time of this writing. InnoDB clusters the data by &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.1525em;"><span class="stl_154 stl_32 stl_145" style="word-spacing:0.0722em;">the primary key. That means that the “indexed column” in </span><a href="MultiPageHTML_out193.html#193_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0617em;">Figure 7-3 </span></a><span class="stl_154 stl_32 stl_361" style="word-spacing:0.0553em;">is the primary &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.2025em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">key column. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.7525em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0516em;">If you don’t define a primary key, InnoDB will try to use a unique nonnullable index &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.8025em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1236em;">instead. If there’s no such index, InnoDB will define a hidden primary key for you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.8525em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0373em;">and then cluster on that. The downside of hidden primary keys is that the incremen‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.9025em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0525em;">ted value for these is shared across all tables that use a hidden primary key, resulting &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.9525em;z-index:758;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0084em;">in higher mutex contention for the shared key. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.5025em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0025em;">Clustering data has some very important advantages: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:41.3858em;z-index:806;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_43" style="word-spacing:0.2em;">u can keep related data close together. For example, when implementing a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:42.4853em;z-index:932;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0034em;">mailbox, you can cluster by </span><span class="stl_170 stl_171 stl_28">user_id</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0035em;">, so you can retrieve all of a single user</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0035em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_28">es‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:43.5353em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1206em;">sages by fetching only a few pages from disk. If you didn’t use clustering, each &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:44.5853em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0045em;">message might require its own disk I/O. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2088em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">171 &nbsp;</span></div>
+					<a name="193_0" style="position:absolute;left:0em;top:8.1083em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

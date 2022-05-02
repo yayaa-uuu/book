@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_198.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_198.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0436em;">lookups. In such cases, it might indeed work well to design the index so that it filters &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:106;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1073em;">out rows as quickly as possible, so it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.105em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1052em;">ore selective for queries that specify only a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.054em;">prefix of the index in the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_427">E</span><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0601em;">clause. However, this depends not only on the selec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.516em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0052em;">tivity (overall cardinality) of the columns but also on the actual values you use to look &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.566em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2713em;">up rows—the distribution of values. This is the same type of consideration we &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.616em;z-index:393;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1268em;">explored for choosing a good prefix length. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1286em;">u might actually need to choose the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.666em;z-index:445;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">column order such that it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">s selective as possible for the queries that you’ll run most. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.216em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0077em;">Let’s use the following query as an example: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:13.9786em;"><span class="stl_200 stl_171 stl_28">SELECT * FROM payment WHERE staff_id = 2 AND customer_id = 584; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.1655em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0603em;">Should you create an index on (</span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0583em;">staff_id, customer_id</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0583em;">), or should you reverse the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.2155em;z-index:668;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1131em;">column order? </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1131em;">e </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1131em;">an run some quick queries to help examine the distribution of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.2655em;z-index:786;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0867em;">values in the table and determine which column has a higher selectivity. Let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0829em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28">rans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.3649em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">form the query to count the cardinality of each predicate in the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_99">clause: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:20.1268em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT SUM(staff_id = 2), SUM(customer_id = 584) FROM payment\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:20.9775em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:21.8275em;"><span class="stl_200 stl_171 stl_28">SUM(staff_id = 2): 7992 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:22.6775em;"><span class="stl_200 stl_171 stl_28">SUM(customer_id = 584): 30 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:23.8643em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.2158em;">According to the rule of thumb, we should place </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0391em;">customer_id </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2109em;">first in the index &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.9143em;z-index:1133;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.134em;">because the predicate matches fewer rows in the table. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1309em;">e </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_204" style="word-spacing:0.1261em;">an then run the query &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.0138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0697em;">again to see how selective </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1877em;">staff_id </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0697em;">is within the range of rows selected by this spe‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.0638em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">cific customer ID: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:28.8257em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT SUM(staff_id = 2) FROM payment WHERE customer_id = 584\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:29.6764em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:30.5264em;"><span class="stl_200 stl_171 stl_28">SUM(staff_id = 2): 17 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.6638em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1248em;">Be careful with this technique because the results depend on the specific constants &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.7138em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0537em;">supplied for the chosen query. If you optimize your indexes for this query and other &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.7638em;z-index:1549;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0144em;">queries don’t fare as well, the server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0077em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0088em;">erformance might suffer overall, or some quer‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.8138em;z-index:1615;"><span class="stl_154 stl_32 stl_145" style="word-spacing:0.0106em;">ies might run unpredictably. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.3524em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0659em;">If you’re using the “worst” sample query from a report from a tool such as </span><span class="stl_155 stl_41 stl_35">pt-query- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.4024em;"><span class="stl_155 stl_41 stl_214">digest</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0972em;">, this technique can be an effective way to see what might be the most helpful &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.4638em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0468em;">indexes for your queries and your data. But if you don’t have specific samples to run, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.5138em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1387em;">it might be better to use the old rule of thumb, which is to look at the cardinality &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.5638em;"><span class="stl_154 stl_32 stl_325" style="word-spacing:-0.0046em;">across the board, not just for one query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:42.3257em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT COUNT(DISTINCT staff_id)/COUNT(*) AS staff_id_selectivity, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:43.1757em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">COUNT(DISTINCT customer_id)/COUNT(*) AS customer_id_selectivity, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:44.0257em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">COUNT(*) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:44.8757em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM payment\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:45.7264em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:46.5764em;"><span class="stl_200 stl_171 stl_28">staff_id_selectivity: 0.0001 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:47.4264em;"><span class="stl_200 stl_171 stl_28">customer_id_selectivity: 0.0373 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:48.2764em;"><span class="stl_200 stl_171 stl_28">COUNT(*): 16049 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">168 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="190_0" style="position:absolute;left:0em;top:18.5942em;">&nbsp;</a>
+					<a name="190_1" style="position:absolute;left:0em;top:39.743em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

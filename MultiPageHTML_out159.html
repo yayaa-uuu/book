@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_165.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_165.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.5415em;"><span class="stl_170 stl_171 stl_28">BIT &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.4655em;z-index:6;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0603em;">u can use a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1975em;">BIT </span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0615em;">column to store one or many true/false values in a single col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.5649em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0237em;">umn. </span><span class="stl_170 stl_171 stl_28">BIT(1</span><span class="stl_170 stl_171 stl_373">)</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0265em;">defines a field that contains a single bit, </span><span class="stl_170 stl_171 stl_28">BIT(2</span><span class="stl_170 stl_171 stl_373">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0238em;">stores 2 bits, and so &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:7.6643em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0469em;">on; the maximum length of a </span><span class="stl_170 stl_171 stl_28">BI</span><span class="stl_170 stl_171 stl_389">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0445em;">column is 64 bits. InnoDB stores each column &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:8.7143em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0172em;">as the smallest integer type large enough to contain the bits, so you don’t save any &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:9.7643em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">storage space. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:11.3638em;"><span class="stl_154 stl_32 stl_152" style="word-spacing:0.1979em;">MySQL treats </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0646em;">BIT </span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1877em;">as a string type, not a numeric type. When you retrieve a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:12.4632em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.175em;">BIT(1) </span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0821em;">value, the result is a string, but the contents are the binary value 0 or 1, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:13.5132em;z-index:433;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.101em;">not the ASCII value “0” or “1</span><span class="stl_154 stl_32 stl_395">”</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.101em;">. </span><span class="stl_154 stl_32 stl_323">H</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1066em;">owever, if you retrieve the value in a numeric &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:14.5632em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1278em;">context, the result is the number to which the bit string converts. Keep this in &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:15.6132em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1534em;">mind if you need to compare the result to another value. For example, if you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:16.7127em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.044em;">store the value </span><span class="stl_170 stl_171 stl_28">b'00111001</span><span class="stl_170 stl_171 stl_396">'</span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0447em;">(which is the binary equivalent of 57) into a </span><span class="stl_170 stl_171 stl_28">BIT(8) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:17.7627em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0816em;">column and retrieve it, you will get the string containing the character code 57. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:18.8127em;z-index:778;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0986em;">This happens to be the ASCII character code for “9</span><span class="stl_154 stl_32 stl_395">”</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0974em;">. </span><span class="stl_154 stl_32 stl_28">B</span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1025em;">ut in a numeric context, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:19.9121em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">you’ll get the value </span><span class="stl_170 stl_171 stl_28">57</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:21.6775em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">mysql&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">CREATE TABLE bittest(a bit(8)); &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:22.57em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">mysql&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">INSERT INTO bittest VALUES(b'00111001'); &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:23.4625em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">mysql&gt; </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">SELECT a, a + 0 FROM bittest; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:24.3557em;"><span class="stl_397 stl_171 stl_28">+------+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:25.2482em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">| a &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:26.1407em;"><span class="stl_397 stl_171 stl_28">+------+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:27.0332em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">| 9</span><span class="stl_397 stl_171 stl_28" style="word-spacing:4em;">&nbsp;</span><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">57 | &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5196em;top:25.2482em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">| a + 0 | &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5196em;top:27.0332em;"><span class="stl_397 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.9165em;top:27.9257em;"><span class="stl_397 stl_171 stl_28">+------+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:29.1515em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0175em;">This can be very confusing, so we recommend that you use </span><span class="stl_170 stl_171 stl_28">BI</span><span class="stl_170 stl_171 stl_208">T</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0244em;">with caution. For &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:30.2015em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">most applications, we think it is a better idea to avoid this type. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:31.7515em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1405em;">If you want to store a true/false value in a single bit of storage space, another &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:32.851em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0605em;">option is to create a nullable </span><span class="stl_170 stl_171 stl_28">CHAR(0</span><span class="stl_170 stl_171 stl_328">)</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0578em;">column. This column is capable of storing &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:33.9504em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1445em;">either the absence of a value (</span><span class="stl_170 stl_171 stl_28">NULL</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1458em;">) or a zero-length value (the empty string). &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:35.0004em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0759em;">This works in practice, but it can be obtuse to others using data in the database &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:36.0504em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.2124em;">and make it difficult to write queries. Unless you’re hyper-focused on saving &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:37.1498em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">space, we still recommend using </span><span class="stl_170 stl_171 stl_28">TINYINT</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.0081em;"><span class="stl_170 stl_171 stl_28">SET &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:39.8826em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0964em;">If you need to store many true/false values, consider combining many columns &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:40.982em;z-index:1557;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0806em;">into one with MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2621em;">’s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0816em;">ative </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1851em;">SET </span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0775em;">data type, which MySQL represents internally &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:42.032em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0685em;">as a packed set of bits. It uses storage efficiently, and MySQL has functions such &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:43.1315em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">as </span><span class="stl_170 stl_171 stl_28">FIND_IN_SET(</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and </span><span class="stl_170 stl_171 stl_28">FIELD(</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">that make it easy to use in queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.7534em;"><span class="stl_155 stl_41 stl_98" style="word-spacing:0.0151em;">Bitwise operations on integer columns &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:45.8643em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0238em;">An alternative to </span><span class="stl_170 stl_171 stl_28">SE</span><span class="stl_170 stl_171 stl_317">T</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0238em;">is to use an integer as a packed set of bits. For example, you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:46.9637em;z-index:1889;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1148em;">can pack 8 bits in a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1402em;">TINYINT </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1172em;">and manipulate them with bitwise operators. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:26.2652em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Choosing Optimal Data Types &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">137 &nbsp;</span></div>
+					<a name="159_0" style="position:absolute;left:0em;top:5.6947em;">&nbsp;</a>
+					<a name="159_1" style="position:absolute;left:0em;top:46.0935em;">&nbsp;</a>
+					<a name="159_2" style="position:absolute;left:0em;top:40.1119em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_218.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_218.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9996em;top:4.366em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.177em;">implements </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0837em;">UNIQUE </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1717em;">constraints and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0424em;">PRIMARY KEY </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1701em;">constraints with indexes, so this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:5.416em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0356em;">actually creates three indexes on the same column! There is typically no reason to do &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.466em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0318em;">this, unless you want to have different types of indexes on the same column to satisfy &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.516em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">different kinds of queries.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out205.html#205_0"><span class="stl_166 stl_32 stl_28">13 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:6.0003em;top:9.066em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0271em;">Redundant indexes are a bit different from duplicated indexes. If there is an index on &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:10.1655em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0958em;">(A, B)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0958em;">, another index on </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1602em;">(A) </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0981em;">would be redundant because it is a prefix of the first &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:11.2649em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0579em;">index. That is, the index on </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0556em;">(A, B</span><span class="stl_170 stl_171 stl_433">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0556em;">can also be used as an index on </span><span class="stl_170 stl_171 stl_28">(A</span><span class="stl_170 stl_171 stl_433">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0556em;">alone. (This &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.3643em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.15em;">type of redundancy applies only to B-tree indexes.) However, an index on </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1456em;">(B, A) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.4638em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0602em;">would not be redundant, and neither would an index on </span><span class="stl_170 stl_171 stl_28">(B)</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0654em;">, because </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1989em;">B </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.059em;">is not a left‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.5632em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1482em;">most prefix of </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1482em;">(A, B)</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1501em;">. Furthermore, indexes of different types (such as a full-text &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.6132em;z-index:834;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0045em;">index) are not redundant to B-tree indexes, no matter what columns they cover. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.1632em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0689em;">Redundant indexes usually appear when people add indexes to a table. For example, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.2627em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0024em;">someone might add an index on </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">(A, B</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0003em;">instead of extending an existing index on </span><span class="stl_170 stl_171 stl_28">(A) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.3621em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1053em;">to cover </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1053em;">(A, B)</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1072em;">. Another way this could happen is by changing the index to cover &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.4615em;z-index:1075;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">(A, ID)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. The </span><span class="stl_170 stl_171 stl_28">I</span><span class="stl_170 stl_171 stl_186">D</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0071em;">column is the primary key, so it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">lready included. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.0115em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1958em;">In most cases, you don’t want redundant indexes, and to avoid them you should &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.0615em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1032em;">extend existing indexes rather than add new ones. Still, there are times when you’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.1115em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0439em;">need redundant indexes for performance reasons. Extending an existing index might &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.1615em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">make it much larger and reduce performance for some queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.7115em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0103em;">For example, if you have an index on an integer column and you extend it with a long &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.811em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.184em;">VARCHAR </span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.077em;">column, it might become significantly slower. This is especially true if your &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.861em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">queries use the index as a covering index. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.4604em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">Consider the </span><span class="stl_170 stl_171 stl_28">userinf</span><span class="stl_170 stl_171 stl_186">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">table that follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:32.223em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE userinfo ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:33.073em;"><span class="stl_200 stl_171 stl_28">id int unsigned NOT NULL AUTO_INCREMENT, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:33.923em;"><span class="stl_200 stl_171 stl_28">name varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:34.773em;"><span class="stl_200 stl_171 stl_28">email varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:35.623em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">password varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:36.473em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">dob date DEFAULT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:37.323em;"><span class="stl_200 stl_171 stl_28">address varchar(255) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:38.173em;"><span class="stl_200 stl_171 stl_28">city varchar(64) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:39.023em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">state_id tinyint unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:39.873em;"><span class="stl_200 stl_171 stl_28">zip varchar(8) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:40.723em;"><span class="stl_200 stl_171 stl_28">country_id smallint unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:41.573em;"><span class="stl_200 stl_171 stl_28">account_type varchar(32) NOT NULL DEFAULT '', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:42.423em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">verified tinyint NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:43.273em;"><span class="stl_200 stl_171 stl_28">allow_mail tinyint unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:44.123em;"><span class="stl_200 stl_171 stl_28">parrent_account int unsigned NOT NULL DEFAULT '0', &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.2968em;z-index:42;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">13 </span><span class="stl_168 stl_32 stl_77" style="word-spacing:0.0032em;">An index is not necessarily a duplicate if it</span><span class="stl_168 stl_32 stl_34">’</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">s a </span><span class="stl_168 stl_32 stl_28">d</span><span class="stl_168 stl_32 stl_95" style="word-spacing:0.0019em;">ifferent type of index; there are often good reasons to have &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6666em;top:48.1878em;"><span class="stl_211 stl_171 stl_28">KEY(col</span><span class="stl_211 stl_171 stl_186">)</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">and </span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">FULLTEXT KEY(col)</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2087em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">183 &nbsp;</span></div>
+					<a name="205_0" style="position:absolute;left:0em;top:47.3882em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

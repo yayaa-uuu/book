@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_27.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_27.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:31.0702em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:22.5429em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">MySQL Architecture &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;z-index:34;"><span class="stl_154 stl_32 stl_93">MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3681em;">’s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1781em;">rchitectural characteristics make it useful for a wide range of purposes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.0806em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0857em;">Although it is not perfect, it is flexible enough to work well in both small and large &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0111em;">environments. These range from a personal website up to large-scale enterprise appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.1806em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0527em;">cations. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0473em;">o </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0497em;">et the most from MySQL, you need to understand its design so that you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.2306em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">can work with it, not against it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.7806em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.1434em;">This chapter provides a high-level overview of the MySQL server architecture, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.8306em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0523em;">major differences between the storage engines, and why those differences are impor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.8806em;z-index:484;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0549em;">tant. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0508em;">e’ve tried to explain MySQL by simplifying the details and showing examples. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.9306em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0131em;">This discussion will be useful for those new to database servers as well as readers who &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.9806em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0007em;">are experts with other database servers. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.8771em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">MySQL’s Logical Architecture &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.1473em;z-index:712;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1907em;">A good mental picture of how MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3758em;">’s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1887em;">omponents work together will help you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.1973em;z-index:800;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">understand the server. </span><a href="MultiPageHTML_out24.html#24_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 1-1 </span></a><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">shows a logical view of MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28">rchitecture. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:36.7473em;"><span class="stl_154 stl_32 stl_139" style="word-spacing:0.0331em;">The topmost layer, clients, contains the services that aren’t unique to MySQL. They’re &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.7973em;"><span class="stl_154 stl_32 stl_185" style="word-spacing:0.0028em;">services most network-based client/server tools or servers need: connection handling, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.8473em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0087em;">authentication, security, and so forth. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.3973em;z-index:1053;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.117em;">The second layer is where things get interesting. Much of MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.3021em;">’s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1121em;">rains are here, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.4473em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0157em;">including the code for query parsing, analysis, optimization, and all the built-in func‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.4973em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.17em;">tions (e.g., dates, times, math, and encryption). Any functionality provided across &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.5473em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">storage engines lives at this level: stored procedures, triggers, and views, for example. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.0973em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1578em;">The third layer contains the storage engines. They are responsible for storing and &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.1473em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0261em;">retrieving all data stored “in” MySQL. Like the various filesystems available for GNU/ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:47.1973em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0165em;">Linux, each storage engine has its own benefits and drawbacks. The server communi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:35.6938em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">1</span></div>
+					<a name="23_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="23_1" style="position:absolute;left:0em;top:32.2287em;">&nbsp;</a>
+					<a name="23_2" style="position:absolute;left:0em;top:34.3765em;">&nbsp;</a>
+					<a name="23_3" style="position:absolute;left:0em;top:20.2598em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

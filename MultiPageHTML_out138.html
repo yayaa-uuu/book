@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_144.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_144.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2175em;">re-create old row versions), change buffer, doublewrite buffer, and other internal &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">structures in the tablespace. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.4235em;"><span class="stl_308 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">the tablespace &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.9404em;z-index:124;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_188" style="word-spacing:0.3314em;">u specify the tablespace files with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0892em;">innodb_data_file_path </span><span class="stl_154 stl_32 stl_77">configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.0398em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0836em;">option. The files are all contained in the directory given by </span><span class="stl_170 stl_171 stl_28">innodb_data_home_dir</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.0898em;"><span class="stl_154 stl_32 stl_371" style="word-spacing:0.0303em;">Here’s an example: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:12.8524em;"><span class="stl_200 stl_171 stl_28">innodb_data_home_dir = /var/lib/mysql/ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:13.7024em;"><span class="stl_200 stl_171 stl_28">innodb_data_file_path = ibdata1:1G;ibdata2:1G;ibdata3:1G &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.8398em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0429em;">That creates a 3 GB tablespace in three files. Sometimes people wonder whether they &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.8898em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">can use multiple files to spread load across drives, like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:17.6524em;"><span class="stl_200 stl_171 stl_28">innodb_data_file_path = /disk1/ibdata1:1G;/disk2/ibdata2:1G;... &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:18.7898em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0508em;">While that does indeed place the files in different directories, which represent differ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.8398em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0424em;">ent drives in this example, InnoDB concatenates the files end-to-end. Thus, you usu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.8898em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0445em;">ally don’t gain much this way. InnoDB will fill the first file, then the second when the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.9398em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0786em;">first is full, and so on; the load isn’t really spread in the fashion you need for higher &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.9898em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">performance. A RAID controller is a smarter way to spread load. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.5398em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2082em;">To </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0129em;">llow the tablespace to grow if it runs out of space, you can make the last file auto- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.5898em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">extend as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:27.3524em;"><span class="stl_200 stl_171 stl_28">...ibdata3:1G:autoextend &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.4898em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0604em;">The default behavior is to create a single 10 MB auto-extending file. If you make the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.5398em;z-index:1144;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0058em;">file auto-extend, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s a </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">ood idea to place an upper limit on the tablespace</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ize to keep &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.5898em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0708em;">it from growing very large because once it grows, it doesn’t shrink. For example, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.6398em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0011em;">following limits the auto-extending file to 2 GB: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:33.4024em;"><span class="stl_200 stl_171 stl_28">...ibdata3:1G:autoextend:max:2G &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.5398em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1426em;">Managing a single tablespace can be a hassle, especially if it auto-extends and you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:35.5898em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0642em;">want to reclaim the space (for this reason, we recommend disabling the auto-extend &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.6398em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1457em;">feature or at least setting a reasonable cap on the space). The only way to reclaim &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.6898em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0308em;">space is to dump your data, shut down MySQL, delete all the files, change the config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.7398em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0591em;">uration, restart, let InnoDB create new empty files, and restore your data. InnoDB is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:39.7898em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2901em;">completely unforgiving about its tablespace: you cannot simply remove files or &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.8398em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0145em;">change their sizes. It will refuse to start if you corrupt its tablespace. It is likewise very &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.8898em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0317em;">strict about its logfiles. If you’re used to casually moving files around as you could do &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.9398em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">with MyISAM, take heed! &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:44.5392em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1314em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1238em;">innodb_file_per_table </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1304em;">option lets you configure InnoDB to use one file per &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:45.5779em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.056em;">table. It stores the data in the database directory as </span><span class="stl_155 stl_41 stl_19" style="word-spacing:0.0669em;">tablename.ibd </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0533em;">files. This makes it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:46.6392em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0591em;">easier to reclaim space when you drop a table. However, placing the data in multiple &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">116 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

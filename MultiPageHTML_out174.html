@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_180.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_180.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.154em;">the database engine create an environment where trade-offs are difficult to reason &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0241em;">about, and he proposes not using foreign keys at all if you also require online schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_28">changes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.9666em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0926em;">If you and your team are new to this task and are paving the way for CI of schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.066em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0564em;">changes in your organization, we believe </span><span class="stl_170 stl_171 stl_28">gh-os</span><span class="stl_170 stl_171 stl_410">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0551em;">is the better solution as long as you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.116em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0405em;">are also disciplined around not introducing foreign keys. Given its use of binary logs &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.166em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0909em;">instead of triggers to track changes, we consider it the safer option where you don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.216em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0043em;">have to worry about triggers’ performance hit, it is far more agnostic to which version &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.266em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1651em;">of MySQL you run (it can even work with statement-based replication with some &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.316em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0023em;">caveats), and it has already been proven on large-scale deployments. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.9155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.035em;">When is </span><span class="stl_170 stl_171 stl_28">pt-online-schema-chang</span><span class="stl_170 stl_171 stl_411">e</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0362em;">the preferred option? If you are running a num‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.9655em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0532em;">ber of older databases where foreign keys already exist and removing them is a diffi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.0649em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.4354em;">cult proposal, you will find that </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1954em;">pt-online-schema-change </span><span class="stl_154 stl_32 stl_181">attempts &nbsp;</span></div>
+					<div class="stl_01" style="left:33.1786em;top:18.0649em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4336em;">a more &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.1149em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1052em;">expansive support for foreign keys, but you will have to carry the cognitive load of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.2143em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0482em;">choosing the safest option for your data integrity and your uptime. Also, </span><span class="stl_170 stl_171 stl_28">gh-os</span><span class="stl_170 stl_171 stl_293">t</span><span class="stl_154 stl_32 stl_28">lev‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.2643em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0315em;">erages binary logs to do its work, so if those are inaccessible to the tool for some rea‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.3638em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">son, </span><span class="stl_170 stl_171 stl_28">pt-online-schema-chang</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">remains a viable option. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.9138em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1262em;">Ideally, someday we can all do online schema changes natively in MySQL, but that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.9638em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.199em;">day is not here yet. Until then, the open source ecosystem has come a long way &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.0138em;z-index:1279;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1781em;">toward making schema changes a more easily automated process. Let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1753em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1753em;">alk about &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.0638em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0994em;">how to put all of these tools together for a fully fleshed CI/CD pipeline for schema &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.1138em;"><span class="stl_154 stl_32 stl_28">changes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.1707em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">A CI/CD pipeline for schema changes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.6381em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1146em;">Now that we have covered a number of tools, from tools that help manage schema &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.6881em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.177em;">definition versioning to tools for making the changes for you in production with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.7381em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0362em;">minimal downtime, you can see that we have the pieces for a full continuous integra‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.7881em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.048em;">tion and deployment of schema changes that can remove a huge bottleneck for engi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:35.8381em;z-index:1705;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">neer productivity in your organization. Let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_412" style="word-spacing:-0.004em;">ut it all together: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.4601em;"><span class="stl_155 stl_41 stl_356" style="word-spacing:0.0168em;">Organizing your schema source control &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:38.5214em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1818em;">First things first, you must start by separating each of your database clusters’ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:39.5715em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0412em;">schema definitions in a repository by itself. If the goal here is to provide flexibil‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:40.6214em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1029em;">ity for different teams to run their changes at different speeds, then it does not &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:41.6714em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1341em;">make sense to combine all the schema definitions of all your databases in one &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:42.7215em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.2813em;">repository. This separation also allows each team to define different linting &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:43.7714em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1359em;">checks in the repository. Some teams may require a very specific character set &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:44.8214em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1068em;">and collation, and others are probably OK with the default. Flexibility for your &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:45.8714em;z-index:2250;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0086em;">partner teams here is key. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">152 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="174_0" style="position:absolute;left:0em;top:31.8674em;">&nbsp;</a>
+					<a name="174_1" style="position:absolute;left:0em;top:28.343em;">&nbsp;</a>
+					<a name="174_2" style="position:absolute;left:0em;top:38.7507em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

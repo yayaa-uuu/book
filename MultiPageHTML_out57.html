@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_64.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_64.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.6875em;top:4.3125em;"><span class="stl_40 stl_41 stl_251" style="word-spacing:0.0815em;">Horizontal sharding </span><span class="stl_31 stl_32 stl_77" style="word-spacing:0.0637em;">is when you have a data set that has grown past the size you can &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:5.3233em;"><span class="stl_31 stl_32 stl_78" style="word-spacing:0.0243em;">reliably serve out of a single cluster, so you split it into multiple clusters and serve the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:6.3233em;"><span class="stl_31 stl_32 stl_78" style="word-spacing:0.0133em;">data from several nodes, relying on some look-up mechanism to locate the subset you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6875em;top:7.3233em;"><span class="stl_31 stl_32 stl_28">need. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.0874em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0755em;">If your databases are reaching a size where restoring from a backup will take longer &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.1374em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0117em;">than what is acceptable for restoring critical functionality of the business, then even if &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.1874em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.1568em;">everything else is running fine, you need to examine adjusting that MTTR target, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.2374em;z-index:484;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.2692em;">changing the definition of “critical functionality</span><span class="stl_154 stl_32 stl_161">,</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2638em;">” or finding a way to make the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.2874em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0547em;">backup-restore time shorter. Here are some things to think about when planning for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.3374em;"><span class="stl_154 stl_32 stl_252" style="word-spacing:-0.008em;">disaster recovery: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:17.2094em;"><span class="stl_154 stl_32 stl_253" style="word-spacing:0.2329em;">• Be</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0935em;">&nbsp;</span><span class="stl_155 stl_41 stl_254" style="word-spacing:0.1028em;">very </span><span class="stl_216 stl_41 stl_28" style="word-spacing:0.0905em;">speciﬁc </span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1138em;">what functionality falls into this recovery target, and if needed, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:18.2708em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0615em;">look into whether the data that powers that functionality subset needs to be in a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:19.3208em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0025em;">separate cluster to actually make that expectation realistic. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:20.7041em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• If</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1304em;">&nbsp;</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1331em;">functionally partitioning that data into multiple and smaller instances is not &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:21.7541em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.098em;">feasible, the entire data set is now under that target for recovering via backups. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:22.8041em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.121em;">The data set that takes the longest to restore from backups will be what drives &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:23.8541em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0007em;">this recovery process completion time. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:25.2374em;"><span class="stl_154 stl_32 stl_152" style="word-spacing:0.2838em;">• Make</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0653em;">&nbsp;</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0627em;">sure to have automated methods for testing (we will cover some examples &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:26.2874em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1237em;">in </span><a href="MultiPageHTML_out279.html#279_0"><span class="stl_184 stl_32 stl_38" style="word-spacing:0.1284em;">Chapter 10</span></a><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1251em;">). Monitor how long it takes to restore a backup from a file to a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:27.3374em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.185em;">running database that has also caught up on replicating all changes since the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:28.3874em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0934em;">backup was created, and store that metric somewhere with enough retention to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:29.4374em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0383em;">see long-term (at least a year) trends. This is one of those indicators that can slip &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:30.4874em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">by and become surprisingly long if monitoring it is not automated. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.3708em;z-index:1410;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1002em;">u will see that in many of the example long-term metrics we describe shortly, we &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.4208em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0698em;">almost always point out the need for either functional sharding or horizontal shard‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.4708em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1023em;">ing of your data. The goal here is to point explicitly to the fact that if you consider &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.5208em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1821em;">sharding when you have incidents where capacity issues are a major contributing &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.5708em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1005em;">cause, then you likely have considered it too late. The work of breaking down your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.6208em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0798em;">data into manageable pieces doesn’t start when your data is too large for one cluster &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.6708em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0773em;">but well before that, when you are still determining what your goals for providing a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.7208em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">successful customer experience are. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.2708em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0868em;">Understanding how long it takes you to recover your data can help set expectations &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.3208em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1199em;">for what to do in a real disaster. It can also make you aware of when it might take &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.3708em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">longer than the business wants it to. This is a precursor to needing to shard. &nbsp;</span></div>
+					<div class="stl_01" style="left:29.5239em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">What to Measure &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4807em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3882em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">35 &nbsp;</span></div>
+					<a name="57_0" style="position:absolute;left:0em;top:43.6em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

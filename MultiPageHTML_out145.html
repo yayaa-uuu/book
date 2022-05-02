@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_151.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_151.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9997em;top:4.5415em;"><span class="stl_170 stl_171 stl_28">innodb_autoinc_lock_mode &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:5.416em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0433em;">This option controls how InnoDB generates auto-incrementing primary key val‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:6.466em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0074em;">ues, which can be a bottleneck in some cases, such as high-concurrency inserts. If &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:7.516em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0207em;">you have many transactions waiting on the auto-increment lock (you can see this &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:8.6155em;z-index:490;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1097em;">in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1097em;">SHOW ENGINE INNODB STATUS</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1127em;">), you should investigate this setting. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1097em;">e </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_377">on’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:9.6655em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0082em;">repeat the manual’s explanation of the options and their behaviors. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.5237em;"><span class="stl_170 stl_171 stl_28">innodb_buffer_pool_instances &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:12.3982em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1514em;">This setting divides the buffer pool into multiple segments in MySQL 5.5 and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:13.4482em;z-index:704;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0049em;">newer and is probably one of the most important ways to improve MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28">cala‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:14.4982em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0455em;">bility on multicore machines with a highly concurrent workload. Multiple buffer &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:15.5482em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0334em;">pools partition the workload so that some of the global mutexes are not such hot &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:16.5982em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0076em;">contention points. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:18.4564em;"><span class="stl_170 stl_171 stl_28">innodb_io_capacity &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:19.331em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0289em;">InnoDB used to be hardcoded to assume that it ran on a single hard disk capable &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:20.381em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0497em;">of one hundred I/O operations per second. This was a bad default. Now you can &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:21.431em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1846em;">inform InnoDB how much I/O capacity is available to it. InnoDB sometimes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:22.481em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1558em;">needs this set quite high (tens of thousands on extremely fast storage such as &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:23.531em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0997em;">PCIe flash devices) to flush dirty pages in a steady fashion, for reasons that are &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:24.581em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">quite complex to explain.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out145.html#145_0"><span class="stl_166 stl_32 stl_39" style="word-spacing:0.0035em;">4 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9999em;top:26.2524em;"><span class="stl_170 stl_171 stl_28">innodb_read_io_thread</span><span class="stl_170 stl_171 stl_259">s</span><span class="stl_155 stl_41 stl_22" style="word-spacing:0.023em;">and </span><span class="stl_170 stl_171 stl_28">innodb_write_io_threads &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:27.3138em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0105em;">These options control how many background threads are available for I/O opera‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:28.3638em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0818em;">tions. The default in recent versions of MySQL is to have four read threads and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:29.4138em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0342em;">four write threads, which is enough for a lot of servers, especially with the native &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:30.4638em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0142em;">asynchronous I/O available since MySQL 5.5. If you have many hard drives and a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:31.5138em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0659em;">high-concurrency workload and you see that the threads are having a hard time &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:32.5638em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0543em;">keeping up, you can increase the number of threads, or you can simply set them &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:33.6138em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1587em;">to the number of physical spindles you have for I/O (even if they’re behind a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:34.6638em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">RAID controller). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.522em;"><span class="stl_170 stl_171 stl_28">innodb_strict_mode &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:37.3966em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1511em;">This setting makes InnoDB throw errors instead of warnings for some condi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:38.496em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.233em;">tions, especially invalid or possibly dangerous </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1073em;">CREATE TABLE </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2317em;">options. If you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:39.5954em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0468em;">enable this option, be certain to check all of your </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0468em;">CREATE TABL</span><span class="stl_170 stl_171 stl_378">E</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0499em;">options because &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:40.6454em;z-index:2022;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0949em;">it might not let you create some tables that used to be fine. Sometimes it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0912em;">s a </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28">it &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:41.6954em;z-index:2061;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0309em;">pessimistic and overly restrictive. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0384em;">u wouldn’t want to find this out while trying &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:42.7454em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">to restore a backup. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.6036em;"><span class="stl_167 stl_32 stl_28">4</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.5212em;z-index:58;"><span class="stl_168 stl_32 stl_97" style="word-spacing:0.003em;">For follow-up reading, see the Percona blog posts </span><a href="https://oreil.ly/aSGC6" target="_blank"><span class="stl_187 stl_32 stl_107" style="word-spacing:0.009em;">“Give Love to </span></a><a href="https://oreil.ly/aSGC6" target="_blank"><span class="stl_187 stl_32 stl_109">Y</span></a><a href="https://oreil.ly/aSGC6" target="_blank"><span class="stl_187 stl_32 stl_28">o</span></a><a href="https://oreil.ly/aSGC6" target="_blank"><span class="stl_187 stl_32 stl_28" style="word-spacing:0em;">ur SSDs—Reduce &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;z-index:143;"><a href="https://oreil.ly/aSGC6" target="_blank"><span class="stl_187 stl_32 stl_74">innodb_io_capacity_max”</span></a><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">, </span><a href="https://oreil.ly/CdzsQ" target="_blank"><span class="stl_187 stl_32 stl_77" style="word-spacing:0.0032em;">“InnoDB Flushing in Action for Percona Server for MySQ</span></a><a href="https://oreil.ly/CdzsQ" target="_blank"><span class="stl_187 stl_32 stl_94">L</span></a><a href="https://oreil.ly/CdzsQ" target="_blank"><span class="stl_187 stl_32 stl_28">”</span></a><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">, and </span><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_195">“</span></a><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_52">T</span></a><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_28">u</span></a><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_28">ning &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_162" style="word-spacing:0.0081em;">MySQL/InnoDB Flushing for a Write-Intensive </span></a><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_52">W</span></a><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_28">o</span></a><a href="https://oreil.ly/mnA8m" target="_blank"><span class="stl_187 stl_32 stl_138">rkload”</span></a><span class="stl_168 stl_32 stl_138">. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.9229em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Advanced InnoDB Settings &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">123 &nbsp;</span></div>
+					<a name="145_0" style="position:absolute;left:0em;top:46.6125em;">&nbsp;</a>
+					<a name="145_1" style="position:absolute;left:0em;top:5.6453em;">&nbsp;</a>
+					<a name="145_2" style="position:absolute;left:0em;top:12.6275em;">&nbsp;</a>
+					<a name="145_3" style="position:absolute;left:0em;top:19.5603em;">&nbsp;</a>
+					<a name="145_4" style="position:absolute;left:0em;top:27.543em;">&nbsp;</a>
+					<a name="145_5" style="position:absolute;left:0em;top:37.6258em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

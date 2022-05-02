@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_143.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_143.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0856em;">Sometimes the hard disk controller or operating system fakes a flush by putting the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3552em;z-index:115;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0611em;">data into yet </span><span class="stl_155 stl_41 stl_230" style="word-spacing:0.0666em;">another </span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0562em;">cache, such as the hard disk</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0516em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_135" style="word-spacing:0.0487em;">wn cache. This is faster but very &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1168em;">dangerous because the data might still be lost if the drive loses power. This is even &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.516em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2311em;">worse than setting </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0178em;">innodb_flush_log_at_trx_commit </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2311em;">to something other than </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.2432em;">1 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.566em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0025em;">because it can cause data corruption, not just lost transactions. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.1655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0285em;">Setting </span><span class="stl_170 stl_171 stl_28">innodb_flush_log_at_trx_commi</span><span class="stl_170 stl_171 stl_369">t</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.031em;">to anything other than </span><span class="stl_170 stl_171 stl_369">1</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0322em;">can cause you to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.2155em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0677em;">lose transactions. However, you might find the other settings useful if you don’t care &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.2655em;z-index:537;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0639em;">about durability (the D in ACID). Maybe you just want some of InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0588em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0588em;">ther fea‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.3155em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0006em;">tures, such as clustered indexes, resistance to data corruption, and row-level locking. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:14.8655em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.4645em;">The best configuration for high-performance transactional needs is to leave &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.9649em;"><span class="stl_170 stl_171 stl_28">innodb_flush_log_at_trx_commi</span><span class="stl_170 stl_171 stl_370">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0532em;">set to </span><span class="stl_170 stl_171 stl_370">1</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0532em;">and place the logfiles on a RAID volume &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.0149em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0841em;">with a battery-backed write cache and SSDs. This is both safe and very fast. In fact, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.0649em;z-index:872;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.117em;">we dare say that any production database server that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1117em;">s </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1117em;">xpected to handle a serious &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.1149em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">workload needs to have this kind of hardware. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.1718em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">How InnoDB opens and </span><span class="stl_308 stl_27 stl_28" style="word-spacing:-0.092em;">ﬂushes logﬁles </span><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">and </span><span class="stl_308 stl_27 stl_28">dataﬁles &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.6887em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0843em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1723em;">innodb_flush_method </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0853em;">option lets you configure how InnoDB actually interacts &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.7387em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0601em;">with the filesystem. Despite its name, it also affects how InnoDB reads data, not just &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.7887em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">how it writes it. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:27.1008em;"><span class="stl_176 stl_32 stl_140" style="word-spacing:0.058em;">Changing how InnoDB performs I/O operations can affect perfor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:28.0608em;"><span class="stl_176 stl_32 stl_17" style="word-spacing:0.0476em;">mance greatly, so be sure you understand what you’re doing before &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:29.0208em;"><span class="stl_176 stl_32 stl_97" style="word-spacing:0.0031em;">you change anything! &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.5387em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0195em;">This is a slightly confusing option because it affects both the logfiles and the datafiles, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.5887em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0893em;">and it sometimes does different things to each kind of file. It would be nice to have &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.6387em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2754em;">one configuration option for the logs and another for the datafiles, but they’re &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.6887em;"><span class="stl_154 stl_32 stl_28">combined. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.2387em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1872em;">If you use a Unix-like operating system and your RAID controller has a battery- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.3381em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0798em;">backed write cache, we recommend that you use </span><span class="stl_170 stl_171 stl_28">O_DIRECT</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0808em;">. If not, either the default &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.4376em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0765em;">or </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1805em;">O_DIRECT </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0781em;">will probably be the best choice, depending on your application. If you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.537em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1225em;">opted to use </span><span class="stl_170 stl_171 stl_28">innodb_dedicated_server</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1284em;">, as we mentioned earlier, this option is set &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.587em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">automatically for you. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.4713em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The InnoDB Tablespace &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.3597em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1037em;">InnoDB keeps its data in a </span><span class="stl_155 stl_41 stl_44">tablespace</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1023em;">, which is essentially a virtual filesystem span‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.4211em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0849em;">ning one or many files on disk. InnoDB uses the tablespace for many purposes, not &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.4711em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1385em;">just for storing tables and indexes. It keeps its undo log (information necessary to &nbsp;</span></div>
+					<div class="stl_01" style="left:25.212em;top:50.8098em;"><span class="stl_233 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">MySQL’s I/O Behavior &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">115 &nbsp;</span></div>
+					<a name="137_0" style="position:absolute;left:0em;top:43.7644em;">&nbsp;</a>
+					<a name="137_1" style="position:absolute;left:0em;top:45.6003em;">&nbsp;</a>
+					<a name="137_2" style="position:absolute;left:0em;top:41.8162em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

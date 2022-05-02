@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_138.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_138.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1746em;">down </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0821em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1746em;">innodb_buffer_pool_load_at_startup </span><span class="stl_154 stl_32 stl_106" style="word-spacing:0.0793em;">work together to warm the server &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1044em;">at startup. The load at startup takes time, but it can speed up the performance of a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">server much faster than waiting for it to naturally populate. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.3503em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The Thread Cache &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.2501em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.041em;">The thread cache holds threads that aren’t currently associated with a connection but &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.3001em;z-index:316;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1234em;">are ready to serve new connections. When there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1216em;">s a </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1216em;">hread in the cache and a new &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.3501em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0634em;">connection is created, MySQL removes the thread from the cache and gives it to the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.4001em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0608em;">new connection. When the connection is closed, MySQL places the thread back into &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.4501em;"><span class="stl_154 stl_32 stl_25" style="word-spacing:0.0625em;">the cache, if there’s room. If there isn’t room, MySQL destroys the thread. As long as &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.5001em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0651em;">MySQL has a free thread in the cache, it can respond rapidly to connection requests &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.5501em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0078em;">because it doesn’t have to create a new thread for each connection. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.1495em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0199em;">The </span><span class="stl_170 stl_171 stl_28">thread_cache_siz</span><span class="stl_170 stl_171 stl_317">e</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0225em;">variable specifies the number of threads MySQL can keep in &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.249em;z-index:753;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1366em;">the cache. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1436em;">u probably won’t need to change this from the default value of </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1172em;">-1 </span><span class="stl_154 stl_32 stl_28">or &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.299em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1036em;">auto-sized unless your server gets many connection requests. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.103em;">o </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.103em;">heck whether the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.3984em;z-index:943;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0716em;">thread cache is large enough, watch the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1871em;">Threads_created </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0732em;">status variable. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0702em;">e </span><span class="stl_154 stl_32 stl_28">g</span><span class="stl_154 stl_32 stl_28">ener‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.4484em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0506em;">ally try to keep the thread cache large enough that we see fewer than 10 new threads &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.4984em;z-index:1042;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0747em;">created each second, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0698em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.071em;">ften pretty easy to get this number lower than one per &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.5484em;"><span class="stl_154 stl_32 stl_28">second. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.1479em;"><span class="stl_154 stl_32 stl_28">A</span></div>
+					<div class="stl_01" style="left:7.1091em;top:26.1479em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.354em;">good approach is to watch the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1072em;">Threads_connected </span><span class="stl_154 stl_32 stl_142" style="word-spacing:0.3457em;">variable and try to set &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.2473em;"><span class="stl_170 stl_171 stl_28">thread_cache_siz</span><span class="stl_170 stl_171 stl_364">e</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0407em;">large enough to handle the typical fluctuation in your workload. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:28.3467em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.1131em;">For example, if </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.15em;">Threads_connected </span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1067em;">usually stays between 100 and 120, you can set &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.3967em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0536em;">the cache size to 20. If it stays between 500 and 700, a thread cache of 200 should be &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.4467em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0439em;">large enough. Think of it this way: at 700 connections, there are probably no threads &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.4967em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0453em;">in the cache; at 500 connections, there are 200 cached threads ready to be used if the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.5467em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">load increases to 700 again. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.0967em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0068em;">Making the thread cache very large is probably not necessary for most uses, but keep‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.1467em;"><span class="stl_154 stl_32 stl_101" style="word-spacing:0.2034em;">ing it small doesn’t save much memory, so there’s little benefit in doing so. Each &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.1967em;z-index:1738;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0279em;">thread that’s in the thread cache or sleeping typically uses around 256 KB of memory. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.2467em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0602em;">This is not very much compared to the amount of memory a thread can use when a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.2967em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1338em;">connection is actively processing a query. In general, you should keep your thread &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.3962em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0321em;">cache large enough that </span><span class="stl_170 stl_171 stl_28">Threads_create</span><span class="stl_170 stl_171 stl_365">d</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0337em;">doesn’t increase very often. If this is a very &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:40.4462em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.133em;">large number, however (e.g., many thousands of threads), you might want to set it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.4962em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1531em;">lower because some operating systems don’t handle very large numbers of threads &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.5462em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">well, even when most of them are sleeping. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.7375em;top:50.8098em;"><span class="stl_233 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Memory Usage &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">111 &nbsp;</span></div>
+					<a name="133_0" style="position:absolute;left:0em;top:8.6434em;">&nbsp;</a>
+					<a name="133_1" style="position:absolute;left:0em;top:10.4794em;">&nbsp;</a>
+					<a name="133_2" style="position:absolute;left:0em;top:6.6953em;">&nbsp;</a>
+					<a name="133_3" style="position:absolute;left:0em;top:42.7754em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

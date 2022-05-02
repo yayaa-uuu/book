@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_167.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_167.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">JSON Data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.065em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0655em;">It is becoming increasingly common to use JSON as a format for interchanging data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.115em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">between systems. MySQL has a native JSON data type that makes it easy to operate on &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:8.165em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0377em;">parts of the JSON structure directly within the table. Purists may suggest that storing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:9.215em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0149em;">raw JSON in a database is an antipattern because ideally, schemas are a representation &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.265em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1258em;">of the fields in JSON. Newcomers may look at the JSON data type and see a short &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:11.315em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0562em;">path by avoiding creating and managing independent fields. Which method is better &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.365em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0674em;">is largely subjective, but we’ll be objective by presenting a sample use case and com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.415em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0008em;">paring both query speed and data size. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.965em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0691em;">Our sample data was </span><a href="https://oreil.ly/2oZX9" target="_blank"><span class="stl_184 stl_32 stl_88" style="word-spacing:0.0638em;">a list of 202 near-Earth asteroids and comets discovered, cour‐ &nbsp;</span></a></div>
+					<div class="stl_01" style="left:5.9999em;top:16.015em;z-index:612;"><a href="https://oreil.ly/2oZX9" target="_blank"><span class="stl_184 stl_32 stl_183" style="word-spacing:0.1954em;">tesy of NASA</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1859em;">. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1888em;">sts were performed under MySQL 8.0.22 on a four-core, 16 GB &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.065em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">RAM virtual machine. An example of the data: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:18.8276em;"><span class="stl_200 stl_171 stl_28">[</span></div>
+					<div class="stl_01" style="left:8.4789em;top:19.6776em;"><span class="stl_200 stl_171 stl_28">{</span></div>
+					<div class="stl_01" style="left:9.5414em;top:20.5276em;"><span class="stl_200 stl_171 stl_28">"designation":"419880 (2011 AH37)", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:21.3776em;"><span class="stl_200 stl_171 stl_28">"discovery_date":"2011-01-07T00:00:00.000", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:22.2276em;"><span class="stl_200 stl_171 stl_28">"h_mag":"19.7", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:23.0776em;"><span class="stl_200 stl_171 stl_28">"moid_au":"0.035", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:23.9276em;"><span class="stl_200 stl_171 stl_28">"q_au_1":"0.84", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:24.7776em;"><span class="stl_200 stl_171 stl_28">"q_au_2":"4.26", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:25.6276em;"><span class="stl_200 stl_171 stl_28">"period_yr":"4.06", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:26.4776em;"><span class="stl_200 stl_171 stl_28">"i_deg":"9.65", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:27.3276em;"><span class="stl_200 stl_171 stl_28">"pha":"Y", &nbsp;</span></div>
+					<div class="stl_01" style="left:9.5414em;top:28.1776em;"><span class="stl_200 stl_171 stl_28">"orbit_class":"Apollo" &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4789em;top:29.0276em;"><span class="stl_200 stl_171 stl_28">}</span></div>
+					<div class="stl_01" style="left:7.4164em;top:29.8776em;"><span class="stl_200 stl_171 stl_28">]</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.0151em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1144em;">This data represents a designation, date it was discovered, and data collected about &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.0651em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0067em;">the entity, including numeric and text fields. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.6151em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.124em;">First, we took the data set in JSON and converted it to be one row per entry. This &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.6651em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0033em;">resulted in a schema that looks relatively simple: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:36.4269em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">DESC asteroids_json; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:37.2776em;"><span class="stl_200 stl_171 stl_28">+-----------+------+------+-----+---------+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:38.1276em;"><span class="stl_200 stl_171 stl_28">| Field &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:38.9776em;"><span class="stl_200 stl_171 stl_28">+-----------+------+------+-----+---------+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:39.8276em;"><span class="stl_200 stl_171 stl_28">| json_data | json | YES</span><span class="stl_200 stl_171 stl_28" style="word-spacing:3.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:40.6776em;"><span class="stl_200 stl_171 stl_28">+-----------+------+------+-----+---------+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.6668em;top:38.1276em;"><span class="stl_200 stl_171 stl_28">| Type | Null | Key | Default | Extra | &nbsp;</span></div>
+					<div class="stl_01" style="left:16.6251em;top:39.8276em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:22.2918em;top:39.8276em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:25.1251em;top:39.8276em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:26.2653em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Choosing Optimal Data Types &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">139 &nbsp;</span></div>
+					<a name="161_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="161_1" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

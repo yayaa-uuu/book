@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_207.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_207.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0621em;">InnoDB’s secondary index leaf nodes contain the primary key values, which serve as &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0462em;">the “pointers” to the rows. This strategy reduces the work needed to maintain secon‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;z-index:210;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0691em;">dary indexes when rows move or when there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0669em;">s a </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0745em;">ata page split. Using the row</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0669em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_28">ri‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1735em;">mary key values as the pointer makes the index larger, but it means InnoDB can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">move a row without updating pointers to it. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.116em;"><a href="MultiPageHTML_out196.html#196_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.1113em;">Figure 7-5 </span></a><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1145em;">illustrates the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1439em;">col2 </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1135em;">index for the example table. Each leaf node contains &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.2155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1828em;">the indexed columns (in this case just </span><span class="stl_170 stl_171 stl_28">col2</span><span class="stl_154 stl_32 stl_141" style="word-spacing:0.1804em;">), followed by the primary key values &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.3149em;"><span class="stl_154 stl_32 stl_28">(</span><span class="stl_170 stl_171 stl_28">col1</span><span class="stl_154 stl_32 stl_28">). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.4188em;"><span class="stl_155 stl_41 stl_192" style="word-spacing:0.0157em;">Figure 7-5. InnoDB secondary index layout for the </span><span class="stl_174 stl_175 stl_28">layout_tes</span><span class="stl_174 stl_175 stl_259">t</span><span class="stl_155 stl_41 stl_22">table &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.4802em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1297em;">These diagrams have illustrated the B-tree leaf nodes, but we intentionally omitted &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.5302em;z-index:626;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2132em;">details about the nonleaf nodes. InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2112em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2127em;">onleaf B-tree nodes each contain the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.5802em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1377em;">indexed column(s), plus a pointer to the next-deeper node (which might be either &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.6302em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0316em;">another nonleaf node or a leaf node). This applies to all B-tree indexes, clustered and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.6802em;z-index:809;"><span class="stl_154 stl_32 stl_150">secondary. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.7371em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Inserting rows in primary key order with InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.2045em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0317em;">If you’re using InnoDB and don’t need any particular clustering, it can be a good idea &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.2432em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.004em;">to define a </span><span class="stl_155 stl_41 stl_81" style="word-spacing:0.0116em;">surrogate key</span><span class="stl_154 stl_32 stl_227" style="word-spacing:0.0025em;">, which is a primary key whose value is not derived from your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:35.354em;"><span class="stl_154 stl_32 stl_144" style="word-spacing:0.0919em;">application’s data. The easiest way to do this is usually with an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.177em;">AUTO_INCREMENT </span><span class="stl_154 stl_32 stl_28">col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.404em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.06em;">umn. This will ensure that rows are inserted in sequential order and will offer better &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.454em;"><span class="stl_154 stl_32 stl_185" style="word-spacing:-0.0019em;">performance for joins using primary keys. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.004em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0906em;">It is best to avoid random (nonsequential and distributed over a large set of values) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.054em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0462em;">clustered keys, especially for I/O-bound workloads. For example, using UUID values &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:41.104em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1057em;">is a poor choice from a performance standpoint: it makes clustered index insertion &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.154em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2195em;">random, which is a worst-case scenario, and does not give you any helpful data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:43.204em;"><span class="stl_154 stl_32 stl_28">clustering. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.8034em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.3356em;">To </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1412em;">emonstrate, we benchmarked two cases. The first is inserting into a </span><span class="stl_170 stl_171 stl_28">userinfo &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.8534em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0039em;">table with an integer ID, defined as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">174 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="196_0" style="position:absolute;left:0em;top:14.0067em;">&nbsp;</a>
+					<a name="196_1" style="position:absolute;left:0em;top:33.4338em;">&nbsp;</a>
+					<a name="196_2" style="position:absolute;left:0em;top:34.4838em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

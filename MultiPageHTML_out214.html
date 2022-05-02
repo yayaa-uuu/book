@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_227.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_227.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0002em;top:4.3166em;z-index:190;"><span class="stl_154 stl_32 stl_178" style="word-spacing:0.2496em;">In general, you can think of a query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2522em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_125" style="word-spacing:0.2515em;">ifetime by mentally following the query &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:5.3666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0821em;">through its sequence diagram from the client to the server, where it is parsed, plan‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.4166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1193em;">ned, and executed, and then back again to the client. Execution is one of the most &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.4666em;z-index:388;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0531em;">important stages in a query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0522em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0554em;">ifetime. It involves lots of calls to the storage engine to &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:8.5166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0007em;">retrieve rows, as well as postretrieval operations such as grouping and sorting. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.0666em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1323em;">While accomplishing all these tasks, the query spends time on the network, in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.1166em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.2057em;">CPU, and in operations like statistics, planning, locking (mutex waits), and most &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.1666em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.124em;">especially, calls to the storage engine to retrieve rows. These calls consume time in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:13.2166em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.028em;">memory operations, CPU operations, and especially I/O operations if the data isn’t in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:14.2666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0672em;">memory. Depending on the storage engine, a lot of context switching and/or system &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.3166em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">calls might also be involved. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.8666em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0236em;">In every case, excessive time may be consumed because the operations are performed &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.9166em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0481em;">needlessly, performed too many times, or are too slow. The goal of optimization is to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.9666em;z-index:1086;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0055em;">avoid that by eliminating or reducing operations or making them faster. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.5166em;z-index:1137;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1136em;">Again, this isn’t a complete or accurate picture of a query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1072em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1072em;">ife. Our goal here is to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:21.5666em;z-index:1197;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.1029em;">show the importance of understanding a query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1035em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1035em;">ife cycle and thinking in terms of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.6166em;z-index:1269;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">where the time is consumed. With that in mind, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ee how to optimize queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0007em;top:24.5131em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Slow Query Basics: Optimize Data Access &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.7833em;z-index:1382;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.088em;">The most basic reason a query doesn’t perform well is because it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0817em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0817em;">orking with too &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.8333em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0299em;">much data. Some queries just have to sift through a lot of data, which can’t be helped. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.8833em;z-index:1532;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.121em;">That’s unusual, though; most bad queries can be changed to access less data. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_401">e’ve &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.9333em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0013em;">found it useful to analyze a poorly performing query in two steps: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4428em;top:31.8166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">1. Find</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1084em;">&nbsp;</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1115em;">out whether your application is retrieving more data than you need. That &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:32.8666em;z-index:1674;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1468em;">usually means it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1423em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1445em;">ccessing too many rows, but it might also be accessing too &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:33.9166em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">many columns. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4429em;top:35.2886em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2728em;">2. Find</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">out whether the </span><span class="stl_155 stl_41 stl_108" style="word-spacing:0.0081em;">MySQL server </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">is analyzing more rows than it needs. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.0176em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Are You Asking the Database for Data You Don’t Need? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.9174em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0428em;">Some queries ask for more data than they need and then throw some of it away. This &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.9674em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1302em;">demands extra work of the MySQL server, adds network overhead,</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out214.html#214_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3929em;">1 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1272em;">and consumes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.0174em;z-index:2014;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">memory and CPU resources on the application server. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">1</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_36" style="word-spacing:0.0038em;">Network overhead is worst if the application is on a different host from the server, but transferring data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:159;"><span class="stl_168 stl_32 stl_100" style="word-spacing:0.0103em;">between MySQL and the application isn’t free even if they’re on the same server. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">192 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="214_0" style="position:absolute;left:0em;top:24.8647em;">&nbsp;</a>
+					<a name="214_1" style="position:absolute;left:0em;top:38.3107em;">&nbsp;</a>
+					<a name="214_2" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="214_3" style="position:absolute;left:0em;top:29.1125em;">&nbsp;</a>
+					<a name="214_4" style="position:absolute;left:0em;top:40.1466em;">&nbsp;</a>
+					<a name="214_5" style="position:absolute;left:0em;top:27.0125em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_216.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_216.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.7709em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">... &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.566em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0166em;">MySQL uses the </span><span class="stl_170 stl_171 stl_28">rental_dat</span><span class="stl_170 stl_171 stl_402">e</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0119em;">index to order the following query, as you can see from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.6655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0001em;">the lack of a filesort</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out203.html#203_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.1702em;">11 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">in </span><span class="stl_170 stl_171 stl_28">EXPLAIN</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:9.4273em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT rental_id, staff_id FROM sakila.rental &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:10.2773em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE rental_date = '2005-05-25' &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:11.1273em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">ORDER BY inventory_id, customer_id\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:11.978em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:12.828em;"><span class="stl_200 stl_171 stl_28">type: ref &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:13.678em;"><span class="stl_200 stl_171 stl_28">possible_keys: rental_date &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:14.528em;"><span class="stl_200 stl_171 stl_28">key: rental_date &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:15.378em;"><span class="stl_200 stl_171 stl_28">rows: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:16.228em;"><span class="stl_200 stl_171 stl_28">Extra: Using where &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.4149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0213em;">This works, even though the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_431">Y</span><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0293em;">clause isn’t itself a leftmost prefix of the index, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:18.4649em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">because we specified an equality condition for the first column in the index. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.0149em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.2182em;">Here are some more queries that can use the index for sorting. This one works &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.0649em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0562em;">because the query provides a constant for the first column of the index and specifies &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.1643em;z-index:996;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0333em;">an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0963em;">ORDER BY </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0333em;">on the second column. </span><span class="stl_154 stl_32 stl_127">T</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0374em;">ken together, those two form a leftmost prefix &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.2143em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">on the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:24.9769em;"><span class="stl_200 stl_171 stl_28">... WHERE rental_date = '2005-05-25' ORDER BY inventory_id DESC; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.1638em;"><span class="stl_154 stl_32 stl_178" style="word-spacing:0.022em;">The following query also works</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out203.html#203_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2122em;">12 </span></a></sup><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0266em;">because the two columns in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_218">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0246em;">are a left‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.2138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">most prefix of the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:28.9764em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">... WHERE rental_date &gt; '2005-05-25' ORDER BY rental_date, inventory_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.1024em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0052em;">Here are some queries that </span><span class="stl_155 stl_41 stl_432" style="word-spacing:0.0216em;">cannot </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">use the index for sorting. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.6638em;z-index:1359;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.101em;">This query uses two different sort directions, but the index</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1014em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1014em;">olumns are all sorted &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.7138em;"><span class="stl_154 stl_32 stl_28">ascending: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:34.4764em;"><span class="stl_200 stl_171 stl_28">... WHERE rental_date = '2005-05-25' ORDER BY inventory_id DESC, customer_id ASC; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.6632em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0083em;">Here, the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_186">Y</span><span class="stl_154 stl_32 stl_100" style="word-spacing:0.0104em;">refers to a column that isn’t in the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:37.4258em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">... WHERE rental_date = '2005-05-25' ORDER BY inventory_id, staff_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.6127em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0083em;">Here, the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_186">Y</span><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0086em;">don’t form a leftmost prefix of the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:40.3752em;"><span class="stl_200 stl_171 stl_28">... WHERE rental_date = '2005-05-25' ORDER BY customer_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:44.4892em;z-index:27;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">11 </span><span class="stl_168 stl_32 stl_124" style="word-spacing:0.007em;">MySQL calls it a “filesort</span><span class="stl_168 stl_32 stl_161">,</span><span class="stl_168 stl_32 stl_222" style="word-spacing:0.0068em;">” but it doesn’t always use a file on a filesystem. It only goes to disk if it cannot sort &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:45.3225em;z-index:114;"><span class="stl_168 stl_32 stl_100" style="word-spacing:0.0105em;">the data in memory. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.8152em;top:46.4058em;z-index:118;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.2727em;">12 </span><span class="stl_168 stl_32 stl_52">W</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_168 stl_32 stl_28">s</span><span class="stl_168 stl_32 stl_158" style="word-spacing:0.0006em;">hould note that while this can use the index for sorting, in our tests the optimizer in 8.0.25 did not use &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.2968em;"><span class="stl_168 stl_32 stl_35" style="word-spacing:0.0027em;">the index until we used a </span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">FORCE INDEX FOR ORDER B</span><span class="stl_211 stl_171 stl_186">Y</span><span class="stl_168 stl_32 stl_73" style="word-spacing:0.0019em;">condition—another reminder that the optimizer may &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_57" style="word-spacing:0.0021em;">not do what you expect, and you should always check with </span><span class="stl_211 stl_171 stl_28">EXPLAIN</span><span class="stl_168 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2086em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">181 &nbsp;</span></div>
+					<a name="203_0" style="position:absolute;left:0em;top:44.5805em;">&nbsp;</a>
+					<a name="203_1" style="position:absolute;left:0em;top:46.4972em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

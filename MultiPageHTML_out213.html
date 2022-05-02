@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_226.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_226.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:31.0702em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 8 &nbsp;</span></div>
+					<div class="stl_01" style="left:13.3418em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Query Performance Optimization &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0652em;">In the previous chapters we explained schema optimization and indexing, which are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.0806em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1748em;">necessary for high performance. But they aren’t enough—you also need to design &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0141em;">your queries well. If your queries are bad, even the best-designed schema and indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.1806em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">will not perform well. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.7306em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0639em;">Query optimization, index optimization, and schema optimization go hand in hand. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.7806em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0124em;">As you gain experience writing queries in MySQL, you will learn how to design tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.8306em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.2117em;">and indexes to support efficient queries. Similarly, what you learn about optimal &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.8806em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0573em;">schema design will influence the kinds of queries you write. This process takes time, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.9306em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">so we encourage you to refer back to these three chapters as you learn more. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.4806em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0647em;">This chapter begins with general query design considerations: the things you should &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.5306em;z-index:727;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1838em;">consider first when a query isn’t performing well. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1788em;">e </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1839em;">hen dig much deeper into &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.5806em;z-index:786;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0695em;">query optimization and server internals. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0708em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0744em;">how you how to find out how MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.6306em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0378em;">executes a particular query, and you’ll learn how to change the query execution plan. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.6806em;"><span class="stl_154 stl_32 stl_150" style="word-spacing:0.1267em;">Finally, we’ll look at some places MySQL doesn’t optimize queries well and explore &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.7306em;z-index:1023;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0052em;">query optimization patterns that help MySQL execute queries more efficiently. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.2806em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">Our goal is to help you understand deeply how MySQL really executes queries, so you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.3306em;z-index:1149;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0387em;">can reason about what is efficient or inefficient, exploit MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2247em;">’s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0373em;">trengths, and avoid &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.3806em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">its weaknesses. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:41.2771em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Why Are Queries Slow? &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.5473em;z-index:1246;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.01em;">Before trying to write fast queries, remember that it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0101em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0101em;">ll about response time. Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:44.5973em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1056em;">are tasks, but they are composed of subtasks, and those subtasks consume time. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_105">o &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.6473em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0658em;">optimize a query, you must optimize its subtasks by eliminating them, making them &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.6973em;z-index:1458;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0058em;">happen fewer times, or making them happen more quickly. &nbsp;</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">191 &nbsp;</span></div>
+					<a name="213_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="213_1" style="position:absolute;left:0em;top:41.6287em;">&nbsp;</a>
+					<a name="213_2" style="position:absolute;left:0em;top:24.9598em;">&nbsp;</a>
+					<a name="213_3" style="position:absolute;left:0em;top:43.7765em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

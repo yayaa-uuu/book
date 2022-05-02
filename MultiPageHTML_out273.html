@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_299.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_299.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1067em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Replication Problems and Solutions &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:6.3769em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1584em;">The simple implementation of MySQL replication makes it easy to set up yet also &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.4269em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0646em;">means there are many ways to stop, confuse, and otherwise disrupt it. Earlier in this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.4769em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0106em;">chapter, we talked about crash-safe replication and rules to help keep your source and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.5269em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.056em;">replicas in sync. This section discusses common problems, how they manifest them‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.5769em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">selves, and how you can solve or even prevent them. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.4612em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Binary Logs Corrupted on the Source &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.361em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0301em;">If the binary log is corrupted on the source, you’ll have no choice but to rebuild your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.411em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0435em;">replicas. Skipping over the corrupted entry will skip some transactions, which would &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.461em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">no longer be processed by your replicas. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.3453em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Nonunique Server IDs &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.2451em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0085em;">This is one of the more elusive problems you might encounter with replication. If you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.2951em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0287em;">accidentally configure two replicas with the same server ID, they might seem to work &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.3451em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0627em;">just fine if you’re not watching closely. But if you watch their error logs or watch the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.3837em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">source with a tool like </span><span class="stl_155 stl_41 stl_243">innotop</span><span class="stl_154 stl_32 stl_112" style="word-spacing:-0.0017em;">, you’ll notice something very odd. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.9451em;z-index:922;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0281em;">On the source, you’ll see only one of the two replicas connected at any time. (Usually, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.9951em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0697em;">all replicas are connected and replicating all the time.) On the replica, you’ll see fre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.0451em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0617em;">quent disconnect and reconnect error messages in the error log but no mention of a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:28.0951em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">misconfigured server ID. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.6451em;z-index:1158;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.101em;">Depending on the MySQL version, the replicas might replicate correctly but slowly, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.6951em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1251em;">or they might not actually replicate correctly—any given replica might miss binary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.7451em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1134em;">log events or even repeat them, causing duplicate key errors (or silent data corrup‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.7951em;z-index:1308;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0567em;">tion). </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0583em;">u can also cause problems on the source because of the increased load from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.8451em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.012em;">the replicas fighting among themselves. And if replicas are fighting one another badly &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.8951em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0014em;">enough, the error logs can become enormous in a very short time. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.4451em;z-index:1565;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0514em;">The only solution to this problem is to be careful when setting up your replicas. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.4951em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0086em;">might find it helpful to create a canonical list of replica-to-server ID mappings so that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.5451em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0583em;">you don’t lose track of which ID belongs to each replica. If your replicas live entirely &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:39.5951em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0158em;">within one network subnet, you can choose unique IDs by using the last octet of each &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.6451em;"><span class="stl_154 stl_32 stl_475" style="word-spacing:0.0191em;">machine’s IP address. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7067em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Problems and Solutions &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">251 &nbsp;</span></div>
+					<a name="273_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="273_1" style="position:absolute;left:0em;top:12.7543em;">&nbsp;</a>
+					<a name="273_2" style="position:absolute;left:0em;top:18.6384em;">&nbsp;</a>
+					<a name="273_3" style="position:absolute;left:0em;top:14.5903em;">&nbsp;</a>
+					<a name="273_4" style="position:absolute;left:0em;top:23.6243em;">&nbsp;</a>
+					<a name="273_5" style="position:absolute;left:0em;top:6.6062em;">&nbsp;</a>
+					<a name="273_6" style="position:absolute;left:0em;top:20.4743em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

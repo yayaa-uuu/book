@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_362.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_362.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9999em;top:4.3166em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0694em;">In many applications, “open more connections to the database” is a pattern we com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:5.3666em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1035em;">monly see when query latency starts to climb. However, in practice this can lead to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.4166em;"><span class="stl_154 stl_32 stl_28">outages</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out332.html#332_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3943em;">7 </span></a></sup><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1288em;">and tends to leave a lot of connections idle, consuming resources but not &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.4666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0774em;">doing any work. When you open more connections by the application layer directly &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.5166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1148em;">to the database, the amount of resources the database server spends on connection &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.5666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2616em;">management also increases. This snowballs into thousands of connections over‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.6166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1899em;">whelming already overloaded database instances. All of this activity leads to pro‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.6666em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.3908em;">longed downtimes, cascading failures in multiple microservices, and extended &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.7166em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0043em;">customer-facing impact. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:14.2666em;z-index:652;"><span class="stl_154 stl_32 stl_28">ProxySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.5054em;">’s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.3175em;">onnection-management architecture helps shield the database layer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.3166em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1245em;">from unexpected application peaks by opening to the database only the number of &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.3666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1217em;">connections that can do work. ProxySQL can reuse those connections for different &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.4166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.007em;">client-side requests. This behavior maximizes the work that a single connection to the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.4666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1303em;">database servers can do, which in turn reduces the number of resources managing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.5166em;z-index:1049;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.2874em;">connections and allows for more efficient use of the database server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2871em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_502">emory &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.5666em;"><span class="stl_154 stl_32 stl_28">resources. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.6235em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Other notable features in ProxySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.0909em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0597em;">ProxySQL has a number of other features that stand out in a general-use application &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.1409em;"><span class="stl_154 stl_32 stl_503">proxy: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:27.0243em;"><span class="stl_154 stl_32 stl_353" style="word-spacing:0.2582em;">• Query</span><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0072em;">&nbsp;</span><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0061em;">routing based on port, user, or simply a regex match &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:28.4076em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• TLS</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0407em;">&nbsp;</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0429em;">support on both the frontend application connections and backend connec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:29.4576em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">tions to databases &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:30.8409em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1743em;">• Support for various MySQL flavors, such as </span><span class="stl_154 stl_32 stl_52">A</span><span class="stl_154 stl_32 stl_116" style="word-spacing:0.1695em;">WS Aurora, Galera Cluster, and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:31.8909em;"><span class="stl_154 stl_32 stl_28">Clickhouse &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:33.2743em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Connection</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28">mirroring &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:34.6576em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Result</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">set caching &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:36.0409em;"><span class="stl_154 stl_32 stl_353" style="word-spacing:0.2582em;">• Query</span><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0072em;">&nbsp;</span><span class="stl_154 stl_32 stl_28">rewrites &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:37.4243em;"><span class="stl_154 stl_32 stl_422" style="word-spacing:0.2932em;">• Audit</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0103em;">&nbsp;</span><span class="stl_154 stl_32 stl_28">log &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.3076em;z-index:1439;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.108em;">u can read about the extensive feature set of ProxySQL (which goes well beyond &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.3576em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">sharding support) by visiting its </span><a href="https://oreil.ly/PTZFW" target="_blank"><span class="stl_184 stl_32 stl_71">documentation</span></a><span class="stl_154 stl_32 stl_71">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.9076em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.027em;">ProxySQL is a powerful tool you can use for scaling out your application with proper &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.9576em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0655em;">performance protections for the database layer and with added features that support &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.0076em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0992em;">all sorts of business needs (like compliance, security rules, etc.). If your company is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">7</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_33" style="word-spacing:0.0042em;">For more information, see </span><a href="https://oreil.ly/YOtAt" target="_blank"><span class="stl_187 stl_32 stl_35" style="word-spacing:0.0028em;">the Wikipedia entry on the thundering herd problem</span></a><span class="stl_168 stl_32 stl_35" style="word-spacing:0.0028em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">310 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="332_0" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_259.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_259.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:8.8333em;top:4.5285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">GROUP BY type &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:5.3785em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">) AS der USING(type) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:6.2285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SET tbl.c = der.c; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.7131em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Optimizing </span><span class="stl_160 stl_27 stl_28" style="word-spacing:-0.092em;">Speciﬁc </span><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Types of Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:9.9833em;z-index:145;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0025em;">In this section, we give advice on how to optimize certain kinds of queries. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_23" style="word-spacing:0.0325em;">e’ve cov‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.0333em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0098em;">ered most of these topics in detail elsewhere in the book, but we wanted to make a list &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.0833em;z-index:275;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0053em;">of common optimization problems that you can refer to easily. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.6333em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1498em;">Most of the advice in this section is version dependent, and it might not hold for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:14.6833em;z-index:371;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0354em;">future versions of MySQL. There</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0276em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0357em;">o reason why the server won’t be able to do some &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.7333em;z-index:449;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0069em;">or all of these optimizations itself someday. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.6176em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Optimizing COUNT() Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.5668em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0461em;">The </span><span class="stl_170 stl_171 stl_28">COUNT(</span><span class="stl_170 stl_171 stl_463">)</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0477em;">aggregate function, and how to optimize queries that use it, is probably &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.6168em;z-index:591;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1227em;">one of the top 10 most-misunderstood topics in MySQL. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1209em;">u can do a web search &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.6668em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">and find more misinformation on this topic than we care to think about. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.2662em;z-index:698;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.17em;">Before we get into optimization, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1664em;">s </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1728em;">mportant that you understand what </span><span class="stl_170 stl_171 stl_28">COUNT() &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.3163em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">really does. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.3732em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">What COUNT() does &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.8786em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1654em;">COUNT() </span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.093em;">is a special function that works in two very different ways: it counts </span><span class="stl_155 stl_41 stl_93">values &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.9781em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1089em;">and </span><span class="stl_155 stl_41 stl_93">rows</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1089em;">. A value is a non-</span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1464em;">NULL </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1089em;">expression (</span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1464em;">NULL </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1089em;">is the absence of a value). If you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.0889em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1239em;">specify a column name or other expression inside the parentheses, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1307em;">COUNT() </span><span class="stl_154 stl_32 stl_55">counts &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.1389em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1093em;">how many times that expression has a value. This is confusing for many people, in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.2383em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1005em;">part because values and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1578em;">NULL </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0981em;">are confusing. If you need to learn how this works in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.2883em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0162em;">SQL, we suggest a good book on SQL fundamentals. (The internet is not necessarily a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.3383em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">good source of accurate information on this topic.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.9378em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1022em;">The other form of </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1535em;">COUNT() </span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1055em;">simply counts the number of rows in the result. This is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.9878em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0509em;">what MySQL does when it knows the expression inside the parentheses can never be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.0872em;"><span class="stl_170 stl_171 stl_28">NULL</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0262em;">. The most obvious example is </span><span class="stl_170 stl_171 stl_28">COUNT(*)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0241em;">, which is a special form of </span><span class="stl_170 stl_171 stl_28">COUNT(</span><span class="stl_170 stl_171 stl_373">)</span><span class="stl_154 stl_32 stl_82">that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.1866em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0286em;">does not expand the </span><span class="stl_170 stl_171 stl_270">*</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0308em;">wildcard into the full list of columns in the table, as you might &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.2366em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">expect; instead, it ignores columns altogether and counts rows. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:41.7866em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.1577em;">One of the most common mistakes we see is specifying column names inside the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.8366em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0925em;">parentheses when you want to count rows. When you want to know the number of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:43.9361em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0804em;">rows in the result, you should always use </span><span class="stl_170 stl_171 stl_28">COUNT(*)</span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0842em;">. This communicates your inten‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:44.9861em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">tion clearly and avoids poor performance. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.6011em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Optimizing </span><span class="stl_233 stl_27 stl_28" style="word-spacing:-0.092em;">Speciﬁc </span><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Types of Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">221 &nbsp;</span></div>
+					<a name="243_0" style="position:absolute;left:0em;top:8.0647em;">&nbsp;</a>
+					<a name="243_1" style="position:absolute;left:0em;top:17.9107em;">&nbsp;</a>
+					<a name="243_2" style="position:absolute;left:0em;top:19.7961em;">&nbsp;</a>
+					<a name="243_3" style="position:absolute;left:0em;top:10.2125em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

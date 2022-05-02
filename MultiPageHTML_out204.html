@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_217.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_217.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0578em;">This query has a range condition on the first column, so MySQL doesn’t use the rest &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">of the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:7.1292em;"><span class="stl_200 stl_171 stl_28">... WHERE rental_date &gt; '2005-05-25' ORDER BY inventory_id, customer_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:8.316em;"><span class="stl_154 stl_32 stl_164" style="word-spacing:0.1374em;">Here, there’s a multiple equality on the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1318em;">inventory_id </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1249em;">column. For the purposes of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.366em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">sorting, this is basically the same as a range: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.1286em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">... WHERE rental_date = '2005-05-25' AND inventory_id IN(1,2) ORDER BY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.9786em;"><span class="stl_200 stl_171 stl_28">customer_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.116em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0602em;">Here’s an example where MySQL could theoretically use an index to order a join but &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.2155em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0093em;">doesn’t because the optimizer places the </span><span class="stl_170 stl_171 stl_28">film_acto</span><span class="stl_170 stl_171 stl_275">r</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">table second in the join: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:15.9773em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT actor_id, title FROM sakila.film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:16.8273em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">INNER JOIN sakila.film USING(film_id) ORDER BY actor_id\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:17.678em;"><span class="stl_200 stl_171 stl_28">+------------+----------------------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:18.528em;"><span class="stl_200 stl_171 stl_28">| table &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:19.378em;"><span class="stl_200 stl_171 stl_28">+------------+----------------------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:20.228em;"><span class="stl_200 stl_171 stl_28">| film</span><span class="stl_200 stl_171 stl_28" style="word-spacing:3em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| Using index; Using temporary; Using filesort | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:21.078em;"><span class="stl_200 stl_171 stl_28">| film_actor | Using index &nbsp;</span></div>
+					<div class="stl_01" style="left:12.021em;top:18.528em;"><span class="stl_200 stl_171 stl_28">| Extra &nbsp;</span></div>
+					<div class="stl_01" style="left:28.6668em;top:18.528em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:28.6668em;top:21.078em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:21.928em;"><span class="stl_200 stl_171 stl_28">+------------+----------------------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.0655em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0536em;">One of the most important uses for ordering by an index is a query that has both an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.1649em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_186">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and a </span><span class="stl_170 stl_171 stl_28">LIMI</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_99">clause. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.0492em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Redundant and Duplicate Indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.949em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.1268em;">Unfortunately, MySQL allows you to create duplicate indexes on the same column. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.999em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1499em;">Doing so will only return a warning, and it will not prevent you from doing this. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.049em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.035em;">MySQL has to maintain each duplicate index separately, and the query optimizer will &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:31.099em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1311em;">consider each of them when it optimizes queries. This can affect performance and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">also wastes space on disk. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.699em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.03em;">Duplicate indexes are indexes of the same type created on the same set of columns in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.749em;z-index:1327;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.056em;">the same order. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0438em;">u should try to avoid creating them, and you should remove them &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.799em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">if you find them. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.349em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0243em;">Sometimes you can create duplicate indexes without knowing it. For example, look at &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.399em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the following code: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:40.1616em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE test ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:41.0116em;"><span class="stl_200 stl_171 stl_28">ID INT NOT NULL PRIMARY KEY, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:41.8616em;"><span class="stl_200 stl_171 stl_28">A INT NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:42.7116em;"><span class="stl_200 stl_171 stl_28">B INT NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:43.5616em;"><span class="stl_200 stl_171 stl_28">UNIQUE(ID), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:44.4116em;"><span class="stl_200 stl_171 stl_28">INDEX(ID) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:45.2616em;"><span class="stl_200 stl_171 stl_28">) ENGINE=InnoDB; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.399em;z-index:1651;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0592em;">An inexperienced user might think this identifies the column</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0538em;">s </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0611em;">ole as a primary key, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:47.4984em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2121em;">adds a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0378em;">UNIQUE </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2145em;">constraint, and adds an index for queries to use. In fact, MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">182 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="204_0" style="position:absolute;left:0em;top:26.3423em;">&nbsp;</a>
+					<a name="204_1" style="position:absolute;left:0em;top:28.1782em;">&nbsp;</a>
+					<a name="204_2" style="position:absolute;left:0em;top:24.3941em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

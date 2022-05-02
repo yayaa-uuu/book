@@ -1,0 +1,76 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_232.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_232.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7213em;top:4.366em;"><span class="stl_154 stl_32 stl_279" style="word-spacing:0.3257em;">• Use</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0538em;">&nbsp;</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0316em;">a covering index (“Using index” in the </span><span class="stl_170 stl_171 stl_28">Extr</span><span class="stl_170 stl_171 stl_369">a</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0291em;">column) to avoid row accesses, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.416em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0352em;">and filter out nonmatching rows after retrieving each result from the index. This &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:6.466em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0078em;">happens at the server layer, but it doesn’t require reading rows from the table. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7208em;top:7.8494em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2732em;">• Retrieve</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.017em;">&nbsp;</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0225em;">rows from the table, then filter nonmatching rows (“Using where” in the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:8.9488em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1788em;">Extra </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0781em;">column). This happens at the server layer and requires the server to read &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:9.9988em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">rows from the table before it can filter them. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:11.8821em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0336em;">This example illustrates how important it is to have good indexes. Good indexes help &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.9321em;z-index:592;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0743em;">your queries get a good access type and examine only the rows they need. However, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.9821em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1432em;">adding an index doesn’t always mean that MySQL will access and return the same &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.0816em;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.3105em;">number of rows. For example, here’s a query that uses the </span><span class="stl_170 stl_171 stl_28">COUNT()</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out219.html#219_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.6941em;">2 </span></a></sup><span class="stl_154 stl_32 stl_38">aggregate &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.1316em;"><span class="stl_154 stl_32 stl_28">function: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:17.8934em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT actor_id, COUNT(*) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:18.7434em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.film_actor GROUP BY actor_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:19.5942em;"><span class="stl_200 stl_171 stl_28">+----------+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:20.4442em;"><span class="stl_200 stl_171 stl_28">| actor_id | COUNT(*) | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:21.2941em;"><span class="stl_200 stl_171 stl_28">+----------+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:22.1441em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:22.9942em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:23.8441em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6041em;top:22.1441em;"><span class="stl_200 stl_171 stl_28">1 | &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6041em;top:22.9942em;"><span class="stl_200 stl_171 stl_28">2 | &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6041em;top:23.8441em;"><span class="stl_200 stl_171 stl_28">3 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.1458em;top:22.1441em;"><span class="stl_200 stl_171 stl_28">19 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.1458em;top:22.9942em;"><span class="stl_200 stl_171 stl_28">25 | &nbsp;</span></div>
+					<div class="stl_01" style="left:14.1458em;top:23.8441em;"><span class="stl_200 stl_171 stl_28">22 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:24.6941em;"><span class="stl_200 stl_171 stl_28">.. omitted.. &nbsp;</span></div>
+					<div class="stl_01" style="left:9.8958em;top:25.5441em;"><span class="stl_200 stl_171 stl_28">200 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:26.3941em;"><span class="stl_200 stl_171 stl_28">+----------+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:25.5441em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:14.1458em;top:25.5441em;"><span class="stl_200 stl_171 stl_28">20 | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:27.2441em;"><span class="stl_200 stl_171 stl_28">200 rows in set (0.01 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.3816em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0026em;">This query returns only 200 rows, as shown, but how many rows does it need to read? &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.481em;z-index:1013;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.194em;">We </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">an check this with </span><span class="stl_170 stl_171 stl_28">EXPLAIN</span><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">, as we talked about in the previous chapter: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:31.2429em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT actor_id, COUNT(*) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:32.0929em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.film_actor GROUP BY actor_id\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:32.9436em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:33.7936em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:34.6436em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:35.4936em;"><span class="stl_200 stl_171 stl_28">table: film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:36.3436em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:37.1936em;"><span class="stl_200 stl_171 stl_28">type: index &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:38.0436em;"><span class="stl_200 stl_171 stl_28">possible_keys: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:38.8936em;"><span class="stl_200 stl_171 stl_28">key: PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:39.7436em;"><span class="stl_200 stl_171 stl_28">key_len: 4 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:40.5936em;"><span class="stl_200 stl_171 stl_28">ref: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:41.4436em;"><span class="stl_200 stl_171 stl_28">rows: 5462 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:42.2936em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:43.1436em;"><span class="stl_200 stl_171 stl_28">Extra: Using index &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">2</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">See </span><a href="MultiPageHTML_out243.html#243_1"><span class="stl_187 stl_32 stl_24" style="word-spacing:0.0053em;">“Optimizing COUNT() Queries” on page 221 </span></a><span class="stl_168 stl_32 stl_35" style="word-spacing:0.0027em;">later in this chapter for more on this topic. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.5909em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Slow Query Basics: Optimize Data Access &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">197 &nbsp;</span></div>
+					<a name="219_0" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

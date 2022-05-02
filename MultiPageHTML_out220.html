@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_233.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_233.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1541em;">Ouch! Reading thousands of rows only to need 200 means that we’re doing much &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0328em;">more work than necessary. An index can’t reduce the number of rows examined for a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;z-index:161;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">query like this one because there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">o </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_186">E</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">clause to eliminate rows. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.016em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0493em;">Unfortunately, MySQL does not tell you how many of the rows it accessed were used &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.066em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0576em;">to build the result set; it tells you only the total number of rows it accessed. Many of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.1655em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0493em;">these rows could be eliminated by a </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_441">E</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0505em;">clause and end up not contributing to the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.2649em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.043em;">result set. In the previous example, after removing the index on </span><span class="stl_170 stl_171 stl_28">sakila.film_actor</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.3643em;"><span class="stl_154 stl_32 stl_289" style="word-spacing:0.0221em;">the query accessed every row in the table and the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_338">E</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.028em;">clause discarded all but 10 of &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.4143em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.092em;">them. Only the remaining 10 rows were used to build the result set. Understanding &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.4643em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1024em;">how many rows the server accesses and how many it really uses requires reasoning &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.5143em;z-index:687;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.008em;">about the query. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.0643em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0232em;">If you find that a huge number of rows were examined to produce relatively few rows &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.1143em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0005em;">in the result, you can try some more sophisticated fixes: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7214em;top:19.9977em;"><span class="stl_154 stl_32 stl_279" style="word-spacing:0.3255em;">• Use</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0711em;">&nbsp;</span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0512em;">covering indexes, which store data so that the storage engine doesn’t have to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:21.0477em;z-index:899;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">retrieve the complete rows. (</span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">iscussed these in </span><a href="MultiPageHTML_out177.html#177_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0054em;">Chapter 7</span></a><span class="stl_154 stl_32 stl_28">.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:22.431em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Change</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4236em;">&nbsp;</span><span class="stl_154 stl_32 stl_37" style="word-spacing:0.4232em;">the schema. An example is using summary tables (discussed in &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:23.481em;"><a href="MultiPageHTML_out147.html#147_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0054em;">Chapter 6</span></a><span class="stl_154 stl_32 stl_28">). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:24.8643em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Rewrite</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0872em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.089em;">a complicated query so the MySQL optimizer is able to execute it opti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:25.9143em;"><span class="stl_154 stl_32 stl_230" style="word-spacing:0.0169em;">mally. (We discuss this later in this chapter.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:27.8109em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Ways to Restructure Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.081em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0533em;">As you optimize problematic queries, your goal should be to find alternative ways to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.131em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0454em;">get the result you want—but that doesn’t necessarily mean getting the same result set &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.181em;z-index:1282;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0738em;">back from MySQL. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0706em;">u can sometimes transform queries into equivalent forms that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.231em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.08em;">return the same results and get better performance. However, you should also think &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.2697em;"><span class="stl_154 stl_32 stl_134" style="word-spacing:0.1451em;">about rewriting the query to retrieve </span><span class="stl_216 stl_41 stl_28" style="word-spacing:0.1243em;">diﬀerent </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1487em;">results if that provides an efficiency &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.331em;z-index:1487;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0872em;">benefit. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0898em;">u might be able to ultimately do the same work by changing the applica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.381em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0115em;">tion code as well as the query. In this section, we explain techniques that can help you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.431em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">restructure a wide range of queries and show you when to use each technique. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:39.3154em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Complex Queries Versus Many Queries &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.2151em;z-index:1756;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.01em;">One important query-design question is whether it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0081em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.01em;">referable to break up a complex &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.2651em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2815em;">query into several simpler queries. The traditional approach to database design &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.3151em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1797em;">emphasizes doing as much work as possible with as few queries as possible. This &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.3651em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0899em;">approach was historically better because of the cost of network communication and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.4151em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0005em;">the overhead of the query parsing and optimization stages. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.9651em;"><span class="stl_154 stl_32 stl_152" style="word-spacing:0.1686em;">However, this advice doesn’t apply as much to MySQL because it was designed to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:48.0151em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0325em;">handle connecting and disconnecting very efficiently and to respond to small, simple &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">198 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="220_0" style="position:absolute;left:0em;top:28.1625em;">&nbsp;</a>
+					<a name="220_1" style="position:absolute;left:0em;top:39.6084em;">&nbsp;</a>
+					<a name="220_2" style="position:absolute;left:0em;top:20.2269em;">&nbsp;</a>
+					<a name="220_3" style="position:absolute;left:0em;top:26.1436em;">&nbsp;</a>
+					<a name="220_4" style="position:absolute;left:0em;top:30.3103em;">&nbsp;</a>
+					<a name="220_5" style="position:absolute;left:0em;top:41.4444em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

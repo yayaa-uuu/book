@@ -1,0 +1,71 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_338.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_338.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0003em;top:4.3166em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0257em;">Queries come in all forms: reads, writes, primary key lookups, subqueries, joins, bulk &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.3666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0281em;">inserts, and so forth. Each has a cost associated with it. This cost is measured in CPU &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.4166em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0102em;">time, or latency. When a query waits longer on a disk to return information, that time &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.4666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1375em;">is added to the cost.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out312.html#312_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.4107em;">2 </span></a></sup><span class="stl_154 stl_32 stl_84" style="word-spacing:0.142em;">It is important to understand the capacity of your resources. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:8.5166em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0142em;">How many CPUs do you have, what are the read and write IOPS and throughput lim‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:9.5666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0827em;">itations of your disk, and what network throughput do you have? Each of these will &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:10.6166em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0048em;">have their own influence on latency, which directly relates to your workload. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.1666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0788em;">A workload is the blend of all types of queries and their latencies. It would be more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.2166em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0642em;">fair to say that, if we process one thousand QPS at 20% CPU, we can add four thou‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:14.2552em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0409em;">sand more QPS </span><span class="stl_155 stl_41 stl_164" style="word-spacing:0.0555em;">as long as their latencies are the same</span><span class="stl_154 stl_32 stl_28">.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out312.html#312_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2418em;">3 </span></a></sup><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0428em;">If we introduce four thousand &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:15.3166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0019em;">more queries and we hit a disk IOPS bottleneck, the latency of all reads goes up. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.8666em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0661em;">If the only metrics you have access to are basic system ones, like CPU, memory, and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.9166em;z-index:1122;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1151em;">disk, it can be nearly impossible to understand which of these you are hitting. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:18.9666em;z-index:1181;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0724em;">will want to determine what your read versus write performance is. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0707em;">e </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0707em;">rovided an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.0166em;z-index:1222;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0409em;">example of this in </span><a href="MultiPageHTML_out84.html#84_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0374em;">“Examining Read </span></a><a href="MultiPageHTML_out84.html#84_0"><span class="stl_184 stl_32 stl_52">V</span></a><a href="MultiPageHTML_out84.html#84_0"><span class="stl_184 stl_32 stl_28">e</span></a><a href="MultiPageHTML_out84.html#84_0"><span class="stl_184 stl_32 stl_226" style="word-spacing:0.0527em;">rsus Write Performance” on page 62 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0374em;">in </span><a href="MultiPageHTML_out63.html#63_0"><span class="stl_184 stl_32 stl_183">Chap‐ &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.0004em;top:21.0666em;"><a href="MultiPageHTML_out63.html#63_0"><span class="stl_184 stl_32 stl_254" style="word-spacing:-0.0107em;">ter 3</span></a><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0205em;">. Using that example, you can determine the latency of reads versus writes. If you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.1166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0122em;">trend these numbers over time, you can see if your read or write latencies are increas‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.1666em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0067em;">ing and, consequently, where you might be bound. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.0509em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Read-Bound Workloads &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.9507em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0137em;">Assume that, when you began designing your product, you took the shortcut of using &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.0007em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0414em;">one source host for all database traffic. Adding more application nodes may scale the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.0507em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0036em;">clients serving requests but will ultimately be capped by the ability of your one-source &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.1007em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0242em;">database host to respond to these read requests. The primary indicator of this is CPU &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.1507em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0371em;">utilization. High CPU means the server is spending all of its time processing queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.2007em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1028em;">The higher CPU utilization gets, the more latency you will see in queries. This isn’t &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.2507em;z-index:1920;"><span class="stl_154 stl_32 stl_42" style="word-spacing:0.1383em;">the only indicator, however. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1269em;">u can also see heavy disk read IOPS or throughput, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.3007em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1284em;">indicating that you are going to disk very often or for large numbers of rows read &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.3507em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">from disk. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.9007em;z-index:2039;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1632em;">u can initially improve this by adding indexes, optimizing queries, and caching &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:37.9507em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0513em;">data you can cache. Once you run out of improvements, you will be left with a read- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.0007em;z-index:2242;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0076em;">bound workload and this is where scaling read traffic using replicas comes in. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0076em;">e </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_28">ill &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:40.0507em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0634em;">discuss later in this chapter how to scale your reads using read replica pools, how to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.1007em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0192em;">run health checks for these pools, and what pitfalls to avoid when you start using that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.1507em;"><span class="stl_154 stl_32 stl_28">architecture. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:45.5203em;"><span class="stl_167 stl_32 stl_28">2</span></div>
+					<div class="stl_01" style="left:6.0952em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">3</span></div>
+					<div class="stl_01" style="left:6.6667em;top:45.4378em;"><span class="stl_168 stl_32 stl_129" style="word-spacing:0.0112em;">We’re choosing to ignore the complexities of multiple CPUs and context switching for simplicity’s sake in this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.2712em;"><span class="stl_168 stl_32 stl_39">explanation. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_46" style="word-spacing:0.0026em;">This is still not entirely accurate because as CPU approaches 100%, latency increases, and you will not be able &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">to add four thousand more queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">290 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="312_0" style="position:absolute;left:0em;top:25.344em;">&nbsp;</a>
+					<a name="312_1" style="position:absolute;left:0em;top:45.5292em;">&nbsp;</a>
+					<a name="312_2" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="312_3" style="position:absolute;left:0em;top:33.4799em;">&nbsp;</a>
+					<a name="312_4" style="position:absolute;left:0em;top:8.7458em;">&nbsp;</a>
+					<a name="312_5" style="position:absolute;left:0em;top:27.1799em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

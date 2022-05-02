@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_141.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_141.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The InnoDB Transaction Log &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.065em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.011em;">InnoDB uses its log to reduce the cost of committing transactions. Instead of flushing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.115em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0749em;">the buffer pool to disk when each transaction commits, it logs the transactions. The &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.165em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0371em;">changes transactions make to data and indexes often map to random locations in the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.215em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1906em;">tablespace, so flushing these changes to disk would require random I/O. InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.265em;z-index:315;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1673em;">assumes it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1605em;">s </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1632em;">sing conventional disks, where random I/O is much more expensive &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.315em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0258em;">than sequential I/O because of the time it takes to seek to the correct location on disk &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.365em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">and wait for the desired part of the disk to rotate under the head. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.915em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0199em;">InnoDB uses its log to convert this random disk I/O into sequential I/O. Once the log &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:14.965em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1499em;">is safely on disk, the transactions are permanent, even though the changes haven’t &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.015em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0503em;">been written to the datafiles yet. If something bad happens (such as a power failure), &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.065em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">InnoDB can replay the log and recover the committed transactions. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.615em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0521em;">Of course, InnoDB does ultimately have to write the changes to the datafiles because &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.665em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0769em;">the log has a fixed size. It writes to the log in a circular fashion: when it reaches the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.715em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0509em;">end of the log, it wraps around to the beginning. It can’t overwrite a log record if the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.7651em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0227em;">changes contained there haven’t been applied to the datafiles because this would erase &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.8151em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">the only permanent record of the committed transaction. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:24.3651em;z-index:1172;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1049em;">InnoDB uses a background thread to flush the changes to the datafiles intelligently. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.4151em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2763em;">This thread can group writes together and make the data writes sequential for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.4651em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1001em;">improved efficiency. In effect, the transaction log converts random datafile I/O into &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.5151em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0367em;">mostly sequential logfile and datafile I/O. Moving flushes into the background makes &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.5651em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0747em;">queries complete more quickly and helps cushion the I/O system from spikes in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.6151em;"><span class="stl_154 stl_32 stl_277" style="word-spacing:-0.0072em;">query load. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.2145em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2077em;">The overall logfile size is controlled by </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0439em;">innodb_log_file_size </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2063em;">and </span><span class="stl_170 stl_171 stl_28">innodb</span><span class="stl_170 stl_171 stl_367">_</span><span class="stl_170 stl_171 stl_28">l</span><span class="stl_170 stl_171 stl_28">og_ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.3139em;"><span class="stl_170 stl_171 stl_28">files_in_group</span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0694em;">, and it’s very important for write performance. If you took our ear‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.4134em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.041em;">lier advice and used </span><span class="stl_170 stl_171 stl_28">innodb_dedicated_server</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.041em;">, these are managed for you based on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.4634em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:-0.001em;">how much memory your system has. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.3477em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Log </span><span class="stl_236 stl_27 stl_28">Buﬀer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.2361em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0956em;">When InnoDB changes any data, it writes a record of the change into its </span><span class="stl_155 stl_41 stl_54" style="word-spacing:0.0968em;">log </span><span class="stl_216 stl_41 stl_28">buﬀer</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.2974em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0285em;">which it keeps in memory. InnoDB flushes the buffer to the logfiles on disk when the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.3475em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1094em;">buffer gets full, when a transaction commits, or once per second, whichever comes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.3975em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0571em;">first. Increasing the buffer size, which is 1 MB by default, can help reduce I/O if you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.4474em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.4724em;">have large transactions. The variable that controls the buffer size is called &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:43.5469em;"><span class="stl_170 stl_171 stl_28">innodb_log_buffer_size</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.0969em;z-index:2073;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0336em;">u usually don’t need to make the buffer very large. The recommended range is 1–8 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:46.1963em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0481em;">MB, and this usually will be enough unless you write a lot of huge </span><span class="stl_170 stl_171 stl_28">BLO</span><span class="stl_170 stl_171 stl_368">B</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0463em;">records. The &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:47.2463em;z-index:2249;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0876em;">log entries are very compact compared to InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0841em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0862em;">ormal data. They are not page &nbsp;</span></div>
+					<div class="stl_01" style="left:25.212em;top:50.8098em;"><span class="stl_233 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguring </span><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">MySQL’s I/O Behavior &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">113 &nbsp;</span></div>
+					<a name="135_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="135_1" style="position:absolute;left:0em;top:36.6407em;">&nbsp;</a>
+					<a name="135_2" style="position:absolute;left:0em;top:14.1443em;">&nbsp;</a>
+					<a name="135_3" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="135_4" style="position:absolute;left:0em;top:38.4767em;">&nbsp;</a>
+					<a name="135_5" style="position:absolute;left:0em;top:9.4443em;">&nbsp;</a>
+					<a name="135_6" style="position:absolute;left:0em;top:11.5443em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

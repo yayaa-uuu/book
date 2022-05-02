@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_178.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_178.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0002em;top:4.366em;z-index:111;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1124em;">all examples of schema changes you still cannot do natively with an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1446em;">INPLACE </span><span class="stl_154 stl_32 stl_156">alter.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out172.html#172_0"><span class="stl_166 stl_32 stl_406">7 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:6em;top:5.416em;z-index:114;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.5051em;">We </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.3134em;">ighly recommend you get familiar through the documentation with what &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.5155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1682em;">changes are allowed using either </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.084em;">INPLACE </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1682em;">or </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.084em;">INSTANT </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1682em;">algorithms as the preferred, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.5655em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0043em;">native way to make schema changes in MySQL without downtime. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.1155em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0697em;">However, even if the change you need is technically supported by native DDL in 8.0 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.1655em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0088em;">and beyond, if the table being changed is very large in size, you can run into rollbacks &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.2155em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1328em;">if the logfile of table changes InnoDB is internally keeping gets too large, undoing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.2655em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0343em;">hours or days of work. Another reason you may need to use an external tool is if you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:13.3155em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0855em;">have a strong desire to control the speed at which the table change happens using a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.3655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0641em;">throttling mechanism. This is something you can manage with the external tools we &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.4155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">are about to discuss. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.3935em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Using external tools to run your schema change.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.6089em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1116em;">If you are not yet able to run the latest &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.4866em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1207em;">and greatest MySQL version with all the flexibility of the schema changes in place, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.5366em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.2101em;">you can still combine CI tooling with available open source tooling to run your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:20.5866em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2341em;">schema changes in production automatically without affecting your service. Two &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.6861em;z-index:1048;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1722em;">prominent options for achieving this are Percona</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.165em;">s </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0874em;">pt-online-schema-change </span><span class="stl_154 stl_32 stl_28">and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:22.7855em;z-index:1082;"><span class="stl_154 stl_32 stl_407" style="word-spacing:0.1949em;">GitHub’s </span><span class="stl_170 stl_171 stl_28">gh-ost</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1385em;">. The documentation for both has all the information you need to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.8355em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0588em;">learn how to install and use the tools, so we will focus here on how to choose which &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:24.8855em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1024em;">of them to use, what the major trade-offs are that you should consider, and how to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.9355em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0687em;">improve the safety of using either tool as part of an automated schema-deploy pipe‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.9855em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">line in production. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:29.2977em;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.0474em;">One thing to note: any external tool running your schema changes &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:30.2577em;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.0513em;">for you will need to make entire copies of the table you are chang‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:31.2177em;"><span class="stl_176 stl_32 stl_140" style="word-spacing:0.0312em;">ing. The tool merely makes the process less impactful and does not &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:32.1777em;"><span class="stl_176 stl_32 stl_83" style="word-spacing:0.0624em;">require disruptive write locks, but only native DDL in MySQL can &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3996em;top:33.1377em;z-index:1618;"><span class="stl_176 stl_32 stl_38" style="word-spacing:0.0047em;">alter table schemas without a full table copy. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.3849em;z-index:1689;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0139em;">The major draw for </span><span class="stl_170 stl_171 stl_28">pt-online-schema-chang</span><span class="stl_170 stl_171 stl_408">e</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0092em;">has been its stability and how long it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.4349em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0122em;">been in use in the MySQL community. It primarily leverages triggers to enable chang‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.4849em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1022em;">ing schemas for tables of all sizes with very little impact to the database availability &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.5349em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0844em;">when switching to the new table version. But its core design also comes with trade- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.6344em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1069em;">offs. Keep these things in mind when learning to use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1501em;">pt-online-schema-change </span><span class="stl_154 stl_32 stl_28">to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.6844em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">power your schema-deploy pipeline: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.3063em;"><span class="stl_155 stl_41 stl_156" style="word-spacing:0.0209em;">Triggers have limitations &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:43.3677em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1806em;">Before MySQL 8.0, you could not have more than one trigger with the same &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:44.4671em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0161em;">action on the same table. What does that mean? If you have a table named </span><span class="stl_170 stl_171 stl_28">sales</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">7</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">See the </span><a href="https://oreil.ly/nFMKg" target="_blank"><span class="stl_187 stl_32 stl_20" style="word-spacing:0.0087em;">MySQL documentation </span></a><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">for more on this. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">150 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="172_0" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+					<a name="172_1" style="position:absolute;left:0em;top:20.8159em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

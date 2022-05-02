@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_402.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_402.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0647em;">looking at a unified provisioning stack to “we only want to use Kubernetes to provi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:118;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1142em;">sion and configure the systems for database resources</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1132em;">” This means you need to be &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0965em;">clear up front that the database workloads that will be provisioned with Kubernetes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1139em;">will be managed separately from stateless workloads, will require different operator &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;z-index:335;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0052em;">skill sets, and will handle container failure differently. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:10.4009em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Choose Your Control Plane &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.3007em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0981em;">There are various MySQL operators in the wild now, but the choice of which is the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:13.3507em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0174em;">best will be mostly a consequence of what you decide as the scope of your Kubernetes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.4007em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.033em;">management of MySQL. Will you need an operator that does it all: provisioning, fail‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.4507em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0717em;">over, and managing connecting to the databases? Or will you simply use Kubernetes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.5007em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0032em;">as a provisioning stack and use other means to manage databases after they are in ser‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.5507em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0206em;">vice? Decide early on what you expect from your control plane, as that will drive a lot &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.6007em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">of the finer operability details. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.485em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The Finer Details &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.3848em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0179em;">Once you have decided to start provisioning MySQL resources using Kubernetes, you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.4348em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0905em;">need to get agreement across your organization on what size data is appropriate for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.4848em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0785em;">this solution. Remember that this is now a new operating model for running a rela‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.5348em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0601em;">tional database, and on this less-paved road, everything gets more complex as it gets &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.5848em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2302em;">bigger. Here are some important items to consider as you collaborate with your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.6348em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.055em;">Kubernetes engineering team (hopefully, you have a dedicated team for this) on how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.6848em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">to support stateful workloads: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:30.5681em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.2849em;">• What</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0063em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">maximum data set size for a single database instance will be supported? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:31.9514em;"><span class="stl_154 stl_32 stl_18" style="word-spacing:0.3em;">• Will</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1158em;">&nbsp;</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1033em;">you be mounting volumes to containers and managing container recovery &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:33.0014em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">separately from the data mounts? Or will the data be part of the container? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:34.3848em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.2849em;">• What</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0385em;">&nbsp;</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0336em;">maximum query throughput is going to be supported? How will you man‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.4348em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">age resources? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:36.8181em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2973em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0886em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0786em;">will you ensure Kubernetes nodes running database workloads are dedica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:37.8681em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">ted to that and not shared with stateless, more elastic, workloads? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:39.2514em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.2849em;">• What</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0621em;">&nbsp;</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.06em;">control plane will you use for running the database instances? Is it Kuber‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:40.3014em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">netes native? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:41.6848em;z-index:1757;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2973em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0125em;">&nbsp;</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">will backups work? What</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">he restore process? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:43.0681em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.2381em;">• How will you control and safely roll out configuration changes and MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:44.1181em;"><span class="stl_154 stl_32 stl_28">upgrades? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:45.5014em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2665em;">• How will you upgrade your Kubernetes clusters themselves without causing &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:46.5514em;"><span class="stl_154 stl_32 stl_28">disruption? &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">350 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6676em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5751em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Appendix B: MySQL on Kubernetes &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

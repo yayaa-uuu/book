@@ -1,0 +1,76 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_33.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_33.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9998em;top:4.3166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2447em;">Row locks are implemented in the storage engine, not the server. The server is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:5.3666em;"><span class="stl_154 stl_32 stl_122">mostly</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out28.html#28_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3052em;">4 </span></a></sup><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0804em;">unaware of locks implemented in the storage engines, and as you’ll see later &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.4166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0133em;">in this chapter and throughout the book, the storage engines all implement locking in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.4666em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">their own ways. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.3631em;"><span class="stl_159 stl_27 stl_28">Transactions &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:11.6333em;z-index:591;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1684em;">u can’t examine the more advanced features of a database system for very long &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.6719em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0275em;">before transactions enter the mix. A </span><span class="stl_155 stl_41 stl_194" style="word-spacing:0.0374em;">transaction </span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0312em;">is a group of SQL statements that are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:13.7333em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0252em;">treated atomically, as a single unit of work. If the database engine can apply the entire &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.7833em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0374em;">group of statements to a database, it does so, but if any of them can’t be done because &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:15.8333em;z-index:917;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0052em;">of a crash or other reason, none of them is applied. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ll or nothing. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.3833em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0345em;">Little of this section is specific to MySQL. If you’re already familiar with ACID trans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.4333em;z-index:1054;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">actions, feel free to skip ahead to </span><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_195">“</span></a><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_196">T</span></a><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_33" style="word-spacing:0.0043em;">ransactions in MySQ</span></a><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_94">L</span></a><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">” </span></a><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_28">o</span></a><a href="MultiPageHTML_out33.html#33_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">n page 11</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.9833em;z-index:1131;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0103em;">A banking application is the classic example of why transactions are necessary.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out28.html#28_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.1808em;">5 </span></a></sup><span class="stl_154 stl_32 stl_28">Imag‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.0333em;z-index:1208;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0226em;">ine a bank’s database with two tables: checking and savings. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0142em;">o </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_197" style="word-spacing:0.042em;">ove $200 from Jane’s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.0833em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">checking account to her savings account, you need to perform at least three steps: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4433em;top:23.9666em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.2809em;">1. Make</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0043em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">sure her checking account balance is greater than $200. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:25.35em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">2. Subtract</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">$200 from her checking account balance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:26.7333em;"><span class="stl_154 stl_32 stl_86" style="word-spacing:0.29em;">3. Add</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0087em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">$200 to her savings account balance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.6166em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0037em;">The entire operation should be wrapped in a transaction so that if any one of the steps &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.6666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">fails, any completed steps can be rolled back. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.2661em;z-index:1522;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0524em;">u start a transaction with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0524em;">START TRANSACTIO</span><span class="stl_170 stl_171 stl_198">N</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0561em;">statement and then either make &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.3655em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0075em;">its changes permanent with </span><span class="stl_170 stl_171 stl_28">COMMI</span><span class="stl_170 stl_171 stl_199">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0053em;">or discard the changes with </span><span class="stl_170 stl_171 stl_28">ROLLBACK</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. So the SQL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.4155em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0023em;">for our sample transaction might look like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.1781em;"><span class="stl_200 stl_171 stl_28">1</span></div>
+					<div class="stl_01" style="left:7.4164em;top:36.0281em;"><span class="stl_200 stl_171 stl_28">2</span></div>
+					<div class="stl_01" style="left:7.4164em;top:36.8781em;"><span class="stl_200 stl_171 stl_28">3</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.7281em;"><span class="stl_200 stl_171 stl_28">4</span></div>
+					<div class="stl_01" style="left:7.4164em;top:38.5781em;"><span class="stl_200 stl_171 stl_28">5</span></div>
+					<div class="stl_01" style="left:8.4789em;top:35.1781em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">START TRANSACTION; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4789em;top:36.0281em;"><span class="stl_200 stl_171 stl_28">SELECT balance FROM checking WHERE customer_id = 10233276; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4789em;top:36.8781em;"><span class="stl_200 stl_171 stl_28">UPDATE checking SET balance = balance - 200.00 WHERE customer_id = 10233276; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4789em;top:37.7281em;"><span class="stl_200 stl_171 stl_28">UPDATE savings SET balance = balance + 200.00 WHERE customer_id = 10233276; &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4789em;top:38.5781em;"><span class="stl_200 stl_171 stl_28">COMMIT; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:39.7155em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0089em;">Transactions alone aren’t the whole story. What happens if the database server crashes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.7655em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.038em;">while performing line 4? Who knows? The customer probably just lost $200. What if &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:44.6869em;"><span class="stl_167 stl_32 stl_28">4</span></div>
+					<div class="stl_01" style="left:6.0951em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">5</span></div>
+					<div class="stl_01" style="left:6.6667em;top:44.6045em;"><span class="stl_168 stl_32 stl_158" style="word-spacing:0.0005em;">There are metadata locks, which are used when dealing with table name changes or changing schemas, and in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:45.4378em;z-index:145;"><span class="stl_168 stl_32 stl_24" style="word-spacing:0.0054em;">8.0 we are introduced to “application level locking functions</span><span class="stl_168 stl_32 stl_161">.</span><span class="stl_168 stl_32 stl_53" style="word-spacing:0.0012em;">” In the course of run-of-the-mill data changes, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.2712em;"><span class="stl_168 stl_32 stl_53" style="word-spacing:0.0012em;">internal locking is left to the InnoDB engine. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_158" style="word-spacing:0.0005em;">Although this is a common academic exercise, most banks actually rely on daily reconciliation and not on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:356;"><span class="stl_168 stl_32 stl_120" style="word-spacing:0.0061em;">strict transactional operations during the day. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">6</span></div>
+					<div class="stl_01" style="left:7.0563em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.9638em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 1: MySQL Architecture &nbsp;</span></div>
+					<a name="28_0" style="position:absolute;left:0em;top:9.7147em;">&nbsp;</a>
+					<a name="28_1" style="position:absolute;left:0em;top:44.6958em;">&nbsp;</a>
+					<a name="28_2" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="28_3" style="position:absolute;left:0em;top:7.6958em;">&nbsp;</a>
+					<a name="28_4" style="position:absolute;left:0em;top:11.8625em;">&nbsp;</a>
+					<a name="28_5" style="position:absolute;left:0em;top:12.9125em;">&nbsp;</a>
+					<a name="28_6" style="position:absolute;left:0em;top:39.9448em;">&nbsp;</a>
+					<a name="28_7" style="position:absolute;left:0em;top:20.2125em;">&nbsp;</a>
+					<a name="28_8" style="position:absolute;left:0em;top:31.4953em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

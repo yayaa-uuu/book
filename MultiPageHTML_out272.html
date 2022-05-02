@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_298.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_298.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.938em;"><span class="stl_155 stl_41 stl_65" style="word-spacing:0.014em;">Always run your replicas with </span><span class="stl_170 stl_171 stl_28">super_read_onl</span><span class="stl_170 stl_171 stl_259">y</span><span class="stl_155 stl_41 stl_149">enabled &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:6.0488em;"><span class="stl_154 stl_32 stl_358" style="word-spacing:0.1268em;">Using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1555em;">read_only </span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1023em;">prevents users without the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1555em;">SUPER </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1003em;">privilege from being able to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:7.1482em;"><span class="stl_154 stl_32 stl_107" style="word-spacing:0.0198em;">write, but this won’t prevent your DBAs from running a </span><span class="stl_170 stl_171 stl_28">DELET</span><span class="stl_170 stl_171 stl_335">E</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0105em;">or </span><span class="stl_170 stl_171 stl_28">ALTE</span><span class="stl_170 stl_171 stl_335">R</span><span class="stl_154 stl_32 stl_28">without &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:8.2477em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0221em;">realizing they’re on the replica. The </span><span class="stl_170 stl_171 stl_28">super_read_onl</span><span class="stl_170 stl_171 stl_208">y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.018em;">setting only allows replica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:9.2977em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">tion to write and is the safest way to run replicas. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:10.9196em;"><span class="stl_155 stl_41 stl_149" style="word-spacing:0.0165em;">Use row-based replication or deterministic statements &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:11.981em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0898em;">Despite having situations where it will use a much larger amount of disk space, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:13.031em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0177em;">row-based replication is the most consistent way to replicate data. This is because &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:14.081em;z-index:525;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0029em;">it includes the exact row data changing for every entry. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:15.631em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">Consider the following with statement-based replication: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9165em;top:17.3971em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">DELETE FROM users WHERE last_login_date &lt;= NOW() LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:18.5735em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1348em;">What happens when there are one thousand users in this table that match the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:19.6729em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1249em;">WHERE </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1324em;">clause? MySQL will use the natural order in the table to only delete the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:20.7229em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0254em;">first 10 rows. The natural order of the table may be different on replicas, so a dif‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:21.7729em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0244em;">ferent set of 10 rows may be affected. Statements run in the future that modify or &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:22.8724em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.042em;">delete the rows based on </span><span class="stl_170 stl_171 stl_28">last_login_dat</span><span class="stl_170 stl_171 stl_431">e</span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0473em;">may or may not exist. This can cause &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:23.9224em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">an inconsistency with the data. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:25.5218em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0875em;">The best way to write this would be to use an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0423em;">ORDER BY </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.086em;">to make the row order &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:26.5718em;"><span class="stl_154 stl_32 stl_28">deterministic: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9166em;top:28.3379em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">DELETE FROM users WHERE last_login_date &lt;= NOW() ORDER BY user_id &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9166em;top:29.2304em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:30.4068em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0477em;">With this statement, as long as the data is consistent between source and replica, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:31.4568em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the same 10 rows will be deleted. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.0788em;"><span class="stl_155 stl_41 stl_81" style="word-spacing:0.0116em;">Do not try to write to multiple servers in a replication topology at the same time &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:34.1402em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0737em;">This includes using cosources with writes on both sides or ring replication. The &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:35.1902em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.1187em;">most practical replication topology is to use one source, taking all your writes, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:36.2402em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and one or more replicas, optionally taking reads. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.7902em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0648em;">Last, we highly recommend that if you encounter any replication errors, you use the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.8402em;"><a href="https://oreil.ly/DlYzR" target="_blank"><span class="stl_184 stl_32 stl_33" style="word-spacing:0.0042em;">strategies </span></a><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">in the official MySQL documentation for rebuilding the replica. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">250 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="272_0" style="position:absolute;left:0em;top:39.0694em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

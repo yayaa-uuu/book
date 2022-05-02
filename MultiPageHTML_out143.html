@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_149.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_149.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0442em;">execute queries, so being denied with a “too many connections” error is a way to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;z-index:90;"><span class="stl_154 stl_32 stl_139" style="word-spacing:0.0102em;">fail fast and fail cheaply. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.966em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0143em;">Set </span><span class="stl_170 stl_171 stl_28">max_connection</span><span class="stl_170 stl_171 stl_241">s</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0167em;">high enough to accommodate the usual load that you think &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:8.016em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0536em;">you’ll experience as well as a safety margin to permit logging in and administer‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:9.066em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0104em;">ing the server. For example, if you think you’ll have 300 or so connections in nor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:10.116em;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.1547em;">mal operations, you might set this to 500 or so. If you don’t know how many &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:11.166em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1732em;">connections you’ll get, 500 is not an unreasonable starting point anyway. The &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:12.216em;z-index:439;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0081em;">default is 151, but that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0033em;">ot enough for a lot of applications. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:13.766em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.117em;">Beware also of surprises that might make you hit the limit of connections. For &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:14.816em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1265em;">example, if you restart an application server, it might not close its connections &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:15.866em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.057em;">cleanly, and MySQL might not realize they’ve been closed. When the application &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:16.916em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0657em;">server comes back up and tries to open connections to the database, it might be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:17.966em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1665em;">refused due to the dead connections that haven’t timed out yet. This can also &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:19.016em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1713em;">come into play if you do not use persistent connections and your application &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:20.066em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0485em;">does not disconnect gracefully. The server will keep a connection around until it &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:21.116em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0429em;">reaches a TCP timeout or, in the worst case, until the number of seconds config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:22.2155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ured with </span><span class="stl_170 stl_171 stl_28">wait_timeout</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:23.8149em;"><span class="stl_154 stl_32 stl_179" style="word-spacing:0.2055em;">Watch the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0862em;">max_used_connections </span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1713em;">status variable over time. It is a high-water &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:24.8649em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0084em;">mark that shows you if the server has had a spike in connections at some point. If &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:25.9643em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0005em;">it reaches </span><span class="stl_170 stl_171 stl_28">max_connections</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">, chances are a client has been denied at least once. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.8226em;"><span class="stl_170 stl_171 stl_28">skip_name_resolve &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:28.6971em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1074em;">This setting disables another networking- and authentication-related trap: DNS &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:29.7471em;z-index:1346;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1116em;">lookups. DNS is one of the weak points in MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.298em;">’s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.108em;">onnection process. When &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:30.7971em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1619em;">you connect to the server, by default it tries to determine the hostname from &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:31.8471em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1265em;">which you’re connecting and uses that as part of the authentication credentials &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:32.8971em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0859em;">(that is, your credentials are your username, hostname, and password—not just &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:33.9471em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:0.0623em;">your username and password). But to verify your hostname, the server needs to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:34.9971em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2557em;">perform a forward-confirmed reverse DNS lookup (or “double reverse DNS &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:36.0471em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2751em;">lookup”), which involves both a reverse and a forward DNS lookup before &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:37.0971em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2075em;">accepting the connection. This is all fine until DNS starts to have problems, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:38.1471em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1934em;">which is pretty much a certainty at some point in time. When that happens, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:39.1971em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0391em;">everything piles up, and eventually the connection times out. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0382em;">o </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.042em;">revent this, we &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:40.2471em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.08em;">strongly recommend that you set this option, which disables DNS lookups dur‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:41.2971em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0895em;">ing authentication. However, if you do this, you will need to convert all of your &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:42.3471em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1294em;">hostname-based grants to use IP addresses, wildcards, or the special hostname &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:43.3971em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">“localhost” because hostname-based accounts will be disabled. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.2553em;"><span class="stl_170 stl_171 stl_28">sql_mode &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:46.1299em;z-index:2274;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.027em;">This setting can accept a variety of options that modify server behavior. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0248em;">e </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_377">on’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:47.1799em;z-index:2323;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1952em;">recommend changing these just for the fun of it; it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1935em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1989em;">etter to let MySQL be &nbsp;</span></div>
+					<div class="stl_01" style="left:29.7048em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Safety Settings &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">121 &nbsp;</span></div>
+					<a name="143_0" style="position:absolute;left:0em;top:28.9264em;">&nbsp;</a>
+					<a name="143_1" style="position:absolute;left:0em;top:46.3591em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

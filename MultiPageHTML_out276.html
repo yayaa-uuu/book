@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_302.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_302.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Oversized Packets from the Source &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.065em;z-index:93;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.5333em;">Another hard-to-trace problem in replication can occur when the source</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.1645em;"><span class="stl_170 stl_171 stl_28">max_allowed_packe</span><span class="stl_170 stl_171 stl_262">t</span><span class="stl_154 stl_32 stl_101" style="word-spacing:0.029em;">size doesn’t match the replica’s. In this case, the source can log a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.2145em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.055em;">packet the replica considers oversized, and when the replica retrieves that binary log &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:9.2645em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1214em;">event, it might suffer from a variety of problems. These include an endless loop of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:10.3145em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">errors and retries or corruption in the relay log. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:12.1988em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">No Disk Space &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.0986em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1161em;">Replication can indeed fill up your disks with binary logs, relay logs, or temporary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.198em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0765em;">files, especially if you do a lot of </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0092em;">LOAD DATA INFILE </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0784em;">queries on the source and have &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.2974em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1047em;">log_replica_updates </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1485em;">enabled on the replica. The more a replica falls behind, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.3474em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1481em;">more disk space it is likely to use for relay logs that have been retrieved from the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:18.3974em;z-index:665;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0852em;">source but not yet executed. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0863em;">u can prevent these errors by monitoring disk usage &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.4969em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and setting the </span><span class="stl_170 stl_171 stl_28">relay_log_spac</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">configuration variable. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.3812em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Replication Limitations &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.281em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0528em;">MySQL replication can fail or get out of sync, with or without errors, just because of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.331em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0491em;">its inherent limitations. A fairly large list of SQL functions and programming practi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.381em;z-index:1000;"><span class="stl_154 stl_32 stl_257" style="word-spacing:0.0153em;">ces simply won’t replicate reliably (we’ve mentioned many of them in this chapter). It’s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.431em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0387em;">hard to ensure that none of these finds a way into your production code, especially if &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.481em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0033em;">your application or team is large. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.031em;z-index:1132;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0213em;">Another issue is bugs in the server. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0183em;">e </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_65" style="word-spacing:0.0323em;">on’t want to sound negative, but many major &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.081em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0823em;">versions of the MySQL server have historically had bugs in replication, especially in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.131em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0687em;">the first releases of the major version. New features, such as stored procedures, have &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.181em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">usually caused more problems. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.731em;z-index:1393;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0096em;">For most users, this is not a reason to avoid new features. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0032em;">s </span><span class="stl_154 stl_32 stl_28">j</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0031em;">ust a reason to test care‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.781em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1558em;">fully, especially when you upgrade your application or MySQL. Monitoring is also &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.831em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">important; you need to know when something causes a problem. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.381em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0433em;">MySQL replication is complicated, and the more complicated your application is, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:38.431em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0057em;">more careful you need to be. However, if you learn how to work with it, it works quite &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.481em;"><span class="stl_154 stl_32 stl_28">well. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">254 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="276_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="276_1" style="position:absolute;left:0em;top:12.4919em;">&nbsp;</a>
+					<a name="276_2" style="position:absolute;left:0em;top:21.6743em;">&nbsp;</a>
+					<a name="276_3" style="position:absolute;left:0em;top:14.3278em;">&nbsp;</a>
+					<a name="276_4" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="276_5" style="position:absolute;left:0em;top:23.5102em;">&nbsp;</a>
+					<a name="276_6" style="position:absolute;left:0em;top:39.7102em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

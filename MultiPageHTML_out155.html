@@ -1,0 +1,72 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_161.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_161.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">| apple | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">| dog &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:10.25em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.416em;z-index:24;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_188" style="word-spacing:0.1398em;">u can work around this by specifying </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1123em;">ENUM </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1413em;">members in the order in which you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:8.5155em;z-index:102;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0479em;">want them to sort. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0445em;">u can also use </span><span class="stl_170 stl_171 stl_28">FIELD(</span><span class="stl_170 stl_171 stl_389">)</span><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0432em;">to specify a sort order explicitly in your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.5655em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0023em;">queries, but this prevents MySQL from using the index for sorting: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:11.3273em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT e FROM enum_test ORDER BY FIELD(e, 'apple', 'dog', 'fish'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:12.178em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:13.028em;"><span class="stl_200 stl_171 stl_28">| e &nbsp;</span></div>
+					<div class="stl_01" style="left:10.2498em;top:13.028em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4165em;top:13.878em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:14.728em;"><span class="stl_200 stl_171 stl_28">| apple | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:15.578em;"><span class="stl_200 stl_171 stl_28">| dog &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:16.428em;"><span class="stl_200 stl_171 stl_28">| fish &nbsp;</span></div>
+					<div class="stl_01" style="left:10.2498em;top:15.578em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.2498em;top:16.428em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4165em;top:17.278em;"><span class="stl_200 stl_171 stl_28">+-------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:18.4155em;z-index:327;"><span class="stl_154 stl_32 stl_390" style="word-spacing:0.0387em;">If we</span><span class="stl_154 stl_32 stl_161">’</span><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0083em;">d defined the values in alphabetical order, we wouldn’t have needed to do that. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.9655em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0088em;">Because MySQL stores each value as an integer and has to do a lookup to convert it to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.0649em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0553em;">its string representation, </span><span class="stl_170 stl_171 stl_28">ENU</span><span class="stl_170 stl_171 stl_391">M</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0526em;">columns have some overhead. This is usually offset by &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.1643em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0472em;">their smaller size, but not always. In particular, it can be slower to join a </span><span class="stl_170 stl_171 stl_28">CHA</span><span class="stl_170 stl_171 stl_307">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0438em;">or </span><span class="stl_170 stl_171 stl_28">VAR &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.2638em;"><span class="stl_170 stl_171 stl_28">CHA</span><span class="stl_170 stl_171 stl_186">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">column to an </span><span class="stl_170 stl_171 stl_28">ENU</span><span class="stl_170 stl_171 stl_186">M</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">column than to another </span><span class="stl_170 stl_171 stl_28">CHA</span><span class="stl_170 stl_171 stl_275">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">or </span><span class="stl_170 stl_171 stl_28">VARCHA</span><span class="stl_170 stl_171 stl_275">R</span><span class="stl_154 stl_32 stl_28">column. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.8138em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2091em;">To </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0151em;">llustrate, we benchmarked how quickly MySQL performs such a join on a table in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.8638em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:-0.001em;">one of our applications. The table has a fairly wide primary key: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:27.6264em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE webservicecalls ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:28.4764em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">day date NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:29.3264em;"><span class="stl_200 stl_171 stl_28">account smallint NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:30.1764em;"><span class="stl_200 stl_171 stl_28">service varchar(10) NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:31.0264em;"><span class="stl_200 stl_171 stl_28">method varchar(50) NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:31.8764em;"><span class="stl_200 stl_171 stl_28">calls int NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:32.7264em;"><span class="stl_200 stl_171 stl_28">items int NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:33.5764em;"><span class="stl_200 stl_171 stl_28">time float NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:34.4264em;"><span class="stl_200 stl_171 stl_28">cost decimal(9,5) NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:35.2764em;"><span class="stl_200 stl_171 stl_28">updated datetime, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:36.1264em;"><span class="stl_200 stl_171 stl_28">PRIMARY KEY (day, account, service, method) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:36.9764em;"><span class="stl_200 stl_171 stl_28">) ENGINE=InnoDB; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.1138em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0665em;">The table contains about 110,000 rows and is only about 10 MB, so it fits entirely in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.2132em;"><span class="stl_154 stl_32 stl_25" style="word-spacing:0.0725em;">memory. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1963em;">service </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0634em;">column contains 5 distinct values with an average length of 4 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.3127em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1066em;">characters, and the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1488em;">method </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1087em;">column contains 71 values with an average length of 20 &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.3627em;"><span class="stl_154 stl_32 stl_28">characters. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.9621em;z-index:1261;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.3602em;">We </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.168em;">ade a copy of this table and converted the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0861em;">service </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1662em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0861em;">method </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1662em;">columns to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:44.0615em;"><span class="stl_170 stl_171 stl_28">ENUM</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:45.8241em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE webservicecalls_enum ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:46.6741em;"><span class="stl_200 stl_171 stl_28">... omitted ... &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:47.5241em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">service ENUM(...values omitted...) NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:48.3741em;"><span class="stl_200 stl_171 stl_28">method ENUM(...values omitted...) NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:26.265em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Choosing Optimal Data Types &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1745em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">133 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

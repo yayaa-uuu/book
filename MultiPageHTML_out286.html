@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_311.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_311.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7217em;top:4.6499em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2722em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">server has to do the work of generating them, so they use more CPU cycles. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:6.0332em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2275em;">• Logical backups can be bigger than the underlying files in some cases.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out286.html#286_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.5611em;">4 </span></a></sup><span class="stl_154 stl_32 stl_28">The &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:7.0832em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.1249em;">ASCII representation of the data isn’t always as efficient as the way the storage &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:8.1333em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0087em;">engine stores the data. For example, an integer requires 4 bytes to store, but when &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:9.1832em;z-index:398;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.057em;">written in ASCII, it can require up to 12 characters. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0595em;">u can often compress the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:10.2333em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.2001em;">files effectively and get a smaller backup, but this uses more CPU resources, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:11.2833em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.116em;">resulting in a longer recovery time. (Logical backups are typically smaller than &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:12.3333em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">raw backups if there are a lot of indexes.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7209em;top:13.7166em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.2795em;">• Dumping</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1192em;">&nbsp;</span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.1235em;">and restoring your data isn’t always guaranteed to result in the same &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:14.7666em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0577em;">data. Floating-point representation problems, bugs, and so on can cause trouble, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:15.8166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">though this is rare. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:17.1999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2728em;">• Restoring</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0524em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0554em;">from a logical backup requires MySQL to load and interpret the state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:18.2499em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1134em;">ments, convert them to the storage format, and rebuild indexes, all of which is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:19.2999em;z-index:883;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.0126em;">very slow. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.1833em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0856em;">The biggest disadvantages are really the cost of dumping the data from MySQL and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.2333em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.088em;">the cost of loading data back in via SQL statements. If you use logical backups, it is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.2833em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">essential to test the time required for restoring the data. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.3402em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Raw backups &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.8076em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">Raw backups have the following benefits: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:28.6909em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• Raw</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0422em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0429em;">file backups simply require you to copy the desired files somewhere else for &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:29.7409em;"><span class="stl_154 stl_32 stl_150" style="word-spacing:0.0098em;">backup. The raw files don’t require any extra work to generate. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:31.1243em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Raw</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0617em;">&nbsp;</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0633em;">backups are very portable across platforms, operating systems, and MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:32.1743em;z-index:1334;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0635em;">versions. (Logical dumps are, too. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_215" style="word-spacing:0.0719em;">e’re simply pointing this out to alleviate any &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:33.2243em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0041em;">concerns you might have.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:34.6076em;"><span class="stl_154 stl_32 stl_484" style="word-spacing:0.3509em;">• It</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0784em;">&nbsp;</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0463em;">can be faster to restore raw backups because the MySQL server doesn’t have to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.6576em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.2561em;">execute any SQL or build indexes. If you have InnoDB tables that don’t fit &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:36.7076em;z-index:1544;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.1515em;">entirely in the server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1527em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1576em;">emory, it can be much faster to restore raw files—an &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:37.7576em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0075em;">order of magnitude or more. In fact, one of the scariest things about logical back‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:38.8076em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">ups is their unpredictable restore time. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.6909em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0041em;">Here are some disadvantages of raw backups: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:42.5743em;z-index:1738;"><span class="stl_154 stl_32 stl_485" style="word-spacing:0.3087em;">• InnoDB’s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1475em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1304em;">raw files are often far larger than the corresponding logical backups. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:43.6243em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0542em;">The InnoDB tablespace typically has lots of unused space. Quite a bit of space is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">4</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_72" style="word-spacing:0.0044em;">In our experience, logical backups are generally smaller than raw backups, but they aren’t always. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">264 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="286_0" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+					<a name="286_1" style="position:absolute;left:0em;top:27.0368em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

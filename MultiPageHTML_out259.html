@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_277.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_277.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9994em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Semisynchronous Replication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.065em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1477em;">When you enable semisynchronous replication, every transaction that your source &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.115em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0333em;">commits must be acknowledged as received by at least one replica.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out259.html#259_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2263em;">5 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">The acknowledg‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:8.165em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0043em;">ment confirms that the replica received it and successfully wrote it to its own relay log &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:9.215em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">(but not necessarily applied it to the local data). &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.765em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0355em;">Since each transaction must wait on the response from other nodes, this feature adds &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.815em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0257em;">additional latency to every transaction that your server does. This means you need to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.865em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">consider the trade-off involved. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.415em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0376em;">One very important thing to note here is that if no replicas acknowledge the transac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.465em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0525em;">tion during the time frame, MySQL reverts to its standard asynchronous replication. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.515em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0417em;">It will not fail the transaction. This really helps illustrate that semisynchronous repli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.565em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0614em;">cation is not a tool to prevent data loss but rather a building block for a larger set of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.615em;z-index:1003;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0061em;">tooling that allows you to have more resilient failover. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.165em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0275em;">Given the fallback to asynchronous, we struggled to find a good use case for why you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.215em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1221em;">would enable this. The logical use case would be to confirm that, in the event of a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.2651em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0493em;">network partition, an isolated source isn’t still writing data while partitioned from its &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.3151em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1447em;">replicas. Unfortunately, that source will just revert back to asynchronous and keep &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.3651em;z-index:1321;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1236em;">accepting writes. For that reason, we</span><span class="stl_154 stl_32 stl_161">’</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1196em;">d recommend not relying on this for any data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.4151em;z-index:1367;"><span class="stl_154 stl_32 stl_202">integrity. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.2994em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Replication Filters &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.1991em;z-index:1447;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1857em;">Replication-filtering options let you replicate just part of a server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1854em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1901em;">ata, which is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.2491em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.088em;">much less of a good thing than you might think. There are two kinds of replication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.2991em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0417em;">filters: those that filter events out of the binary log on the source and those that filter &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.3491em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">events coming from the relay log on the replica. </span><a href="MultiPageHTML_out260.html#260_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 9-3 </span></a><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">illustrates the two types. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.9486em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.5501em;">The options that control binary log filtering are </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.3174em;">binlog_do_db </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.5496em;">and </span><span class="stl_170 stl_171 stl_28">bin &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.048em;z-index:1749;"><span class="stl_170 stl_171 stl_28">log_ignore_db</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">u should not enable these, as we’ll explain in a moment, unless you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.098em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0276em;">think you’ll enjoy explaining to your boss why the data is gone permanently and can’t &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.148em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">be recovered. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.7475em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1149em;">On the replica, the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1401em;">replicate_* </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.117em;">options filter events as the replication SQL thread &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.7974em;z-index:1985;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1367em;">reads them from the relay log. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1372em;">u can replicate or ignore one or more databases, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.8969em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0057em;">rewrite one database to another database, and replicate or ignore tables based on </span><span class="stl_170 stl_171 stl_28">LIKE &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.9469em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">pattern-matching syntax. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.5459em;"><span class="stl_167 stl_32 stl_28">5</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.4635em;"><span class="stl_168 stl_32 stl_88" style="word-spacing:0.001em;">The number of replicas required is a configurable option </span><span class="stl_211 stl_171 stl_28">(rpl_semi_sync_source_wait_for_rep &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6669em;top:47.3545em;"><span class="stl_211 stl_171 stl_28">lica_count)</span><span class="stl_168 stl_32 stl_83" style="word-spacing:0.0024em;">. With wider topologies, you may consider requiring two or even three acknowledgments before &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6669em;top:48.1878em;"><span class="stl_168 stl_32 stl_78" style="word-spacing:0.0013em;">completing the original transaction. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.6347em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Under the Hood &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">237 &nbsp;</span></div>
+					<a name="259_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="259_1" style="position:absolute;left:0em;top:27.5924em;">&nbsp;</a>
+					<a name="259_2" style="position:absolute;left:0em;top:46.4972em;">&nbsp;</a>
+					<a name="259_3" style="position:absolute;left:0em;top:15.6943em;">&nbsp;</a>
+					<a name="259_4" style="position:absolute;left:0em;top:29.4284em;">&nbsp;</a>
+					<a name="259_5" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

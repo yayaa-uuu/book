@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_196.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_196.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;z-index:4;"><span class="stl_154 stl_32 stl_348">We</span><span class="stl_154 stl_32 stl_220">’</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.037em;">ll discuss column order in the next section. The first mistake, indexing many col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0065em;">umns separately, has a distinctive signature in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">SHOW CREATE TABLE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:7.1786em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE t ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:8.0286em;"><span class="stl_200 stl_171 stl_28">c1 INT, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:8.8786em;"><span class="stl_200 stl_171 stl_28">c2 INT, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:9.7286em;"><span class="stl_200 stl_171 stl_28">c3 INT, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:10.5786em;"><span class="stl_200 stl_171 stl_28">KEY(c1), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:11.4286em;"><span class="stl_200 stl_171 stl_28">KEY(c2), &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:12.2786em;"><span class="stl_200 stl_171 stl_28">KEY(c3) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:13.1286em;"><span class="stl_200 stl_171 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.266em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.2012em;">This strategy of indexing often results when people give vague but authoritative- &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.3655em;z-index:327;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0451em;">sounding advice such as “create indexes on columns that appear in the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_425">E</span><span class="stl_154 stl_32 stl_99">clause</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.4155em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0347em;">This advice is very wrong. It will result in one-star indexes at best. These indexes can &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.4655em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1436em;">be many orders of magnitude slower than truly optimal indexes. Sometimes when &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.5649em;"><span class="stl_154 stl_32 stl_81" style="word-spacing:0.0186em;">you can’t design a three-star index, it’s much better to ignore the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_408">E</span><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0082em;">clause and pay &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.6149em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">attention to optimal row order or create a covering index instead. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.1649em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1142em;">Individual indexes on lots of columns won’t help MySQL improve performance for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.2149em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.2371em;">most queries. MySQL can cope a little with such poorly indexed tables when it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.2535em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0283em;">employs a strategy known as </span><span class="stl_155 stl_41 stl_83" style="word-spacing:0.0024em;">index merge</span><span class="stl_154 stl_32 stl_134" style="word-spacing:0.0245em;">, which permits a query to make limited use &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.3149em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0234em;">of multiple indexes from a single table to locate desired rows. It can use both indexes, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.3649em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0351em;">scanning them simultaneously and merging the results. There are three variations on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.4643em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0114em;">the algorithm: union for </span><span class="stl_170 stl_171 stl_28">O</span><span class="stl_170 stl_171 stl_335">R</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.013em;">conditions, intersection for </span><span class="stl_170 stl_171 stl_28">AN</span><span class="stl_170 stl_171 stl_302">D</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0114em;">conditions, and unions of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.5143em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0981em;">intersections for combinations of the two. The following query uses a union of two &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.6138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">index scans, as you can see by examining the </span><span class="stl_170 stl_171 stl_28">Extr</span><span class="stl_170 stl_171 stl_186">a</span><span class="stl_154 stl_32 stl_28">column: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:30.3757em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">EXPLAIN SELECT film_id, actor_id FROM sakila.film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:31.2257em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE actor_id = 1 OR film_id = 1\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:32.0764em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:32.9264em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:33.7764em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:34.6264em;"><span class="stl_200 stl_171 stl_28">table: film_actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:35.4764em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:36.3264em;"><span class="stl_200 stl_171 stl_28">type: index_merge &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:37.1764em;"><span class="stl_200 stl_171 stl_28">possible_keys: PRIMARY,idx_fk_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:38.0264em;"><span class="stl_200 stl_171 stl_28">key: PRIMARY,idx_fk_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:38.8764em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">key_len: 2,2 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:39.7264em;"><span class="stl_200 stl_171 stl_28">ref: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:40.5764em;"><span class="stl_200 stl_171 stl_28">rows: 29 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:41.4264em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:42.2757em;"><span class="stl_200 stl_171 stl_28">Extra: </span><span class="stl_265 stl_173 stl_28">Using union(PRIMARY,idx_fk_film_id); </span><span class="stl_200 stl_171 stl_28">Using where &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.4138em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.103em;">MySQL can use this technique on complex queries, so you might see nested opera‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:44.5132em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tions in the </span><span class="stl_170 stl_171 stl_28">Extr</span><span class="stl_170 stl_171 stl_186">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">column for some queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.0632em;z-index:1663;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.2857em;">The index merge strategy sometimes works very well, but more commonly it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.1132em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0011em;">actually an indication of a poorly indexed table: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">166 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="188_0" style="position:absolute;left:0em;top:23.4942em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

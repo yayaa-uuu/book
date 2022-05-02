@@ -1,0 +1,62 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_332.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_332.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;z-index:44;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1927em;">then restart. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1974em;">u also need to ensure that InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1927em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1945em;">ransaction logfiles match its &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1424em;">tablespace files. If the files don’t match—for example, if you replace the tablespace &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0722em;">files but not the transaction logfiles—InnoDB will refuse to start. This is one reason &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0061em;">it’s crucial to back up the transaction log along with the datafiles. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.066em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0771em;">If you’re using the InnoDB file-per-table feature (</span><span class="stl_170 stl_171 stl_28">innodb_file_per_table</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0705em;">), InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.1046em;z-index:398;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.044em;">stores the data and indexes for each table in an </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.0527em;">.ibd </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0427em;">file. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0427em;">u can back up and restore &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.166em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.024em;">individual tables by copying these files, and you can do it while the server is running, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.216em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0988em;">but it’s not very simple. The individual files are not independent from InnoDB as a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.2547em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0296em;">whole. Each </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.04em;">.ibd </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0327em;">file has internal information that tells InnoDB how the file is related &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.316em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2403em;">to the main (shared) tablespace. When you restore such a file, you have to tell &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.366em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0081em;">InnoDB to “import” the file. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.916em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0323em;">There are many restrictions on this process, which you can read about in the MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.966em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2459em;">manual section on using per-table tablespaces. The biggest is that you can only &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.016em;z-index:909;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0652em;">restore a table to the server from which you backed it up. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0617em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0644em;">ot impossible to back &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.066em;z-index:973;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">up and restore tables in this configuration, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">rickier than you might think. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.616em;z-index:1066;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0408em;">All this complexity means that restoring raw files can be very tedious, and it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0387em;">s </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0387em;">asy to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0465em;">get it wrong. A good rule of thumb is that the harder and more complex your recov‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.716em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0016em;">ery procedure becomes, the more you need to protect yourself with logical backups as &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.766em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0971em;">well. It’s always a good idea to have a logical backup, in case something goes wrong &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.816em;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0111em;">and you can’t convince MySQL to use your raw backups. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.7003em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Restoring with Percona XtraBackup &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.6001em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2006em;">In the section </span><a href="MultiPageHTML_out300.html#300_1"><span class="stl_184 stl_32 stl_115" style="word-spacing:0.2091em;">“How XtraBackup works” on page 278</span></a><span class="stl_154 stl_32 stl_38" style="word-spacing:0.2053em;">, we mentioned that it uses &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.6501em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0784em;">InnoDB’s crash-recovery process to take safe backups. This means that for us to use &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.7001em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0031em;">files that were backed up with XtraBackup, we need to go through additional steps. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.2387em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1701em;">If you used a streaming backup, you’ll need to unpack the </span><span class="stl_155 stl_41 stl_59" style="word-spacing:0.1838em;">xbstream </span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1708em;">file first. For &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.3382em;"><span class="stl_155 stl_41 stl_56">xbstream</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0002em;">, you can use the </span><span class="stl_170 stl_171 stl_28">xbstrea</span><span class="stl_170 stl_171 stl_186">m</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">command to extract: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:36.1121em;"><span class="stl_200 stl_171 stl_28">$ xbstream -x &lt; backup.xbstream &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.299em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1395em;">This will extract all files to your current location, or you can use the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.116em;">-C </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1378em;">option to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.349em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.143em;">change to a specific directory beforehand. If you used compression or encryption, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.4484em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1876em;">you can use similar options to reverse the process. For a compressed file, use </span><span class="stl_170 stl_171 stl_28">-- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.5479em;"><span class="stl_170 stl_171 stl_28">decompress</span><span class="stl_154 stl_32 stl_247" style="word-spacing:0.0185em;">, and for encryption, use </span><span class="stl_170 stl_171 stl_28">--decryp</span><span class="stl_170 stl_171 stl_261">t</span><span class="stl_154 stl_32 stl_134" style="word-spacing:0.0198em;">while specifying the </span><span class="stl_170 stl_171 stl_28">--encrypt-key- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.6473em;"><span class="stl_170 stl_171 stl_28">fil</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_38">location: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:43.4099em;"><span class="stl_200 stl_171 stl_28">$ xbstream -x --decompress &lt; backup-compressed.xbstream &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:45.1099em;"><span class="stl_200 stl_171 stl_28">$ xbstream -x --decrypt --encrypt-key-file=/safe/key/location/encrypt.key &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:45.9599em;"><span class="stl_200 stl_171 stl_28">&lt; backup-encrypted.xbstream &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">284 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6684em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5759em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="306_0" style="position:absolute;left:0em;top:27.9934em;">&nbsp;</a>
+					<a name="306_1" style="position:absolute;left:0em;top:29.8294em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

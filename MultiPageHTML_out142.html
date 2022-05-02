@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_148.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_148.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0502em;">Once a thread is inside the kernel, it has a certain number of “tickets” that let it back &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:95;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1766em;">into the kernel for “free</span><span class="stl_154 stl_32 stl_161">,</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.173em;">” without any concurrency checks. This limits how much &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2029em;">work it can do before it has to get back in line with other waiting threads. The &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:7.516em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.182em;">innodb_concurrency_tickets </span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0792em;">option controls the number of tickets. It rarely needs &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.566em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1168em;">to be changed unless you have a lot of extremely long-running queries. Tickets are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.616em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0909em;">granted per query, not per transaction. Once a query finishes, its unused tickets are &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.666em;"><span class="stl_154 stl_32 stl_28">discarded. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.216em;z-index:495;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0481em;">In addition to the bottlenecks in the buffer pool and other structures, there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0459em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28">nother &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:13.266em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1076em;">concurrency bottleneck at the commit stage, which is largely I/O bound because of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.3655em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.3599em;">flush operations. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1153em;">innodb_commit_concurrency </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.3601em;">variable governs how many &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.4155em;z-index:705;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0617em;">threads can commit at the same time. Configuring this option might help if there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0581em;">s a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.5149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">lot of thread thrashing even when </span><span class="stl_170 stl_171 stl_28">innodb_thread_concurrenc</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">is set to a low value. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:18.4114em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Safety Settings &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.6816em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0162em;">After your basic configuration settings are in place, you may wish to enable a number &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.7316em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0408em;">of settings that make the server safer and more reliable. Some of them influence per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:22.7816em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0691em;">formance because safety and reliability are often more costly to guarantee. Some are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.8316em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0745em;">just sensible, however: they prevent silly mistakes such as inserting nonsensical data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:24.8816em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0782em;">into the server. And some don’t make a difference in day-to-day operations but pre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.9316em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">vent bad things from happening in edge cases. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.4816em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0048em;">Let’s look at a collection of useful options for general server behavior first: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.3398em;"><span class="stl_170 stl_171 stl_28">max_connect_errors &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:30.2144em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0652em;">If something goes wrong with your networking for a moment, there is an appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:31.2644em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0706em;">cation or configuration error, or there is another problem that prevents connec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:32.3144em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2097em;">tions from completing successfully for a brief period of time, clients can get &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:33.3644em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0787em;">blocked and will be unable to connect again until you flush the host cache. The &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:34.4638em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.053em;">default setting for this option (</span><span class="stl_170 stl_171 stl_28">100</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0542em;">) is so small that this problem can happen too &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.5138em;z-index:1614;"><span class="stl_154 stl_32 stl_346" style="word-spacing:0.1225em;">easily. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0996em;">u might want to increase it, and in fact, if you know that the server is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:36.5638em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0425em;">adequately secured against brute-force attacks, you can just make it very large to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:37.6138em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.8063em;">effectively disable blocking of hosts due to connection errors. If &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:38.7133em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0499em;">skip_name_resolve </span><span class="stl_154 stl_32 stl_138" style="word-spacing:0.208em;">is enabled, however, the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0499em;">max_connect_errors </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2006em;">option will &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:39.7519em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0708em;">have no effect because its behavior depends on the </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.0808em;">host </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0675em;">cache, which is disabled &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:40.8627em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">by </span><span class="stl_170 stl_171 stl_28">skip_name_resolve</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.7209em;"><span class="stl_170 stl_171 stl_28">max_connections &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:43.5955em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0944em;">This setting acts like an emergency brake to keep your server from being over‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:44.6455em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0703em;">whelmed by a surge of connections from the application. If the application mis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:45.6955em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.3188em;">behaves or the server encounters a problem such as a stall, a lot of new &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:46.7455em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1356em;">connections can be opened. But opening a connection does no good if it can’t &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">120 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="142_0" style="position:absolute;left:0em;top:18.763em;">&nbsp;</a>
+					<a name="142_1" style="position:absolute;left:0em;top:43.8247em;">&nbsp;</a>
+					<a name="142_2" style="position:absolute;left:0em;top:30.4436em;">&nbsp;</a>
+					<a name="142_3" style="position:absolute;left:0em;top:20.9109em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

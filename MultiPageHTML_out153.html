@@ -1,0 +1,57 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_159.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_159.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:15.6988em;top:5.8671em;"><span class="stl_239 stl_27 stl_28" style="word-spacing:0em;">Generosity Can Be Unwise &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6871em;top:7.6621em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0624em;">Storing the value </span><span class="stl_349 stl_171 stl_28" style="word-spacing:-0.1954em;">'hello' </span><span class="stl_31 stl_32 stl_74" style="word-spacing:0.064em;">requires the same amount of space in a </span><span class="stl_349 stl_171 stl_28" style="word-spacing:-0.1954em;">VARCHAR(5) </span><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0624em;">and a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6878em;top:8.7092em;"><span class="stl_349 stl_171 stl_28">VARCHAR(200</span><span class="stl_349 stl_171 stl_186">)</span><span class="stl_31 stl_32 stl_77" style="word-spacing:0.0032em;">column. Is there any advantage to using the shorter column? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6878em;top:10.2092em;"><span class="stl_31 stl_32 stl_74" style="word-spacing:0.0141em;">As it turns out, there is a big advantage. The larger column can use much more mem‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6878em;top:11.2092em;"><span class="stl_31 stl_32 stl_33" style="word-spacing:0.0156em;">ory, because MySQL often allocates fixed-size chunks of memory to hold values inter‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6878em;top:12.2092em;"><span class="stl_31 stl_32 stl_83" style="word-spacing:0.0794em;">nally. This is especially bad for sorting or operations that use in-memory temporary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6878em;top:13.2092em;"><span class="stl_31 stl_32 stl_88" style="word-spacing:0.001em;">tables. The same thing happens with filesorts that use on-disk temporary tables. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6878em;top:14.7092em;"><span class="stl_31 stl_32 stl_74" style="word-spacing:0.0015em;">The best strategy is to allocate only as much space as you really need. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.6468em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">BLOB and TEXT types &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.1637em;"><span class="stl_170 stl_171 stl_28">BLO</span><span class="stl_170 stl_171 stl_370">B</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0532em;">and </span><span class="stl_170 stl_171 stl_28">TEX</span><span class="stl_170 stl_171 stl_370">T</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0557em;">are string data types designed to store large amounts of data as either &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.2137em;z-index:617;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">binary or character strings, respectively. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.8131em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0742em;">In fact, they are each families of data types: the character types are </span><span class="stl_170 stl_171 stl_28">TINYTEXT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0734em;">, </span><span class="stl_170 stl_171 stl_28">SMALL &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.9126em;"><span class="stl_170 stl_171 stl_28">TEXT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1586em;">, </span><span class="stl_170 stl_171 stl_28">TEXT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1586em;">, </span><span class="stl_170 stl_171 stl_28">MEDIUMTEXT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1586em;">, and </span><span class="stl_170 stl_171 stl_28">LONGTEXT</span><span class="stl_154 stl_32 stl_289" style="word-spacing:0.1548em;">, and the binary types are </span><span class="stl_170 stl_171 stl_28">TINYBLOB</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1586em;">, </span><span class="stl_170 stl_171 stl_28">SMALL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.012em;"><span class="stl_170 stl_171 stl_28">BLOB</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0133em;">, </span><span class="stl_170 stl_171 stl_28">BLOB</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0133em;">, </span><span class="stl_170 stl_171 stl_28">MEDIUMBLOB</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0128em;">, and </span><span class="stl_170 stl_171 stl_28">LONGBLOB</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0133em;">. </span><span class="stl_170 stl_171 stl_28">BLO</span><span class="stl_170 stl_171 stl_276">B</span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0182em;">is a synonym for </span><span class="stl_170 stl_171 stl_28">SMALLBLOB</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0133em;">, and </span><span class="stl_170 stl_171 stl_28">TEX</span><span class="stl_170 stl_171 stl_276">T</span><span class="stl_154 stl_32 stl_28">is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.1114em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0058em;">a synonym for </span><span class="stl_170 stl_171 stl_28">SMALLTEXT</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.7109em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1275em;">Unlike all other data types, MySQL handles each </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.133em;">BLOB </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1216em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.133em;">TEXT </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1216em;">value as an object &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.7609em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0826em;">with its own identity. Storage engines often store them specially; InnoDB may use a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.8109em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0172em;">separate “external” storage area for them when they’re large. Each value requires from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.8609em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1776em;">1 to 4 bytes of storage space in the row and enough space in external storage to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:30.9109em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">actually hold the value. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.5103em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2151em;">The only difference between the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0347em;">BLOB </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2151em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0347em;">TEXT </span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2185em;">families is that </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0347em;">BLOB </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2151em;">types store &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.6098em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0236em;">binary data with no collation or character set, but </span><span class="stl_170 stl_171 stl_28">TEX</span><span class="stl_170 stl_171 stl_309">T</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.025em;">types have a character set and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.6598em;"><span class="stl_154 stl_32 stl_33">collation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:36.2592em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0646em;">MySQL sorts </span><span class="stl_170 stl_171 stl_28">BLO</span><span class="stl_170 stl_171 stl_388">B</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0566em;">and </span><span class="stl_170 stl_171 stl_28">TEX</span><span class="stl_170 stl_171 stl_388">T</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0575em;">columns differently from other types: instead of sorting &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:37.3586em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0401em;">the full length of the string, it sorts only the first </span><span class="stl_170 stl_171 stl_28">max_sort_lengt</span><span class="stl_170 stl_171 stl_271">h</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0402em;">bytes of such col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.4086em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.203em;">umns. If you need to sort by only the first few characters, you can decrease the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.5081em;"><span class="stl_170 stl_171 stl_28">max_sort_lengt</span><span class="stl_170 stl_171 stl_186">h</span><span class="stl_154 stl_32 stl_146" style="word-spacing:-0.0045em;">server variable. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.0581em;"><span class="stl_154 stl_32 stl_181" style="word-spacing:0.1343em;">MySQL can’t index the full length of these data types and can’t use the indexes for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.1081em;"><span class="stl_154 stl_32 stl_28">sorting. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.2649em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Choosing Optimal Data Types &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">131 &nbsp;</span></div>
+					<a name="153_0" style="position:absolute;left:0em;top:19.3929em;">&nbsp;</a>
+					<a name="153_1" style="position:absolute;left:0em;top:14.9275em;">&nbsp;</a>
+					<a name="153_2" style="position:absolute;left:0em;top:7.8804em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

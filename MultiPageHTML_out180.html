@@ -1,0 +1,54 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_187.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_187.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0583em;">A B-tree index speeds up data access because the storage engine doesn’t have to scan &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0357em;">the whole table to find the desired data. Instead, it starts at the root node (not shown &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0042em;">in this figure). The slots in the root node hold pointers to child nodes, and the storage &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0336em;">engine follows these pointers. It finds the right pointer by looking at the values in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1923em;">node pages, which define the upper and lower bounds of the values in the child &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.5666em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0576em;">nodes. Eventually, the storage engine either determines that the desired value doesn’t &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.6166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">exist or successfully reaches a leaf page. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.1666em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0139em;">Leaf pages are special because they have pointers to the indexed data instead of point‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.2166em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0483em;">ers to other pages. (Different storage engines have different types of “pointers” to the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.2666em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0819em;">data.) Our illustration shows only one node page and its leaf pages, but there might &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.3166em;z-index:742;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.2341em;">be many levels of node pages between the root and the leaves. The tree</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2296em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28">epth &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:16.3666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">depends on how big the table is. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.9166em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1012em;">Because B-trees store the indexed columns in order, they’re useful for searching for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.9666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1092em;">ranges of data. For instance, descending the tree for an index on a text field passes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.0166em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1544em;">through values in alphabetical order, so looking for “everyone whose name begins &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.0666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">with I through K” is efficient. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.6166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">Suppose you have the following table: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:24.3792em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE People ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:25.2292em;"><span class="stl_200 stl_171 stl_28">last_name varchar(50) not null, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:26.0792em;"><span class="stl_200 stl_171 stl_28">first_name varchar(50) not null, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:26.9292em;"><span class="stl_200 stl_171 stl_28">dob date not null, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:27.7792em;"><span class="stl_200 stl_171 stl_28">key(last_name, first_name, dob) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:28.6292em;"><span class="stl_200 stl_171 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.816em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0343em;">The index will contain the values from the </span><span class="stl_170 stl_171 stl_28">last_name</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0332em;">, </span><span class="stl_170 stl_171 stl_28">first_name</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0329em;">, and </span><span class="stl_170 stl_171 stl_28">do</span><span class="stl_170 stl_171 stl_385">b</span><span class="stl_154 stl_32 stl_28">columns &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.866em;"><span class="stl_154 stl_32 stl_247" style="word-spacing:0.1142em;">for every row in the table. </span><a href="MultiPageHTML_out181.html#181_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.1178em;">Figure 7-2 </span></a><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1202em;">illustrates how the index arranges the data it &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.916em;"><span class="stl_154 stl_32 stl_28">stores. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.466em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0506em;">Notice that the index sorts the values according to the order of the columns given in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.5655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0724em;">the index in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0565em;">CREATE TABLE </span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0765em;">statement. Look at the last two entries: there are two &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.6155em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0039em;">people with the same name but different birth dates, and they’re sorted by birth date. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">158 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_62.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_62.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0757em;">and alert if your database server has a lot of threads sitting in </span><span class="stl_170 stl_171 stl_28">IOwait</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.08em;">, an indication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;z-index:133;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0147em;">that they are in queue waiting on some disk resources to be available. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.013em;">u find this by &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.5155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0357em;">tracking </span><span class="stl_170 stl_171 stl_28">IOuti</span><span class="stl_170 stl_171 stl_249">l</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0376em;">as a running graph for a meaningful period of time, such as a day or &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.6149em;z-index:277;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1135em;">two, or even a week. </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1472em;">IOutil </span><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1143em;">is reported as a percentage of the overall system</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1082em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28">isk &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.6649em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0909em;">access capacity. Having that be close to 100% for sustained periods on a host that is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.7149em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0854em;">not running backups can be an indication of full table scans and inefficient queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.7649em;z-index:425;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.112em;">u also want to monitor the overall utilization of your disk I/O capacity as a per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.8149em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0803em;">centage since that can forewarn you of disk access becoming a future bottleneck for &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.8649em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">your database performance. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.9218em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Auto-increment space &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.3892em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.119em;">One of the less well-known landmines in using MySQL is that auto-increment pri‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.4392em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.018em;">mary keys are by default created as signed integers and can run out of key space. This &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.4892em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0105em;">happens when you have done enough inserts that the auto-increment key has reached &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.5392em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2168em;">the maximum possible value for its data type. When planning what metrics you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.5892em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1539em;">should monitor on a long-term basis, monitoring remaining integer space for any &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.6392em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.056em;">tables that use auto increments as the primary key is a simple action that will almost &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.6892em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0184em;">certainly save you some major incident pain in the future because you can predict the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.7392em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">need for a larger key space in advance. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.2892em;z-index:1147;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0161em;">How do you monitor this key space? </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0152em;">u have a few options. If you already use PMM &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.3392em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0882em;">and its Prometheus exporter, this comes baked in and all you need to do is turn on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.4387em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0534em;">the flag </span><span class="stl_170 stl_171 stl_28">-collect.auto_increment.columns</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0534em;">. If your team does not use Prometheus, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.4887em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0501em;">you can use the following query, which can be modified either as a metrics producer &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.5387em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1373em;">or an alert to tell you when any of your tables are approaching the </span><a href="https://oreil.ly/xfypm" target="_blank"><span class="stl_184 stl_32 stl_38" style="word-spacing:0.1399em;">maximum key &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6.0002em;top:30.6381em;"><a href="https://oreil.ly/xfypm" target="_blank"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0392em;">space possible</span></a><span class="stl_154 stl_32 stl_146" style="word-spacing:0.0348em;">. This query relies on </span><span class="stl_170 stl_171 stl_28">information_schema</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0415em;">, which has all the metadata &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.6881em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0013em;">about the tables in your database instance: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:33.4507em;"><span class="stl_200 stl_171 stl_28">SELECT &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:34.3007em;"><span class="stl_200 stl_171 stl_28">t.TABLE_SCHEMA AS `schema`, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:35.1507em;"><span class="stl_200 stl_171 stl_28">t.TABLE_NAME AS `table`, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:36.0007em;"><span class="stl_200 stl_171 stl_28">t.AUTO_INCREMENT AS `auto_increment`, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:36.8507em;"><span class="stl_200 stl_171 stl_28">c.DATA_TYPE AS `pk_type`, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:37.7007em;"><span class="stl_200 stl_171 stl_28">(</span></div>
+					<div class="stl_01" style="left:10.2501em;top:38.5507em;"><span class="stl_200 stl_171 stl_28">t.AUTO_INCREMENT / &nbsp;</span></div>
+					<div class="stl_01" style="left:10.2501em;top:39.4007em;"><span class="stl_200 stl_171 stl_28">(CASE DATA_TYPE &nbsp;</span></div>
+					<div class="stl_01" style="left:11.6668em;top:40.2507em;"><span class="stl_200 stl_171 stl_28">WHEN 'tinyint' &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:41.1007em;"><span class="stl_200 stl_171 stl_28">THEN IF(COLUMN_TYPE LIKE '%unsigned', &nbsp;</span></div>
+					<div class="stl_01" style="left:14.5001em;top:41.9507em;"><span class="stl_200 stl_171 stl_28">255, &nbsp;</span></div>
+					<div class="stl_01" style="left:14.5001em;top:42.8007em;"><span class="stl_200 stl_171 stl_28">127 &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:43.6507em;"><span class="stl_200 stl_171 stl_28">)</span></div>
+					<div class="stl_01" style="left:11.6668em;top:44.5007em;"><span class="stl_200 stl_171 stl_28">WHEN 'smallint' &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:45.3507em;"><span class="stl_200 stl_171 stl_28">THEN IF(COLUMN_TYPE LIKE '%unsigned', &nbsp;</span></div>
+					<div class="stl_01" style="left:14.5001em;top:46.2007em;"><span class="stl_200 stl_171 stl_28">65535, &nbsp;</span></div>
+					<div class="stl_01" style="left:14.5001em;top:47.0507em;"><span class="stl_200 stl_171 stl_28">32767 &nbsp;</span></div>
+					<div class="stl_01" style="left:13.0835em;top:47.9007em;"><span class="stl_200 stl_171 stl_28">)</span></div>
+					<div class="stl_01" style="left:29.5236em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">What to Measure &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4804em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3879em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">33 &nbsp;</span></div>
+					<a name="55_0" style="position:absolute;left:0em;top:16.6185em;">&nbsp;</a>
+					<a name="55_1" style="position:absolute;left:0em;top:30.8674em;">&nbsp;</a>
+					<a name="55_2" style="position:absolute;left:0em;top:6.7447em;">&nbsp;</a>
+					<a name="55_3" style="position:absolute;left:0em;top:4.5953em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

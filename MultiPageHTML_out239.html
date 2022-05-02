@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_255.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_255.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">There are two filesort algorithms: &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.9385em;"><span class="stl_155 stl_41 stl_248" style="word-spacing:0.0207em;">Two passes (old) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:7.0494em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0135em;">Reads row pointers and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_261">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.011em;">columns, sorts them, and then scans the sorted &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:8.0994em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">list and rereads the rows for output. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:9.6494em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1223em;">The two-pass algorithm can be quite expensive because it reads the rows from &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:10.6994em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">the table twice and the second read causes a lot of random I/O. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:12.3213em;"><span class="stl_155 stl_41 stl_151" style="word-spacing:0.01em;">Single pass (new) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:13.4321em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0073em;">Reads all the columns needed for the query, sorts them by the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_420">Y</span><span class="stl_154 stl_32 stl_28">columns, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:14.4821em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and then scans the sorted list and outputs the specified columns. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:16.0321em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0421em;">It can be much more efficient, especially on large I/O-bound data sets, because it &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:17.0821em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1269em;">avoids reading the rows from the table twice and trades random I/O for more &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:18.1321em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1212em;">sequential I/O. However, it has the potential to use a lot more space because it &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:19.1821em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0251em;">holds all the desired columns from each row, not just the columns needed to sort &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:20.2321em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0277em;">the rows. This means fewer tuples will fit into the sort buffer, and the filesort will &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:21.2821em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">have to perform more sort merge passes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.8321em;z-index:821;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.2332em;">MySQL might use much more temporary storage space for a filesort than you</span><span class="stl_154 stl_32 stl_161">’</span><span class="stl_154 stl_32 stl_161">d &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.8821em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0272em;">expect because it allocates a fixed-size record for each tuple it will sort. These records &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.9321em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0923em;">are large enough to hold the largest possible tuple, including the full length of each &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.0316em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0802em;">VARCHAR </span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.1784em;">column. Also, if you’re using utf8mb4, MySQL allocates 4 bytes for each &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.0816em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.115em;">character. As a result, we’ve seen cases where poorly optimized schemas caused the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.1316em;z-index:1173;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0802em;">temporary space used for sorting to be many times larger than the entire table</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0768em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28">ize &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.1816em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">on disk. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.7316em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1855em;">When sorting a join, MySQL might perform the filesort at two stages during the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.831em;"><span class="stl_154 stl_32 stl_247" style="word-spacing:0.0383em;">query execution. If the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0419em;">ORDER B</span><span class="stl_170 stl_171 stl_460">Y</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.043em;">clause refers only to columns from the first table in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.881em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1019em;">the join order, MySQL can filesort this table and then proceed with the join. If this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.9804em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1197em;">happens, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1408em;">EXPLAIN </span><span class="stl_154 stl_32 stl_162" style="word-spacing:0.1222em;">shows “Using filesort” in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1408em;">Extra </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1142em;">column. In all other circum‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.0304em;z-index:1497;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1158em;">stances—such as a sort against a table that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1126em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1126em;">ot first in the join order or when the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.1299em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_376">Y</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0148em;">clause contains columns from more than one table—MySQL must store the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.1799em;z-index:1601;"><span class="stl_154 stl_32 stl_314">query</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0796em;">s </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0796em;">esults into a temporary table and then filesort the temporary table after the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.2793em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1537em;">join finishes. In this case, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0992em;">EXPLAIN </span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1593em;">shows “Using temporary; Using filesort” in the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.3788em;"><span class="stl_170 stl_171 stl_28">Extr</span><span class="stl_170 stl_171 stl_270">a</span><span class="stl_154 stl_32 stl_432" style="word-spacing:0.053em;">column. If there’s a </span><span class="stl_170 stl_171 stl_28">LIMIT</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0299em;">, it is applied after the filesort, so the temporary table &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.4288em;"><span class="stl_154 stl_32 stl_178" style="word-spacing:-0.0026em;">and the filesort can be very large. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0006em;top:42.3131em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">The Query Execution Engine &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.2128em;z-index:1932;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1546em;">The parsing and optimizing stage outputs a query execution plan, which MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34">’s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:45.2628em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1054em;">query execution engine uses to process the query. The plan is a data structure; it is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:46.3128em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">not executable bytecode, which is how many other databases execute queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.841em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Query Execution Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">217 &nbsp;</span></div>
+					<a name="239_0" style="position:absolute;left:0em;top:42.6061em;">&nbsp;</a>
+					<a name="239_1" style="position:absolute;left:0em;top:40.658em;">&nbsp;</a>
+					<a name="239_2" style="position:absolute;left:0em;top:44.4421em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

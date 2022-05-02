@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_325.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_325.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Planning for LVM backups &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.7109em;z-index:92;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0277em;">The most important thing to plan for is allocating enough space for the snapshot. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_52">e &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.7609em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">take the following approach: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:8.6442em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1582em;">• Remember that LVM needs to copy each modified block to the snapshot only &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:9.6943em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0633em;">once. When MySQL writes a block in the original volume, it copies the block to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:10.7443em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0245em;">the snapshot, then makes a note of the copied block in its exception table. Future &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:11.7943em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">writes to this block will not cause any further copies to the snapshot. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:13.1776em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• If</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0767em;">&nbsp;</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0781em;">you use only InnoDB, consider how InnoDB writes data. Because it writes all &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:14.2276em;z-index:466;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0404em;">data twice, at least half of InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0345em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0387em;">rite I/O goes to the doublewrite buffer, log‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:15.2776em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1045em;">files, and other relatively small areas on disk. These reuse the same disk blocks &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:16.3276em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1331em;">over and over, so they’ll have an initial impact on the snapshot, but after that, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:17.3776em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0013em;">they’ll stop causing writes to the snapshot. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:18.7609em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.2855em;">• Next,</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1182em;">&nbsp;</span><span class="stl_154 stl_32 stl_115" style="word-spacing:0.1204em;">estimate how much of your I/O will be writing to blocks that haven’t yet &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:19.8109em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0998em;">been copied to the snapshot, as opposed to modifying the same data again and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:20.8609em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0001em;">again. Be generous with your estimate. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:22.2329em;"><span class="stl_154 stl_32 stl_279" style="word-spacing:0.3259em;">• Use</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1362em;">&nbsp;</span><span class="stl_155 stl_41 stl_81" style="word-spacing:0.1193em;">vmstat </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1097em;">or </span><span class="stl_155 stl_41 stl_248" style="word-spacing:0.1285em;">iostat </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1114em;">to gather statistics on how many blocks your server writes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:23.2943em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">per second. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:24.6776em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.2809em;">• Measure</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0336em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0301em;">(or estimate) how long it will take to copy your backup to another loca‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:25.7276em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">tion: in other words, how long you need to keep the LVM snapshot open. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.6109em;"><span class="stl_154 stl_32 stl_107" style="word-spacing:0.0937em;">Let’s suppose you’ve estimated that half of your writes will cause writes to the snap‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.6609em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1111em;">shot’s copy-on-write space, and your server writes 10 MB per second. If it takes an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.7109em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0742em;">hour (3,600 seconds) to copy the snapshot to another server, you will need 1/2 × 10 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.7609em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0897em;">MB × 3,600 or 18 GB of space for the snapshot. Err on the side of caution and add &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.8109em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">some extra space as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.3609em;z-index:1346;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0526em;">Sometimes it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0472em;">s </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0508em;">asy to calculate how much data will change while you keep the snap‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.4109em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">shot open. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.4679em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Other uses and alternatives &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.9353em;z-index:1437;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0399em;">u can use snapshots for more than just backups. For example, as mentioned previ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.9853em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.0253em;">ously, they can be a useful way to take a “checkpoint” just before a potentially danger‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.0353em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1587em;">ous action. Some systems let you promote the snapshot to the original filesystem. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.0853em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">This makes it easy to roll back to the point at which you took the snapshot. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.6353em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1064em;">Filesystem snapshots aren’t the only way to get an instantaneous copy of your data, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.6853em;z-index:1849;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0107em;">either. Another option is a RAID split: if you have a three-disk software RAID mirror, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.7353em;z-index:1913;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.2079em;">for example, you can remove one disk from the mirror and mount it separately. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.7853em;"><span class="stl_154 stl_32 stl_19" style="word-spacing:0.083em;">There’s no copy-on-write penalty, and it’s easy to promote this kind of “snapshot” to &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.8353em;z-index:2057;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.0165em;">be the source’s copy if necessary. After adding the disk back to the RAID set, however, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:47.8853em;z-index:2105;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0069em;">it will have to be resynced. There</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0112em;">o free lunch, sadly. &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3883em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Backing Up Data &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">277 &nbsp;</span></div>
+					<a name="299_0" style="position:absolute;left:0em;top:48.1145em;">&nbsp;</a>
+					<a name="299_1" style="position:absolute;left:0em;top:38.1645em;">&nbsp;</a>
+					<a name="299_2" style="position:absolute;left:0em;top:5.9402em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

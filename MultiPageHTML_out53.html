@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_60.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_60.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0679em;">Monitoring connection growth is about making sure your resources are not exhaus‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0236em;">ted to the point of risking your database availability. This risk can come in two differ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_215" style="word-spacing:0.0123em;">ent ways: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:8.2999em;z-index:203;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">application layer is opening lots of connections it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">ot using and creating the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:9.3499em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0549em;">risk of maxing out connections for no good reason. A clear sign of this is seeing &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:10.4494em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.21em;">connections count (</span><span class="stl_170 stl_171 stl_28">threads_connected</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2074em;">) as high but </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0427em;">threads_running </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2074em;">is still &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:11.4994em;z-index:361;"><span class="stl_154 stl_32 stl_244">low. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:12.8827em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0057em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0076em;">application layer is actively using lots of connections and risking overloading &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:13.9821em;z-index:448;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0795em;">the database. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0781em;">u can distinguish this state by seeing that both </span><span class="stl_170 stl_171 stl_28">threads_connec &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:15.0702em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1279em;">ted </span><span class="stl_155 stl_41 stl_22" style="word-spacing:0.3905em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1279em;">threads_running </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.3719em;">are at high values (hundreds? thousands?) and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:16.1316em;"><span class="stl_154 stl_32 stl_28">increasing. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.0149em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0655em;">A useful thing to consider when setting up monitoring for connection count is rely‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.1143em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0633em;">ing on percentages and not absolute numbers. A percentage of </span><span class="stl_170 stl_171 stl_28">threads_connected/ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.2138em;"><span class="stl_170 stl_171 stl_28">max_connection</span><span class="stl_170 stl_171 stl_245">s</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0485em;">shows you how close the growth of your application node count is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.2638em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0807em;">taking you to the maximum connection pool the database can allow. This helps you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.3138em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">monitor for the first state of connection growth trouble. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:23.8638em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0039em;">Separately, you should be tracking and alerting on how busy a database host is, which, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.9632em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.178em;">as we explained earlier, is seen in the value of </span><span class="stl_170 stl_171 stl_28">threads_running</span><span class="stl_154 stl_32 stl_128" style="word-spacing:0.1961em;">. Typically, if this &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.0132em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0793em;">value is growing north of one hundred threads, you start to see elevated CPU usage &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.0632em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0302em;">and increased memory use, which is a general sign of high load on the database host. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.1132em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0963em;">This is an immediate concern for your database availability, as it can escalate to the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.1632em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0833em;">MySQL process getting killed by the operating system. A common quick solution is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.2018em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0056em;">to use the kill process command or a tool that automates using it, such as </span><span class="stl_155 stl_41 stl_129">pt-kill</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, tacti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.2632em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0967em;">cally to relieve load, then look into why the database got into this state using query &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.3132em;z-index:1494;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">analysis, which we described earlier. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:34.6254em;"><span class="stl_176 stl_32 stl_140" style="word-spacing:0.0547em;">Connection storms are situations in production systems where the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:35.5854em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.045em;">application layer perceives increases in query latency and responds &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:36.5454em;"><span class="stl_176 stl_32 stl_38" style="word-spacing:0.236em;">with opening more connections to the database layer. This can &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:37.5054em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.1166em;">result in adding significant load on the database as it handles the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:38.4654em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.0932em;">large influx of new connections, which takes away resources from &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:39.4254em;"><span class="stl_176 stl_32 stl_37" style="word-spacing:0.1833em;">fulfilling query requests. Connection storms can cause a sudden &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:40.4306em;"><span class="stl_176 stl_32 stl_78" style="word-spacing:0.0205em;">decrease in available connections in </span><span class="stl_212 stl_171 stl_28">max_connection</span><span class="stl_212 stl_171 stl_246">s</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">and increase &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:41.3906em;z-index:1919;"><span class="stl_176 stl_32 stl_51" style="word-spacing:0.0079em;">the risk of your database availability. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.5153em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Replication lag &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.9714em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0354em;">MySQL has a native replication feature that sends data from one server, the </span><span class="stl_155 stl_41 stl_226">source</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:46.0214em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:0.0626em;">one or more additional servers, referred to as </span><span class="stl_155 stl_41 stl_66">replicas</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0684em;">. The delay between data being &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.0714em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0772em;">written on the source and being available on the replicas is referred to as </span><span class="stl_155 stl_41 stl_202">replication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:48.1214em;"><span class="stl_155 stl_41 stl_194">lag</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0859em;">. If your application reads data from the replicas, lag can make it seem as if your &nbsp;</span></div>
+					<div class="stl_01" style="left:29.5236em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">What to Measure &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4803em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3878em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">31 &nbsp;</span></div>
+					<a name="53_0" style="position:absolute;left:0em;top:41.6002em;">&nbsp;</a>
+					<a name="53_1" style="position:absolute;left:0em;top:45.212em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

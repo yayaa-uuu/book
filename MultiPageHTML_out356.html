@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_387.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_387.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Data access logging &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:5.7109em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0379em;">Many compliance controls ask that you maintain logs of changes or access to specific &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.7609em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.007em;">data sets. This can be for the purposes of tracking changes to financial data or for reg‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.8109em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1766em;">ulations such as PCI or HIPAA where the data is sensitive enough that all access &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.8609em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">needs to be tracked. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.4109em;z-index:319;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0472em;">u can address this need directly at the database level by leveraging either </span><a href="https://oreil.ly/0SJa0" target="_blank"><span class="stl_184 stl_32 stl_505">Percona’s &nbsp;</span></a></div>
+					<div class="stl_01" style="left:6em;top:11.4609em;"><a href="https://oreil.ly/0SJa0" target="_blank"><span class="stl_184 stl_32 stl_77" style="word-spacing:0.0381em;">audit log plug-in </span></a><span class="stl_154 stl_32 stl_93" style="word-spacing:0.051em;">if you run Percona’s fork or the equivalent </span><a href="https://oreil.ly/2tanA" target="_blank"><span class="stl_184 stl_32 stl_181" style="word-spacing:0.0458em;">MySQL Enterprise Audit &nbsp;</span></a></div>
+					<div class="stl_01" style="left:5.9997em;top:12.5109em;"><a href="https://oreil.ly/2tanA" target="_blank"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0708em;">plug-in </span></a><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0755em;">if you run MySQL Community Server. The benefit here is that you now can &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.5609em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0465em;">track changes at the last hop before data changes, especially if you are in an environ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.6109em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0043em;">ment where changes to the database can happen via multiple paths. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.589em;z-index:621;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Undesirable options for tracking changes.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.6213em;">&nbsp;</span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1265em;">u may ask, “Why not use triggers to track &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.6821em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0081em;">any changes to the tables I care about?” This is definitely an approach we have seen in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.7321em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0213em;">the past, but it is not recommended. Here are some reasons we discourage using trig‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.7821em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">gers for this: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7209em;top:21.1654em;"><span class="stl_154 stl_32 stl_110" style="word-spacing:0.2968em;">• Triggers</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1102em;">&nbsp;</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1em;">are known to present a write performance hit, which will affect you at &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:22.2154em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the worst possible time. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:23.5988em;"><span class="stl_154 stl_32 stl_110" style="word-spacing:0.296em;">• Triggers</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4244em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.4144em;">amount to storing business logic in the database, which is not &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:24.6488em;"><span class="stl_154 stl_32 stl_28">recommended. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:26.0321em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Storing</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0774em;">&nbsp;</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0807em;">code in the database will likely circumvent any process for testing, stag‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:27.0821em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0319em;">ing, and deploying that code. It is easy for triggers to become an unexpected sur‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:28.1321em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">prise for your team during incidents. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:29.5154em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2186em;">• Triggers can only support tracking write actions. It is a solution that cannot &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:30.5654em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">expand to track read access if the need arises. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.9488em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0075em;">Let’s see how you would use the Percona audit log plug-in and how to tune it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.9268em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Installing and tuning Percona audit logs.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.5353em;">&nbsp;</span><span class="stl_154 stl_32 stl_93" style="word-spacing:0.0412em;">Percona’s audit log plug-in ships as part of Per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.0199em;z-index:1437;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0204em;">cona’s MySQL fork but is not installed or enabled by default. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0092em;">u can install it by run‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.0699em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1255em;">ning the following command on your instances as part of the bootstrap process of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.1199em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">any new instance: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:39.8818em;"><span class="stl_265 stl_173 stl_28">INSTALL PLUGIN audit_log SONAME 'audit_log.so'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:40.7318em;"><span class="stl_265 stl_173 stl_28">SHOW PLUGINS; &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.8699em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1125em;">The second command lists the running plug-ins and should confirm that the audit &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.9199em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:-0.0017em;">log plug-in is, in fact, now running as part of the server process. Besides turning it on, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.9699em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0036em;">you also need to determine how you will ingest its output. This is where the real plan‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.0199em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">ning happens. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:46.5699em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0308em;">The audit log plug-in by Percona allows you to define what statement verbs you need &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:47.6199em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0686em;">to track. This allows for flexibility to meet various controls without committing to a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">334 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 13: Compliance with MySQL &nbsp;</span></div>
+					<a name="356_0" style="position:absolute;left:0em;top:10.6402em;">&nbsp;</a>
+					<a name="356_1" style="position:absolute;left:0em;top:5.9402em;">&nbsp;</a>
+					<a name="356_2" style="position:absolute;left:0em;top:35.1992em;">&nbsp;</a>
+					<a name="356_3" style="position:absolute;left:0em;top:16.8613em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

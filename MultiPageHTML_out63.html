@@ -1,0 +1,54 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_69.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_69.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:31.0702em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 3 &nbsp;</span></div>
+					<div class="stl_01" style="left:21.3765em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:22.3791em;top:17.2122em;"><span class="stl_258 stl_63 stl_25" style="word-spacing:0.0111em;">Contributed by Sveta Smirnova &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.7473em;"><span class="stl_154 stl_32 stl_52">T</span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0246em;">ning the performance of databases under high load is an iterative cycle. Every time &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.7973em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0407em;">you make a change to tune the performance of the database, you need to understand &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.8473em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0801em;">if the change had any effect. Are your queries running faster than before? Are locks &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.8973em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0535em;">slowing down the application, or are they entirely gone? Did memory usage change? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.9473em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1588em;">Did the time spent waiting on disk change? Once you understand how to answer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.9973em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.049em;">these questions, you’ll be able to evaluate and respond to day-to-day situations faster &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.0473em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and with more confidence. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.5973em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0315em;">Performance Schema is a database that stores the data required to answer these ques‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.6473em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0836em;">tions. This chapter will help you understand how Performance Schema works, what &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.7467em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0602em;">its limitations are, and how to best go about using it—along with its companion </span><span class="stl_170 stl_171 stl_28">sys &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.7967em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">schema—to uncover common information about what is going on inside MySQL. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0007em;top:33.6932em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Introduction to Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.9634em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.3963em;">Performance Schema provides low-level metrics on operations running inside &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.0134em;z-index:871;"><span class="stl_154 stl_32 stl_96" style="word-spacing:0.0629em;">MySQL server. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0497em;">o </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0513em;">xplain how Performance Schema works, there are two concepts I &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.0634em;z-index:947;"><span class="stl_154 stl_32 stl_181" style="word-spacing:0.0108em;">need to introduce early. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:39.602em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1075em;">The first is an </span><span class="stl_155 stl_41 stl_116">instrument</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1118em;">. An instrument refers to any portion of the MySQL code &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:40.6634em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0718em;">that we want to capture information about. For example, if we want to collect infor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.7628em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.4049em;">mation about metadata locks, we would need to enable the </span><span class="stl_170 stl_171 stl_28">wait/lock/meta &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.8623em;"><span class="stl_170 stl_171 stl_28">data/sql/md</span><span class="stl_170 stl_171 stl_186">l</span><span class="stl_154 stl_32 stl_36">instrument. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.4009em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0258em;">The second concept is a </span><span class="stl_155 stl_41 stl_103">consumer</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.029em;">, which is simply a table that stores the information &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:45.4623em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2269em;">about what code was instrumented. If we instrument queries, the consumer will &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:46.5123em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1368em;">record information like the total number of executions, how many times no index &nbsp;</span></div>
+					<div class="stl_01" style="left:35.3877em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">41 &nbsp;</span></div>
+					<a name="63_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="63_1" style="position:absolute;left:0em;top:34.0448em;">&nbsp;</a>
+					<a name="63_2" style="position:absolute;left:0em;top:44.6415em;">&nbsp;</a>
+					<a name="63_3" style="position:absolute;left:0em;top:39.8426em;">&nbsp;</a>
+					<a name="63_4" style="position:absolute;left:0em;top:36.1926em;">&nbsp;</a>
+					<a name="63_5" style="position:absolute;left:0em;top:28.8265em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

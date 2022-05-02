@@ -1,0 +1,93 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_193.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_193.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1167em;">Sample Database, so we derive one from the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1411em;">city </span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.118em;">table so we have enough data to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">work with: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:7.1786em;"><span class="stl_200 stl_171 stl_28">CREATE TABLE sakila.city_demo(city VARCHAR(50) NOT NULL); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:8.0286em;"><span class="stl_200 stl_171 stl_28">INSERT INTO sakila.city_demo(city) SELECT city FROM sakila.city; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:8.8786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-- Repeat the next statement five times: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:9.7286em;"><span class="stl_200 stl_171 stl_28">INSERT INTO sakila.city_demo(city) SELECT city FROM sakila.city_demo; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:10.5786em;"><span class="stl_200 stl_171 stl_28">-- Now randomize the distribution (inefficiently but conveniently): &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:11.4286em;"><span class="stl_200 stl_171 stl_28">UPDATE sakila.city_demo &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7705em;top:12.2786em;"><span class="stl_200 stl_171 stl_28">SET city = (SELECT city FROM sakila.city ORDER BY RAND() LIMIT 1); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.416em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0264em;">Now we have an example data set. The results are not realistically distributed, and we &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.5155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0694em;">used </span><span class="stl_170 stl_171 stl_28">RAND()</span><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0772em;">, so your results will vary, but that doesn’t matter for this exercise. First, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.5655em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">we find the most frequently occurring cities: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:17.3273em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT COUNT(*) AS c, city &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:18.1773em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.city_demo &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:19.0273em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">GROUP BY city ORDER BY c DESC LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:19.878em;"><span class="stl_200 stl_171 stl_28">+-----+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:20.728em;"><span class="stl_200 stl_171 stl_28">| c</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| city &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:21.578em;"><span class="stl_200 stl_171 stl_28">+-----+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:15.5627em;top:20.728em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4169em;top:22.428em;"><span class="stl_200 stl_171 stl_28">| 65 | London &nbsp;</span></div>
+					<div class="stl_01" style="left:15.5627em;top:22.428em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:23.278em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:24.128em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:24.978em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:25.828em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:26.678em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:27.528em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:28.378em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:29.228em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:15.5627em;top:30.078em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4169em;top:23.278em;"><span class="stl_200 stl_171 stl_28">| 49 | Hiroshima &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:24.128em;"><span class="stl_200 stl_171 stl_28">| 48 | Teboksary &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:24.978em;"><span class="stl_200 stl_171 stl_28">| 48 | Pak Kret &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:25.828em;"><span class="stl_200 stl_171 stl_28">| 48 | Yaound &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:26.678em;"><span class="stl_200 stl_171 stl_28">| 47 | Tel Aviv-Jaffa &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:27.528em;"><span class="stl_200 stl_171 stl_28">| 47 | Shimoga &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:28.378em;"><span class="stl_200 stl_171 stl_28">| 45 | Cabuyao &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:29.228em;"><span class="stl_200 stl_171 stl_28">| 45 | Callao &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:30.078em;"><span class="stl_200 stl_171 stl_28">| 45 | Bislig &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:30.928em;"><span class="stl_200 stl_171 stl_28">+-----+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.0655em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.123em;">Notice that there are roughly 45 to 65 occurrences of each value. Now we find the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.1041em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">most frequently occurring city name </span><span class="stl_216 stl_41 stl_28">preﬁxes</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, beginning with three-letter prefixes: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:34.8773em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT COUNT(*) AS c, LEFT(city, 3) AS pref &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:35.7273em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.city_demo GROUP BY pref ORDER BY cc DESC LIMIT 10; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:36.5781em;"><span class="stl_200 stl_171 stl_28">+-----+------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:37.4281em;"><span class="stl_200 stl_171 stl_28">| c</span><span class="stl_200 stl_171 stl_28" style="word-spacing:1em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| pref | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:38.2781em;"><span class="stl_200 stl_171 stl_28">+-----+------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:39.1281em;"><span class="stl_200 stl_171 stl_28">| 483 | San &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:39.9781em;"><span class="stl_200 stl_171 stl_28">| 195 | Cha &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:40.8281em;"><span class="stl_200 stl_171 stl_28">| 177 | Tan &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:41.6781em;"><span class="stl_200 stl_171 stl_28">| 167 | Sou &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:42.5281em;"><span class="stl_200 stl_171 stl_28">| 163 | al- &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:43.3781em;"><span class="stl_200 stl_171 stl_28">| 163 | Sal &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:44.2281em;"><span class="stl_200 stl_171 stl_28">| 146 | Shi &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:45.0781em;"><span class="stl_200 stl_171 stl_28">| 136 | Hal &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:45.9281em;"><span class="stl_200 stl_171 stl_28">| 130 | Val &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:46.7781em;"><span class="stl_200 stl_171 stl_28">| 129 | Bat &nbsp;</span></div>
+					<div class="stl_01" style="left:12.0207em;top:39.1281em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:39.9781em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:40.8281em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:41.6781em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:42.5281em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:43.3781em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:44.2281em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:45.0781em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:45.9281em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:12.0207em;top:46.7781em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4165em;top:47.6281em;"><span class="stl_200 stl_171 stl_28">+-----+------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2086em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1743em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0818em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">163 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

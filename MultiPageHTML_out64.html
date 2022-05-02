@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_71.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_71.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1404em;">was used, the time spent, and so forth. The consumer is what most people closely &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">associate with Performance Schema. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.9166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">The general function of Performance Schema is shown in </span><a href="MultiPageHTML_out64.html#64_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 3-1</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.2805em;"><span class="stl_155 stl_41 stl_215" style="word-spacing:0.0125em;">Figure 3-1. </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">e ﬂo</span><span class="stl_256 stl_41 stl_28" style="word-spacing:-0.021em;">t </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.0155em;">of queries running on a database, showing how </span><span class="stl_174 stl_175 stl_28">perfor &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.38em;"><span class="stl_174 stl_175 stl_28">mance_schem</span><span class="stl_174 stl_175 stl_259">a</span><span class="stl_155 stl_41 stl_93" style="word-spacing:0.016em;">collects and aggregates the data and then presents it to the DBA &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.4413em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0381em;">When application users connect to MySQL and execute an instrumented instruction, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.5408em;"><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_260">a</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0581em;">encapsulates each examined call into two macros, then records &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.5908em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0814em;">the results in the corresponding consumer table. The takeaway here is that enabling &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.6408em;z-index:564;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0039em;">instruments calls additional code, which in turn means instruments consume CPU. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.5251em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Instrument Elements &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.4743em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0228em;">In </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0226em;">, the </span><span class="stl_170 stl_171 stl_28">setup_instrument</span><span class="stl_170 stl_171 stl_261">s</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0241em;">table contains a list of all supported &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.5243em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0636em;">instruments. All instruments’ names consist of parts separated by a slash. I’ll use the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.5743em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0009em;">following examples to help you understand how these are named: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7212em;top:34.5071em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2735em;">• </span><span class="stl_170 stl_171 stl_28">statement/sql/select &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:35.9398em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2737em;">• </span><span class="stl_170 stl_171 stl_28">wait/synch/mutex/innodb/autoinc_mutex &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.8232em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.043em;">The leftmost part of the instrument name indicates the type of the instrument. Thus, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.9226em;"><span class="stl_170 stl_171 stl_28">statemen</span><span class="stl_170 stl_171 stl_208">t</span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0238em;">indicates that the instrument is a statement, </span><span class="stl_170 stl_171 stl_28">wai</span><span class="stl_170 stl_171 stl_208">t</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0202em;">indicates it is a wait, and &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.9726em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">so on. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.5226em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0735em;">The rest of the elements in the name field, from left to right, indicate the subsystem &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.622em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.015em;">from general to specific. In the preceding example, </span><span class="stl_170 stl_171 stl_28">selec</span><span class="stl_170 stl_171 stl_262">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.014em;">is a part of the </span><span class="stl_170 stl_171 stl_28">sq</span><span class="stl_170 stl_171 stl_262">l</span><span class="stl_154 stl_32 stl_28">subsys‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:43.7215em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0363em;">tem, which is of type </span><span class="stl_170 stl_171 stl_28">statement</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0365em;">. Or </span><span class="stl_170 stl_171 stl_28">autoinc_mute</span><span class="stl_170 stl_171 stl_263">x</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0365em;">belongs to </span><span class="stl_170 stl_171 stl_28">innodb</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0365em;">, which is part &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:44.8209em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2251em;">of the more generic instrument class </span><span class="stl_170 stl_171 stl_28">mutex</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2236em;">, which, in turn, is part of the more &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.9204em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">generic instrument </span><span class="stl_170 stl_171 stl_28">syn</span><span class="stl_170 stl_171 stl_186">c</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">of instrument type </span><span class="stl_170 stl_171 stl_28">wait</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">42 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3617em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2692em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+					<a name="64_0" style="position:absolute;left:0em;top:28.8181em;">&nbsp;</a>
+					<a name="64_1" style="position:absolute;left:0em;top:8.6083em;">&nbsp;</a>
+					<a name="64_2" style="position:absolute;left:0em;top:30.7035em;">&nbsp;</a>
+					<a name="64_3" style="position:absolute;left:0em;top:7.1458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

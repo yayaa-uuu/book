@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_87.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_87.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Prepared statements &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.7604em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0133em;">The </span><span class="stl_170 stl_171 stl_28">prepared_statements_instance</span><span class="stl_170 stl_171 stl_276">s</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0161em;">table contains all prepared statements existing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:6.8598em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1151em;">in the server. It has the same statistics as in the </span><span class="stl_170 stl_171 stl_28">events_statements_[current|his &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.9592em;"><span class="stl_170 stl_171 stl_28">tory|history_long</span><span class="stl_170 stl_171 stl_305">]</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0047em;">tables and, additionally, information about the thread that owns &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:9.0092em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1062em;">the prepared statement and how many times the statement was executed. Unlike in &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:10.1087em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1679em;">the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0843em;">events_statements_[current|history|history_long] </span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1719em;">tables, statistics data is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.1587em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0029em;">summed, and the table contains the total amount of all statement executions. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:13.516em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.283em;">The </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0.0368em;">COUNT_EXECUTE </span><span class="stl_176 stl_32 stl_97" style="word-spacing:0.2859em;">column contains the number of times the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:14.476em;"><span class="stl_176 stl_32 stl_54" style="word-spacing:0.073em;">statement was executed, so you can get average statistics per state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:15.436em;"><span class="stl_176 stl_32 stl_73" style="word-spacing:0.1767em;">ment by dividing the total value by the number in this column. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:16.396em;"><span class="stl_176 stl_32 stl_17" style="word-spacing:0.1032em;">Note, however, that any average statistics could be inaccurate. For &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:17.356em;"><span class="stl_176 stl_32 stl_35" style="word-spacing:0.058em;">example, if you executed a statement 10 times and the value in the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:18.3612em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0019em;">column </span><span class="stl_212 stl_171 stl_28">SUM_SELECT_FULL_JOI</span><span class="stl_212 stl_171 stl_264">N</span><span class="stl_176 stl_32 stl_95" style="word-spacing:0.0017em;">is 10, the average would be one full &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:19.3212em;"><span class="stl_176 stl_32 stl_35" style="word-spacing:0.0542em;">join per statement. If you then add an index and execute the state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:20.3264em;"><span class="stl_176 stl_32 stl_77" style="word-spacing:0.0112em;">ment one more time, </span><span class="stl_212 stl_171 stl_28">SUM_SELECT_FULL_JOI</span><span class="stl_212 stl_171 stl_306">N</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">will remain 10, so the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:21.2864em;"><span class="stl_176 stl_32 stl_73" style="word-spacing:0.1484em;">average will be 10/11 = 0.9. This does not show that the issue is &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:22.2464em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">now resolved. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.4443em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2799em;">To </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0871em;">nable prepared statements instrumentation, you need to enable the instruments &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.4943em;z-index:1037;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">described in </span><a href="MultiPageHTML_out80.html#80_0"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out80.html#80_0"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out80.html#80_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">ble 3-6</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.5819em;"><span class="stl_40 stl_41 stl_156" style="word-spacing:0.0209em;">Table 3-6. Instruments to enable for prepared statements instrumentation &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2999em;top:29.1542em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Instrument class &nbsp;</span></div>
+					<div class="stl_01" style="left:15.7541em;top:29.1542em;"><span class="stl_205 stl_27 stl_28">Description &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2999em;top:30.2519em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.3471em;">statement/sql/prepare_sql PREPAR</span><span class="stl_200 stl_171 stl_287">E</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">statement in the text protocol (when run via MySQL CLI) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2999em;top:31.3606em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.3472em;">statement/sql/execute_sql EXECUT</span><span class="stl_200 stl_171 stl_287">E</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">statement in the text protocol (when run via MySQL CLI) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2999em;top:32.5827em;"><span class="stl_200 stl_171 stl_28">statement/com/Prepare &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3002em;top:33.6914em;"><span class="stl_200 stl_171 stl_28">statement/com/Execute &nbsp;</span></div>
+					<div class="stl_01" style="left:15.7542em;top:32.4694em;"><span class="stl_200 stl_171 stl_28">PREPAR</span><span class="stl_200 stl_171 stl_287">E</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">statement in the binary protocol (if accessed via MySQL C API) &nbsp;</span></div>
+					<div class="stl_01" style="left:15.7542em;top:33.5781em;"><span class="stl_200 stl_171 stl_28">EXECUT</span><span class="stl_200 stl_171 stl_287">E</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">statement in the binary protocol (if accessed via MySQL C API) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.5459em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">Once enabled, you can prepare a statement and execute it a few times: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:37.3078em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">PREPARE stmt FROM &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:38.1578em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">'SELECT COUNT(*) FROM employees WHERE hire_date &gt; ?'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:39.0085em;"><span class="stl_200 stl_171 stl_28">Query OK, 0 rows affected (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:39.8585em;"><span class="stl_200 stl_171 stl_28">Statement prepared &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:41.5578em;"><span class="stl_200 stl_171 stl_28">mysql1&gt; </span><span class="stl_265 stl_173 stl_28">SET @hd='1995-01-01'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:42.4085em;"><span class="stl_200 stl_171 stl_28">Query OK, 0 rows affected (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:44.1078em;"><span class="stl_200 stl_171 stl_28">mysql1&gt; </span><span class="stl_265 stl_173 stl_28">EXECUTE stmt USING @hd; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:44.9585em;"><span class="stl_200 stl_171 stl_28">+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:45.8085em;"><span class="stl_200 stl_171 stl_28">| count(*) | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:46.6585em;"><span class="stl_200 stl_171 stl_28">+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:47.5085em;"><span class="stl_200 stl_171 stl_28">| 34004 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:48.3585em;"><span class="stl_200 stl_171 stl_28">+----------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3128em;top:47.5085em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">58 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.362em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2695em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+					<a name="80_0" style="position:absolute;left:0em;top:27.7277em;">&nbsp;</a>
+					<a name="80_1" style="position:absolute;left:0em;top:24.6735em;">&nbsp;</a>
+					<a name="80_2" style="position:absolute;left:0em;top:5.9896em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

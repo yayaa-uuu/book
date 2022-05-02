@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_116.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_116.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3052em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0116em;">exception is that a crash at just the right time could cause corruption in a </span><span class="stl_155 stl_41 stl_217" style="word-spacing:-0.0043em;">.frm </span><span class="stl_154 stl_32 stl_28">file &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.3666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0034em;">on a pre-8.0 version of MySQL. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:6.9166em;"><span class="stl_154 stl_32 stl_151" style="word-spacing:0.15em;">Here’s an example of how this configuration could cause problems. Say a pro‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:7.9666em;z-index:220;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0741em;">gram decides to extend a file to make it larger. The metadata (the file</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0679em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0679em;">ize) will &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:9.0166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0682em;">be logged and written before the data is actually written to the (now larger) file. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:10.0666em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0069em;">The result is that the file’s tail—the newly extended area—contains garbage. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.9248em;"><span class="stl_170 stl_171 stl_28">data=ordered &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:12.7994em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0433em;">This option also journals only the metadata, but it provides some consistency by &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:13.8494em;z-index:499;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0287em;">writing the data before the metadata so it stays consistent. It</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0222em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0249em;">nly slightly slower &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:14.9488em;z-index:546;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0507em;">than the </span><span class="stl_170 stl_171 stl_28">writebac</span><span class="stl_170 stl_171 stl_332">k</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0561em;">option, and it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_111" style="word-spacing:0.063em;">s much safer when there’s a crash. In this con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:15.9988em;z-index:651;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.1403em;">figuration, if we suppose again that a program wants to extend a file, the file</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:17.0488em;"><span class="stl_154 stl_32 stl_153" style="word-spacing:0.1112em;">metadata won’t reflect the file’s new size until the data that resides in the newly &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:18.0988em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">extended area has been written. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.957em;"><span class="stl_170 stl_171 stl_28">data=journal &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:20.8316em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0992em;">This option provides atomic journaled behavior, writing the data to the journal &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:21.8816em;z-index:837;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.1343em;">before it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1266em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1287em;">ritten to the final location. It is usually unnecessary and has much &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:22.9316em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.24em;">higher overhead than the other two options. However, in some cases it can &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:23.9816em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0888em;">improve performance because the journaling lets the filesystem delay the writes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:25.0316em;"><span class="stl_154 stl_32 stl_14" style="word-spacing:0.0212em;">to the data’s final location. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.5816em;z-index:1111;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1199em;">Regardless of the filesystem, there are some specific options that it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1181em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1181em;">est to disable &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.6316em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0388em;">because they don’t provide any benefit and can add quite a bit of overhead. The most &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.6816em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0918em;">famous is recording access time, which requires a write even when you’re reading a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.781em;z-index:1278;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0618em;">file or directory. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0551em;">o </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0551em;">isable this option, add the </span><span class="stl_170 stl_171 stl_28">noatime,nodiratim</span><span class="stl_170 stl_171 stl_333">e</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0589em;">mount options &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.8196em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1654em;">to your </span><span class="stl_155 stl_41 stl_96">/etc/fstab</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1664em;">; this can sometimes boost performance by as much as 5%–10%, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.881em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0056em;">depending on the workload and the filesystem (although it might not make much dif‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.9196em;z-index:1495;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.3084em;">ference in other cases). Here</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.3005em;">s a </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_183" style="word-spacing:0.31em;">ample </span><span class="stl_155 stl_41 stl_164" style="word-spacing:0.3132em;">/etc/fstab </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.3005em;">line for the ext3 options we &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.981em;"><span class="stl_154 stl_32 stl_33">mentioned: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:35.7436em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">/dev/sda2 /usr/lib/mysql ext3 noatime,nodiratime,data=writeback 0 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.881em;z-index:1637;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0222em;">u can also tune the filesystem</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.014em;">s </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0181em;">ead-ahead behavior because it might be redundant. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:37.931em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0123em;">For example, InnoDB does its own read-ahead prediction. Disabling or limiting read- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.0305em;z-index:1791;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.3853em;">ahead is especially beneficial on Solaris</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.3827em;">s </span><span class="stl_154 stl_32 stl_28">U</span><span class="stl_154 stl_32 stl_136" style="word-spacing:0.4004em;">FS. Using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.117em;">innodb_ flush_ method= &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.1299em;"><span class="stl_170 stl_171 stl_28">O_DIREC</span><span class="stl_170 stl_171 stl_186">T</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0026em;">automatically disables read-ahead. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.6799em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1564em;">Some filesystems don’t support features you might need. For example, support for &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:42.7793em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0262em;">direct I/O might be important if you’re using the </span><span class="stl_170 stl_171 stl_28">O_DIREC</span><span class="stl_170 stl_171 stl_334">T</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0197em;">flush method for InnoDB. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.8293em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0214em;">Also, some filesystems handle a large number of underlying drives better than others; &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.8793em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.004em;">XFS is often much better at this than ext3, for instance. Finally, if you plan to use Log‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.9293em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ical </span><span class="stl_154 stl_32 stl_52">V</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0053em;">lume Manager (LVM) snapshots for initializing replicas or taking backups, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.9793em;z-index:2284;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0053em;">should verify that your chosen filesystem and LVM version work well together. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">88 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3623em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2698em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 4: Operating System and Hardware Optimization &nbsp;</span></div>
+					<a name="110_0" style="position:absolute;left:0em;top:41.9091em;">&nbsp;</a>
+					<a name="110_1" style="position:absolute;left:0em;top:26.8108em;">&nbsp;</a>
+					<a name="110_2" style="position:absolute;left:0em;top:37.1103em;">&nbsp;</a>
+					<a name="110_3" style="position:absolute;left:0em;top:46.1586em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

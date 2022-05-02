@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_279.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_279.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:19.7211em;"><span class="stl_155 stl_41 stl_215" style="word-spacing:0.0125em;">Figure 9-3. </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">Replicwtion-ﬁltering </span><span class="stl_155 stl_41 stl_164">options &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.8319em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0409em;">The most important thing to understand about these options is that the </span><span class="stl_170 stl_171 stl_28">*_do_d</span><span class="stl_170 stl_171 stl_473">b</span><span class="stl_154 stl_32 stl_28">and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.9313em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0893em;">*_ignore_db </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1632em;">options, both on the source and on the replica, do not work as you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.9813em;z-index:224;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1782em;">might expect. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.178em;">u might think they filter on the object</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1744em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1769em;">atabase name, but they &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.0313em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1363em;">actually filter on the current default database—that is, if you execute the following &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.0813em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">statements on the source: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:27.8439em;"><span class="stl_200 stl_171 stl_28">USE test; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:28.6939em;"><span class="stl_200 stl_171 stl_28">DELETE FROM sakila.film; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.8808em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.099em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1569em;">*_do_db </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.099em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1569em;">*_ignore_db </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.099em;">parameters will filter the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1569em;">DELETE </span><span class="stl_154 stl_32 stl_115" style="word-spacing:0.1074em;">statement on </span><span class="stl_170 stl_171 stl_28">test</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.9802em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0767em;">not on </span><span class="stl_170 stl_171 stl_28">sakila</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0804em;">. This is not usually what you want, and it can cause the wrong state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.0797em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1358em;">ments to be replicated or ignored. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1213em;">*_do_db </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1328em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1213em;">*_ignore_db </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1358em;">parameters have &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.1297em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.089em;">uses, but they’re limited and rare, and you should be very careful with them. If you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.1797em;z-index:664;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">use these parameters, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">v</span><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0006em;">ery easy for replication to get out of sync or fail. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.7791em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.166em;">The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0863em;">binlog_do_db </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.166em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0863em;">binlog_ignore_db </span><span class="stl_154 stl_32 stl_152" style="word-spacing:0.1773em;">options don’t just have the potential to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.8291em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1013em;">break replication; they also make it impossible to do point-in-time recovery from a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.8791em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0035em;">backup. For most situations, you should never use them. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.4291em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0553em;">In general, replication filters are a problem waiting to happen. For example, suppose &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.4791em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0415em;">you want to prevent privilege changes from propagating to replicas, a fairly common &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:41.5291em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.076em;">goal. (The desire to do this should probably tip you off that you’re doing something &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.5791em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">wrong; there are probably other ways to accomplish your real goal.) Replication filters &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.6785em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0019em;">on the system tables will certainly prevent </span><span class="stl_170 stl_171 stl_28">GRAN</span><span class="stl_170 stl_171 stl_275">T</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0041em;">statements from replicating, but they &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.7285em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0265em;">will prevent events and routines from replicating, too. Such unforeseen consequences &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:45.7785em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0386em;">are a reason to be careful with filters. It may be a better idea to prevent specific state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.878em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0199em;">ments from being replicated, usually with </span><span class="stl_170 stl_171 stl_134" style="word-spacing:-0.0022em;">SET SQL_LOG_BIN=0</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0196em;">, although that practice &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:47.928em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0833em;">has its own hazards. In general, you should use replication filters very carefully and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">238 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="260_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

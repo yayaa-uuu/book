@@ -1,0 +1,52 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_251.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_251.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:11.9211em;"><span class="stl_155 stl_41 stl_356" style="word-spacing:0.0169em;">Figure 8-2. One way to join multiple tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.9711em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0267em;">This is what computer scientists call a </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.012em;">balanced tree</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0257em;">. This is not how MySQL executes &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.0324em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1537em;">the query, though. As we described in the previous section, MySQL always begins &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.0824em;z-index:243;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0032em;">with one table and finds matching rows in the next table. Thus, MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_154 stl_32 stl_28">q</span><span class="stl_154 stl_32 stl_277" style="word-spacing:-0.0072em;">uery execu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.1211em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">tion plans always take the form of a </span><span class="stl_216 stl_41 stl_28" style="word-spacing:-0.021em;">lef-deep </span><span class="stl_155 stl_41 stl_230">tree</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, as in </span><a href="MultiPageHTML_out235.html#235_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 8-3</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.7269em;"><span class="stl_155 stl_41 stl_201" style="word-spacing:0.02em;">Figure 8-3. How MySQL joins multiple tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.7952em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">The join optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.2513em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0694em;">The most important part of the MySQL query optimizer is the </span><span class="stl_155 stl_41 stl_194" style="word-spacing:0.0805em;">join optimizer</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0672em;">, which &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.3126em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0752em;">decides the best order of execution for multitable queries. It is often possible to join &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.3626em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.023em;">the tables in several different orders and get the same results. The join optimizer esti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.4126em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.04em;">mates the cost for various plans and tries to choose the least expensive one that gives &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.4626em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the same result. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.0126em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1255em;">Here’s a query whose tables can be joined in different orders without changing the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.0626em;"><span class="stl_154 stl_32 stl_28">results: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:40.8245em;"><span class="stl_265 stl_173 stl_28">SELECT film.film_id, film.title, film.release_year, actor.actor_id, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:41.6745em;"><span class="stl_265 stl_173 stl_28">actor.first_name, actor.last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:42.5245em;"><span class="stl_265 stl_173 stl_28">FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:43.3745em;"><span class="stl_265 stl_173 stl_28">INNER JOIN sakila.film_actor USING(film_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:44.2245em;"><span class="stl_265 stl_173 stl_28">INNER JOIN sakila.actor USING(actor_id); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:45.3626em;z-index:933;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1252em;">u can probably think of a few different query plans. For example, MySQL could &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:46.4621em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0752em;">begin with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1818em;">film </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0752em;">table, use the index on </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1818em;">film_id </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0752em;">in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1818em;">film_actor </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0753em;">table to find &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:47.5615em;"><span class="stl_170 stl_171 stl_28">actor_i</span><span class="stl_170 stl_171 stl_302">d</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0118em;">values, and then look up rows in the </span><span class="stl_170 stl_171 stl_28">acto</span><span class="stl_170 stl_171 stl_302">r</span><span class="stl_154 stl_32 stl_149" style="word-spacing:0.0282em;">table’s primary key. Oracle users &nbsp;</span></div>
+					<div class="stl_01" style="left:27.841em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Query Execution Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">213 &nbsp;</span></div>
+					<a name="235_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="235_1" style="position:absolute;left:0em;top:18.8242em;">&nbsp;</a>
+					<a name="235_2" style="position:absolute;left:0em;top:14.2117em;">&nbsp;</a>
+					<a name="235_3" style="position:absolute;left:0em;top:32.4919em;">&nbsp;</a>
+					<a name="235_4" style="position:absolute;left:0em;top:17.3617em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

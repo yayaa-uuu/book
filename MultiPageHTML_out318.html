@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_345.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_345.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1749em;">Deciding how far to take these health checks should be a conversation with your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0416em;">application developer teams so that everyone understands and aligns on what behav‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0714em;">ior they expect when reading from the database. Here are some questions to ask the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">team that can help guide this decision process: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7214em;top:9.3499em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2976em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0458em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0364em;">much data staleness is acceptable? If the data returned is a few minutes old, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:10.3999em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0051em;">what does that affect? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:11.7833em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.285em;">• What</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0063em;">&nbsp;</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">is the maximum acceptable query latency for the application? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:13.1666em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.2822em;">• What,</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1em;">&nbsp;</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0986em;">if any, retry logic exists for read queries, and if it exists, is it exponential &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:14.2166em;"><span class="stl_154 stl_32 stl_496">backoff? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:15.5999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• Do</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0751em;">&nbsp;</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0771em;">we already have an SLO for the application? Does that SLO extend to query &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:16.6499em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">latency or only address uptime? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:18.0333em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1995em;">• How does the system behave in the absence of this data? Is that degradation &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:19.0833em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">acceptable? If so, for how long? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.9666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0067em;">In many cases, you will be fine using only a port check to confirm the MySQL process &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.0166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0081em;">is live and can accept connections. This means that as long as the database is running, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.0666em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0006em;">it will be part of that pool and serving requests. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.6166em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1193em;">However, sometimes you may need something more sophisticated because the data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.6666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0704em;">set involved is critical enough that you do not want to serve it when replication lags &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.7166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1084em;">more than a few seconds or if replication is not running at all. For these scenarios, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.7666em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0385em;">you can still use a read pool but augment the health check with an HTTP check. The &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.8166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1194em;">way this works is that your load balancer of choice will run a command (usually a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.8666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0578em;">script) and, based on the response code, will determine if the node is healthy or not. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.9166em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0063em;">In HAProxy, for example, the backend would have lines of code like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:32.6792em;"><span class="stl_200 stl_171 stl_28">option httpchk GET /check-lag &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:33.8166em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1116em;">This line means that for every host in the read pool, the load balancer will call the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.916em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.1527em;">path </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1136em;">/check-lag </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1401em;">using a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1136em;">GET </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1424em;">call and inspect the response code. That path runs a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:35.966em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1729em;">script that holds the logic as to how much lag is acceptable. The script compares &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:37.016em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2148em;">existing lag status with that threshold and, depending on that, the load balancer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.066em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">either considers the replica healthy or not. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:40.3782em;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.1791em;">Even though health checks are a powerful tool, be careful using &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3991em;top:41.3382em;"><span class="stl_176 stl_32 stl_140" style="word-spacing:0.1496em;">those with complex logic (such as the lag check described previ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:42.2982em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.0479em;">ously), and make sure you have a plan for what to do if all replicas &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:43.2582em;z-index:1830;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1108em;">in the pool fail the health checks. </span><span class="stl_176 stl_32 stl_109">Y</span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_152" style="word-spacing:0.1222em;">u can have a static “fallback” &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:44.2182em;"><span class="stl_176 stl_32 stl_140" style="word-spacing:0.1837em;">pool that brings all the nodes back in for certain global failures &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:45.1782em;"><span class="stl_176 stl_32 stl_57" style="word-spacing:0.0792em;">(e.g., the entire cluster is lagged) to avoid accidentally breaking all &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:46.1382em;"><span class="stl_176 stl_32 stl_33" style="word-spacing:0.1832em;">read requests. For more detail on how one company has imple‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:47.0982em;"><span class="stl_176 stl_32 stl_39" style="word-spacing:0.0035em;">mented this, see </span><a href="https://oreil.ly/zyjA4" target="_blank"><span class="stl_177 stl_32 stl_72" style="word-spacing:0.0043em;">this post on the GitHub blog</span></a><span class="stl_176 stl_32 stl_72" style="word-spacing:0.0043em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">296 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="318_0" style="position:absolute;left:0em;top:47.3078em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

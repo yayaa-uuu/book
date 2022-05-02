@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_142.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_142.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0117em;">based, so they don’t waste space storing whole pages at a time. InnoDB also makes log &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0146em;">entries as short as possible. They are sometimes even stored as a few integers, indicat‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0031em;">ing the type of operation logged and any parameters needed by that operation! &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:8.4735em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">How InnoDB </span><span class="stl_308 stl_27 stl_28" style="word-spacing:-0.092em;">ﬂushes </span><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">the log </span><span class="stl_308 stl_27 stl_28">buﬀer &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:9.9409em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0504em;">When InnoDB flushes the log buffer to the logfiles on disk, it locks the buffer with a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:10.9909em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0105em;">mutex, flushes it up to the desired point, and then moves any remaining entries to the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.0409em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0419em;">front of the buffer. It is possible that more than one transaction will be ready to flush &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.0909em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0658em;">its log entries when the mutex is released. InnoDB uses a group commit feature that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.1409em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">can commit all of them to the log in a single I/O operation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.6795em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0649em;">The log buffer </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.0782em;">must </span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0658em;">be flushed to durable storage to ensure that committed transac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.7409em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0676em;">tions are fully durable. If you care more about performance than durability, you can &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.8404em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1312em;">change </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.123em;">innodb_flush_log_at_trx_commit </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1328em;">to control where and how often the log &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.8904em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">buffer is flushed. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.4404em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0027em;">Possible settings are as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.2986em;"><span class="stl_170 stl_171 stl_28">0</span></div>
+					<div class="stl_01" style="left:7.4997em;top:23.1731em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0422em;">Write the log buffer to the logfile and flush the logfile every second but do noth‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:24.2231em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">ing at transaction commit. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.0813em;"><span class="stl_170 stl_171 stl_28">1</span></div>
+					<div class="stl_01" style="left:7.5002em;top:26.9559em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1482em;">Write the log buffer to the logfile and flush it to durable storage every time a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:28.0059em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1491em;">transaction commits. This is the default (and safest) setting; it guarantees that &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:29.0559em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1222em;">you won’t lose any committed transactions unless the disk or operating system &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:30.1059em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0087em;">“fakes” the flush operation. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.9641em;"><span class="stl_170 stl_171 stl_28">2</span></div>
+					<div class="stl_01" style="left:7.5003em;top:32.8387em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.1674em;">Write the log buffer to the logfile at every commit but don’t flush it. InnoDB &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:33.9381em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0923em;">schedules a flush once every second. The most important difference from the </span><span class="stl_170 stl_171 stl_87" style="word-spacing:0.0972em;">0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:35.0376em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0803em;">setting is that </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1806em;">2 </span><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0844em;">won’t lose any transactions if the MySQL process crashes. If the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:36.0875em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0041em;">entire server crashes or loses power, however, you can still lose transactions. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:37.6262em;"><span class="stl_154 stl_32 stl_215" style="word-spacing:0.051em;">It’s important to know the difference between </span><span class="stl_155 stl_41 stl_107" style="word-spacing:0.0455em;">writing </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0386em;">the log buffer to the logfile and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.6762em;"><span class="stl_216 stl_41 stl_28" style="word-spacing:0.0727em;">ﬂushing </span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0964em;">the log to durable storage. In most operating systems, writing the buffer to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:39.7376em;z-index:1585;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1262em;">the log simply moves the data from InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1211em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_125" style="word-spacing:0.1203em;">emory buffer to the operating sys‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.7876em;"><span class="stl_154 stl_32 stl_214" style="word-spacing:0.0209em;">tem’s cache, which is also in memory. It doesn’t actually write the data to durable stor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.8756em;z-index:1759;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0341em;">age. Thus, settings </span><span class="stl_170 stl_171 stl_362">0</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0314em;">and </span><span class="stl_170 stl_171 stl_359">2</span><span class="stl_155 stl_41 stl_214" style="word-spacing:0.0437em;">usually </span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0378em;">result in at most one second of lost data if there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0314em;">s a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.937em;z-index:1830;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1026em;">crash or a power outage because the data might exist only in the operating system</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.987em;z-index:1838;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0847em;">cache. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0847em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0877em;">ay “usually” because InnoDB tries to flush the logfile to disk about once &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:45.037em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0811em;">per second no matter what, but it is possible to lose more than a second of transac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.087em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tions in some cases, such as when a flush gets stalled. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">114 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_74.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_74.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">SELECT user,birthdate FROM users WHERE user_id=19; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">SELECT user,birthdate FROM users WHERE user_id=13; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">SELECT user,birthdate FROM users WHERE user_id=27; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.3666em;"><span class="stl_154 stl_32 stl_178" style="word-spacing:-0.0026em;">The digest for this query would be: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:9.1292em;"><span class="stl_200 stl_171 stl_28">SELECT user,birthdate FROM users WHERE user_id=? &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.2666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0935em;">This allows Performance Schema to keep track of metrics like latency for the digest &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:11.3166em;z-index:334;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">without needing to retain each variation of the query separately. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:13.3735em;"><span class="stl_193 stl_27 stl_28">Instances &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.8409em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0333em;">Instances refer to object instances, available for the MySQL installation. For example, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.9404em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0887em;">the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1677em;">file_instances </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0914em;">table contains filenames and the number of threads that access &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.9904em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">these files. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.0473em;"><span class="stl_193 stl_27 stl_28">Setup &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.5641em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">Setup tables are used for runtime setup of </span><span class="stl_170 stl_171 stl_28">performance_schema</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.6211em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Other tables &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.0885em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0885em;">There are other tables whose names do not follow a strict pattern. For example, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.1879em;"><span class="stl_170 stl_171 stl_28">metadata_lock</span><span class="stl_170 stl_171 stl_241">s</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0178em;">table holds data about metadata locks. I will introduce a few of them &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.2873em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0035em;">later in the chapter when discussing issues that </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_186">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">can help solve. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.1717em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Resource Consumption &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.0714em;z-index:853;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1861em;">The data collected by Performance Schema is kept in memory. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1814em;">u can limit the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.1214em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1751em;">amount of memory it uses by setting the maximum size of the consumers. Some &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.2209em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1326em;">tables in </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1215em;">performance_schema </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1357em;">support autoscaling. This means that they allocate a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.2709em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0413em;">minimal amount of memory at startup and adjust their size as needed. However, this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.3209em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0925em;">memory is never freed once allocated, even if you disabled specific instrumentation &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.3709em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">and truncated the table. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.9209em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1048em;">As I mentioned earlier, every instrumented call adds two more macro calls to store &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.0203em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0955em;">data in </span><span class="stl_170 stl_171 stl_268">performance_schema</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0883em;">. This means that the more you instrument, the higher &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.0703em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0392em;">the CPU usage will be. The actual impact on CPU utilization depends on the specific &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.1203em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1349em;">instrument. For example, a statement-related instrument could be called only once &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.1703em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0725em;">during the query while a wait instrument could be called much more often. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0721em;">o </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28">can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.2203em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0576em;">an InnoDB table with one million rows, for instance, the engine will need to set and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.2703em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0698em;">release one million row locks. If you instrument locks, CPU usage may increase sig‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.3203em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1344em;">nificantly. However, the same query will require a single call to figure out if it is a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.4197em;"><span class="stl_170 stl_171 stl_28">statement/sql/select</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0241em;">. Therefore, you would not notice any increase in CPU load if &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.4697em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0087em;">you enable statement instrumentation. The same is true for memory or metadata lock &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:47.5197em;"><span class="stl_154 stl_32 stl_114">instrumentation. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.6553em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Introduction to Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4803em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.3878em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">45 &nbsp;</span></div>
+					<a name="67_0" style="position:absolute;left:0em;top:28.4647em;">&nbsp;</a>
+					<a name="67_1" style="position:absolute;left:0em;top:32.4501em;">&nbsp;</a>
+					<a name="67_2" style="position:absolute;left:0em;top:15.0702em;">&nbsp;</a>
+					<a name="67_3" style="position:absolute;left:0em;top:24.3177em;">&nbsp;</a>
+					<a name="67_4" style="position:absolute;left:0em;top:20.7934em;">&nbsp;</a>
+					<a name="67_5" style="position:absolute;left:0em;top:30.3007em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

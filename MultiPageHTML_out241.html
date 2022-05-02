@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_257.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_257.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1067em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Limitations of the MySQL Query Optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.3769em;z-index:107;"><span class="stl_154 stl_32 stl_93">MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2696em;">’s </span><span class="stl_154 stl_32 stl_294">a</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0836em;">pproach to query execution isn’t ideal for optimizing every kind of query. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:7.4269em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2793em;">Fortunately, there are only a limited number of cases where the MySQL query &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.4769em;z-index:199;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2065em;">optimizer does a poor job, and it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2011em;">s </span><span class="stl_154 stl_32 stl_28">u</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2011em;">sually possible to rewrite such queries more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.5269em;"><span class="stl_154 stl_32 stl_39">efficiently. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0006em;top:11.4112em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">UNION Limitations &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:13.3604em;"><span class="stl_154 stl_32 stl_103" style="word-spacing:0.0934em;">MySQL sometimes can’t “push down” conditions from the outside of a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1752em;">UNION </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0816em;">to the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:14.4104em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0006em;">inside, where they could be used to limit results or enable additional optimizations. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.0099em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.055em;">If you think any of the individual queries inside a </span><span class="stl_170 stl_171 stl_28">UNIO</span><span class="stl_170 stl_171 stl_461">N</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0535em;">would benefit from a </span><span class="stl_170 stl_171 stl_28">LIMIT &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.1093em;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.1199em;">or if you know they’ll be subject to an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0058em;">ORDER BY </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1232em;">clause once combined with other &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.2088em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.079em;">queries, you need to put those clauses inside each part of the </span><span class="stl_170 stl_171 stl_28">UNION</span><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0856em;">. For example, if &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.3082em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0746em;">you </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1825em;">UNION </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0746em;">together two tables and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1825em;">LIMIT </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0771em;">the result to the first 20 rows, MySQL will &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.3582em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">store both tables into a temporary table and then retrieve just 20 rows from it: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:22.1208em;"><span class="stl_200 stl_171 stl_28">(SELECT first_name, last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:22.9708em;"><span class="stl_200 stl_171 stl_28">FROM sakila.actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:23.8208em;"><span class="stl_200 stl_171 stl_28">ORDER BY last_name) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:24.6708em;"><span class="stl_200 stl_171 stl_28">UNION ALL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:25.5208em;"><span class="stl_200 stl_171 stl_28">(SELECT first_name, last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:26.3708em;"><span class="stl_200 stl_171 stl_28">FROM sakila.customer &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:27.2208em;"><span class="stl_200 stl_171 stl_28">ORDER BY last_name) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:28.0708em;"><span class="stl_200 stl_171 stl_28">LIMIT 20; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.2576em;"><span class="stl_154 stl_32 stl_141" style="word-spacing:0.0276em;">This query will store 200 rows from the </span><span class="stl_170 stl_171 stl_28">acto</span><span class="stl_170 stl_171 stl_365">r</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.03em;">table and 599 from the </span><span class="stl_170 stl_171 stl_28">custome</span><span class="stl_170 stl_171 stl_365">r</span><span class="stl_154 stl_32 stl_28">table &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.3076em;z-index:1020;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0068em;">into a temporary table and then fetch the first 20 rows from that temporary table. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.4071em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">can avoid this by adding </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">LIMIT 2</span><span class="stl_170 stl_171 stl_186">0</span><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0008em;">redundantly to each query inside the </span><span class="stl_170 stl_171 stl_28">UNION</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:33.1697em;"><span class="stl_200 stl_171 stl_28">(SELECT first_name, last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:34.0197em;"><span class="stl_200 stl_171 stl_28">FROM sakila.actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:34.8697em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">ORDER BY last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:35.7197em;"><span class="stl_200 stl_171 stl_28">LIMIT 20) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:36.5697em;"><span class="stl_200 stl_171 stl_28">UNION ALL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:37.4197em;"><span class="stl_200 stl_171 stl_28">(SELECT first_name, last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:38.2697em;"><span class="stl_200 stl_171 stl_28">FROM sakila.customer &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:39.1197em;"><span class="stl_200 stl_171 stl_28">ORDER BY last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:39.9697em;"><span class="stl_200 stl_171 stl_28">LIMIT 20) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:40.8197em;"><span class="stl_200 stl_171 stl_28">LIMIT 20; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.9571em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0871em;">Now the temporary table will contain only 40 rows. In addition to the performance &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.0071em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0406em;">improvement, you’ll probably need to correct the query: the order in which the rows &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:44.0571em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1415em;">are retrieved from the temporary table is undefined, so there should be an overall &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:45.1565em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">ORDER B</span><span class="stl_170 stl_171 stl_186">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">just before the final </span><span class="stl_170 stl_171 stl_28">LIMIT</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.1538em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Limitations of the MySQL Query Optimizer &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1743em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0818em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">219 &nbsp;</span></div>
+					<a name="241_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="241_1" style="position:absolute;left:0em;top:11.7043em;">&nbsp;</a>
+					<a name="241_2" style="position:absolute;left:0em;top:6.6062em;">&nbsp;</a>
+					<a name="241_3" style="position:absolute;left:0em;top:13.5897em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

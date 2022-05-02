@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_170.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_170.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9998em;top:4.3166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0722em;">From our preceding simple test case, the amount of used tablespace seems to be the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:5.3666em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0539em;">primary driver for why you would use SQL columns rather than storing a raw JSON &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:6.4166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0509em;">document. Speed is still better with SQL columns. Overall, the decision to use native &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.4666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0908em;">SQL versus JSON comes down to whether the ease of storing JSON in the database &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:8.5166em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0638em;">outweighs the performance. If you’re accessing this data millions or billions of times &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:9.5666em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.008em;">per day, the speed difference is going to add up. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:11.4509em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Choosing </span><span class="stl_236 stl_27 stl_28">Identiﬁers &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.3393em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0253em;">In general, an </span><span class="stl_216 stl_41 stl_28" style="word-spacing:0.003em;">identiﬁer </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0277em;">is the way you refer to a row and often what makes it unique. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.4007em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1152em;">For example, if you have a table about users, you might want to assign each user a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:15.5001em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0901em;">numerical ID or a unique username. This field may be some or all of your </span><span class="stl_170 stl_171 stl_28">PRIMARY &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.5995em;"><span class="stl_170 stl_171 stl_28">KEY</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.1495em;z-index:987;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1097em;">Choosing a good data type for an identifier column is very important. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_358" style="word-spacing:0.134em;">u’re more &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.1995em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1338em;">likely to compare these columns to other values (for example, in joins) and to use &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.2495em;z-index:1096;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0188em;">them for lookups than other columns. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0244em;">u’re also likely to use them in other tables as &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.2995em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0587em;">foreign keys, so when you choose a data type for an identifier column, you’re proba‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.3496em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1364em;">bly choosing the type in related tables as well. (As we demonstrated earlier in this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.3995em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.143em;">chapter, it’s a good idea to use the same data types in related tables because you’re &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.4496em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">likely to use them for joins.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.9996em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1166em;">When choosing a type for an identifier column, you need to consider not only the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.0496em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0967em;">storage type but also how MySQL performs computations and comparisons on that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:28.149em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0915em;">type. For example, MySQL stores </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1714em;">ENUM </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0851em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1714em;">SET </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0881em;">types internally as integers but con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.199em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">verts them to strings when doing comparisons in a string context. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.749em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0978em;">Once you choose a type, make sure you use the same type in all related tables. The &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:31.8484em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0583em;">types should match exactly, including properties such as </span><span class="stl_170 stl_171 stl_28">UNSIGNED</span><span class="stl_154 stl_32 stl_28">.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out164.html#164_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2645em;">5 </span></a></sup><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0568em;">Mixing different &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.8984em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0557em;">data types can cause performance problems, and even if it doesn’t, implicit type con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.9484em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0349em;">versions during comparisons can create hard-to-find errors. These may even crop up &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.9984em;"><span class="stl_154 stl_32 stl_25" style="word-spacing:0.011em;">much later, after you’ve forgotten that you’re comparing different data types. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.5484em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0408em;">Choose the smallest size that can hold your required range of values, and leave room &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.6479em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1981em;">for future growth if necessary. For example, if you have a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0582em;">state_id </span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.1974em;">column that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.6979em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.027em;">stores US state names, you don’t need thousands or millions of values, so don’t use an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:39.7973em;"><span class="stl_170 stl_171 stl_28">INT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0776em;">. A </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1793em;">TINYINT </span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0815em;">should be sufficient and is 3 bytes smaller. If you use this value as a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.8473em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">foreign key in other tables, 3 bytes can make a big difference. Here we give a few tips. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:45.7126em;"><span class="stl_167 stl_32 stl_28">5</span></div>
+					<div class="stl_01" style="left:6.6667em;top:45.6302em;"><span class="stl_168 stl_32 stl_54" style="word-spacing:0.004em;">If you’re using the InnoDB storage engine, you may not be able to create foreign keys unless the data types &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.4635em;z-index:164;"><span class="stl_168 stl_32 stl_138" style="word-spacing:0.0074em;">match exactly. The resulting error message, “ERROR 1005 (HY000): Can’t create table</span><span class="stl_168 stl_32 stl_161">,</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">” can be confusing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.2968em;"><span class="stl_168 stl_32 stl_36" style="word-spacing:0.0037em;">depending on the context, and questions about it come up often on MySQL mailing lists. (Oddly, you can &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_95" style="word-spacing:0.0019em;">create foreign keys between </span><span class="stl_211 stl_171 stl_28">VARCHA</span><span class="stl_211 stl_171 stl_186">R</span><span class="stl_168 stl_32 stl_74" style="word-spacing:0.0017em;">columns of different lengths.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">142 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="164_0" style="position:absolute;left:0em;top:11.744em;">&nbsp;</a>
+					<a name="164_1" style="position:absolute;left:0em;top:45.7215em;">&nbsp;</a>
+					<a name="164_2" style="position:absolute;left:0em;top:13.5799em;">&nbsp;</a>
+					<a name="164_3" style="position:absolute;left:0em;top:9.7958em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_388.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_388.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0004em;top:4.3166em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0857em;">lot of noise in your audit logs that are irrelevant to what you care about. Make sure &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:5.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">you review its documentation to properly configure that variable as needed. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:6.9166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0603em;">One of the flexible advantages of the plug-in is that you can have it installed but not &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.9666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1265em;">actually monitoring queries.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out357.html#357_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3916em;">2 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1265em;">This can be useful if you are still working on how to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:9.0166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0388em;">ingest its output and need to turn it off and on without uptime impact. But with that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.0666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0417em;">flexibility comes complexity. Besides managing the configuration variables that come &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.1166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0612em;">with the audit log plug-in, you also need to monitor that it is running at all times. If &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.1666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0721em;">this is a critical function for the business, it means it is worth monitoring. Since the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.2166em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0838em;">plug-in can be disabled on the fly without a server restart, you need more than just &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:14.2552em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0483em;">checking the on disk </span><span class="stl_155 stl_41 stl_355" style="word-spacing:0.0851em;">my.cnf </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0505em;">file to confirm that it is doing what it needs to be doing. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.3166em;z-index:800;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0779em;">ur best bet is to use shell queries to parse out the current state of the plug-in and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1272em;">confirm that it is, in fact, monitoring queries. Here are two sample single liners to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.4166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">check for each of these: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:19.1792em;"><span class="stl_200 stl_171 stl_28"># Single liner to check that the audit log plugin is active &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:20.0292em;"><span class="stl_200 stl_171 stl_28">$ mysql -e "show plugins" | grep -w audit_log | grep -iw active &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:21.7292em;"><span class="stl_200 stl_171 stl_28"># Single liner to check that the plugin policy is actually monitoring queries &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:22.5792em;"><span class="stl_200 stl_171 stl_28">$ mysqladmin variables | grep -w audit_log_policy | grep -iw queries &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.7166em;z-index:1240;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0775em;">These examples assume that you are only looking to monitor queries. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0758em;">u will need &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.7666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to edit the check if you also expect to use the plug-in to track logins. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.7446em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Ingesting and using audit plug-in logs.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.6236em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1278em;">As you can see, there is a lot of flexibility with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.8378em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.103em;">the audit log plug-in, but it also only produces audit events for you. It is on you to &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.8878em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0815em;">determine the best way to ingest these logs, have them in a place where they can be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.9378em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0864em;">easily searched and analyzed, and reasonably discover anomalies in them without it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.9878em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.024em;">being a major burden. The plug-in can simply dump the output to local files, but that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.0378em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1144em;">can increase the risk of causing outages by filling up your database host disks with &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.0878em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">these logs. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.6872em;z-index:1775;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0534em;">A more complex option is to use the plug-in</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0459em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0459em;">bility to send its output to </span><span class="stl_170 stl_171 stl_28">rsyslog</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0459em;">, a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:35.7866em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.1538em;">common Unix log management utility, and from there use </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1069em;">rsyslog </span><span class="stl_154 stl_32 stl_361" style="word-spacing:0.14em;">to forward all &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.8366em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.0387em;">these events to your organization’s structured logging platform of choice. This option &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.8866em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.02em;">is appealing as it brings this data into the same place where your organization already &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.9366em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.181em;">does structured log storage, which lowers the barrier for stakeholders outside the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.9866em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1987em;">database team to be able to see, search, and analyze these events. Keep in mind, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.0861em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1661em;">though, that using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0893em;">rsyslog </span><span class="stl_154 stl_32 stl_112" style="word-spacing:0.1615em;">for log forwarding in this manner will require you to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.1361em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2255em;">become familiar with how it works. Make sure you decide and document in an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:43.2355em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0437em;">intentional manner how </span><span class="stl_170 stl_171 stl_28">rsyslo</span><span class="stl_170 stl_171 stl_506">g</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0407em;">for this data stream is configured.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out357.html#357_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2388em;">3 </span></a></sup><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0463em;">It is quite possi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.1869em;"><span class="stl_167 stl_32 stl_28">2</span></div>
+					<div class="stl_01" style="left:6.0948em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">3</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.1045em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">See the </span><a href="https://oreil.ly/gwqc2" target="_blank"><span class="stl_187 stl_32 stl_33" style="word-spacing:0.0042em;">plug-in documentation </span></a><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">for more on this. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_73" style="word-spacing:0.0019em;">As a start, here is an entire page on </span><a href="https://oreil.ly/76e9K" target="_blank"><span class="stl_187 stl_32 stl_73" style="word-spacing:0.002em;">“reliable log forwarding”</span></a><span class="stl_168 stl_32 stl_73" style="word-spacing:0.002em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:25.3674em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Building for Compliance Controls &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1746em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0821em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">335 &nbsp;</span></div>
+					<a name="357_0" style="position:absolute;left:0em;top:47.1958em;">&nbsp;</a>
+					<a name="357_1" style="position:absolute;left:0em;top:48.2792em;">&nbsp;</a>
+					<a name="357_2" style="position:absolute;left:0em;top:27.017em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

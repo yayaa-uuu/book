@@ -1,0 +1,85 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_36.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_36.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2156em;">and XtraDB solve the phantom read problem with multiversion concurrency &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;z-index:129;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0073em;">control, which we explain later in this chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.966em;z-index:152;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">REPEATABLE REA</span><span class="stl_170 stl_171 stl_186">D</span><span class="stl_154 stl_32 stl_153" style="word-spacing:0.0128em;">is MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">efault transaction isolation level. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.8242em;"><span class="stl_170 stl_171 stl_28">SERIALIZABLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:9.7482em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1132em;">The highest level of isolation, </span><span class="stl_170 stl_171 stl_28">SERIALIZABLE</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1132em;">, solves the phantom read problem &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:10.7982em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0204em;">by forcing transactions to be ordered so that they can’t possibly conflict. In a nut‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:11.8977em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.156em;">shell, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0969em;">SERIALIZABLE </span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1567em;">places a lock on every row it reads. At this level, a lot of &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:12.9477em;z-index:435;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0812em;">timeouts and lock contention can occur. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0809em;">e’ve rarely seen people use this isola‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:13.9977em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.1201em;">tion level, but your application’s needs might force you to accept the decreased &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:15.0477em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">concurrency in favor of the data safety that results. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.5977em;z-index:583;"><a href="MultiPageHTML_out31.html#31_1"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out31.html#31_1"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out31.html#31_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0718em;">ble 1-1 </span></a><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0739em;">summarizes the various isolation levels and the drawbacks associated with &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.6477em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">each one. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:19.7353em;"><span class="stl_40 stl_41 stl_136" style="word-spacing:0.0177em;">Table 1-1. ANSI SQL isolation levels &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3003em;top:21.3076em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Isolation level &nbsp;</span></div>
+					<div class="stl_01" style="left:12.592em;top:21.3076em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Dirty reads possible</span><span class="stl_205 stl_27 stl_28" style="word-spacing:0.6427em;">&nbsp;</span><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Nonrepeatable reads &nbsp;</span></div>
+					<div class="stl_01" style="left:18.0428em;top:22.2076em;"><span class="stl_205 stl_27 stl_28">possible &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8822em;top:21.3076em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Phantom reads &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8822em;top:22.2076em;"><span class="stl_205 stl_27 stl_28">possible &nbsp;</span></div>
+					<div class="stl_01" style="left:32.3071em;top:21.3076em;"><span class="stl_205 stl_27 stl_28" style="word-spacing:0.033em;">Locking reads &nbsp;</span></div>
+					<div class="stl_01" style="left:12.5918em;top:23.284em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:12.5918em;top:24.3928em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:12.592em;top:25.5015em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:12.5917em;top:26.6103em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:18.0424em;top:23.284em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:18.0424em;top:24.3928em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:18.0424em;top:25.5015em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8818em;top:23.284em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8818em;top:24.3928em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8818em;top:25.5015em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:25.8818em;top:26.6103em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:32.3068em;top:23.284em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:32.3068em;top:24.3928em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:32.3068em;top:25.5015em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:32.3068em;top:26.6103em;"><span class="stl_206 stl_68 stl_28">Yes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.2997em;top:23.4186em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.036em;">READ UNCOMMITTED &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:24.5273em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">READ COMMITTED &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:25.6361em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0.035em;">REPEATABLE READ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:26.7448em;"><span class="stl_200 stl_171 stl_28">SERIALIZABLE &nbsp;</span></div>
+					<div class="stl_01" style="left:18.0424em;top:26.6103em;"><span class="stl_206 stl_68 stl_28">No &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.448em;"><span class="stl_180 stl_27 stl_28">Deadlocks &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.3364em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1308em;">A </span><span class="stl_155 stl_41 stl_144" style="word-spacing:0.1408em;">deadlock </span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1316em;">is when two or more transactions are mutually holding and requesting &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.3978em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0326em;">locks on the same resources, creating a cycle of dependencies. Deadlocks occur when &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.4478em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1579em;">transactions try to lock resources in a different order. They can happen whenever &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.4978em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0192em;">multiple transactions lock the same resources. For example, consider these two trans‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.5972em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0671em;">actions running against a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1905em;">StockPrice </span><span class="stl_154 stl_32 stl_106" style="word-spacing:0.0642em;">table, which has a primary key of </span><span class="stl_170 stl_171 stl_28">(stock_id, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.6967em;"><span class="stl_170 stl_171 stl_28">date)</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:37.2467em;"><span class="stl_154 stl_32 stl_56" style="word-spacing:0.0166em;">Transaction 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:39.0093em;"><span class="stl_200 stl_171 stl_28">START TRANSACTION; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:39.8593em;"><span class="stl_200 stl_171 stl_28">UPDATE StockPrice SET close = 45.50 WHERE stock_id = 4 and date = ‘2020-05-01’; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:40.7093em;"><span class="stl_200 stl_171 stl_28">UPDATE StockPrice SET close = 19.80 WHERE stock_id = 3 and date = ‘2020-05-02’; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:41.5593em;"><span class="stl_200 stl_171 stl_28">COMMIT; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.6967em;"><span class="stl_154 stl_32 stl_56" style="word-spacing:0.0166em;">Transaction 2 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:44.4593em;"><span class="stl_200 stl_171 stl_28">START TRANSACTION; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:45.3093em;"><span class="stl_200 stl_171 stl_28">UPDATE StockPrice SET high = 20.12 WHERE stock_id = 3 and date = ‘2020-05-02’; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:46.1593em;"><span class="stl_200 stl_171 stl_28">UPDATE StockPrice SET high = 47.20 WHERE stock_id = 4 and date = ‘2020-05-01’; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:47.0093em;"><span class="stl_200 stl_171 stl_28">COMMIT; &nbsp;</span></div>
+					<div class="stl_01" style="left:30.9324em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">Transactions &nbsp;</span></div>
+					<div class="stl_01" style="left:34.7866em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.6941em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">9</span></div>
+					<a name="31_0" style="position:absolute;left:0em;top:28.7411em;">&nbsp;</a>
+					<a name="31_1" style="position:absolute;left:0em;top:19.8811em;">&nbsp;</a>
+					<a name="31_2" style="position:absolute;left:0em;top:30.577em;">&nbsp;</a>
+					<a name="31_3" style="position:absolute;left:0em;top:9.9775em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

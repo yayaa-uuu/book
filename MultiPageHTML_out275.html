@@ -1,0 +1,64 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_301.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_301.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9998em;top:4.8885em;"><span class="stl_155 stl_41 stl_250" style="word-spacing:0.0218em;">Multithreaded replication &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:5.9499em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1471em;">Ensure you’re using multithreaded replication and you’ve looked at tuning the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:6.9999em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">various options as per the manual for how to get the most efficiency from it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.6219em;"><span class="stl_155 stl_41 stl_477" style="word-spacing:0.0289em;">Use sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:9.6832em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.04em;">While it seems like a cop-out answer, using sharding techniques to spread writes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:10.7333em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2051em;">across multiple sources is a very effective strategy. The long-standing rule of &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:11.7833em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">thumb for MySQL has been: scale reads with replicas, scale writes with sharding. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.4052em;z-index:470;"><span class="stl_155 stl_41 stl_52">T</span><span class="stl_155 stl_41 stl_28">e</span><span class="stl_155 stl_41 stl_157" style="word-spacing:0.0196em;">mporarily lower durability &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:14.4666em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1299em;">Purists will disagree, but there may be times when you’ve exhausted all tuning &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:15.5166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2057em;">and tweaking and sharding is not a viable option because of either effort or &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:16.5666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0532em;">design issues. If your replication lag is largely due to write operation limitations, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:17.666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.285em;">you can temporarily set </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0365em;">sync_binlog=0 </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2827em;">and </span><span class="stl_170 stl_171 stl_28">innodb_flush_log_at_trx_com &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:18.7655em;"><span class="stl_170 stl_171 stl_28">mit=</span><span class="stl_170 stl_171 stl_186">0</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">to boost replication speed. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.3155em;z-index:839;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0431em;">If you go this last route, you should be very, very careful. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0423em;">u should only do this on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.3655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0804em;">your replica, and if your replica is also where you take backups, changing these set‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.4155em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0511em;">tings may make it impossible for you to recover from a backup.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out275.html#275_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.254em;">7 </span></a></sup><span class="stl_154 stl_32 stl_33" style="word-spacing:0.052em;">Also, if your replica &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.4655em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.2208em;">crashes during this reduced durability, you will likely have to rebuild from your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.5155em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0809em;">source. Lastly, if you do this manually, it’s terribly easy to forget to set the durability &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.5655em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0787em;">back. Ensure you have good monitoring or have scripted some way to set durability &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.6155em;"><span class="stl_154 stl_32 stl_28">again. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:28.2149em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0439em;">One possible strategy would be to watch the </span><span class="stl_170 stl_171 stl_28">Seconds_behind_sourc</span><span class="stl_170 stl_171 stl_478">e</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0429em;">value from the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.3143em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.094em;">SHOW REPLICA STATUS </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1779em;">command, and when it exceeds a certain value, trigger an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.3643em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">action that does the following: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4427em;top:32.2477em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2731em;">1. Ensure</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4436em;">&nbsp;</span><span class="stl_154 stl_32 stl_112" style="word-spacing:0.4418em;">that the server is &nbsp;</span></div>
+					<div class="stl_01" style="left:18.0662em;top:32.2477em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.4451em;">a nonwritable replica, likely by verifying that &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:33.3471em;"><span class="stl_170 stl_171 stl_28">super_read_onl</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">is enabled. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4427em;top:34.7799em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.273em;">2. Change</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0868em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0868em;">the settings for </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1697em;">sync_binlog </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0868em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1697em;">innodb_flush_log_at_trx_commit </span><span class="stl_154 stl_32 stl_28">to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.8299em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">reduce write operations. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4434em;top:37.2627em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.2603em;">3. Periodically check </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1656em;">SHOW REPLICA STATUS </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2483em;">for the value of </span><span class="stl_170 stl_171 stl_28">Seconds</span><span class="stl_170 stl_171 stl_479">_</span><span class="stl_170 stl_171 stl_28">b</span><span class="stl_170 stl_171 stl_28">ehind_ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:38.3621em;"><span class="stl_170 stl_171 stl_28">source</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4434em;top:39.7454em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1641em;">4. When below an acceptable threshold, revert the settings back to their durable &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:40.7954em;"><span class="stl_154 stl_32 stl_99">nature. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">7</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_72" style="word-spacing:0.0045em;">This is typically true in cases where you may use LVM snapshots or a cloud-based disk snapshot approach to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28">backups. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7068em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Problems and Solutions &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">253 &nbsp;</span></div>
+					<a name="275_0" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="275_1" style="position:absolute;left:0em;top:14.6958em;">&nbsp;</a>
+					<a name="275_2" style="position:absolute;left:0em;top:6.1792em;">&nbsp;</a>
+					<a name="275_3" style="position:absolute;left:0em;top:9.9125em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

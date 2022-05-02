@@ -1,0 +1,48 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_42.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_42.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0004em;top:19.4411em;"><span class="stl_155 stl_41 stl_149" style="word-spacing:0.0164em;">Figure 1-2. A sequence diagram of handling multiple versions of a row across </span><span class="stl_216 stl_41 stl_28">diﬀerent &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:20.4911em;"><span class="stl_155 stl_41 stl_111">transactions &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.5525em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1882em;">When a different session reads a cluster key index record, InnoDB compares the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.6025em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0126em;">record’s transaction ID versus the read view of that session. If the record in its current &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.6525em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0421em;">state should not be visible (the transaction that altered it has not yet committed), the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.7025em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.139em;">undo log record is followed and applied until the session reaches a transaction ID &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.7525em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0592em;">that is eligible to be visible. This process can loop all the way to an undo record that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.8025em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0041em;">deletes this row entirely, signaling to the read view that this row does not exist. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.3525em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0338em;">Records in a transaction are deleted by setting a “deleted” bit in the “info flags” of the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.4025em;z-index:741;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">record. This is also tracked in the undo log as a “remove delete mark</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.9525em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0496em;">It is also worth noting that all undo log writes are also redo logged because the undo &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.0025em;"><span class="stl_154 stl_32 stl_185" style="word-spacing:0.1038em;">log writes are part of the server crash recovery process and are transactional.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out36.html#36_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.3555em;">11 </span></a></sup><span class="stl_154 stl_32 stl_28">The &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.0525em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1053em;">size of these redo and undo logs also plays a large part in how transactions at high &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.1025em;z-index:972;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">concurrency perform. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">over their configuration in more detail in </span><a href="MultiPageHTML_out121.html#121_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0054em;">Chapter 5</span></a><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.6525em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.158em;">The result of all this extra record keeping is that most read queries never acquire &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.7025em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0538em;">locks. They simply read data as fast as they can, making sure to select only rows that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.7525em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1006em;">meet the criteria. The drawbacks are that the storage engine has to store more data &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.8025em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1656em;">with each row, do more work when examining rows, and handle some additional &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.8525em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">housekeeping operations. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.3545em;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">11 </span><span class="stl_168 stl_32 stl_78" style="word-spacing:0.0015em;">For a lot more detail on how InnoDB handles multiple versions of its records, see </span><a href="https://oreil.ly/exaaL" target="_blank"><span class="stl_187 stl_32 stl_28" style="word-spacing:0em;">this blog post </span></a><span class="stl_168 stl_32 stl_164" style="word-spacing:0.0147em;">by Jeremy &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28">Cole. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">14 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3619em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2694em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 1: MySQL Architecture &nbsp;</span></div>
+					<a name="36_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="36_1" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

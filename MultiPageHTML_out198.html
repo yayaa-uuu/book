@@ -1,0 +1,43 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_210.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_210.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.115em;">Notice that not only does it take longer to insert the rows with the UUID primary &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0721em;">key, but the resulting indexes are quite a bit bigger. Some of that is due to the larger &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0516em;">primary key, but some of it is undoubtedly due to page splits and resultant fragmen‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">tation as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:9.0166em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2338em;">To </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_139" style="word-spacing:0.048em;">ee why this is so, let’s see what happened in the index when we inserted data into &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.0666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0124em;">the first table. </span><a href="MultiPageHTML_out198.html#198_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0125em;">Figure 7-6 </span></a><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0143em;">shows inserts filling a page and then continuing on a second &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:11.1166em;"><span class="stl_154 stl_32 stl_28">page. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.2711em;"><span class="stl_155 stl_41 stl_98" style="word-spacing:0.0151em;">Figure 7-6. Inserting sequential index values into a clustered index &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.3325em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.028em;">As </span><a href="MultiPageHTML_out198.html#198_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.028em;">Figure 7-6 </span></a><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0294em;">illustrates, InnoDB stores each record immediately after the one before &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.3825em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0741em;">because the primary key values are sequential. When the page reaches its maximum &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.4325em;z-index:592;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1141em;">fill factor (InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1101em;">s </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1109em;">nitial fill factor is only 15/16 full, to leave room for modifica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.4825em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0813em;">tions later), the next record goes into a new page. Once the data has been loaded in &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.5325em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1359em;">this sequential fashion, the primary key pages are packed nearly full with in-order &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.5825em;z-index:862;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0247em;">records, which is highly desirable. (The secondary index pages are not likely to differ, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.6325em;"><span class="stl_154 stl_32 stl_192">however.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.1825em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1212em;">Contrast that with what happened when we inserted the data into the second table &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.2325em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">with the UUID clustered index, as shown in </span><a href="MultiPageHTML_out199.html#199_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 7-7</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">176 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6678em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5753em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="198_0" style="position:absolute;left:0em;top:12.8083em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

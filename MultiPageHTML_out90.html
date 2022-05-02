@@ -1,0 +1,106 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_97.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_97.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:8.8333em;top:4.5285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">vt2.VARIABLE_VALUE AS OTHER_VALUE &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:5.3785em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM performance_schema.variables_by_thread vt1 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:6.2285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">JOIN performance_schema.threads t USING(THREAD_ID) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:7.0785em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">JOIN performance_schema.variables_by_thread vt2 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:7.9285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">USING(VARIABLE_NAME) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:8.7785em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE vt1.VARIABLE_VALUE != vt2.VARIABLE_VALUE &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:9.6285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">AND t.PROCESSLIST_ID=@@pseudo_thread_id; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:10.4792em;"><span class="stl_200 stl_171 stl_28">+-----+--------------------+-------------------+--------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">| TID | VARIABLE_NAME &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:12.1792em;"><span class="stl_200 stl_171 stl_28">+-----+--------------------+-------------------+--------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9792em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">| MY_VALUE &nbsp;</span></div>
+					<div class="stl_01" style="left:24.0625em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">| OTHER_VALUE &nbsp;</span></div>
+					<div class="stl_01" style="left:31.5em;top:11.3292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.4792em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">42 | max_allowed_packet | 67108864 &nbsp;</span></div>
+					<div class="stl_01" style="left:24.0625em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">| 1073741824 &nbsp;</span></div>
+					<div class="stl_01" style="left:24.0625em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">| 5 &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9792em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">| 1626650242.678049 | 1626567255.695062 &nbsp;</span></div>
+					<div class="stl_01" style="left:31.5em;top:13.0292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.5em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.5em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.4792em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">42 | pseudo_thread_id &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4792em;top:14.7292em;"><span class="stl_200 stl_171 stl_28">42 | timestamp &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4792em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">43 | gtid_next &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9792em;top:13.8792em;"><span class="stl_200 stl_171 stl_28">| 22715 &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9792em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">| AUTOMATIC &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9792em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">| 22715 &nbsp;</span></div>
+					<div class="stl_01" style="left:16.9792em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">| 1626650242.678049 | 1626567255.707031 &nbsp;</span></div>
+					<div class="stl_01" style="left:24.0625em;top:15.5792em;"><span class="stl_200 stl_171 stl_28">| NOT_YET_DETERMINED | &nbsp;</span></div>
+					<div class="stl_01" style="left:24.0625em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">| 6 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4792em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">43 | pseudo_thread_id &nbsp;</span></div>
+					<div class="stl_01" style="left:8.4792em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">43 | timestamp &nbsp;</span></div>
+					<div class="stl_01" style="left:31.5em;top:16.4292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.5em;top:17.2792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:18.1292em;"><span class="stl_200 stl_171 stl_28">+-----+--------------------+-------------------+--------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:18.9792em;"><span class="stl_200 stl_171 stl_28">6 rows in set (0,01 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0839em;">Global and current session status values are stored in the tables </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1746em;">global_status </span><span class="stl_154 stl_32 stl_28">and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.2655em;"><span class="stl_170 stl_171 stl_28">session_status</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.052em;">, respectively. They also have only two columns: </span><span class="stl_170 stl_171 stl_28">VARIABLE_NAM</span><span class="stl_170 stl_171 stl_318">E</span><span class="stl_154 stl_32 stl_28">and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.3649em;"><span class="stl_170 stl_171 stl_28">VARIABLE_VALUE</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.9149em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1901em;">Status variables can be aggregated by user account, host, user, and thread. In my &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.9649em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0696em;">opinion, the most interesting aggregation is by thread because it allows you to iden‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.0149em;z-index:1165;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.034em;">tify quickly which connection is creating most of the resource pressure on the server. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.0649em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.4856em;">For example, the following snippet clearly shows that the connection with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.1643em;"><span class="stl_170 stl_171 stl_28">THREAD_ID=8</span><span class="stl_170 stl_171 stl_186">3</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">is doing most of the writes: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:29.9262em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT * FROM status_by_thread &nbsp;</span></div>
+					<div class="stl_01" style="left:8.833em;top:30.7762em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE VARIABLE_NAME='Handler_write'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:31.6269em;"><span class="stl_200 stl_171 stl_28">+-----------+---------------+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:32.4769em;"><span class="stl_200 stl_171 stl_28">| THREAD_ID | VARIABLE_NAME | VARIABLE_VALUE | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:33.3269em;"><span class="stl_200 stl_171 stl_28">+-----------+---------------+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:34.1769em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.0269em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4164em;top:35.8769em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6039em;top:34.1769em;"><span class="stl_200 stl_171 stl_28">71 | Handler_write | 94 &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6039em;top:35.0269em;"><span class="stl_200 stl_171 stl_28">83 | Handler_write | 4777777777 &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6039em;top:35.8769em;"><span class="stl_200 stl_171 stl_28">84 | Handler_write | 101 &nbsp;</span></div>
+					<div class="stl_01" style="left:23.3539em;top:34.1769em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:23.3539em;top:35.0269em;"><span class="stl_200 stl_171 stl_28">| -- Most writes &nbsp;</span></div>
+					<div class="stl_01" style="left:23.3539em;top:35.8769em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4164em;top:36.7269em;"><span class="stl_200 stl_171 stl_28">+-----------+---------------+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.5769em;"><span class="stl_200 stl_171 stl_28">3 rows in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.7638em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1243em;">User-defined variables are created as </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0538em;">SET @my_var = 'foo' </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1175em;">and are tracked in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.8632em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">table </span><span class="stl_170 stl_171 stl_28">user_variables_by_thread</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:41.6251em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT * FROM user_variables_by_thread; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:42.4758em;"><span class="stl_200 stl_171 stl_28">+-----------+---------------+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:43.3258em;"><span class="stl_200 stl_171 stl_28">| THREAD_ID | VARIABLE_NAME | VARIABLE_VALUE | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:44.1758em;"><span class="stl_200 stl_171 stl_28">+-----------+---------------+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:45.0258em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:45.8758em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6043em;top:45.0258em;"><span class="stl_200 stl_171 stl_28">71 | baz &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6043em;top:45.8758em;"><span class="stl_200 stl_171 stl_28">84 | foo &nbsp;</span></div>
+					<div class="stl_01" style="left:17.3335em;top:45.0258em;"><span class="stl_200 stl_171 stl_28">| boo &nbsp;</span></div>
+					<div class="stl_01" style="left:17.3335em;top:45.8758em;"><span class="stl_200 stl_171 stl_28">| bar &nbsp;</span></div>
+					<div class="stl_01" style="left:23.3543em;top:45.0258em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:23.3543em;top:45.8758em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4168em;top:46.7258em;"><span class="stl_200 stl_171 stl_28">+-----------+---------------+----------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:47.5758em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">2 rows in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">68 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3623em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2698em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

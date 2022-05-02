@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_157.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_157.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0002em;top:4.5415em;"><span class="stl_170 stl_171 stl_28">VARCHAR &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.4655em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1783em;">VARCHAR </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0786em;">stores variable-length character strings and is the most common string &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.5155em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0374em;">data type. It can require less storage space than fixed-length types because it uses &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:7.5655em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">only as much space as it needs (i.e., less space is used to store shorter values). &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:9.1649em;z-index:404;"><span class="stl_170 stl_171 stl_28">VARCHA</span><span class="stl_170 stl_171 stl_365">R</span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0354em;">uses 1 or 2 extra bytes to record the value</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0307em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_157" style="word-spacing:0.0504em;">ength: 1 byte if the column’s &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:10.2149em;z-index:449;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1968em;">maximum length is 255 bytes or less, and 2 bytes if it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.194em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.194em;">ore. Assuming the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:11.3143em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1588em;">latin1 </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0972em;">character set, a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1588em;">VARCHAR(10) </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0972em;">will use up to 11 bytes of storage space. A &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:12.4138em;"><span class="stl_170 stl_171 stl_28">VARCHAR(1000</span><span class="stl_170 stl_171 stl_329">)</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0255em;">can use up to 1,002 bytes, because it needs 2 bytes to store length &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:13.4638em;"><span class="stl_154 stl_32 stl_39">information. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:15.0632em;"><span class="stl_170 stl_171 stl_28">VARCHA</span><span class="stl_170 stl_171 stl_199">R</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0112em;">helps performance because it saves space. However, because the rows are &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:16.1132em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1673em;">variable length, they can grow when you update them, which can cause extra &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:17.1632em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1155em;">work. If a row grows and no longer fits in its original location, the behavior is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:18.2132em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0342em;">storage engine dependent. For example, InnoDB may need to split the page to fit &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:19.2632em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0039em;">the row into it. Other storage engines may never update data in place at all. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:20.8627em;"><span class="stl_154 stl_32 stl_121" style="word-spacing:0.2112em;">It’s usually worth using </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0587em;">VARCHAR </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1953em;">when the maximum column length is much &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:21.9127em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0713em;">larger than the average length; when updates to the field are rare, so fragmenta‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:22.9627em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1491em;">tion is not a problem; and when you’re using a complex character set such as &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:24.0127em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">UTF-8, where each character uses a variable number of bytes of storage. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:25.6121em;z-index:1247;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0354em;">It’s trickier with InnoDB, which can store long </span><span class="stl_170 stl_171 stl_28">VARCHA</span><span class="stl_170 stl_171 stl_373">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0243em;">values as BLOBs. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0243em;">e </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_28">ill &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:26.6621em;z-index:1268;"><span class="stl_154 stl_32 stl_103" style="word-spacing:0.0117em;">discuss this later. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.5203em;"><span class="stl_170 stl_171 stl_28">CHAR &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:29.4443em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0074em;">CHAR </span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.2436em;">is fixed-length: MySQL always allocates enough space for the specified &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:30.5437em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0901em;">number of characters. When storing a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1678em;">CHAR </span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0932em;">value, MySQL removes any trailing &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:31.5937em;z-index:1410;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">spaces. </span><span class="stl_154 stl_32 stl_113">V</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">lues are padded with spaces as needed for comparisons. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:33.1932em;"><span class="stl_170 stl_171 stl_28">CHA</span><span class="stl_170 stl_171 stl_386">R</span><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0333em;">is useful if you want to store very short strings or if all the values are nearly &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:34.2926em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.041em;">the same length. For example, </span><span class="stl_170 stl_171 stl_28">CHA</span><span class="stl_170 stl_171 stl_387">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0372em;">is a good choice for </span><span class="stl_170 stl_171 stl_28">MD</span><span class="stl_170 stl_171 stl_387">5</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0372em;">values for user pass‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:35.392em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1386em;">words, which are always the same length. </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1166em;">CHAR </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1373em;">is also better than </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1166em;">VARCHAR </span><span class="stl_154 stl_32 stl_28">for &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:36.442em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.137em;">data that’s changed frequently because a fixed-length row is not prone to frag‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:37.5415em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1114em;">mentation. For very short columns, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1462em;">CHAR </span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1112em;">is also more efficient than </span><span class="stl_170 stl_171 stl_28">VARCHAR</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1091em;">; a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:38.6409em;"><span class="stl_170 stl_171 stl_28">CHAR(1</span><span class="stl_170 stl_171 stl_261">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0215em;">designed to hold only </span><span class="stl_170 stl_171 stl_376">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0219em;">and </span><span class="stl_170 stl_171 stl_261">N</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0215em;">values will use only 1 byte in a single-byte &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:39.7404em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">character set,</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out151.html#151_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.1702em;">1 </span></a></sup><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">but a </span><span class="stl_170 stl_171 stl_28">VARCHAR(1</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">would use 2 bytes because of the length byte. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.4369em;"><span class="stl_167 stl_32 stl_28">1</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_88" style="word-spacing:0.001em;">Remember that the length is specified in characters, not bytes. A multibyte character set can require more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:123;"><span class="stl_168 stl_32 stl_24" style="word-spacing:0.0055em;">than 1 byte to store each character. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.2647em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Choosing Optimal Data Types &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">129 &nbsp;</span></div>
+					<a name="151_0" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

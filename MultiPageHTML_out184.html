@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_192.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_192.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9999em;top:4.3166em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0352em;">and benefits of indexes, how to estimate query speed, and how to determine whether &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">indexes will be more expensive to maintain than the benefits they provide. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:6.9166em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.1476em;">Lahdenmaki and Leach’s book also introduces a three-star system for grading how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:7.9666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.125em;">suitable an index is for a query. The index earns one star if it places relevant rows &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:9.0166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1641em;">adjacent to each other, a second star if its rows are sorted in the order the query &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.0666em;z-index:627;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0261em;">needs, and a final star if it contains all the columns needed for the query. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_219">e</span><span class="stl_154 stl_32 stl_220">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0234em;">ll return &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:11.1166em;z-index:674;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.005em;">to these principles throughout this chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:13.0131em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.2833em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0528em;">Creating the correct indexes and using them properly is essential to good query per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.3333em;z-index:791;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.3672em;">formance. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_143" style="word-spacing:0.3727em;">e’ve introduced the different types of indexes and explored their &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:17.3833em;z-index:878;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">strengths and weaknesses. Now let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">ee how to really tap into the power of indexes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.9333em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.113em;">There are many ways to choose and use indexes effectively because there are many &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.9833em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0381em;">special-case optimizations and specialized behaviors.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out184.html#184_2"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2341em;">4 </span></a></sup><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0385em;">Determining what to use when &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.0333em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1537em;">and evaluating the performance implications of your choices are skills you’ll learn &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:22.0833em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">over time. The next sections will help you understand how to use indexes effectively. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.9676em;"><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Preﬁx </span><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Indexes and Index Selectivity &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.8674em;z-index:1235;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.042em;">u can often save space and get good performance by indexing the first few charac‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.9174em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1237em;">ters instead of the whole value. This makes your indexes use less space, but it also &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.956em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2155em;">makes them less </span><span class="stl_155 stl_41 stl_100">selective</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.2176em;">. Index selectivity is the ratio of the number of distinct &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.006em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0764em;">indexed values (the </span><span class="stl_155 stl_41 stl_422">cardinality</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.078em;">) to the total number of rows in the table (</span><span class="stl_155 stl_41 stl_28">#T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0764em;">), and it &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.056em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0924em;">ranges from 1/</span><span class="stl_155 stl_41 stl_28" style="word-spacing:0.0904em;">#T </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0949em;">to 1. A highly selective index is good because it lets MySQL filter &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.1174em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0138em;">out more rows when it looks for matches. A unique index has a selectivity of 1, which &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.1674em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">is as good as it gets. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.7174em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0679em;">A prefix of the column is often selective enough to give good performance. If you’re &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.8054em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0337em;">indexing </span><span class="stl_170 stl_171 stl_28">BLO</span><span class="stl_170 stl_171 stl_386">B</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0337em;">or </span><span class="stl_170 stl_171 stl_28">TEX</span><span class="stl_170 stl_171 stl_386">T</span><span class="stl_154 stl_32 stl_142" style="word-spacing:0.0295em;">columns, or very long </span><span class="stl_170 stl_171 stl_28">VARCHA</span><span class="stl_170 stl_171 stl_386">R</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0337em;">columns, you </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.047em;">must </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0337em;">define pre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.8668em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">fix indexes because MySQL disallows indexing their full length. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.4168em;z-index:1891;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1212em;">The trick is to choose a prefix that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.117em;">s </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.117em;">ong enough to give good selectivity but short &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.4668em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0534em;">enough to save space. The prefix should be long enough to make the index nearly as &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.5168em;z-index:2060;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0089em;">useful as it would be if you</span><span class="stl_154 stl_32 stl_161">’</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0073em;">d indexed the whole column. In other words, you</span><span class="stl_154 stl_32 stl_161">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0057em;">d like the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.5668em;z-index:2125;"><span class="stl_154 stl_32 stl_28">prefix</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0061em;">ardinality to be close to the full column</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_164">ardinality. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:42.1168em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2234em;">To </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0289em;">etermine a good prefix length, find the most frequent values and compare with a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.1668em;z-index:2231;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0602em;">list of the most frequent prefixes. There</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0549em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0563em;">o good table to demonstrate this in Sakila &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.5459em;"><span class="stl_167 stl_32 stl_28">4</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.4635em;z-index:92;"><span class="stl_168 stl_32 stl_93">MySQ</span><span class="stl_168 stl_32 stl_94">L</span><span class="stl_168 stl_32 stl_34" style="word-spacing:0.19em;">’s </span><span class="stl_168 stl_32 stl_28">o</span><span class="stl_168 stl_32 stl_74" style="word-spacing:0.0016em;">ptimizer is a very mysterious and powerful device, and its mystery is only exceeded by its power. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_87" style="word-spacing:0.0003em;">Due to the way it calculates optimal query planning, you should rely on using </span><span class="stl_211 stl_171 stl_28">EXPLAI</span><span class="stl_211 stl_171 stl_275">N</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">in your own queries &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_88" style="word-spacing:0.001em;">and workload to determine the most optimal strategies. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">162 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.668em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5755em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="184_0" style="position:absolute;left:0em;top:13.3647em;">&nbsp;</a>
+					<a name="184_1" style="position:absolute;left:0em;top:24.2607em;">&nbsp;</a>
+					<a name="184_2" style="position:absolute;left:0em;top:46.5548em;">&nbsp;</a>
+					<a name="184_3" style="position:absolute;left:0em;top:35.0461em;">&nbsp;</a>
+					<a name="184_4" style="position:absolute;left:0em;top:28.1966em;">&nbsp;</a>
+					<a name="184_5" style="position:absolute;left:0em;top:26.0966em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

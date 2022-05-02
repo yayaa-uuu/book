@@ -1,0 +1,67 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_150.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_150.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0815em;">MySQL in most ways and not try to make it behave like other database servers. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1505em;">(Many client and GUI tools expect MySQL to have its own flavor of SQL, for &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:6.4166em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1456em;">example, so if you change it to speak more ANSI-compliant SQL some things &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:7.4666em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.021em;">might break.) However, several of the settings are very useful, and some might be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:8.5166em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0687em;">worth considering in your specific cases. In the past, MySQL was generally very &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:9.616em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">loose about </span><span class="stl_170 stl_171 stl_28">sql_mode</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">, but it is much more strict in later versions. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:11.166em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0893em;">However, be aware that it might not be a good idea to change these settings for &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:12.216em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0773em;">existing applications because doing so might make the server incompatible with &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:13.266em;"><span class="stl_154 stl_32 stl_42" style="word-spacing:0.0668em;">the application’s expectations. It’s pretty common for people to unwittingly write &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:14.3655em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0875em;">queries that refer to columns not in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0423em;">GROUP BY </span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0898em;">clause or use aggregate func‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:15.4649em;z-index:712;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0147em;">tions, for example, so if you want to enable the </span><span class="stl_170 stl_171 stl_28">ONLY_FULL_GROUP_B</span><span class="stl_170 stl_171 stl_302">Y</span><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0068em;">option, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:16.5149em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.075em;">good idea to do it in a development or staging server first and only deploy it in &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:17.5649em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">production once you’re sure everything is working. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:19.1643em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0669em;">Also, be sure to check for changes to the default </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.194em;">sql_mode </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0637em;">as you plan upgrades &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:20.2143em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0441em;">to your databases. Changes to this variable may be incompatible with your exist‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:21.2643em;z-index:1016;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0252em;">ing application, and you need to preemptively test this beforehand. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0229em;">e </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0229em;">alk more &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:22.3143em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">about upgrading in </span><a href="MultiPageHTML_out365.html#365_0"><span class="stl_184 stl_32 stl_139" style="word-spacing:0.0103em;">Appendix A</span></a><span class="stl_154 stl_32 stl_139" style="word-spacing:0.0103em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.1726em;"><span class="stl_170 stl_171 stl_28">sysdate_is_now &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:25.0471em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1304em;">This is another setting that might be backward incompatible with applications’ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:26.1466em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.163em;">expectations. But if you don’t explicitly desire the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0972em;">SYSDATE() </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.159em;">function to have &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:27.1965em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0776em;">nondeterministic behavior, which can break replication and make point-in-time &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:28.2465em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1977em;">recovery from backups unreliable, you might want to enable this option and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:29.2966em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">make its behavior deterministic. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:30.9679em;"><span class="stl_170 stl_171 stl_28">read_onl</span><span class="stl_170 stl_171 stl_259">y</span><span class="stl_155 stl_41 stl_22" style="word-spacing:0.023em;">and </span><span class="stl_170 stl_171 stl_28">super_read_only &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:32.0788em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0294em;">The </span><span class="stl_170 stl_171 stl_28">read_onl</span><span class="stl_170 stl_171 stl_365">y</span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0313em;">option prevents unprivileged users from making changes on rep‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:33.1288em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0397em;">licas, which should be receiving changes only via replication, not from the appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:34.1788em;z-index:1533;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0063em;">cation. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">trongly recommend setting replicas to read-only mode. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:35.7782em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.109em;">There is a more restrictive read-only option, </span><span class="stl_170 stl_171 stl_28">super_read_only</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1125em;">, which prevents &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:36.8776em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2049em;">even users with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0451em;">SUPER </span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.2087em;">privilege from being able to write data. With this &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:37.9276em;z-index:1781;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0244em;">enabled, the only thing that can write changes to your database is replication. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_52">e &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:39.0157em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1816em;">also </span><span class="stl_155 stl_41 stl_250" style="word-spacing:0.2013em;">strongly </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1816em;">recommend enabling </span><span class="stl_170 stl_171 stl_28">super_read_only</span><span class="stl_154 stl_32 stl_51" style="word-spacing:0.1893em;">. It will prevent you from &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:40.0771em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0802em;">accidentally using an administrator account to write data to a read-only replica, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:41.1271em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">putting it out of sync. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:43.0236em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Advanced InnoDB Settings &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.2938em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0227em;">Some of these InnoDB options are quite important for server performance, and there &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:46.3438em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">are also a couple of safety options: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">122 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="144_0" style="position:absolute;left:0em;top:43.3752em;">&nbsp;</a>
+					<a name="144_1" style="position:absolute;left:0em;top:45.523em;">&nbsp;</a>
+					<a name="144_2" style="position:absolute;left:0em;top:32.308em;">&nbsp;</a>
+					<a name="144_3" style="position:absolute;left:0em;top:41.3563em;">&nbsp;</a>
+					<a name="144_4" style="position:absolute;left:0em;top:36.0074em;">&nbsp;</a>
+					<a name="144_5" style="position:absolute;left:0em;top:25.2764em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

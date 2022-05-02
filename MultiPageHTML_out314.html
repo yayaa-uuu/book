@@ -1,0 +1,50 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_341.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_341.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.7213em;top:4.3166em;z-index:45;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Do</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">split tables based on business function. </span><span class="stl_154 stl_32 stl_127">T</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0048em;">bles that power account signups can &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.3666em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">be separate from tables that host existing customer settings, and tables that power &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:6.4166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">a new feature should start off in their own database. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:7.7999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• Do</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.016em;">&nbsp;</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0197em;">not shy away from tackling spots where separate business concerns have been &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:8.8499em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.12em;">intermingled in the data and you need to advocate for not just data separation &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:9.8999em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0625em;">but also application refactoring and introducing API access across those bound‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:10.9499em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.135em;">aries. A common example we have seen is mixing customer identity with cus‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:11.9999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tomer billing. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.8833em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0427em;">It is normal that at first there will be tables that clearly have their own business func‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.9333em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0601em;">tion and access pattern and therefore are an easy target for splitting off to a separate &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.9833em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0047em;">cluster, but that separation will get more nuanced as you get further along. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.5333em;z-index:747;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0625em;">Now that we have split data in a thoughtful manner based on business function, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.5833em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">talk about how to scale for read-bound loads using replica read pools. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0008em;top:20.4798em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Scaling Reads with Read Pools &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.75em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0928em;">Replicas in a cluster can serve more than one purpose. First and foremost, they are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:23.8em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0138em;">candidates for failing over writes, either in a planned or unplanned manner, when the &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.85em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0044em;">current source needs to be taken out of service for any reason. But since these replicas &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.9em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0055em;">are also constantly running updates to match the data in the source, you can use them &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.95em;"><span class="stl_154 stl_32 stl_135" style="word-spacing:-0.0029em;">to serve read requests as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.5em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0905em;">In </span><a href="MultiPageHTML_out314.html#314_1"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0905em;">Figure 11-1</span></a><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0914em;">, we start by getting a visual of what this new setup with read replica &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.55em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">pools looks like. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:48.0645em;"><span class="stl_155 stl_41 stl_194" style="word-spacing:0.0134em;">Figure 11-1. Application nodes using a virtual IP to access read replicas &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">292 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 11: Scaling MySQL &nbsp;</span></div>
+					<a name="314_0" style="position:absolute;left:0em;top:20.8314em;">&nbsp;</a>
+					<a name="314_1" style="position:absolute;left:0em;top:31.2417em;">&nbsp;</a>
+					<a name="314_2" style="position:absolute;left:0em;top:22.9792em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

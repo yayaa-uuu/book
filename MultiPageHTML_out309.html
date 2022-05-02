@@ -1,0 +1,47 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_335.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_335.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:30.4983em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 11 &nbsp;</span></div>
+					<div class="stl_01" style="left:26.0842em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Scaling MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.0306em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0506em;">Running MySQL in a personal project, or even in a young company, is very different &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.0806em;z-index:161;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.063em;">from running it in a business with an established market and “hockey stick growth</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1386em;">In a high-velocity business setting, traffic can grow orders of magnitude year over &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.1806em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1953em;">year, the environment becomes more complex, and the accompanying data needs &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.2306em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1706em;">accelerate rapidly. Scaling up MySQL is very different from other types of servers &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.2806em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0324em;">largely because of the stateful nature of the data. Compare this to a web server, where &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:26.3306em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0459em;">the widely accepted model of adding more behind a load balancer is typically all you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:27.3806em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0097em;">need to do. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.9306em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1287em;">In this chapter, we explain what scaling means and walk you through the different &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.9806em;z-index:615;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0404em;">axes where you may need to scale. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0386em;">e </span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0414em;">xplore why read scaling is essential and show &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.0306em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.015em;">you how to accomplish it safely, with strategies like queuing for making scaling writes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.0806em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0737em;">more predictable. Finally, we cover sharding data sets to scale writes using tools like &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.1306em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0535em;">ProxySQL and Vitess. By the end of this chapter, you should be able to identify what &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:34.1806em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">seasonal pattern your system has, how to scale reads, and how to scale writes. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9993em;top:36.0771em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">What Is Scaling? &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:38.3359em;"><span class="stl_155 stl_41 stl_230" style="word-spacing:0.016em;">Scaling </span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0063em;">is the system’s ability to support growing traffic. The criteria for whether a sys‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.3973em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0469em;">tem scales well or scales poorly can be measured by cost and simplicity. If it is exces‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.4473em;z-index:1149;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1259em;">sively expensive or complicated to increase your system</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1201em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1201em;">bility to scale, you likely &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.4973em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">will expend significantly more effort remediating this as you hit limitations. &nbsp;</span></div>
+					<div class="stl_01" style="left:35.082em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">287 &nbsp;</span></div>
+					<a name="309_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="309_1" style="position:absolute;left:0em;top:36.4287em;">&nbsp;</a>
+					<a name="309_2" style="position:absolute;left:0em;top:38.5765em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_322.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_322.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:18.5611em;"><span class="stl_155 stl_41 stl_116" style="word-spacing:0.0129em;">Figure 10-1. How copy-on-write technology reduces the size needed for a volume &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.6111em;"><span class="stl_155 stl_41 stl_59">snapshot &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.6794em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Prerequisites and </span><span class="stl_308 stl_27 stl_28">conﬁguration &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.1468em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.02em;">It’s almost trivial to create a snapshot, but you need to ensure that your system is con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.1854em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0947em;">figured in such a way that you can get a consistent copy of </span><span class="stl_155 stl_41 stl_93" style="word-spacing:0.1054em;">all </span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0945em;">the files you want to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:25.2468em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2962em;">back up at a single instant in time. First, make sure your system meets these &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.2968em;"><span class="stl_154 stl_32 stl_28">conditions: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:28.1801em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2725em;">• All</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0442em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0449em;">InnoDB files (InnoDB tablespace files and InnoDB transaction logs) must be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:29.2301em;z-index:427;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1272em;">on a single logical volume (partition). </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1286em;">u need absolute point-in-time consis‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:30.2801em;"><span class="stl_154 stl_32 stl_214" style="word-spacing:0.157em;">tency, and LVM can’t take consistent snapshots of more than one volume at a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:31.3301em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">time. (This is an LVM limitation; some other systems do not have this problem.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:32.7135em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• If</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.059em;">&nbsp;</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0618em;">you need to back up the table definitions too, the MySQL data directory must &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:33.7635em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.013em;">be in the same logical volume. If you use another method to back up table defini‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:34.8135em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0264em;">tions, such as a schema-only backup into your version control system, you might &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:35.8635em;"><span class="stl_154 stl_32 stl_137" style="word-spacing:-0.0032em;">not need to worry about this. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:37.2468em;z-index:814;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.14em;">u must have enough free space in the volume group to create the snapshot. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:38.2968em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.06em;">How much you need will depend on your workload. When you set up your sys‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:39.3468em;z-index:1000;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0068em;">tem, leave some unallocated space so that you’ll have room for snapshots later. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.2188em;"><span class="stl_154 stl_32 stl_111" style="word-spacing:0.0271em;">LVM has the concept of a </span><span class="stl_155 stl_41 stl_116" style="word-spacing:0.013em;">volume group</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0162em;">, which contains one or more logical volumes. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:42.2801em;z-index:1070;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">u can see the volume groups on your system as follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:44.042em;"><span class="stl_200 stl_171 stl_28">$ </span><span class="stl_265 stl_173 stl_28">vgs &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:44.8927em;"><span class="stl_200 stl_171 stl_28">VG #PV #LV #SN Attr VSize VFree &nbsp;</span></div>
+					<div class="stl_01" style="left:7.771em;top:45.7427em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">vg 1 4 0 wz--n- 534.18G 249.18G &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">274 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="296_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="296_1" style="position:absolute;left:0em;top:23.3761em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

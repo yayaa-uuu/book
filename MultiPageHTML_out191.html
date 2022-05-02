@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_199.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_199.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.366em;"><span class="stl_170 stl_171 stl_28">customer_i</span><span class="stl_170 stl_171 stl_428">d</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0619em;">has higher selectivity, so again the answer is to put that column first in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.416em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:7.1779em;"><span class="stl_265 stl_173 stl_28">ALTER TABLE payment ADD KEY(customer_id, staff_id); &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:8.316em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0115em;">As with prefix indexes, problems often arise from special values that have higher than &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.366em;"><span class="stl_154 stl_32 stl_151" style="word-spacing:0.0322em;">normal cardinality. For example, we have seen applications treat users who aren’t log‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:10.416em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1213em;">ged in as “guest” users who get a special user ID in session tables and other places &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:11.466em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1265em;">where user activity is recorded. Queries involving that user ID are likely to behave &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:12.516em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1604em;">very differently from other queries because there are usually a lot of sessions that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:13.566em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0372em;">aren’t logged in. Sometimes system accounts cause similar problems. One application &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:14.616em;"><span class="stl_154 stl_32 stl_100" style="word-spacing:0.169em;">had a magical administrative account, which wasn’t a real user, who was “friends” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.666em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1292em;">with every user of the entire website so that it could send status notices and other &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:16.716em;z-index:714;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1081em;">messages. That user</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1073em;">s huge list of friends was causing severe performance problems &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.766em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">for the site. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.316em;z-index:827;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0365em;">This is actually fairly typical. Any outlier, even if it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0305em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0305em;">ot an artifact of a poor decision &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:20.366em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0241em;">in how the application is managed, can cause problems. Users who really do have lots &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.416em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1279em;">of friends, photos, status messages, and the like can be just as troublesome as fake &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:22.466em;"><span class="stl_154 stl_32 stl_28">users. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.016em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0342em;">Here’s a real example we saw once on a product forum where users exchanged stories &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.066em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0102em;">and experiences about the product. Queries of this particular form were running very &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.116em;"><span class="stl_154 stl_32 stl_429">slowly: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:27.8779em;"><span class="stl_265 stl_173 stl_28">SELECT COUNT(DISTINCT threadId) AS COUNT_VALUE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:28.7279em;"><span class="stl_265 stl_173 stl_28">FROM Message &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:29.5779em;"><span class="stl_265 stl_173 stl_28">WHERE (groupId = 10137) AND (userId = 1288826) AND (anonymous = 0) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:30.4279em;"><span class="stl_265 stl_173 stl_28">ORDER BY priority DESC, modifiedDate DESC &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.566em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:0.0184em;">This query appeared not to have a very good index, so the customer asked us to see if &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.6655em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">it could be improved. The </span><span class="stl_170 stl_171 stl_28">EXPLAI</span><span class="stl_170 stl_171 stl_186">N</span><span class="stl_154 stl_32 stl_28">follows: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:34.4281em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:35.2781em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:36.1281em;"><span class="stl_200 stl_171 stl_28">table: Message &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:36.9781em;"><span class="stl_200 stl_171 stl_28">type: ref &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:37.8281em;"><span class="stl_200 stl_171 stl_28">key: ix_groupId_userId &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:38.6781em;"><span class="stl_200 stl_171 stl_28">key_len: 18 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:39.5281em;"><span class="stl_200 stl_171 stl_28">ref: const,const &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:40.3781em;"><span class="stl_200 stl_171 stl_28">rows: 1251162 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7712em;top:41.2281em;"><span class="stl_200 stl_171 stl_28">Extra: Using where &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.4149em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1306em;">The index that MySQL chose for this query is on (</span><span class="stl_170 stl_171 stl_28">groupId</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1291em;">, </span><span class="stl_170 stl_171 stl_28">userId</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1291em;">), which would &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:43.4649em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0176em;">seem like a pretty decent choice if we had no information about the column cardinal‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:44.5149em;"><span class="stl_154 stl_32 stl_107" style="word-spacing:0.0142em;">ity. However, a different picture emerged when we looked at how many rows matched &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:45.5649em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0025em;">that user ID and group ID: &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2087em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">169 &nbsp;</span></div>
+					<a name="191_0" style="position:absolute;left:0em;top:8.5453em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

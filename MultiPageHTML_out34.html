@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_39.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_39.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9995em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Mixing storage engines in transactions &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:5.7109em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0648em;">MySQL doesn’t manage transactions at the server level. Instead, the underlying stor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.7609em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1604em;">age engines implement transactions themselves. This means you can’t reliably mix &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.8109em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">different engines in a single transaction. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.3609em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0382em;">If you mix transactional and nontransactional tables (for instance, InnoDB and MyI‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.4109em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0186em;">SAM tables) in a transaction, the transaction will work properly if all goes well. How‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:11.4609em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.2308em;">ever, if a rollback is required, the changes to the nontransactional table can’t be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:12.5109em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0133em;">undone. This leaves the database in an inconsistent state from which it might be diffi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.5609em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1321em;">cult to recover and renders the entire point of transactions moot. This is why it is &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.6109em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0946em;">really important to pick the right storage engine for each table and to avoid mixing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.6609em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">storage engines in your application logic at all costs. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.2109em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0055em;">MySQL will usually not warn you or raise errors if you do transactional operations on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.2609em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.2617em;">a nontransactional table. Sometimes rolling back a transaction will generate the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.3109em;z-index:1045;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0235em;">warning, “Some nontransactional changed tables couldn’t be rolled back</span><span class="stl_154 stl_32 stl_161">,</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0175em;">” but most of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.3609em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0048em;">the time, you’ll have no indication you’re working with nontransactional tables. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:22.6731em;"><span class="stl_176 stl_32 stl_39" style="word-spacing:0.134em;">It is best practice to not mix storage engines in your application. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:23.6331em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.1536em;">Failed transactions can lead to inconsistent results as some parts &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:24.5931em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">can roll back and others cannot. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.0378em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Implicit and explicit locking &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.5053em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0614em;">InnoDB uses a two-phase locking protocol. It can acquire locks at any time during a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.6047em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0188em;">transaction, but it does not release them until a </span><span class="stl_170 stl_171 stl_28">COMMI</span><span class="stl_170 stl_171 stl_208">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0171em;">or </span><span class="stl_170 stl_171 stl_28">ROLLBACK</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0241em;">. It releases all the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.6547em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1653em;">locks at the same time. The locking mechanisms described earlier are all implicit. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.7047em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0049em;">InnoDB handles locks automatically, according to your isolation level. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.2547em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1264em;">However, InnoDB also supports explicit locking, which the SQL standard does not &nbsp;</span></div>
+					<div class="stl_01" style="left:11.5928em;top:35.3839em;"><a href="MultiPageHTML_out34.html#34_1"><span class="stl_209 stl_32 stl_28">9</span></a></div>
+					<div class="stl_01" style="left:5.9998em;top:35.3047em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0069em;">mention at all:</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out34.html#34_0"><span class="stl_166 stl_32 stl_28">8</span></a><span class="stl_210 stl_32 stl_28">, &nbsp;</span></sup></div>
+					<div class="stl_01" style="left:7.4164em;top:37.0673em;"><span class="stl_200 stl_171 stl_28">SELECT ... FOR SHARE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4164em;top:37.9173em;"><span class="stl_200 stl_171 stl_28">SELECT ... FOR UPDATE &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.1041em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1474em;">MySQL also supports the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0166em;">LOCK TABLES </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1434em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0166em;">UNLOCK TABLES </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1434em;">commands, which are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.1541em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0434em;">implemented in the server, not in the storage engines. If you need transactions, use a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:41.2536em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0902em;">transactional storage engine. </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0379em;">LOCK TABLES </span><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0896em;">is unnecessary because InnoDB supports &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:42.3036em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">row-level locking. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.1293em;"><span class="stl_167 stl_32 stl_28">8</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.0468em;"><span class="stl_168 stl_32 stl_57" style="word-spacing:0.0022em;">These locking hints are frequently abused and should usually be avoided. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0952em;top:48.1878em;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.2731em;">9 </span><span class="stl_211 stl_171 stl_28">SELECT</span><span class="stl_168 stl_32 stl_28">…</span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">FOR SHAR</span><span class="stl_211 stl_171 stl_186">E</span><span class="stl_168 stl_32 stl_47" style="word-spacing:0.0061em;">is a MySQL 8.0 feature that replaces </span><span class="stl_211 stl_171 stl_28">SELECT</span><span class="stl_168 stl_32 stl_28">…</span><span class="stl_211 stl_171 stl_28" style="word-spacing:0em;">LOCK IN SHARE MOD</span><span class="stl_211 stl_171 stl_186">E</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">of previous versions. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">12 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3623em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2698em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 1: MySQL Architecture &nbsp;</span></div>
+					<a name="34_0" style="position:absolute;left:0em;top:47.1382em;">&nbsp;</a>
+					<a name="34_1" style="position:absolute;left:0em;top:48.2215em;">&nbsp;</a>
+					<a name="34_2" style="position:absolute;left:0em;top:29.7345em;">&nbsp;</a>
+					<a name="34_3" style="position:absolute;left:0em;top:34.4839em;">&nbsp;</a>
+					<a name="34_4" style="position:absolute;left:0em;top:41.4828em;">&nbsp;</a>
+					<a name="34_5" style="position:absolute;left:0em;top:9.5902em;">&nbsp;</a>
+					<a name="34_6" style="position:absolute;left:0em;top:5.9402em;">&nbsp;</a>
+					<a name="34_7" style="position:absolute;left:0em;top:39.3334em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

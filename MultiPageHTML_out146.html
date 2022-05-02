@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_152.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_152.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.5415em;"><span class="stl_170 stl_171 stl_28">innodb_old_blocks_time &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.416em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0325em;">InnoDB has a two-part buffer pool LRU list, which is designed to prevent ad hoc &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:6.466em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0112em;">queries from evicting pages that are used many times over the long term. One-off &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:7.5046em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1345em;">queries such as those issued by </span><span class="stl_155 stl_41 stl_230" style="word-spacing:0.1495em;">mysqldump </span><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1361em;">will typically bring a page into the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:8.566em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1324em;">buffer pool LRU list, read the rows from it, and move on to the next page. In &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:9.616em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1337em;">theory, the two-part LRU list will prevent this page from displacing pages that &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:10.666em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1464em;">will be needed for a long time by placing it into the “young” sublist and only &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:11.716em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.2411em;">moving it to the “old” sublist after it has been accessed multiple times. But &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:12.766em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">InnoDB is not configured to prevent this by default because the page has multiple &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:13.816em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0094em;">rows, and thus the multiple accesses to read rows from the page will cause it to be &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:14.866em;"><span class="stl_154 stl_32 stl_115" style="word-spacing:0.1575em;">moved to the “old” sublist immediately, placing pressure on pages that need a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:15.916em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.042em;">long lifetime. This variable specifies the number of milliseconds that must elapse &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:16.966em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0848em;">before a page can move from the “young” part of the LRU list to the “old” part. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:18.0655em;"><span class="stl_154 stl_32 stl_379" style="word-spacing:0.1416em;">It’s set to </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1685em;">0 </span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0892em;">by default, and setting it to a small value such as </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1685em;">1000 </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0879em;">(one second) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:19.1155em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:-0.0019em;">has proven very effective in our benchmarks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.012em;"><span class="stl_159 stl_27 stl_28">Summary &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.2822em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0056em;">After you’ve worked through this chapter, you should have a server configuration that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.3322em;z-index:1023;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2115em;">is much better than the defaults. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_134" style="word-spacing:0.2059em;">ur server should be fast and stable, and you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.3822em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0809em;">should not need to tweak the configuration unless you run into an unusual circum‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.4322em;"><span class="stl_154 stl_32 stl_28">stance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:27.9822em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2427em;">To </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0514em;">eview, we suggest that you begin with our sample configuration file, set the basic &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.0322em;z-index:1273;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0352em;">options for your server and workload, and add safety options as desired. That</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0346em;">s </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_28">eally &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.0822em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0058em;">all you need to do. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:31.6322em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.1793em;">If you’re running a dedicated database server, then the best option you can set is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:32.7316em;"><span class="stl_170 stl_171 stl_28">innodb_dedicated_server</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1112em;">, which handles 90% of your performance configuration. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.7816em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">If you are unable to use this option, then the most important options are these two: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7208em;top:35.7144em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.274em;">• </span><span class="stl_170 stl_171 stl_28">innodb_buffer_pool_size &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:37.1471em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2737em;">• </span><span class="stl_170 stl_171 stl_28">innodb_log_file_size &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.0305em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0416em;">Congratulations—you just solved the vast majority of real-world configuration prob‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.0805em;"><span class="stl_154 stl_32 stl_149" style="word-spacing:0.0164em;">lems we’ve seen! &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.6305em;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.1285em;">We’ve also made a lot of suggestions about what not to do. The most important of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:42.6805em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0334em;">these are not to “tune” your server and not to use ratios, formulas, or “tuning scripts” &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.7305em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">as a basis for setting the configuration variables. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">124 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6679em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5754em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="146_0" style="position:absolute;left:0em;top:21.3636em;">&nbsp;</a>
+					<a name="146_1" style="position:absolute;left:0em;top:34.0109em;">&nbsp;</a>
+					<a name="146_2" style="position:absolute;left:0em;top:31.8614em;">&nbsp;</a>
+					<a name="146_3" style="position:absolute;left:0em;top:5.6453em;">&nbsp;</a>
+					<a name="146_4" style="position:absolute;left:0em;top:41.8597em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_183.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_183.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:31.0703em;top:6.2783em;"><span class="stl_182 stl_27 stl_28" style="word-spacing:0em;">CHAPTER 7 &nbsp;</span></div>
+					<div class="stl_01" style="left:14.7374em;top:8.1071em;"><span class="stl_89 stl_27 stl_28" style="word-spacing:0em;">Indexing for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.0192em;"><span class="stl_155 stl_41 stl_136" style="word-spacing:0.1486em;">Indexes </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1329em;">(also called </span><span class="stl_155 stl_41 stl_73" style="word-spacing:0.1329em;">keys </span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1366em;">in MySQL) are data structures that storage engines use to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.0806em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0276em;">find rows quickly. They also have several other beneficial properties that we’ll explore &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.1306em;z-index:385;"><span class="stl_154 stl_32 stl_98" style="word-spacing:0.0149em;">in this chapter. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.6806em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0821em;">Indexes are critical for good performance and become more important as your data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.7306em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.066em;">grows larger. Small, lightly loaded databases often perform well even without proper &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.7806em;z-index:600;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0063em;">indexes, but as the data set grows, performance can drop very quickly.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out177.html#177_1"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.1773em;">1 </span></a></sup><span class="stl_154 stl_32 stl_248">Unfortunately, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.8306em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0602em;">indexes are often forgotten or misunderstood, so poor indexing is a leading cause of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.8806em;z-index:707;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">real-world performance problems. That</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0034em;">hy we put this material early in the book— &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:28.9306em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0005em;">even earlier than our discussion of query optimization. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.4806em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0204em;">Index optimization is perhaps the most powerful way to improve query performance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.5306em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.3231em;">Indexes can improve performance by many orders of magnitude, and optimal &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.5806em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.022em;">indexes can sometimes boost performance about two orders of magnitude more than &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.6306em;z-index:1016;"><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0652em;">indexes that are merely “good</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0569em;">” Creating truly optimal indexes will often require you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.6806em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">to rewrite queries, so this chapter and the next one are closely related. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:36.2306em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0035em;">This chapter relies on using example databases, like the </span><a href="https://oreil.ly/cIabb" target="_blank"><span class="stl_184 stl_32 stl_54" style="word-spacing:0.004em;">Sakila Sample Database</span></a><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0072em;">, avail‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.2806em;z-index:1214;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0738em;">able from MySQ</span><span class="stl_154 stl_32 stl_94">L</span><span class="stl_154 stl_32 stl_34" style="word-spacing:0.2574em;">’s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0709em;">ebsite. Sakila is an example database that models a rental store, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.3306em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">with a collection of actors, films, customers, and more. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.6036em;"><span class="stl_167 stl_32 stl_28">1</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.5212em;"><span class="stl_168 stl_32 stl_78" style="word-spacing:0.0015em;">SSDs have different performance characteristics, which we covered in </span><a href="MultiPageHTML_out97.html#97_0"><span class="stl_187 stl_32 stl_24" style="word-spacing:0.0054em;">Chapter 4</span></a><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">. The indexing principles &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;"><span class="stl_168 stl_32 stl_43" style="word-spacing:0.0073em;">remain true, but the penalties we’re trying to avoid aren’t as large with SSDs as they are with conventional &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28">drives. &nbsp;</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">155 &nbsp;</span></div>
+					<a name="177_0" style="position:absolute;left:0em;top:5.9583em;">&nbsp;</a>
+					<a name="177_1" style="position:absolute;left:0em;top:46.6125em;">&nbsp;</a>
+					<a name="177_2" style="position:absolute;left:0em;top:20.2598em;">&nbsp;</a>
+					<a name="177_3" style="position:absolute;left:0em;top:23.9098em;">&nbsp;</a>
+					<a name="177_4" style="position:absolute;left:0em;top:36.4598em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

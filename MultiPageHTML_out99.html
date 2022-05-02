@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_105.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_105.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3052em;"><span class="stl_155 stl_41 stl_50" style="word-spacing:0.0178em;">Many writes, one </span><span class="stl_216 stl_41 stl_28">ﬂush &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.3666em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0708em;">A single piece of data can be changed many times in memory without all of the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.4166em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0517em;">new values being written to disk. When the data is eventually flushed to disk, all &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:7.4666em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0585em;">the modifications that happened since the last physical write are permanent. For &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:8.5166em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0561em;">example, many statements could update an in-memory counter. If the counter is &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:9.5666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0141em;">incremented one hundred times and then written to disk, one hundred modifica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:10.6166em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">tions have been grouped into one write. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.2385em;"><span class="stl_155 stl_41 stl_17" style="word-spacing:0.0085em;">I/O merging &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:13.2999em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0459em;">Many different pieces of data can be modified in memory, and the modifications &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:14.3499em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0281em;">can be collected together, so the physical writes can be performed as a single disk &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:15.3999em;"><span class="stl_154 stl_32 stl_33">operation. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:16.9499em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1634em;">This is why many transactional systems use a write-ahead logging strategy. Write- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.9999em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0726em;">ahead logging lets them make changes to the pages in memory without flushing the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:19.0499em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1161em;">changes to disk, which usually involves random I/O and is very slow. Instead, they &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.0999em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1259em;">write a record of the changes to a sequential logfile, which is much faster. A back‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.1499em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.1023em;">ground thread can flush the modified pages to disk later; when it does, it can opti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:22.1999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">mize the writes. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:23.7499em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.2386em;">Writes benefit greatly from buffering because it converts random I/O into more &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.7999em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.009em;">sequential I/O. Asynchronous (buffered) writes are typically handled by the operating &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.8499em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0778em;">system and are batched so they can be flushed to disk more optimally. Synchronous &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:26.8999em;z-index:1168;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0199em;">(unbuffered) writes have to be written to disk before they finish. That</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0173em;">s </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0238em;">hy they ben‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:27.9499em;z-index:1249;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1295em;">efit from buffering in a Redundant Array of Inexpensive Disks (RAID) controller</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.9999em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">battery-backed write-back cache (we discuss RAID a bit later). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:30.8842em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">What’s Your Working Set? &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.784em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0636em;">Every application has a “working set” of data—that is, the data that it really needs to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.834em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0512em;">do its work. A lot of databases also have plenty of data that is not in the working set. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:34.884em;z-index:1468;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0511em;">u can imagine the database as a desk with filing drawers. The working set consists &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:35.934em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.094em;">of the papers you need to have on the desktop to get your work done. The desktop &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.984em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0648em;">represents main memory in this analogy, while the filing drawers are the hard disks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.0226em;"><span class="stl_154 stl_32 stl_157" style="word-spacing:0.1024em;">Just as you don’t need to have </span><span class="stl_155 stl_41 stl_313" style="word-spacing:0.0709em;">every </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0843em;">piece of paper on the desktop to get your work &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.084em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0251em;">done, you don’t need the whole database to fit in memory for optimal performance— &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.134em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">just the working set. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.684em;"><span class="stl_154 stl_32 stl_134" style="word-spacing:0.0063em;">When dealing with HDDs, it was good practice to try to find an effective memory-to- &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.734em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0228em;">disk ratio. This was largely due to the slower latency and low input/output operations &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.784em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.078em;">per second (IOPS) of HDDs. With SSDs, the memory-to-disk ratio becomes far less &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:44.834em;"><span class="stl_154 stl_32 stl_115">important. &nbsp;</span></div>
+					<div class="stl_01" style="left:24.3457em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Balancing Memory and Disk Resources &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4805em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.388em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">77 &nbsp;</span></div>
+					<a name="99_0" style="position:absolute;left:0em;top:31.1773em;">&nbsp;</a>
+					<a name="99_1" style="position:absolute;left:0em;top:33.0133em;">&nbsp;</a>
+					<a name="99_2" style="position:absolute;left:0em;top:41.9133em;">&nbsp;</a>
+					<a name="99_3" style="position:absolute;left:0em;top:13.5292em;">&nbsp;</a>
+					<a name="99_4" style="position:absolute;left:0em;top:42.9633em;">&nbsp;</a>
+					<a name="99_5" style="position:absolute;left:0em;top:45.0633em;">&nbsp;</a>
+					<a name="99_6" style="position:absolute;left:0em;top:17.1792em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

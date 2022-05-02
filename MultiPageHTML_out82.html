@@ -1,0 +1,98 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_89.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_89.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:8.125em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">INSERT INTO t1 VALUES(val); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">END &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:6.5166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">Then call it with different values: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:8.2785em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CALL sp_test(1); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:9.1292em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">Query OK, 1 row affected (0.07 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:10.8285em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT THREAD_ID, EVENT_NAME, SQL_TEXT &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:11.6785em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM EVENTS_STATEMENTS_HISTORY &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:12.5285em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE EVENT_NAME LIKE 'statement/sp%'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:13.3792em;"><span class="stl_200 stl_171 stl_28">+-----------+-------------------------+----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:14.2292em;"><span class="stl_200 stl_171 stl_28">| THREAD_ID | EVENT_NAME &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:15.0792em;"><span class="stl_200 stl_171 stl_28">+-----------+-------------------------+----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:14.2292em;"><span class="stl_200 stl_171 stl_28">| SQL_TEXT &nbsp;</span></div>
+					<div class="stl_01" style="left:31.1458em;top:14.2292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:15.9292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:16.7792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:17.6292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6041em;top:15.9292em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/hpush_jump | NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6041em;top:16.7792em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/stmt &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6041em;top:17.6292em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/hpop &nbsp;</span></div>
+					<div class="stl_01" style="left:31.1458em;top:15.9292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:20.875em;top:16.7792em;"><span class="stl_200 stl_171 stl_28">| INSERT INTO t1 VALUES(val) | &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:17.6292em;"><span class="stl_200 stl_171 stl_28">| NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:31.1458em;top:17.6292em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4166em;top:18.4792em;"><span class="stl_200 stl_171 stl_28">+-----------+-------------------------+----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:19.3292em;"><span class="stl_200 stl_171 stl_28">3 rows in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:20.4666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1073em;">In this case, the error handler was not called, and the procedure inserted the argu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:21.566em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">ment value </span><span class="stl_170 stl_171 stl_28">(1</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">into the table: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:23.3279em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CALL sp_test(NULL); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:24.1786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">Query OK, 1 row affected (0.07 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:25.8779em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT THREAD_ID, EVENT_NAME, SQL_TEXT &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:26.7279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM EVENTS_STATEMENTS_HISTORY &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:27.5779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE EVENT_NAME LIKE 'statement/sp%'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:28.4286em;"><span class="stl_200 stl_171 stl_28">+-----------+-------------------------+------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:29.2786em;"><span class="stl_200 stl_171 stl_28">| THREAD_ID | EVENT_NAME &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:30.1286em;"><span class="stl_200 stl_171 stl_28">+-----------+-------------------------+------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:29.2786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">| SQL_TEXT &nbsp;</span></div>
+					<div class="stl_01" style="left:31.8542em;top:29.2786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:30.9786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:31.8286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:32.6786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6042em;top:30.9786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">24 | statement/sp/hpush_jump | NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:31.8542em;top:30.9786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.8542em;top:31.8286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6042em;top:31.8286em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/stmt &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6042em;top:32.6786em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/stmt &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:31.8286em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">| INSERT INTO t1 VALUES(val) &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:32.6786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">| INSERT IGNORE INTO t1 &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7709em;top:33.5286em;"><span class="stl_200 stl_171 stl_28">VALUES(‘Some str... | &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:34.3786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">| GET STACKED DIAGNOSTICS &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7709em;top:35.2286em;"><span class="stl_200 stl_171 stl_28">CONDITION 1 @s... &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:36.0786em;"><span class="stl_200 stl_171 stl_28">| GET STACKED DIAGNOSTICS &nbsp;</span></div>
+					<div class="stl_01" style="left:24.7709em;top:36.9286em;"><span class="stl_200 stl_171 stl_28">CONDITION 1 @s... &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:37.7786em;"><span class="stl_200 stl_171 stl_28">| NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:34.3786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:36.0786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6042em;top:34.3786em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/stmt &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6042em;top:36.0786em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/stmt &nbsp;</span></div>
+					<div class="stl_01" style="left:31.8542em;top:35.2286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.8542em;top:36.9286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.8542em;top:37.7786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:31.8542em;top:38.6286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:37.7786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4167em;top:38.6286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:10.6042em;top:37.7786em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/hreturn &nbsp;</span></div>
+					<div class="stl_01" style="left:10.6042em;top:38.6286em;"><span class="stl_200 stl_171 stl_28">24 | statement/sp/hpop &nbsp;</span></div>
+					<div class="stl_01" style="left:20.875em;top:38.6286em;"><span class="stl_200 stl_171 stl_28">| NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:39.4786em;"><span class="stl_200 stl_171 stl_28">+-----------+-------------------------+------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:40.3286em;"><span class="stl_200 stl_171 stl_28">7 rows in set (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:41.5155em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0853em;">In the second call, however, the content of the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1783em;">events_statements_history </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0786em;">table is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.5655em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0169em;">different: it contains calls from the error handler and the SQL statement that replaced &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:43.6155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the erroneous one. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:45.1655em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0007em;">While the return value of the procedure itself did not change, we clearly see that it has &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:46.2155em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.148em;">been executed differently. Understanding such differences in the routine execution &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">60 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3618em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2693em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

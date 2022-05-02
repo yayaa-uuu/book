@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_169.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_169.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.196em;">To </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">elect all of a single column in SQL, our syntax is straightforward: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:6.0792em;"><span class="stl_200 stl_171 stl_28">SELECT designation FROM asteroids_sql; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.2166em;z-index:138;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.082em;">On our first run of this query, uncached by InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0774em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0774em;">uffer pool, we got a result of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:8.2666em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0017em;">1.14 milliseconds (ms). The second execution, with it in memory, we got 0.44 ms. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.8166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">For JSON, we are able to access a field inside of the JSON structure: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:11.5792em;"><span class="stl_200 stl_171 stl_28">SELECT json_data-&gt;'$.designation' FROM asteroids_json &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.7166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0746em;">Similarly, our first execution, uncached, executed in 1.13 ms. Subsequent executions &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.7666em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">were at around 0.80 ms. At this execution speed, we expect that there will be a reason‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.8166em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0104em;">able variation—we’re talking about a difference of hundreds of microseconds in a VM &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.8666em;z-index:626;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0629em;">environment. In our opinion, both queries executed reasonably quickly, although it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.9166em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:-0.0005em;">worth noting that the JSON query is still about twice as long. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:18.4666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2224em;">What about accessing specific rows, though? For the single-row lookup, we take &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:19.5166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">advantage of using indexes: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.417em;top:21.2792em;"><span class="stl_200 stl_171 stl_28">ALTER TABLE asteroids_sql ADD INDEX ( designation ); &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.4166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1007em;">When we do a single-row lookup, our SQL version runs in 0.33 ms, and our JSON &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.4666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0764em;">version runs in 0.58 ms, giving an edge to the SQL version. This is easily explained: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.5166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">our index is allowing InnoDB to return 1 row instead of 202 rows. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.0666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0076em;">Comparing an indexed query to a full table scan is unfair, though. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0051em;">o </span><span class="stl_154 stl_32 stl_28">l</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0084em;">evel the playing &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.1052em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.008em;">field, we need to use the </span><span class="stl_155 stl_41 stl_50" style="word-spacing:0.0247em;">generated columns </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0105em;">feature to extract the designation and then &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.1666em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">create an index against that virtual generated column: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:29.9292em;"><span class="stl_200 stl_171 stl_28">ALTER TABLE asteroids_json ADD COLUMN designation VARCHAR(30) GENERATED ALWAYS AS &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:30.7792em;"><span class="stl_200 stl_171 stl_28">(json_data-&gt;"$.designation"), ADD INDEX ( designation ); &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.9166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">This gives us a schema on our JSON table that looks like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:33.6785em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">DESC asteroids_json; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:34.5292em;"><span class="stl_200 stl_171 stl_28">+-------------+-------------+------+-----+---------+-------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:35.3792em;"><span class="stl_200 stl_171 stl_28">| Field &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:36.2292em;"><span class="stl_200 stl_171 stl_28">+-------------+-------------+------+-----+---------+-------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:37.0792em;"><span class="stl_200 stl_171 stl_28">| json_data</span><span class="stl_200 stl_171 stl_28" style="word-spacing:1em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| json</span><span class="stl_200 stl_171 stl_28" style="word-spacing:3.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| YES</span><span class="stl_200 stl_171 stl_28" style="word-spacing:3.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:37.9292em;"><span class="stl_200 stl_171 stl_28">| designation | varchar(30) | YES</span><span class="stl_200 stl_171 stl_28" style="word-spacing:0.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| MUL | NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:12.3752em;top:35.3792em;"><span class="stl_200 stl_171 stl_28">| Type &nbsp;</span></div>
+					<div class="stl_01" style="left:17.3336em;top:35.3792em;"><span class="stl_200 stl_171 stl_28">| Null | Key | Default | Extra &nbsp;</span></div>
+					<div class="stl_01" style="left:32.5627em;top:35.3792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:19.8127em;top:37.0792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:25.4794em;top:37.0792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:32.5627em;top:37.0792em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:25.4794em;top:37.9292em;"><span class="stl_200 stl_171 stl_28">| VIRTUAL GENERATED | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:38.7792em;"><span class="stl_200 stl_171 stl_28">+-------------+-------------+------+-----+---------+-------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.966em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0541em;">Our schema now generates a virtual column for the designation from the </span><span class="stl_170 stl_171 stl_28">json_data &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.016em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0488em;">column and indexes it. Now, we rerun our single-row lookup to use the indexed col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.1155em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0323em;">umn instead of the JSON column path operator (</span><span class="stl_170 stl_171 stl_28">-&gt;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0316em;">). Since the field data is quoted in &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.1655em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the JSON, we need to search for it quoted in our SQL as well: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:44.9281em;"><span class="stl_200 stl_171 stl_28">SELECT * FROM asteroids_json WHERE designation='"(2010 GW62)"'; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.0655em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:-0.0013em;">This query executed in 0.4 ms, fairly close to our SQL version of 0.33 ms. &nbsp;</span></div>
+					<div class="stl_01" style="left:26.2649em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Choosing Optimal Data Types &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1744em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0819em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">141 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_230.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_230.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;z-index:56;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0185em;">(QUBE) of query response time using the techniques explained in </span><span class="stl_154 stl_32 stl_127">T</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.023em;">apio Lahdenmaki &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3552em;"><span class="stl_154 stl_32 stl_439" style="word-spacing:0.0823em;">and Mike Leach’s book </span><span class="stl_155 stl_41 stl_131" style="word-spacing:0.0716em;">Relational Database Index Design and the Optimizers </span><span class="stl_154 stl_32 stl_103">(Wiley). &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0481em;">In a nutshell: examine the query execution plan and the indexes involved, determine &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.14em;">how many sequential and random I/O operations might be required, and multiply &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.029em;">these by the time it takes your hardware to perform them. Add it all up and you have &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.5666em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:-0.0013em;">a yardstick to judge whether a query is slower than it could or should be. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.6235em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Rows examined and rows returned &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.0909em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.2393em;">It’s useful to think about the number of rows examined when analyzing queries &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.1409em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0736em;">because you can see how efficiently the queries are finding the data you need. How‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.1909em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1211em;">ever, this is not a perfect metric for finding “bad” queries. Not all row accesses are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.2409em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1562em;">equal. Shorter rows are faster to access, and fetching rows from memory is much &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:17.2909em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">faster than reading them from disk. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.8409em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0116em;">Ideally, the number of rows examined would be the same as the number returned, but &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.8909em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0079em;">in practice this is rarely possible. For example, when constructing rows with joins, the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:20.9409em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0811em;">server must access multiple rows to generate each row in the result set. The ratio of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.9909em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1673em;">rows examined to rows returned is usually small—say, between 1:1 and 10:1—but &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.0409em;z-index:1052;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0039em;">sometimes it can be orders of magnitude larger. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:25.0979em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Rows examined and access types &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.5653em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0605em;">When you’re thinking about the cost of a query, consider the cost of finding a single &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.6153em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0222em;">row in a table. MySQL can use several access methods to find and return a row. Some &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:28.6653em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0124em;">require examining many rows, but others might be able to generate the result without &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.7153em;z-index:1299;"><span class="stl_154 stl_32 stl_86" style="word-spacing:0.0175em;">examining any. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.3147em;z-index:1349;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.169em;">The access method(s) appear in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0849em;">type </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1673em;">column in </span><span class="stl_170 stl_171 stl_28">EXPLAIN</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1673em;">s </span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1673em;">utput. The access &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.3647em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0561em;">types range from a full table scan to index scans, range scans, unique index lookups, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.4147em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">and constants. Each of these is faster than the one before it because it requires reading &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.4647em;z-index:1521;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1196em;">less data. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1194em;">u don’t need to memorize the access types, but you should understand &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.5147em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2124em;">the general concepts of scanning a table, scanning an index, range accesses, and &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.5647em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">single-value accesses. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:38.1147em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0105em;">If you aren’t getting a good access type, the best way to solve the problem is usually by &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:39.1647em;z-index:1766;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">adding an appropriate index. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">e </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_117" style="word-spacing:-0.0003em;">iscussed indexing in the previous chapter; now you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.2147em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0434em;">can see why indexes are so important to query optimization. Indexes let MySQL find &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.2647em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">rows with a more efficient access type that examines less data. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.8147em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.0088em;">For example, let’s look at a simple query on the Sakila Sample Database: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:44.5766em;"><span class="stl_265 stl_173 stl_28">SELECT * FROM sakila.film_actor WHERE film_id = 1; &nbsp;</span></div>
+					<div class="stl_01" style="left:23.5914em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Slow Query Basics: Optimize Data Access &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1747em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0822em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">195 &nbsp;</span></div>
+					<a name="217_0" style="position:absolute;left:0em;top:26.7945em;">&nbsp;</a>
+					<a name="217_1" style="position:absolute;left:0em;top:13.3202em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

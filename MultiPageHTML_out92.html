@@ -1,0 +1,73 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_99.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_99.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Examining Most Frequent Errors &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.1145em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.155em;">In addition to the specific error information, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0991em;">performance_schema </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1539em;">provides digest &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.1645em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1744em;">tables, aggregating errors by user, host, account, thread, and globally by the error &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.2145em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.428em;">number. All aggregation tables have &nbsp;</span></div>
+					<div class="stl_01" style="left:20.5276em;top:8.2145em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.4205em;">a structure similar to that used in the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:9.3139em;"><span class="stl_170 stl_171 stl_28">events_errors_summary_global_by_erro</span><span class="stl_170 stl_171 stl_186">r</span><span class="stl_154 stl_32 stl_28">table: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.0758em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">USE performance_schema; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.9258em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SHOW CREATE TABLE events_errors_summary_global_by_error\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:12.7765em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:13.6265em;"><span class="stl_200 stl_171 stl_28">Table: events_errors_summary_global_by_error &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:14.4765em;"><span class="stl_200 stl_171 stl_28">Create Table: CREATE TABLE `events_errors_summary_global_by_error` ( &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:15.3265em;"><span class="stl_200 stl_171 stl_28">`ERROR_NUMBER` int DEFAULT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:16.1765em;"><span class="stl_200 stl_171 stl_28">`ERROR_NAME` varchar(64) DEFAULT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:17.0265em;"><span class="stl_200 stl_171 stl_28">`SQL_STATE` varchar(5) DEFAULT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:17.8765em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">`SUM_ERROR_RAISED` bigint unsigned NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:18.7265em;"><span class="stl_200 stl_171 stl_28">`SUM_ERROR_HANDLED` bigint unsigned NOT NULL, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:19.5765em;"><span class="stl_200 stl_171 stl_28">`FIRST_SEEN` timestamp NULL DEFAULT '0000-00-00 00:00:00', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:20.4265em;"><span class="stl_200 stl_171 stl_28">`LAST_SEEN` timestamp NULL DEFAULT '0000-00-00 00:00:00', &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7709em;top:21.2765em;"><span class="stl_200 stl_171 stl_28">UNIQUE KEY `ERROR_NUMBER` (`ERROR_NUMBER`) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:22.1265em;"><span class="stl_200 stl_171 stl_28">) ENGINE=PERFORMANCE_SCHEMA DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:22.9765em;"><span class="stl_200 stl_171 stl_28">1 row in set (0,00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:24.1634em;z-index:1008;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.5222em;">The columns </span><span class="stl_170 stl_171 stl_28">ERROR_NUMBER</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.5222em;">, </span><span class="stl_170 stl_171 stl_28">ERROR_NAME</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.5222em;">, and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.2886em;">SQL_STATE </span><span class="stl_154 stl_32 stl_108" style="word-spacing:0.5315em;">identify the error. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.2628em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1726em;">SUM_ERROR_RAISED </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0855em;">is the number of times the error was raised. </span><span class="stl_170 stl_171 stl_28">SUM_ERROR_HANDLED &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.3622em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0807em;">is the number of times the error was handled. </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1775em;">FIRST_SEEN </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0794em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1775em;">LAST_SEEN </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0794em;">are time‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.4122em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0013em;">stamps when the error was first and last seen. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.0117em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1377em;">Specific aggregate tables have additional columns. Thus, the table </span><span class="stl_170 stl_171 stl_28">events</span><span class="stl_170 stl_171 stl_320">_</span><span class="stl_170 stl_171 stl_28">e</span><span class="stl_170 stl_171 stl_28">rrors_ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.1111em;"><span class="stl_170 stl_171 stl_119" style="word-spacing:-0.1947em;">summary_by_thread_by_error </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0682em;">has a column named </span><span class="stl_170 stl_171 stl_28">THREAD_ID</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0708em;">, which identifies the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.2105em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1649em;">thread that raised the error, the table </span><span class="stl_170 stl_171 stl_28">events_errors</span><span class="stl_170 stl_171 stl_321">_</span><span class="stl_170 stl_171 stl_28">s</span><span class="stl_170 stl_171 stl_28">ummary</span><span class="stl_170 stl_171 stl_321">_</span><span class="stl_170 stl_171 stl_28">b</span><span class="stl_170 stl_171 stl_28">y_host_by_error &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.31em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">has a column named </span><span class="stl_170 stl_171 stl_28">HOST</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, and so on. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:33.86em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.038em;">For example, to find all accounts that ran statements that caused errors more than 10 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.91em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">times, run: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:36.6718em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT * FROM &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:37.5219em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">performance_schema.events_errors_summary_by_account_by_error &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:38.3719em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE SUM_ERROR_RAISED &gt; 10 AND USER IS NOT NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:39.2219em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">ORDER BY SUM_ERROR_RAISED DESC\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:40.0726em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:40.9226em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">USER: sveta &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:41.7726em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">HOST: localhost &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:42.6226em;"><span class="stl_200 stl_171 stl_28">ERROR_NUMBER: 3554 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:43.4726em;"><span class="stl_200 stl_171 stl_28">ERROR_NAME: ER_NO_SYSTEM_TABLE_ACCESS &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:44.3226em;"><span class="stl_200 stl_171 stl_28">SQL_STATE: HY000 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:45.1726em;"><span class="stl_200 stl_171 stl_28">SUM_ERROR_RAISED: 60 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:46.0226em;"><span class="stl_200 stl_171 stl_28">SUM_ERROR_HANDLED: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:46.8726em;"><span class="stl_200 stl_171 stl_28">FIRST_SEEN: 2021-07-18 03:14:59 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8335em;top:47.7226em;"><span class="stl_200 stl_171 stl_28">LAST_SEEN: 2021-07-19 02:50:13 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:48.5726em;"><span class="stl_200 stl_171 stl_28">1 row in set (0,01 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">70 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3622em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2697em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 3: Performance Schema &nbsp;</span></div>
+					<a name="92_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="92_1" style="position:absolute;left:0em;top:6.3437em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

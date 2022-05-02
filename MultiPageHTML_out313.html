@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_339.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_339.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Write-Bound Workloads &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:6.065em;z-index:23;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1983em;">u may also be encountering a write-bound load. Here are some examples of a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.115em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">write-bound database load: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.721em;top:8.9984em;z-index:147;"><span class="stl_154 stl_32 stl_230" style="word-spacing:0.29em;">• Perhaps</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0085em;">&nbsp;</span><span class="stl_154 stl_32 stl_148" style="word-spacing:0.0082em;">signups are growing exponentially. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:10.3817em;"><span class="stl_154 stl_32 stl_484" style="word-spacing:0.3507em;">• It</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1594em;">&nbsp;</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1212em;">is peak ecommerce season, and sales are growing, along with the number of &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:11.4317em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">orders to track. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:12.815em;"><span class="stl_154 stl_32 stl_484" style="word-spacing:0.3503em;">• It</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.039em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">is election season, and you have a lot of campaign communication going out. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.6984em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0109em;">All of these are business use cases that lead to exponentially more database writes that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.7484em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0543em;">you now have to scale. Again, a single-source database, even if you can scale it verti‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.7984em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0374em;">cally for some time, can only go so far. When the bottleneck is the write volume, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.8484em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.086em;">have to start thinking about ways to split your data so that you can accept writes in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:18.8984em;z-index:603;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0404em;">parallel on separate subsets. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0387em;">e </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0399em;">ill talk about how to shard for write scaling later in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.9484em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">this chapter as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:21.4984em;"><span class="stl_154 stl_32 stl_152" style="word-spacing:0.0438em;">It’s logical at this point to ask, “What if I’m seeing both types of growth?” It is impor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.5484em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1195em;">tant to inspect your schema closely and identify whether there is a subset of tables &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:23.5984em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0486em;">growing faster in reads versus another subset growing in write needs. Trying to scale &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:24.6484em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0671em;">a database cluster for both at the same time is asking for a lot of pain and incidents. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:25.6984em;z-index:953;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.322em;">We </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1293em;">ecommend separating tables in different functional clusters to scale reads and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:26.7484em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0477em;">writes independently; this is a prerequisite for scaling read traffic with read pools far &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:27.7984em;z-index:1114;"><span class="stl_154 stl_32 stl_100" style="word-spacing:0.0104em;">more effectively. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.3484em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1348em;">Now that you have determined whether you have a read- or write-bound load, we &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.3984em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2597em;">discuss how you can help guide this functional splitting of data in an effective &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:31.4484em;"><span class="stl_154 stl_32 stl_28">manner. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.3449em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Functional Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:35.6151em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0368em;">Splitting your data based on its “function” in the business is a context-heavy task that &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.6651em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0099em;">requires a deep understanding of what the data is. This goes hand in hand with popu‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.7151em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.2677em;">lar software architecture paradigms like service-oriented architecture (SOA) and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:38.7651em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1254em;">microservices. Not all functional approaches are created equal, and in a hyperbolic &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.8151em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0068em;">example, if you were to put each table in its own “functional” database, you could def‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.8651em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">initely make everything worse through too much fragmentation. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.4151em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0715em;">How do you approach splitting your large monolith/mixed concerns database into a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.4651em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0534em;">sensible set of smaller clusters that help the business scale? Here are some guidelines &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:44.5151em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to keep in mind: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7209em;top:46.3984em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1692em;">• Do not split based on the structure of the engineering team. That will always &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:47.4484em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0054em;">change at some point. &nbsp;</span></div>
+					<div class="stl_01" style="left:28.4621em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Functional Sharding &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1741em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0816em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">291 &nbsp;</span></div>
+					<a name="313_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="313_1" style="position:absolute;left:0em;top:33.6965em;">&nbsp;</a>
+					<a name="313_2" style="position:absolute;left:0em;top:35.8443em;">&nbsp;</a>
+					<a name="313_3" style="position:absolute;left:0em;top:31.6776em;">&nbsp;</a>
+					<a name="313_4" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

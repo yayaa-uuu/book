@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_129.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_129.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0448em;">Configuration settings can have several scopes. Some settings are server-wide (global &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0942em;">scope), others are different for each connection (session scope), and others are per- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1053em;">object. Many session-scoped variables have global equivalents, which you can think &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0077em;">of as defaults. If you change the session-scoped variable, it affects only the connection &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1574em;">from which you changed it, and the changes are lost when the connection closes. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.5666em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">Here are some examples of the variety of behaviors of which you should be aware: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7209em;top:11.4994em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2731em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_170 stl_171 stl_28">max_connection</span><span class="stl_170 stl_171 stl_186">s</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">variable is globally scoped. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:12.9321em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1019em;">&nbsp;</span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1538em;">sort_buffer_size </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.103em;">variable has a global default, but you can set it per ses‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:13.9821em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">sion as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:15.4149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">• The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0988em;">&nbsp;</span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1571em;">join_buffer_size </span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0998em;">variable has a global default and can be set per session, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:16.4535em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0255em;">but a single query that joins several tables can allocate one join buffer </span><span class="stl_155 stl_41 stl_158" style="word-spacing:0.0007em;">per join</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, so &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:17.5149em;z-index:729;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0041em;">there might be several join buffers per query. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.3982em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0757em;">In addition to setting variables in the configuration files, you can change many (but &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:20.4369em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0051em;">not all) of them while the server is running. MySQL refers to these as </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.0183em;">dynamic </span><span class="stl_154 stl_32 stl_28">config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.4982em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0219em;">uration variables. The following statements show different ways to change the session &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:22.5977em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">and global values of </span><span class="stl_170 stl_171 stl_28">sort_buffer_siz</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_351">dynamically: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:24.3603em;"><span class="stl_200 stl_171 stl_28">SET sort_buffer_size = &lt;value&gt;; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:25.2103em;"><span class="stl_200 stl_171 stl_28">SET GLOBAL sort_buffer_size = &lt;value&gt;; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:26.0603em;"><span class="stl_200 stl_171 stl_28">SET @@sort_buffer_size := &lt;value&gt;; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:26.9103em;"><span class="stl_200 stl_171 stl_28">SET @@session.sort_buffer_size := &lt;value&gt;; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:27.7603em;"><span class="stl_200 stl_171 stl_28">SET @@global.sort_buffer_size := &lt;value&gt;; &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.8977em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0175em;">If you set variables dynamically, be aware that those settings will be lost when MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:29.9477em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0218em;">shuts down. If you want to keep the settings, you’ll have to update your configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.9977em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">file as well. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3992em;top:33.3098em;"><span class="stl_176 stl_32 stl_143" style="word-spacing:0.1034em;">If you set a variable’s global value while the server is running, the &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:34.2698em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.1372em;">values for the current session and any other existing sessions are &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:35.2298em;"><span class="stl_176 stl_32 stl_35" style="word-spacing:0.171em;">not affected. Keep this in mind if your clients rely on persistent &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3993em;top:36.1898em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.0432em;">database connections. This is because the session values are initial‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:37.1498em;z-index:1597;"><span class="stl_176 stl_32 stl_88" style="word-spacing:0.1057em;">ized from the global value when the connections are created. </span><span class="stl_176 stl_32 stl_109">Y</span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_28">u &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:38.155em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1598em;">should inspect the output of </span><span class="stl_212 stl_171 stl_28" style="word-spacing:0.0756em;">SHOW GLOBAL VARIABLES </span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.1598em;">after each &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:39.115em;z-index:1670;"><span class="stl_176 stl_32 stl_36" style="word-spacing:0.0039em;">change to make sure it</span><span class="stl_176 stl_32 stl_34">’</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_176 stl_32 stl_28">h</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0em;">ad the desired effect. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:41.3623em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0856em;">There is also a special value you can assign to variables with the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1709em;">SET </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0856em;">command: the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.4617em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0544em;">keyword </span><span class="stl_170 stl_171 stl_28">DEFAULT</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0542em;">. Assigning this value to a session-scoped variable sets that variable &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:43.5117em;z-index:1874;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2312em;">to the corresponding globally scoped variable</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2279em;">s </span><span class="stl_154 stl_32 stl_28">v</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2279em;">alue. This is useful for resetting &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.5617em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1044em;">session-scoped variables back to the values they had when you opened the connec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:45.6117em;z-index:1979;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1389em;">tion. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1389em;">e </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1448em;">dvise you not to use it for global variables because it probably won’t do &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:46.6617em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.1402em;">what you want—that is, it doesn’t set the values back to what they were when you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">102 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="124_0" style="position:absolute;left:0em;top:20.6775em;">&nbsp;</a>
+					<a name="124_1" style="position:absolute;left:0em;top:4.5458em;">&nbsp;</a>
+					<a name="124_2" style="position:absolute;left:0em;top:15.6442em;">&nbsp;</a>
+					<a name="124_3" style="position:absolute;left:0em;top:11.7286em;">&nbsp;</a>
+					<a name="124_4" style="position:absolute;left:0em;top:41.5916em;">&nbsp;</a>
+					<a name="124_5" style="position:absolute;left:0em;top:13.1614em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

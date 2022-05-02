@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_184.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_184.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1067em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Indexing Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.3769em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0894em;">The easiest way to understand how an index works in MySQL is to think about the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.4269em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">index of a book. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">o </span><span class="stl_154 stl_32 stl_28">f</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">ind out where a particular topic is discussed in a book, you look &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.4769em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">in the index, and it tells you the page number(s) where that term appears. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.0269em;z-index:280;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0434em;">In MySQL, a storage engine uses indexes in a similar way. It searches the index</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.037em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_121">ata &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.0769em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1385em;">structure for a value. When it finds a match, it can find the row that contains the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.1269em;"><span class="stl_154 stl_32 stl_106" style="word-spacing:-0.0027em;">match. Suppose you run the following query: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:13.8888em;"><span class="stl_265 stl_173 stl_28">SELECT first_name FROM sakila.actor WHERE actor_id = 5; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:15.0764em;"><span class="stl_154 stl_32 stl_250" style="word-spacing:0.0744em;">There’s an index on the </span><span class="stl_170 stl_171 stl_28">actor_i</span><span class="stl_170 stl_171 stl_415">d</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0548em;">column, so MySQL will use the index to find rows &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:16.1758em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0397em;">whose </span><span class="stl_170 stl_171 stl_28">actor_i</span><span class="stl_170 stl_171 stl_416">d</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0397em;">is </span><span class="stl_170 stl_171 stl_28">5</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0397em;">. In other words, it performs a lookup on the values in the index &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.2258em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0023em;">and returns any rows containing the specified value. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.7758em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1134em;">An index contains values from one or more columns in a table. If you index more &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:19.8258em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2198em;">than one column, the column order is very important because MySQL can only &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.8758em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0952em;">search efficiently on the leftmost prefix of the index. Creating an index on two col‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.9258em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0016em;">umns is not the same as creating two separate single-column indexes, as you’ll see. &nbsp;</span></div>
+					<div class="stl_01" style="left:14.0189em;top:24.5263em;"><span class="stl_239 stl_27 stl_28" style="word-spacing:0em;">If I Use an ORM, Do I Need to Care? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:26.2742em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0723em;">The short version: yes, you still need to learn about indexing, even if you rely on an &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:27.2742em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0em;">ORM tool. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:28.7742em;"><span class="stl_31 stl_32 stl_158" style="word-spacing:0.0278em;">ORMs produce logically and syntactically correct queries (most of the time), but they &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:29.7742em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0.1452em;">rarely produce index-friendly queries unless you use them for only the most basic &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:30.7742em;z-index:1169;"><span class="stl_31 stl_32 stl_112" style="word-spacing:0.0276em;">types of queries, such as primary key lookups. </span><span class="stl_31 stl_32 stl_109">Y</span><span class="stl_31 stl_32 stl_28">o</span><span class="stl_31 stl_32 stl_153" style="word-spacing:0.0423em;">u can’t expect your ORM, no matter &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:31.7742em;"><span class="stl_31 stl_32 stl_53" style="word-spacing:0.0012em;">how sophisticated, to handle the subtleties and complexities of indexing. Read the rest &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:32.7742em;z-index:1303;"><span class="stl_31 stl_32 stl_138" style="word-spacing:0.0485em;">of this chapter if you disagree! It</span><span class="stl_31 stl_32 stl_34">’</span><span class="stl_31 stl_32 stl_28" style="word-spacing:0.0411em;">s </span><span class="stl_31 stl_32 stl_28">s</span><span class="stl_31 stl_32 stl_78" style="word-spacing:0.0425em;">ometimes a hard job for an expert human to puz‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6872em;top:33.7742em;"><span class="stl_31 stl_32 stl_28" style="word-spacing:0em;">zle through all of the possibilities, let alone an ORM. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.5393em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Types of Indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:38.4391em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1412em;">There are many types of indexes, each designed to perform well for different pur‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:39.4891em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0145em;">poses. Indexes are implemented in the storage engine layer, not the server layer. Thus, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:40.5391em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0375em;">they are not standardized: indexing works slightly differently in each engine, and not &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:41.5891em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0086em;">all engines support all types of indexes. Even when multiple engines support the same &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:42.6391em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0438em;">index type, they might implement it differently under the hood. Given that this book &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:43.689em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1962em;">assumes you are using InnoDB as the engine for all your tables, we will address &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:44.7391em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0041em;">specifically index implementations in InnoDB. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:46.2891em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.1363em;">That said, let’s look at the two most commonly used index types MySQL currently &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:47.3391em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">supports, their benefits, and their drawbacks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">156 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 7: Indexing for High Performance &nbsp;</span></div>
+					<a name="178_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="178_1" style="position:absolute;left:0em;top:36.8323em;">&nbsp;</a>
+					<a name="178_2" style="position:absolute;left:0em;top:6.6062em;">&nbsp;</a>
+					<a name="178_3" style="position:absolute;left:0em;top:26.4926em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

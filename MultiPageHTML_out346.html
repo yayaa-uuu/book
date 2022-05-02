@@ -1,0 +1,59 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_376.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_376.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">Auto-extend your disks &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:5.6995em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.052em;">With network-attached disks, you pay for the amount of space </span><span class="stl_155 stl_41 stl_129">provisioned</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0472em;">, not used. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:6.7609em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0837em;">This can mean that it is wasteful to leave a large amount of provisioned but unused &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.8109em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0224em;">space on your MySQL data disks. One way you can optimize this would be to target a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:8.8609em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0912em;">much higher percentage of disk space usage, like 90%, but how do you mitigate the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:9.9109em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">risk of running out of disk space? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:11.4609em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0684em;">Cloud providers typically have an API call available to extend your disk size. With a &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.5109em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0791em;">little bit of code, you can determine if your servers are going over the 90% disk-full &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:13.5609em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0205em;">mark and call that API to extend the disks. This can also reduce the likelihood of get‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:14.6109em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0284em;">ting paged for a server that is close to running out of disk space. Overall, this process &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.6609em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0007em;">can make a sizable difference in how much you spend on provisioned disk space. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:17.2109em;z-index:675;"><span class="stl_154 stl_32 stl_348">We</span><span class="stl_154 stl_32 stl_220">’</span><span class="stl_154 stl_32 stl_227" style="word-spacing:-0.0017em;">ll share a few warnings about this, however: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7214em;top:19.0943em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1513em;">• Think about how frequently you should run the code that looks for used disk &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:20.1443em;z-index:826;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1386em;">space percentage. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.1394em;">u need to figure out, based on the disk</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1359em;">s </span><span class="stl_154 stl_32 stl_28">t</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1393em;">hroughput, how &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:21.1943em;z-index:896;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0212em;">long a process would take to fill the remaining disk completely. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0169em;">ur code should &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:22.2443em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">run more frequently than that. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7215em;top:23.6276em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2724em;">• If</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.021em;">&nbsp;</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0224em;">your process runs away and keeps extending the disk without limits, you could &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:24.6776em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0629em;">wake up to a 64 TB volume. This might be a costly surprise when it comes time &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:25.7276em;z-index:1081;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">to pay the provider</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_28">ill. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:27.1109em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2729em;">• This</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1066em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1096em;">disk extension API call can cause the disk to stall briefly. Be sure you test &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:28.1609em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0053em;">this under load to ensure it doesn’t adversely affect your users. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.0574em;"><span class="stl_159 stl_27 stl_28">Summary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:32.3276em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.023em;">If you work in one of the thousands of companies that run in public clouds, you have &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:33.3776em;z-index:1350;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0944em;">many options when it comes to how to run your databases. As a database engineer, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:34.4276em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0429em;">you will be asked which managed solution to use, whether to use managed relational &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.4776em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0066em;">database solutions at all, and what the trade-offs are for each choice. The most impor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.5276em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0199em;">tant thing to keep in mind when giving your input in these discussions is that there is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.5776em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0003em;">no free lunch. Every one of your options comes with a set of trade-offs. The most use‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.6276em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0584em;">ful thing you can do is to frame these trade-offs in the context of how your business &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.6776em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0728em;">operates and what maturity stage it is in to help guide your organization toward the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.7276em;z-index:1782;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1273em;">best fit. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1273em;">e </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1301em;">ope this chapter has helped you come to these conversations with an &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.7776em;z-index:1900;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0064em;">ability to compare the trade-offs at hand with the needs of your company. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">324 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 12: MySQL in the Cloud &nbsp;</span></div>
+					<a name="346_0" style="position:absolute;left:0em;top:30.409em;">&nbsp;</a>
+					<a name="346_1" style="position:absolute;left:0em;top:5.9402em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

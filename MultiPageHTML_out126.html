@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_131.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_131.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4998em;top:4.3166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0996em;">another connection. If not, it kills the thread instead of caching it. In this case, &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.3666em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0185em;">the number of threads in the cache, and hence the amount of memory the thread &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:6.4166em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.021em;">cache uses, does not immediately decrease; it decreases only when a new connec‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:7.4666em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0078em;">tion removes a thread from the cache to use it. (MySQL adds threads to the cache &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:8.5166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0783em;">only when connections close and removes them from the cache only when new &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:9.5666em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0019em;">connections are created.) &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:11.4248em;"><span class="stl_170 stl_171 stl_28">read_buffer_size &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:12.2994em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1375em;">MySQL doesn’t allocate any memory for this buffer until a query needs it, but &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:13.3494em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">then it immediately allocates the entire chunk of memory specified here. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.2076em;"><span class="stl_170 stl_171 stl_28">read_rnd_buffer_size &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:16.0821em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1245em;">MySQL doesn’t allocate any memory for this buffer until a query needs it, and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:17.1816em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.3069em;">then it allocates only as much memory as needed. (The name </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.194em;">max_ read_ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:18.281em;"><span class="stl_170 stl_171 stl_28">rnd_buffer_siz</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0053em;">would describe this variable more accurately.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.831em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1508em;">The official MySQL documentation explains what these variables do in detail, and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.881em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.1504em;">this isn’t an exhaustive list. Our goal here is simply to show you what behavior to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.931em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">expect when you change a few common variables. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:23.481em;z-index:867;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0773em;">u should not raise the value of a per-connection setting globally unless you know &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:24.531em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.1445em;">it’s the right thing to do. Some buffers are allocated all at once, even if they’re not &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.581em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0417em;">needed, so a large global setting can be a huge waste. Instead, you can raise the value &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.631em;"><span class="stl_154 stl_32 stl_146" style="word-spacing:-0.0045em;">when a query needs it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.5153em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Planning Your Variable Changes &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:30.4151em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0538em;">Be careful when setting variables. More is not always better, and if you set the values &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:31.4651em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0282em;">too high, you can easily cause problems: you might run out of memory or cause your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.5151em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">server to swap. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:34.0651em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1128em;">Referring back to </span><a href="MultiPageHTML_out41.html#41_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.1183em;">Chapter 2</span></a><span class="stl_154 stl_32 stl_162" style="word-spacing:0.1208em;">, monitor your SLOs to ensure that your changes don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:35.1151em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0341em;">affect the customer experience. Benchmarks aren’t enough because they’re not real. If &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:36.1651em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.1887em;">you don’t measure your server’s actual performance, you might hurt performance &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:37.2151em;z-index:1501;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.008em;">without knowing it. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_17" style="word-spacing:0.0165em;">e’ve seen many cases where someone changed a server’s config‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:38.2651em;z-index:1613;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0453em;">uration and thought it improved performance, when in fact the server</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0442em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_28">erformance &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:39.3151em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0707em;">worsened overall because of a different workload at a different time of day or day of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:40.3651em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the week. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:41.9151em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0804em;">Ideally, you’re using a version control system to track changes to your configuration &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:42.9651em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0772em;">files. This strategy can be very effective at correlating a performance change or SLO &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:44.0151em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0513em;">breach to a specific configuration change. Just be aware that changing the configura‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.0651em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0363em;">tion file doesn’t actually do anything by default—you have to change the runtime set‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:46.1151em;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0097em;">ting too. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">104 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 5: Optimizing Server Settings &nbsp;</span></div>
+					<a name="126_0" style="position:absolute;left:0em;top:28.8084em;">&nbsp;</a>
+					<a name="126_1" style="position:absolute;left:0em;top:30.6443em;">&nbsp;</a>
+					<a name="126_2" style="position:absolute;left:0em;top:12.5286em;">&nbsp;</a>
+					<a name="126_3" style="position:absolute;left:0em;top:16.3114em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

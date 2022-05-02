@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_130.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_130.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.038em;">started the server or even the value specified in the configuration file; it sets the vari‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0033em;">able to the compiled-in default. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:7.2509em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Persisted System Variables &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.1507em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.0714em;">If all of this variable scoping and configuration business wasn’t complicated enough, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.2007em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0956em;">you also had to be aware that if MySQL was restarted, it would revert back to what &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.3001em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1375em;">you had in your configuration file—even if you had used </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0095em;">SET GLOBAL </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1365em;">to change a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.3387em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0554em;">global variable. This meant that you had to manage a configuration file </span><span class="stl_155 stl_41 stl_22" style="word-spacing:0.0741em;">and </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0531em;">the run‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.4001em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0333em;">time configuration of MySQL as well as ensure they stayed in sync with each other. If &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.4995em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.1554em;">you wanted to increase </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1001em;">max_connections </span><span class="stl_154 stl_32 stl_106" style="word-spacing:0.1501em;">for your servers, you had to issue a </span><span class="stl_170 stl_171 stl_28">SET &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.599em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.008em;">GLOBAL max_connections </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1349em;">command on each running instance and then follow up &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.649em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">with editing the configuration file to reflect your new configuration. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.199em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0256em;">MySQL 8.0 introduced a new feature called </span><a href="https://oreil.ly/ZDwXZ" target="_blank"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0206em;">persisted system variables</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0206em;">, which helps to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.2984em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0982em;">make this a little less complicated. The new syntax </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0332em;">SET PERSIST </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0948em;">now allows you to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.3484em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0229em;">set the value once for runtime and MySQL will write this setting out to disk, enabling &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.3984em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.002em;">it to be used at the next restart. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0005em;top:23.2827em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Side </span><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Eﬀects </span><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">of Setting Variables &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:25.1825em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.047em;">Setting variables dynamically can have unexpected side effects, such as flushing dirty &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.2325em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1543em;">blocks from buffers. Be careful which settings you change online because this can &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.2825em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:-0.001em;">cause the server to do a lot of work. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:28.8325em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4243em;">Sometimes you can infer &nbsp;</span></div>
+					<div class="stl_01" style="left:16.3544em;top:28.8325em;"><span class="stl_154 stl_32 stl_111" style="word-spacing:0.4366em;">a variable’s behavior from its name. For example, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:29.9206em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0389em;">max_heap_table_size </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.2125em;">does what it sounds like: it specifies the </span><span class="stl_155 stl_41 stl_56" style="word-spacing:0.2257em;">maximum </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2111em;">size to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.9819em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0559em;">which implicit in-memory temporary tables are allowed to grow. However, the nam‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:32.0319em;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0142em;">ing conventions aren’t completely consistent, so you can’t always guess what a variable &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:33.0819em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">will do by looking at its name. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.6319em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.0789em;">Let’s take a look at some commonly used variables and the effects of changing them &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:35.6819em;"><span class="stl_154 stl_32 stl_351">dynamically: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:37.5402em;"><span class="stl_170 stl_171 stl_28">table_open_cache &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:38.4147em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0874em;">Setting this variable has no immediate effect: the effect is delayed until the next &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:39.4647em;z-index:1629;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.1619em;">time a thread opens a table. When this happens, MySQL checks the variable</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_34">s &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:40.5147em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0274em;">value. If the value is larger than the number of tables in the cache, the thread can &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:41.5647em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0093em;">insert the newly opened table into the cache. If the value is smaller than the num‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:42.6147em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">ber of tables in the cache, MySQL deletes unused tables from the cache. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:44.4729em;"><span class="stl_170 stl_171 stl_28">thread_cache_size &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:45.3475em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0874em;">Setting this variable has no immediate effect: the effect is delayed until the next &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:46.3975em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0829em;">time a connection is closed. At that time, MySQL checks whether there is space &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:47.4475em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.1415em;">in the cache to store the thread. If so, it caches the thread for future reuse by &nbsp;</span></div>
+					<div class="stl_01" style="left:24.9882em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">How MySQL’s </span><span class="stl_233 stl_27 stl_28" style="word-spacing:-0.092em;">Conﬁguration </span><span class="stl_80 stl_27 stl_28">Works &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">103 &nbsp;</span></div>
+					<a name="125_0" style="position:absolute;left:0em;top:7.544em;">&nbsp;</a>
+					<a name="125_1" style="position:absolute;left:0em;top:23.5758em;">&nbsp;</a>
+					<a name="125_2" style="position:absolute;left:0em;top:9.3799em;">&nbsp;</a>
+					<a name="125_3" style="position:absolute;left:0em;top:25.4118em;">&nbsp;</a>
+					<a name="125_4" style="position:absolute;left:0em;top:29.0618em;">&nbsp;</a>
+					<a name="125_5" style="position:absolute;left:0em;top:19.5277em;">&nbsp;</a>
+					<a name="125_6" style="position:absolute;left:0em;top:38.644em;">&nbsp;</a>
+					<a name="125_7" style="position:absolute;left:0em;top:45.5767em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

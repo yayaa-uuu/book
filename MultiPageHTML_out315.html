@@ -1,0 +1,65 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_342.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_342.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0487em;">For the sake of simplicity, we will pretend application nodes still fulfill write requests &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;z-index:120;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0609em;">by directly connecting to the source database. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0597em;">e </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0615em;">ill later cover how connecting to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0639em;">the source node can scale better. Note, though, that the same application nodes con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;z-index:237;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0539em;">nect to a virtual I</span><span class="stl_154 stl_32 stl_443">P</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0539em;">, </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0548em;">hich acts as a middle layer between them and the read replicas. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5052em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0492em;">This is a </span><span class="stl_155 stl_41 stl_149" style="word-spacing:0.0657em;">replica read pool</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0492em;">, and this is how you spread the growing read load to more &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.5666em;z-index:372;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0557em;">than one host. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0587em;">u may also note that not all replicas are in the pool. That is a com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.6166em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0397em;">mon way to prevent different read workloads from affecting one another. If you have &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.6666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.185em;">reporting processes or your backup process tends to consume all of the disk I/O &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:12.7166em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0957em;">resources and cause replication lag, you can leave out one or more replica nodes to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:13.7666em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0623em;">fulfill those tasks and exclude it from the read pool that serves customer-facing traf‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.8166em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0265em;">fic. Alternatively, you can augment your load balancer health check with a replication &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:15.8666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0728em;">check that automatically removes the backup node that is behind from the pool and &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.9166em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0506em;">reintroduces it when it is caught up. The flexibility of turning your read replicas into &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:17.9666em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0107em;">interchangeable resources grows significantly when there is a single point the applica‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:19.0166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0196em;">tion talks to for reads and you can manage these resources seamlessly without impact &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.0666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">on your customers. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.6166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0519em;">Now that there is more than one database host serving read requests, there are a few &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.6666em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">things to consider for smooth production sailing: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7211em;top:24.5499em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2979em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0125em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">do you route traffic to all these read replicas? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:25.9333em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2977em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0125em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">do you evenly distribute the load? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:27.3166em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2977em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0488em;">&nbsp;</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.038em;">do you run health checks and remove unhealthy or lagged replicas to avoid &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:28.3666em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0014em;">serving stale data? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:29.7499em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2973em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0694em;">&nbsp;</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0592em;">do you avoid accidentally removing all of the nodes, causing more damage &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:30.7999em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0038em;">to the application traffic? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:32.1833em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2973em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0125em;">&nbsp;</span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0004em;">do you manually remove a server proactively for maintenance? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7213em;top:33.5666em;"><span class="stl_154 stl_32 stl_224" style="word-spacing:0.2977em;">• How</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0125em;">&nbsp;</span><span class="stl_154 stl_32 stl_188" style="word-spacing:-0.0015em;">do you add newly provisioned servers to your load balancer? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7212em;top:34.9499em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.2854em;">• What</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0178em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0138em;">automated checks are in place to avoid adding a newly provisioned node to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:35.9999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">the load balancer before it is ready? &nbsp;</span></div>
+					<div class="stl_01" style="left:6.7216em;top:37.3833em;"><span class="stl_154 stl_32 stl_495" style="word-spacing:0.3163em;">• Is</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.022em;">&nbsp;</span><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">your definition of “ready for a new node” specific enough? &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:39.2666em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.106em;">A very common way to manage these read pools is to use a load balancer to run a &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.3166em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0651em;">virtual IP that acts as an intermediary for all traffic meant to go to the read replicas. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:41.3666em;z-index:1840;"><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1114em;">chnologies for doing this include HAProxy, a hardware load balancer if you self- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.4166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0187em;">host, or a network load balancer if you are running in a public cloud environment. In &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:43.4666em;z-index:2050;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.0939em;">the case of using HAProxy, all application hosts will connect to that one “frontend</span><span class="stl_154 stl_32 stl_161">,</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:44.5166em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0041em;">and HAProxy takes care of directing those requests to one of the read replicas defined &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:45.5666em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0748em;">in the backend. Here is a sample HAProxy config file that defines a virtual IP front‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:46.6166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0029em;">end and maps that to multiple read replicas as a backend pool: &nbsp;</span></div>
+					<div class="stl_01" style="left:25.9953em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Scaling Reads with Read Pools &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">293 &nbsp;</span></div>
+					<a name="315_0" style="position:absolute;left:0em;top:41.5958em;">&nbsp;</a>
+					<a name="315_1" style="position:absolute;left:0em;top:15.0458em;">&nbsp;</a>
+					<a name="315_2" style="position:absolute;left:0em;top:8.7458em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

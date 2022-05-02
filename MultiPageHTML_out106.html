@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_112.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_112.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.2435em;"><span class="stl_193 stl_27 stl_28" style="word-spacing:0em;">The RAID cache &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:5.7109em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0539em;">The RAID cache is a (relatively) small amount of memory that is physically installed &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:6.7609em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0411em;">on a hardware RAID controller. It can be used to buffer data as it travels between the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:7.8109em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0768em;">disks and the host system. Here are some of the reasons a RAID card might use the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:8.8609em;"><span class="stl_154 stl_32 stl_28">cache: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:10.4829em;"><span class="stl_155 stl_41 stl_86" style="word-spacing:0.0174em;">Caching reads &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:11.5443em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0663em;">After the controller reads some data from the disks and sends it to the host sys‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:12.5943em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0226em;">tem, it can store the data; this will enable it to satisfy future requests for the same &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:13.6443em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">data without having to go to disk again. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:15.1943em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0837em;">This is usually a very poor use of the RAID cache. Why? Because the operating &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:16.2443em;z-index:533;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1344em;">system and the database server have their own much larger caches. If there</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.131em;">s a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:17.2943em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0482em;">cache hit in one of these caches, the data in the RAID cache won’t be used. Con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:18.3443em;"><span class="stl_154 stl_32 stl_181" style="word-spacing:0.0701em;">versely, if there’s a miss in one of the higher-level caches, the chance that there’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:19.3943em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1175em;">be a hit in the RAID cache is vanishingly small. Because the RAID cache is so &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:20.4443em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1785em;">much smaller, it will almost certainly have been flushed and filled with other &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:21.4943em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.08em;">data, too. Either way you look at it, it’s a waste of memory to cache reads in the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:22.5443em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">RAID cache. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.1662em;"><span class="stl_155 stl_41 stl_136" style="word-spacing:0.0176em;">Caching read-ahead data &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:25.2276em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">If the RAID controller notices sequential requests for data, it might decide to do a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:26.2776em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0028em;">read-ahead read—that is, to prefetch data it predicts will be needed soon. It has to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:27.3276em;z-index:1069;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0577em;">have somewhere to put the data until it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0511em;">s </span><span class="stl_154 stl_32 stl_28">r</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0544em;">equested, though. It can use the RAID &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:28.3776em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0834em;">cache for this. The performance impact of this can vary widely, and you should &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:29.4276em;z-index:1183;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0373em;">check to ensure it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0328em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0346em;">ctually helping. Read-ahead operations might not help if the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:30.4776em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0003em;">database server is doing its own smart read-ahead (as InnoDB does), and it might &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:31.5276em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0023em;">interfere with the all-important buffering of synchronous writes. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.1496em;"><span class="stl_155 stl_41 stl_82" style="word-spacing:0.0125em;">Caching writes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:34.2109em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0552em;">The RAID controller can buffer writes in its cache and schedule them for a later &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:35.2609em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.085em;">time. The advantage to doing this is twofold: first, it can return “success” to the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:36.3109em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0394em;">host system much more quickly than it would be able to if it had to actually per‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:37.3609em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0878em;">form the writes on the physical disks, and second, it can accumulate writes and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:38.4109em;z-index:1662;"><span class="stl_154 stl_32 stl_139" style="word-spacing:0.0102em;">do them more efficiently. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:40.0329em;"><span class="stl_155 stl_41 stl_157" style="word-spacing:0.0196em;">Internal operations &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:41.0943em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0498em;">Some RAID operations are very complex—especially RAID 5 writes, which have &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:42.1443em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0911em;">to calculate parity bits that can be used to rebuild data in the event of a failure. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:43.1943em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.1616em;">The controller needs to use some memory for this type of internal operation. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:44.2443em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0281em;">This is one reason why RAID 5 can perform poorly on some controllers: it needs &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:45.2943em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0606em;">to read a lot of data into the cache for good performance. Some controllers can’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:46.3443em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0008em;">balance caching writes with caching for the RAID 5 parity operations. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">84 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3616em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2691em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 4: Operating System and Hardware Optimization &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

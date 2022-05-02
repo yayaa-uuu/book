@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_57.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_57.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0262em;">many scenarios where clients can encounter errors that are intermittent and, in many &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3552em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0828em;">cases, resolved with a simple retry of the failed query. The </span><span class="stl_155 stl_41 stl_242" style="word-spacing:0.113em;">rate </span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0836em;">of errors happening, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1034em;">though, across the fleet of services handling database queries in your infrastructure &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0815em;">can be a crucial indicator of brewing trouble. Here are some examples of client-side &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.2691em;">errors that might normally be just noise but are a sign of trouble if their rate &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.5666em;"><span class="stl_154 stl_32 stl_39">accelerates: &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.1885em;"><span class="stl_155 stl_41 stl_136" style="word-spacing:0.0177em;">Lock wait timeout &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:12.2499em;z-index:384;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0335em;">ur clients reporting a sharp increase of this error can be a sign of an escalating &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:13.2999em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">row-lock contention on your source node that transactions keep retrying and still &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:14.3499em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0035em;">failing. It can be a precursor for write downtime. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:15.9719em;"><span class="stl_155 stl_41 stl_85" style="word-spacing:0.0096em;">Aborted connections &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:17.0333em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1em;">Clients reporting a sudden surge of aborted connections can be an indicator of &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:18.0833em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0084em;">issues in any access layer you have between the clients and the database instances. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:19.1333em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1113em;">Not tracking that down can lead to a lot of client-side retries, which consumes &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:20.1833em;"><span class="stl_154 stl_32 stl_28">resources. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:21.7333em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0237em;">One thing MySQL server tracks that can help you is the set of server variables named &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.7719em;"><a href="https://oreil.ly/F4VUw" target="_blank"><span class="stl_184 stl_32 stl_28" style="word-spacing:0.0725em;">Connection_errors_xxx </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0725em;">where </span><span class="stl_155 stl_41 stl_28" style="word-spacing:0.0705em;">xxx </span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0736em;">is different kinds of connection errors. A sudden &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:23.8333em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0369em;">increase of any of these counters can be a strong indicator telling you that something &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.8833em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">new and unusual is currently broken. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:26.4333em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.051em;">Are there errors where a single instance means there is trouble and needs to be han‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.4833em;z-index:1112;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">dled? </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">e</span><span class="stl_154 stl_32 stl_28">s. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.0333em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0354em;">For example, getting errors that the MySQL instance is running in read-only mode is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.0833em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0233em;">a sign of issues even if these errors do not happen very often. This can mean that you &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.1333em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0672em;">just had a replica promoted to source, but it is still running in read-only mode (you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.1833em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1381em;">run replicas in read-only mode, don’t you?), which is downtime of writes for your &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:33.2333em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0175em;">cluster. Or it can mean there is some issue in your access layer sending write traffic to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.2833em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0225em;">a replica. In either of those cases, it is not a sign of an intermittent issue solved with a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.3333em;z-index:1544;"><span class="stl_154 stl_32 stl_136">retry. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:36.8833em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0605em;">Another server-side error that is a flag for a major problem is either “too many con‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.9333em;z-index:1658;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.0629em;">nections” or an OS-level “cannot create new thread</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0586em;">” These are signs that your appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:38.9833em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0544em;">cation layer has created and left open more connections than your database server is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:40.0827em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.07em;">configured to allow, either in the server </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1906em;">max_connections </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0693em;">variable or the number of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:41.1327em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0424em;">threads the MySQL process is allowed to open. These errors translate immediately as &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:42.1827em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0191em;">5xx errors to your application and, depending on your application design, can also be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:43.2327em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">impactful to your customers. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:44.7827em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1441em;">As you can see, measuring performance and choosing which errors to frame your &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.8327em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0533em;">SLIs around is as much a communication and social problem as it is a technical one, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.8827em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">so you should be prepared for that. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">28 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.3618em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.2693em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 2: Monitoring in a Reliability Engineering World &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

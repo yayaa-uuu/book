@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_281.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_281.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.4431em;top:4.6499em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2726em;">1. Determine</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0523em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0523em;">which replica you are going to promote. This is often the replica you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:5.6999em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">are sure has all the data. That is your target. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4434em;top:7.0832em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2723em;">2. Check</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0012em;">the lag to make sure that you are within a few seconds. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:8.516em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">3. Stop</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">taking writes on your source by setting </span><span class="stl_170 stl_171 stl_28">super_read_only</span><span class="stl_154 stl_32 stl_28">.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out262.html#262_2"><span class="stl_166 stl_32 stl_28">6 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:6.4433em;top:9.8994em;z-index:414;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">4. </span><span class="stl_154 stl_32 stl_113">W</span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_28">it</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">until replication is in sync with your target. Compare GTIDs to be sure. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4433em;top:11.3321em;"><span class="stl_154 stl_32 stl_76" style="word-spacing:0.2896em;">5. Unset</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0086em;">&nbsp;</span><span class="stl_170 stl_171 stl_28">read_onl</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">on target. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:12.7155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">6. Switch</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">application traffic to the target. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:14.0988em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2781em;">7. Repoint</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0564em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0537em;">all replicas to the new source, including the demoted one. This is trivial &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:15.1982em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">with GTIDs and </span><span class="stl_170 stl_171 stl_28">AUTO_POSITION=1</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:17.0826em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Unplanned Promotions &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:18.9823em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0599em;">On a long enough timeline, every system fails, either as a result of software or hard‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.0323em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.001em;">ware. When this happens on a source server where writes are happening, it can have a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:21.0823em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.0146em;">big impact on the user experience. Most applications will simply return an error, leav‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:22.1209em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:0.1876em;">ing the user to retry themselves. This is a case where an </span><span class="stl_155 stl_41 stl_14" style="word-spacing:0.2096em;">unplanned promotion </span><span class="stl_154 stl_32 stl_28">is &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:23.1823em;"><span class="stl_154 stl_32 stl_28">needed. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:24.7323em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.073em;">Since you do not have a live source to check, this is an abbreviated planned promo‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.7823em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">tion, where you choose which replica based on data that was already replicated: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4432em;top:27.6657em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2725em;">1. Determine</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0523em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0523em;">which replica you are going to promote. This is often the replica you &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:28.7157em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">are sure has all the data. This is your target. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4434em;top:30.1484em;"><span class="stl_154 stl_32 stl_76" style="word-spacing:0.2895em;">2. Unset</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0086em;">&nbsp;</span><span class="stl_170 stl_171 stl_28">read_onl</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">on target. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:31.5318em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">3. Switch</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">application traffic to the target. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:32.9151em;"><span class="stl_154 stl_32 stl_24" style="word-spacing:0.2781em;">4. Repoint</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0053em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0026em;">all replicas to the new source, including the demoted one when it returns &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:33.9651em;"><span class="stl_154 stl_32 stl_134" style="word-spacing:-0.0022em;">to service. This is trivial with GTIDs. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.8484em;z-index:1353;"><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0701em;">u should also ensure that when your former source comes back online, it defaults &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.9479em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">to </span><span class="stl_170 stl_171 stl_28">super_read_onl</span><span class="stl_170 stl_171 stl_186">y</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">enabled. This will help prevent any accidental writes. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:38.8322em;"><span class="stl_236 stl_27 stl_28" style="word-spacing:-0.092em;">Trade-Oﬀs </span><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">of Promotion &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:40.732em;z-index:1506;"><span class="stl_154 stl_32 stl_52" style="word-spacing:0.2775em;">We </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0865em;">re compelled to point out that sometimes your first reaction to downtime is to &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:41.782em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.02em;">failover. Because it is more difficult to know how much data may be missing from the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:42.8206em;z-index:1693;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0003em;">target, it can sometimes be a better strategy to </span><span class="stl_155 stl_41 stl_121" style="word-spacing:0.017em;">not </span><span class="stl_154 stl_32 stl_192">failover. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.5459em;"><span class="stl_167 stl_32 stl_28">6</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.4635em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">Setting </span><span class="stl_211 stl_171 stl_28">super_read_onl</span><span class="stl_211 stl_171 stl_186">y</span><span class="stl_168 stl_32 stl_46" style="word-spacing:0.0025em;">implicitly enables </span><span class="stl_211 stl_171 stl_28">read_only</span><span class="stl_168 stl_32 stl_145" style="word-spacing:0.0107em;">. Conversely, disabling </span><span class="stl_211 stl_171 stl_28">read_onl</span><span class="stl_211 stl_171 stl_275">y</span><span class="stl_168 stl_32 stl_83" style="word-spacing:0.0024em;">implicitly disables &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6664em;top:47.3545em;"><span class="stl_211 stl_171 stl_28">super_read_only</span><span class="stl_168 stl_32 stl_47" style="word-spacing:0.006em;">. There’s no reason for you to enable or disable both variables at the same time during this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6664em;top:48.1878em;"><span class="stl_168 stl_32 stl_28">process. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">240 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6683em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5758em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 9: Replication &nbsp;</span></div>
+					<a name="262_0" style="position:absolute;left:0em;top:17.3756em;">&nbsp;</a>
+					<a name="262_1" style="position:absolute;left:0em;top:39.1252em;">&nbsp;</a>
+					<a name="262_2" style="position:absolute;left:0em;top:46.4972em;">&nbsp;</a>
+					<a name="262_3" style="position:absolute;left:0em;top:40.9612em;">&nbsp;</a>
+					<a name="262_4" style="position:absolute;left:0em;top:19.2116em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

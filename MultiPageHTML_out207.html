@@ -1,0 +1,73 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_220.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_220.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9999em;top:4.3166em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0343em;">As you can see, inserting new rows into the table with more indexes is slower. This is &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.416em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1416em;">true in general: adding new indexes might have a performance impact for </span><span class="stl_170 stl_171 stl_28">INSERT</span><span class="stl_154 stl_32 stl_28">, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:6.5155em;"><span class="stl_170 stl_171 stl_28">UPDATE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0996em;">, and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1562em;">DELETE </span><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1em;">operations, especially if a new index causes you to hit memory &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:7.5655em;"><span class="stl_154 stl_32 stl_28">limits. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.1155em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1213em;">The solution for redundant and duplicate indexes is simply to drop them, but first &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.1655em;z-index:426;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1734em;">you need to identify them. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1753em;">u can write various complicated queries against the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.2535em;z-index:525;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0169em;">INFORMATION_SCHEMA </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.232em;">tables, but there are easier techniques. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.232em;">u can use the </span><span class="stl_155 stl_41 stl_144">pt- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.3035em;"><span class="stl_155 stl_41 stl_214" style="word-spacing:0.0756em;">duplicate-key-checker </span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0673em;">tool included with Percona </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.064em;">olkit, which analyzes table struc‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.3649em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0027em;">tures and suggests indexes that are duplicate or redundant. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.9149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0944em;">Be careful when determining which indexes are candidates for dropping or extend‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:16.0143em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1343em;">ing. Recall that in InnoDB, an index on column </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1223em;">(A) </span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1338em;">in our example table is really &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:17.1138em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0219em;">equivalent to an index on </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">(A, ID</span><span class="stl_170 stl_171 stl_436">)</span><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0183em;">because the primary key is appended to secondary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.2132em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:0.0693em;">index leaf nodes. If you have a query such as </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0701em;">WHERE A = 5 ORDER BY ID</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0701em;">, the index &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.3127em;"><span class="stl_154 stl_32 stl_112" style="word-spacing:0.0216em;">will be very helpful. But if you extend the index to </span><span class="stl_170 stl_171 stl_314" style="word-spacing:-0.0116em;">(A, B)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0235em;">, then it really becomes </span><span class="stl_170 stl_171 stl_28">(A, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:20.4121em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1364em;">B, ID)</span><span class="stl_154 stl_32 stl_185" style="word-spacing:0.1344em;">, and the query will begin to use a filesort for the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0095em;">ORDER BY </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1364em;">portion of the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:21.4507em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.1692em;">query. It’s good to validate your planned changes carefully with a tool such as </span><span class="stl_155 stl_41 stl_144">pt- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:22.5007em;"><span class="stl_155 stl_41 stl_152" style="word-spacing:0.0093em;">upgrade </span><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0071em;">from Percona </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28">olkit. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:24.0621em;z-index:1196;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0536em;">For both cases, consider using MySQL 8.0</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.05em;">s </span><span class="stl_154 stl_32 stl_28">i</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0529em;">nvisible index feature prior to removing &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:25.1615em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.1301em;">an index. With this feature, you can issue an </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0014em;">ALTER TABLE </span><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1309em;">statement to change an &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:26.2115em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0777em;">index to be flagged as invisible, meaning the optimizer will ignore it when planning &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.2615em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0468em;">queries. If you discover that the index you were about to remove was important, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.3115em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0015em;">can easily make it visible again without having to re-create the index. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:30.1958em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Unused Indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:32.0956em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1182em;">In addition to duplicate and redundant indexes, you might have some indexes that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:33.1456em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0526em;">the server simply doesn’t use. These are simply deadweight, and you should consider &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:34.1956em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:-0.0001em;">dropping them.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out207.html#207_1"><span class="stl_166 stl_32 stl_28">15 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:5.9997em;top:35.7951em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.034em;">The best way to identify unused indexes is with </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_362">a</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0313em;">and </span><span class="stl_170 stl_171 stl_28">sys</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, which &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.8945em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4256em;">we covered in detail in </span><a href="MultiPageHTML_out63.html#63_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.431em;">Chapter 3</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4256em;">. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.187em;">sys </span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.4291em;">schema creates &nbsp;</span></div>
+					<div class="stl_01" style="left:30.4802em;top:36.8945em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4256em;">a view of the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.9939em;"><span class="stl_170 stl_171 stl_28">table_io_waits_summary_by_index_usag</span><span class="stl_170 stl_171 stl_261">e</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0227em;">table that can easily tell us which indexes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.0439em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0047em;">are unused: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:40.8058em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT * FROM sys.schema_unused_indexes; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:41.6565em;"><span class="stl_200 stl_171 stl_28">+---------------+---------------+-----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:42.5065em;"><span class="stl_200 stl_171 stl_28">| object_schema | object_name &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:43.3565em;"><span class="stl_200 stl_171 stl_28">+---------------+---------------+-----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4163em;top:44.2065em;"><span class="stl_200 stl_171 stl_28">| sakila</span><span class="stl_200 stl_171 stl_28" style="word-spacing:3.5em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| actor</span><span class="stl_200 stl_171 stl_28" style="word-spacing:4em;">&nbsp;</span><span class="stl_200 stl_171 stl_28">| idx_actor_last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:18.7497em;top:42.5065em;"><span class="stl_200 stl_171 stl_28">| index_name &nbsp;</span></div>
+					<div class="stl_01" style="left:29.3747em;top:42.5065em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:29.3747em;top:44.2065em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:5.815em;top:47.3545em;"><span class="stl_167 stl_32 stl_28" style="word-spacing:0.273em;">15 </span><span class="stl_168 stl_32 stl_33" style="word-spacing:0.0043em;">Some indexes function as unique constraints, so even if an index doesn’t get used for queries, it might be used &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_48" style="word-spacing:0.0036em;">to prevent duplicate values. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2091em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">185 &nbsp;</span></div>
+					<a name="207_0" style="position:absolute;left:0em;top:30.4889em;">&nbsp;</a>
+					<a name="207_1" style="position:absolute;left:0em;top:47.4458em;">&nbsp;</a>
+					<a name="207_2" style="position:absolute;left:0em;top:28.5408em;">&nbsp;</a>
+					<a name="207_3" style="position:absolute;left:0em;top:32.3249em;">&nbsp;</a>
+					<a name="207_4" style="position:absolute;left:0em;top:12.5442em;">&nbsp;</a>
+					<a name="207_5" style="position:absolute;left:0em;top:11.4942em;">&nbsp;</a>
+					<a name="207_6" style="position:absolute;left:0em;top:21.6913em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

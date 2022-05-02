@@ -1,0 +1,66 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_391.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_391.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.015em;">When fulfilling compliance needs for your company, you will come to see that a lot of &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:5.3666em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1324em;">those compliance controls require the organization to track any and all changes to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1061em;">certain assets. These controls are typical in reports like SOC 2, which we described &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:7.4666em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0155em;">earlier in this chapter, where the primary concern is providing evidence of data integ‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:8.5166em;z-index:302;"><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0112em;">rity and security. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.0666em;z-index:364;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0727em;">There are a few ways to find out if a defined database user is in use or not. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.071em;">e </span><span class="stl_154 stl_32 stl_28">c</span><span class="stl_154 stl_32 stl_28">ov‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.1166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0467em;">ered Performance Schema extensively in </span><a href="MultiPageHTML_out63.html#63_0"><span class="stl_184 stl_32 stl_99" style="word-spacing:0.0509em;">Chapter 3 </span></a><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0435em;">as a way to inspect server perfor‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:12.216em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4022em;">mance. There is a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1623em;">users </span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.4049em;">table in Performance Schema that stores historical &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.266em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1392em;">information about users that have connected to the server. This historical tracking &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.316em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0315em;">goes as far back as the life of the server process or the maximum size allowed for this &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:15.3546em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1021em;">table, whichever happens first. Since the table tracks users that </span><span class="stl_155 stl_41 stl_360" style="word-spacing:0.1212em;">have </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1005em;">connected, not &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:16.4047em;"><span class="stl_154 stl_32 stl_148" style="word-spacing:0.1507em;">ones that have </span><span class="stl_155 stl_41 stl_226" style="word-spacing:0.1558em;">not, </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1438em;">you will need to loop over known users and see if any do not &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:17.466em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0036em;">appear in this table as the signal that they might not be in use anymore. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:19.016em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0031em;">Here is a query to enable that instrument in Performance Schema: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:20.7779em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE performance_schema.setup_instruments &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:21.6279em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SET ENABLED=‘YES’ WHERE NAME='memory/sql/user_conn'; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:22.4786em;"><span class="stl_200 stl_171 stl_28" style="word-spacing:0em;">Query OK, 1 rows affected (0.00 sec) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:23.3286em;"><span class="stl_200 stl_171 stl_28">Rows matched: 1 Changed: 1 Warnings: 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.5155em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.2221em;">Once you have that enabled, the table to find this information is </span><span class="stl_170 stl_171 stl_28">perfor</span><span class="stl_170 stl_171 stl_507">m</span><span class="stl_170 stl_171 stl_28">a</span><span class="stl_170 stl_171 stl_28">nce_ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:25.6149em;"><span class="stl_170 stl_171 stl_28">schema.users</span><span class="stl_154 stl_32 stl_28">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.1649em;z-index:1200;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0641em;">If you use an audit-logging solution for compliance controls, such as Percona</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.058em;">s </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_28">lug- &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.2149em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0549em;">in that we mentioned previously, you can use these logs to determine whether a user &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:29.2649em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">has connected to the instances within a given number of weeks. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.8149em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0334em;">Regardless of which way you determine this, it is recommended to set a policy where &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.8649em;"><span class="stl_154 stl_32 stl_138" style="word-spacing:0.3102em;">“after six months of inactivity, a database user that has not connected will be &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:32.9149em;z-index:1469;"><span class="stl_154 stl_32 stl_28">removed</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.1213em;">” This is a practice that will help prevent having access that is not needed &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.9649em;z-index:1550;"><span class="stl_154 stl_32 stl_100" style="word-spacing:0.0104em;">and is now a liability. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.5149em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0316em;">The databases you help manage are going to be in scope for controls that require this &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:36.5649em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0932em;">level of diligence. As your company matures and starts considering becoming more &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:37.6149em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.025em;">compliant, you will need to have a story for how you will show evidence that changes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:38.6649em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0445em;">to the databases in production are reviewed and tracked before they are applied. The &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:39.7149em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.097em;">other thing that compliance controls will focus on is proving your ability to restore &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:40.7649em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0749em;">data and service when a catastrophic event happens. For that, we need to go over to &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:41.8149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">backups and restores and see how they fit in. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.6992em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Backup and Restore Procedures &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:45.599em;"><a href="MultiPageHTML_out279.html#279_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.1001em;">Chapter 10 </span></a><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0969em;">covers the different kinds of backups. Backups are obviously important. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:46.649em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0625em;">They can be tremendously helpful in incidents but also are a key part of many com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:47.699em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0033em;">pliance controls. In most SOC 2 implementations, you will have controls for both cre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">338 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 13: Compliance with MySQL &nbsp;</span></div>
+					<a name="360_0" style="position:absolute;left:0em;top:43.9923em;">&nbsp;</a>
+					<a name="360_1" style="position:absolute;left:0em;top:45.8282em;">&nbsp;</a>
+					<a name="360_2" style="position:absolute;left:0em;top:42.0442em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

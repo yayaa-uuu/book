@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_258.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_258.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Equality Propagation &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.065em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0624em;">Equality propagation can have unexpected costs sometimes. For example, consider a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:7.1645em;"><span class="stl_154 stl_32 stl_82" style="word-spacing:0.1124em;">huge </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.156em;">IN() </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0998em;">list on a column the optimizer knows will be equal to some columns on &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:8.2639em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0995em;">other tables, due to a </span><span class="stl_170 stl_171 stl_28">WHERE</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0995em;">, </span><span class="stl_170 stl_171 stl_28">ON</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0995em;">, or </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1563em;">USING </span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.1024em;">clause that sets the columns equal to one &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:9.3139em;z-index:231;"><span class="stl_154 stl_32 stl_190">another. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:10.8639em;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0756em;">The optimizer will “share” the list by copying it to the corresponding columns in all &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.9139em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0649em;">related tables. This is normally helpful because it gives the query optimizer and exe‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.0134em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0821em;">cution engine more options for where to actually execute the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1747em;">IN() </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0821em;">check. But when &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.0634em;z-index:513;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1265em;">the list is very large, it can result in slower optimization and execution. There</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1248em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_28">o &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:15.1134em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.2248em;">built-in workaround for this problem at the time of this writing—you’ll have to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:16.1634em;z-index:606;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.003em;">change the source code if it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s a </span><span class="stl_154 stl_32 stl_28">p</span><span class="stl_154 stl_32 stl_183" style="word-spacing:0.0095em;">roblem for you. (It’s not a problem for most people.) &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9994em;top:18.0477em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">Parallel Execution &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:19.9474em;"><span class="stl_154 stl_32 stl_20" style="word-spacing:0.2161em;">MySQL can’t execute a single query in parallel on many CPUs. This is a feature &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:20.9974em;z-index:782;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0957em;">offered by some other database servers, but not MySQL. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0945em;">e </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1008em;">ention it so that you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.0474em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0662em;">won’t spend a lot of time trying to figure out how to get parallel query execution on &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.0974em;"><span class="stl_154 stl_32 stl_153">MySQL! &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:24.9818em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">SELECT and UPDATE on the Same Table &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:26.931em;"><span class="stl_154 stl_32 stl_14" style="word-spacing:0.0765em;">MySQL doesn’t let you </span><span class="stl_170 stl_171 stl_28">SELEC</span><span class="stl_170 stl_171 stl_462">T</span><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0566em;">from a table while simultaneously running an </span><span class="stl_170 stl_171 stl_28">UPDATE &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.981em;"><span class="stl_154 stl_32 stl_47" style="word-spacing:0.1723em;">on it. This isn’t really an optimizer limitation, but knowing how MySQL executes &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:29.031em;z-index:1099;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0751em;">queries can help you work around it. Here</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.069em;">s </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0738em;">n example of a query that</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.069em;">s </span><span class="stl_154 stl_32 stl_28">d</span><span class="stl_154 stl_32 stl_28">isallowed, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:30.081em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0123em;">even though it is standard SQL. The query updates each row with the number of sim‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.131em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">ilar rows in the table: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:32.8928em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE tbl AS outer_tbl &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:33.7428em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SET c = ( &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:34.5928em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SELECT count(*) FROM tbl AS inner_tbl &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:35.4428em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE inner_tbl.type = outer_tbl.type &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8336em;top:36.2928em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:37.1436em;"><span class="stl_200 stl_171 stl_28">ERROR 1093 (HY000): You can't specify target table 'outer_tbl' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:37.9936em;"><span class="stl_200 stl_171 stl_28">for update in FROM clause &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:39.131em;"><span class="stl_154 stl_32 stl_105" style="word-spacing:0.2124em;">To </span><span class="stl_154 stl_32 stl_28">w</span><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0197em;">ork around this limitation, you can use a derived table because MySQL material‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:40.2304em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0833em;">izes it as a temporary table. This effectively executes two queries: one </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.173em;">SELECT </span><span class="stl_154 stl_32 stl_28">inside &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:41.3299em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0842em;">the subquery and one multitable </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1714em;">UPDATE </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0851em;">with the joined results of the table and the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:42.4293em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0226em;">subquery. The subquery opens and closes the table before the outer </span><span class="stl_170 stl_171 stl_28">UPDAT</span><span class="stl_170 stl_171 stl_261">E</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">opens the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:43.4793em;"><span class="stl_154 stl_32 stl_141" style="word-spacing:-0.0024em;">table, so the query will now succeed: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:45.2412em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">UPDATE tbl &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:46.0912em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">INNER JOIN( &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:46.9412em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">SELECT type, count(*) AS c &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8334em;top:47.7912em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM tbl &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">220 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="242_0" style="position:absolute;left:0em;top:4.4583em;">&nbsp;</a>
+					<a name="242_1" style="position:absolute;left:0em;top:18.3407em;">&nbsp;</a>
+					<a name="242_2" style="position:absolute;left:0em;top:25.2748em;">&nbsp;</a>
+					<a name="242_3" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="242_4" style="position:absolute;left:0em;top:20.1767em;">&nbsp;</a>
+					<a name="242_5" style="position:absolute;left:0em;top:27.1602em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

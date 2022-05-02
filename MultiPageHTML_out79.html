@@ -1,0 +1,78 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_86.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_86.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.4167em;top:4.5292em;"><span class="stl_200 stl_171 stl_28">OR SORT_ROWS &gt; 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:5.3792em;"><span class="stl_200 stl_171 stl_28">OR SORT_SCAN &gt; 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:6.2292em;"><span class="stl_200 stl_171 stl_28">OR NO_INDEX_USED &gt; 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4167em;top:7.0792em;"><span class="stl_200 stl_171 stl_28">OR NO_GOOD_INDEX_USED &gt; 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.6446em;"><span class="stl_60 stl_27 stl_28" style="word-spacing:0em;">Using sys schema.</span><span class="stl_60 stl_27 stl_28" style="word-spacing:0.5234em;">&nbsp;</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0114em;">The </span><span class="stl_170 stl_171 stl_28">sy</span><span class="stl_170 stl_171 stl_302">s</span><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0127em;">schema provides views that could be used to find problem‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:9.7872em;"><span class="stl_154 stl_32 stl_17" style="word-spacing:0.151em;">atic statements. For example, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1112em;">statements_with_errors_or_warnings </span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1458em;">lists all state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:10.8866em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1473em;">ments with errors and warnings, and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1077em;">statements_with_full_table_scans </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1457em;">lists all &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:11.9861em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0672em;">statements that required a full table scan. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1941em;">sys </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0636em;">schema uses digest text instead of &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.0361em;"><span class="stl_154 stl_32 stl_134" style="word-spacing:0.0967em;">query text, so you will get the digest query text instead of either SQL or digest text &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:14.1355em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0017em;">like you do when accessing the raw </span><span class="stl_170 stl_171 stl_28">performance_schem</span><span class="stl_170 stl_171 stl_186">a</span><span class="stl_154 stl_32 stl_28">tables: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:15.8974em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT query, total_latency, no_index_used_count, rows_sent, &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:16.7474em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">rows_examined &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:17.5974em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sys.statements_with_full_table_scans &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:18.4474em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">WHERE db='employees' AND &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8331em;top:19.2974em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">query NOT LIKE '%performance_schema%'\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:20.1481em;"><span class="stl_200 stl_171 stl_28">********************** 1. row ********************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:20.9981em;"><span class="stl_200 stl_171 stl_28">query: SELECT COUNT ( 'emp_no' ) FROM ... 'emp_no' ) &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:21.8481em;"><span class="stl_200 stl_171 stl_28">WHERE 'title' = ? &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:22.6981em;"><span class="stl_200 stl_171 stl_28">total_latency: 805.37 ms &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:23.5481em;"><span class="stl_200 stl_171 stl_28">no_index_used_count: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:24.3981em;"><span class="stl_200 stl_171 stl_28">rows_sent: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:25.2481em;"><span class="stl_200 stl_171 stl_28">rows_examined: 397774 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7706em;top:26.0981em;"><span class="stl_200 stl_171 stl_28">…</span></div>
+					<div class="stl_01" style="left:6.0003em;top:27.2355em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2057em;">Other views that could be used to find statements that require optimizations are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.2855em;z-index:931;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">described in </span><a href="MultiPageHTML_out79.html#79_0"><span class="stl_184 stl_32 stl_127">T</span></a><a href="MultiPageHTML_out79.html#79_0"><span class="stl_184 stl_32 stl_28">a</span></a><a href="MultiPageHTML_out79.html#79_0"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">ble 3-5</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:30.3731em;"><span class="stl_40 stl_41 stl_303" style="word-spacing:0.0248em;">Table 3-5. Views that can be used to </span><span class="stl_304 stl_41 stl_28" style="word-spacing:-0.021em;">ﬁnd </span><span class="stl_40 stl_41 stl_121" style="word-spacing:0.019em;">statements requiring optimization &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3003em;top:31.9454em;"><span class="stl_205 stl_27 stl_28">View &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3003em;top:33.1564em;"><span class="stl_200 stl_171 stl_28">statement_analysis &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1294em;top:31.9454em;"><span class="stl_205 stl_27 stl_28">Description &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:33.0218em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">A normalized statement view with aggregated statistics, &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:33.9218em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">ordered by the total execution time per the normalized &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:34.8431em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">statement. Similar to the </span><span class="stl_200 stl_171 stl_28">events_statements_sum &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1291em;top:35.7643em;"><span class="stl_200 stl_171 stl_28">mary_by_diges</span><span class="stl_200 stl_171 stl_287">t</span><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">table but less detailed. &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:36.8518em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">All normalized statements that raised errors or warnings. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3001em;top:36.9864em;"><span class="stl_200 stl_171 stl_28">statements_with_errors_or_warnings &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3002em;top:38.0952em;"><span class="stl_200 stl_171 stl_28">statements_with_full_table_scans. &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:37.9606em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">All normalized statements that have done a full table &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:38.8606em;"><span class="stl_206 stl_68 stl_28">scan. &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:39.9481em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">All normalized statements whose average execution time &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:40.8481em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">is in the top 95th percentile. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3003em;top:40.0827em;"><span class="stl_200 stl_171 stl_28">statements_with_runtimes_in_95th_percentile &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:42.0702em;"><span class="stl_200 stl_171 stl_28">statements_with_sorting &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:41.9356em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0334em;">All normalized statements that have done sorts. The view &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:42.8356em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0332em;">includes all kinds of sorts. &nbsp;</span></div>
+					<div class="stl_01" style="left:22.1292em;top:43.9231em;"><span class="stl_206 stl_68 stl_28" style="word-spacing:0.0333em;">All normalized statements that used temporary tables. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.3em;top:44.0577em;"><span class="stl_200 stl_171 stl_28">statements_with_temp_tables &nbsp;</span></div>
+					<div class="stl_01" style="left:27.0038em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Using Performance Schema &nbsp;</span></div>
+					<div class="stl_01" style="left:34.4805em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.388em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">57 &nbsp;</span></div>
+					<a name="79_0" style="position:absolute;left:0em;top:30.5189em;">&nbsp;</a>
+					<a name="79_1" style="position:absolute;left:0em;top:10.0164em;">&nbsp;</a>
+					<a name="79_2" style="position:absolute;left:0em;top:40.0868em;">&nbsp;</a>
+					<a name="79_3" style="position:absolute;left:0em;top:42.0743em;">&nbsp;</a>
+					<a name="79_4" style="position:absolute;left:0em;top:44.0618em;">&nbsp;</a>
+					<a name="79_5" style="position:absolute;left:0em;top:33.1606em;">&nbsp;</a>
+					<a name="79_6" style="position:absolute;left:0em;top:8.917em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

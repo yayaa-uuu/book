@@ -1,0 +1,70 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_158.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_158.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:5.9998em;top:4.3166em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0998em;">This behavior can be a little confusing, so we’ll illustrate with an example. First, we &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:5.416em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0022em;">create a table with a single </span><span class="stl_170 stl_171 stl_28">CHAR(10</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">column and store some values in it: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:7.1779em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">CREATE TABLE char_test( char_col CHAR(10)); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:8.0279em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">INSERT INTO char_test(char_col) VALUES &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8333em;top:8.8779em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">('string1'), (' string2'), ('string3 '); &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.016em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0009em;">When we retrieve the values, the trailing spaces have been stripped away: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:11.7779em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT CONCAT("'", char_col, "'") FROM char_test; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4168em;top:12.6286em;"><span class="stl_200 stl_171 stl_28">+----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:13.4786em;"><span class="stl_200 stl_171 stl_28">| CONCAT("'", char_col, "'") | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:14.3286em;"><span class="stl_200 stl_171 stl_28">+----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:15.1786em;"><span class="stl_200 stl_171 stl_28">| 'string1' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:16.0286em;"><span class="stl_200 stl_171 stl_28">| ' string2' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:16.8786em;"><span class="stl_200 stl_171 stl_28">| 'string3' &nbsp;</span></div>
+					<div class="stl_01" style="left:17.6877em;top:15.1786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:17.6877em;top:16.0286em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:17.6877em;top:16.8786em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4169em;top:17.7286em;"><span class="stl_200 stl_171 stl_28">+----------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:18.9155em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1562em;">If we store the same values in a </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0966em;">VARCHAR(10) </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1562em;">column, we get the following result &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:20.0149em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">upon retrieval, where the trailing space on </span><span class="stl_170 stl_171 stl_28">string</span><span class="stl_170 stl_171 stl_275">3</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">has not been removed: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:21.7768em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">SELECT CONCAT("'", varchar_col, "'") FROM varchar_test; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:22.6275em;"><span class="stl_200 stl_171 stl_28">+-------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:23.4775em;"><span class="stl_200 stl_171 stl_28">| CONCAT("'", varchar_col, "'") | &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:24.3275em;"><span class="stl_200 stl_171 stl_28">+-------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:25.1775em;"><span class="stl_200 stl_171 stl_28">| 'string1' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:26.0275em;"><span class="stl_200 stl_171 stl_28">| ' string2' &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:26.8775em;"><span class="stl_200 stl_171 stl_28">| 'string3 ' &nbsp;</span></div>
+					<div class="stl_01" style="left:18.7499em;top:25.1775em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:18.7499em;top:26.0275em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:18.7499em;top:26.8775em;"><span class="stl_200 stl_171 stl_28">|</span></div>
+					<div class="stl_01" style="left:7.4165em;top:27.7275em;"><span class="stl_200 stl_171 stl_28">+-------------------------------+ &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.9143em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2322em;">The sibling types for </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0166em;">CHAR </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2322em;">and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0166em;">VARCHAR </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2322em;">are </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0166em;">BINARY </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2322em;">and </span><span class="stl_170 stl_171 stl_28">VARBINARY</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2322em;">, which store &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:29.9643em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0721em;">binary strings. Binary strings are very similar to conventional strings, but they store &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:31.0638em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0232em;">bytes instead of characters. Padding is also different: MySQL pads </span><span class="stl_170 stl_171 stl_28">BINAR</span><span class="stl_170 stl_171 stl_317">Y</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">values with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:32.1632em;"><span class="stl_170 stl_171 stl_28">\</span><span class="stl_170 stl_171 stl_186">0</span><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0044em;">(the zero byte) instead of spaces and doesn’t strip the pad value on retrieval.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out152.html#152_0"><span class="stl_166 stl_32 stl_55" style="word-spacing:0.0077em;">2 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:6.0001em;top:33.7132em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.0419em;">These types are useful when you need to store binary data and want MySQL to com‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:34.7632em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1076em;">pare the values as bytes instead of characters. The advantage of byte-wise compari‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:35.8627em;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.0155em;">sons is more than just a matter of case insensitivity. MySQL literally compares </span><span class="stl_170 stl_171 stl_28">BINARY &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:36.9127em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0959em;">strings one byte at a time, according to the numeric value of each byte. As a result, &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:37.9627em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1526em;">binary comparisons can be much simpler than character comparisons, so they are &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:39.0127em;z-index:1610;"><span class="stl_154 stl_32 stl_156">faster. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:47.3793em;"><span class="stl_167 stl_32 stl_28">2</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.2968em;"><span class="stl_168 stl_32 stl_133" style="word-spacing:-0.0033em;">Be careful with the </span><span class="stl_211 stl_171 stl_28">BINAR</span><span class="stl_211 stl_171 stl_186">Y</span><span class="stl_168 stl_32 stl_73" style="word-spacing:0.002em;">type if the value must remain unchanged after retrieval. MySQL will pad it to the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;"><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">required length with </span><span class="stl_211 stl_171 stl_28">\0</span><span class="stl_168 stl_32 stl_28">s. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">130 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 6: Schema Design and Management &nbsp;</span></div>
+					<a name="152_0" style="position:absolute;left:0em;top:47.3305em;">&nbsp;</a>
+					<a name="152_1" style="position:absolute;left:0em;top:29.1436em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

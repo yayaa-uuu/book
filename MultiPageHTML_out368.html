@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_398.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_398.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.1653em;"><span class="stl_180 stl_27 stl_28">Replica &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:6.065em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0502em;">If your topology has read replicas and you have the ability to depool the replica, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:7.115em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0806em;">could consider upgrading one of the replicas first. This would allow you to see how &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:8.165em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.04em;">your read traffic performs with an actual production workload. If you observe errors &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:9.215em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1098em;">or regressions, you can depool the replica and make adjustments. The downside of &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:10.265em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0009em;">this method is that you cannot test performance or write traffic. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:12.1494em;"><span class="stl_180 stl_27 stl_28">Tooling &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:14.0378em;"><span class="stl_154 stl_32 stl_145" style="word-spacing:0.0107em;">Percona </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0155em;">olkit offers the tool </span><span class="stl_155 stl_41 stl_108">pt-upgrade</span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0137em;">, which takes an input of queries, runs them &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:15.0991em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0544em;">against two different targets, and produces a report telling you about any differences &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:16.1491em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1431em;">in row counts, row data, or errors. Since it can take many different types of input &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:17.1991em;"><span class="stl_154 stl_32 stl_137" style="word-spacing:0.0614em;">(slow query log, general query log, binary logs), it can be a good option to get addi‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:18.2491em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tional test coverage. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.7991em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0637em;">The best way to use this would be to first collect the queries you are most interested &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:20.8491em;"><span class="stl_154 stl_32 stl_188" style="word-spacing:0.0036em;">in, with either the slow query log or the binary log. Then set up two identical systems, &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.8878em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1006em;">upgrade only one of them to your new version, and run </span><span class="stl_155 stl_41 stl_139" style="word-spacing:0.1088em;">pt-upgrade </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1006em;">against both to &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:22.9491em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">see the differences. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0006em;top:24.8457em;"><span class="stl_159 stl_27 stl_28" style="word-spacing:0em;">Upgrading at Scale &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:27.1158em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.106em;">Upgrading MySQL is very straightforward and is covered thoroughly in the official &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:28.1658em;"><span class="stl_154 stl_32 stl_143" style="word-spacing:0.2234em;">MySQL documentation. In brief, if you’re doing an in-place upgrade, you’ll stop &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:29.2653em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0033em;">MySQL, replace the binaries, start MySQL, and then run the </span><span class="stl_170 stl_171 stl_28">mysql_upgrad</span><span class="stl_170 stl_171 stl_186">e</span><span class="stl_154 stl_32 stl_28">script. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:30.8153em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0991em;">This can be repetitive if you’re doing this on a fleet of hundreds of MySQL servers. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:31.8653em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0651em;">Our suggestion would be to automate this as much as possible. One way you can do &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:32.9153em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">this is with Ansible. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.4653em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0122em;">Here’s a suggested skeleton process for performing safe upgrades that you can use as a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:35.5153em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0011em;">guide to build an Ansible playbook, if you choose to: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.1372em;z-index:1375;"><span class="stl_155 stl_41 stl_28" style="word-spacing:0em;">1. </span><span class="stl_155 stl_41 stl_497">V</span><span class="stl_155 stl_41 stl_28">e</span><span class="stl_155 stl_41 stl_71" style="word-spacing:0.0058em;">rify target. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:38.1986em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0163em;">The very first thing you want to do is prevent any accidental upgrades of produc‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:39.2486em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.1304em;">tion systems. If you have a system that you can query to determine whether a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:40.2986em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0376em;">database is actively taking traffic, this is the place to check it. If you followed our &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:41.3981em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0467em;">advice from </span><a href="MultiPageHTML_out121.html#121_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0522em;">Chapter 5</span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0467em;">, you should be using the </span><span class="stl_170 stl_171 stl_28">read_onl</span><span class="stl_170 stl_171 stl_508">y</span><span class="stl_154 stl_32 stl_35" style="word-spacing:0.0494em;">flag to prevent unex‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:42.4481em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1141em;">pected writes to your replicas. This can serve as a good alternative if you don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:43.4981em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1122em;">have a system that you can check. If a server is writable, chances are you don’t &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:44.5481em;z-index:1836;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0208em;">want to upgrade it since it may be taking production writes. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0189em;">u can also use this &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:45.598em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0154em;">step to verify that you haven’t already upgraded the server. This allows you to run &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:46.648em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0021em;">the playbook against it later and it will take no action. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">346 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6682em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5757em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Appendix A: Upgrading MySQL &nbsp;</span></div>
+					<a name="368_0" style="position:absolute;left:0em;top:14.2784em;">&nbsp;</a>
+					<a name="368_1" style="position:absolute;left:0em;top:6.2943em;">&nbsp;</a>
+					<a name="368_2" style="position:absolute;left:0em;top:27.3451em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

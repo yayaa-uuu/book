@@ -1,0 +1,35 @@
+<div id="tab_1" >
+    <iframe src="MultiPageHTML_out1.html"  padding:100%></iframe>
+</div>
+
+<!-- <div id="tab_1" style="text-align:center;">
+    <iframe src="MultiPageHTML_out1.html" width="100%" height="100%" ></iframe>
+</div> -->
+
+<script>
+    //从MultiPageHTML_out1.html 切换到 MultiPageHTML_out2.html ...MultiPageHTML_out389.html
+    //当前页面的索引
+    var index = 1;
+    //定义上下页按钮
+    var btn_up = document.getElementById("btn_up");
+    var btn_down = document.getElementById("btn_down");
+    //定义tab_1
+    var tab_1 = document.getElementById("tab_1");
+    //定义iframe
+    var iframe = document.getElementsByTagName("iframe")[0];
+    //定义iframe的src
+    var iframe_src = iframe.src;
+    //定义iframe的src的数组
+    var iframe_src_arr = iframe_src.split("/");
+    //定义iframe的src的数组的长度
+    var iframe_src_arr_length = iframe_src_arr.length;
+    //定义iframe的src的数组的长度的最后一个元素
+    var iframe_src_arr_last = iframe_src_arr[iframe_src_arr_length - 1];
+
+    //上下页切换函数
+    function tab(id) {
+        document.getElementById("tab_1").style.display = "none";
+        document.getElementById("tab_" + id).style.display = "block";
+    }
+
+</script>

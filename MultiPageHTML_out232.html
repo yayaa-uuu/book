@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_246.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_246.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:9.2883em;top:4.5327em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">filtered: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:9.2883em;top:5.4245em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">Extra: </span><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">Impossible WHERE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:6.6016em;"><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0514em;">This query stopped during the optimization step, but MySQL can also terminate &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:7.6516em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0893em;">execution early in some other cases. The server can use this optimization when &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:8.7016em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.0994em;">the query execution engine recognizes the need to retrieve distinct values or to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:9.7516em;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0183em;">stop when a value doesn’t exist. For example, the following query finds all movies &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:10.8016em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0031em;">without any actors:</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out232.html#232_0"><span class="stl_166 stl_32 stl_24" style="word-spacing:0.0055em;">7 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:8.9167em;top:12.567em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">SELECT film.film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9167em;top:13.4595em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9167em;top:14.352em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">LEFT OUTER JOIN sakila.film_actor USING(film_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9167em;top:15.2445em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">WHERE film_actor.film_id IS NULL; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:16.4216em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0211em;">This query works by eliminating any films that have actors. Each film might have &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:17.4716em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0272em;">many actors, but as soon as it finds one actor, it stops processing the current film &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:18.571em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1953em;">and moves to the next one because it knows the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.057em;">WHERE </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.1963em;">clause prohibits out‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:19.621em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.111em;">putting that film. A similar “Distinct/not-exists” optimization can apply to cer‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:20.7205em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tain kinds of </span><span class="stl_170 stl_171 stl_28">DISTINCT</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">NOT EXISTS()</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, and </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0em;">LEFT JOI</span><span class="stl_170 stl_171 stl_186">N</span><span class="stl_154 stl_32 stl_28">queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:22.3424em;"><span class="stl_155 stl_41 stl_59" style="word-spacing:0.0188em;">Equality propagation &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:23.4038em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.0481em;">MySQL recognizes when a query holds two columns as equal—for example, in a &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:24.5032em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0893em;">JOIN </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.165em;">condition—and propagates </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0893em;">WHERE </span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1671em;">clauses across equivalent columns. For &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:25.5532em;"><span class="stl_154 stl_32 stl_452" style="word-spacing:-0.005em;">instance, in the following query: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9164em;top:27.3186em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">SELECT film.film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9164em;top:28.2111em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">FROM sakila.film &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9164em;top:29.1036em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">INNER JOIN sakila.film_actor USING(film_id) &nbsp;</span></div>
+					<div class="stl_01" style="left:8.9164em;top:29.9961em;"><span class="stl_398 stl_173 stl_28" style="word-spacing:0em;">WHERE film.film_id &gt; 500; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:31.2227em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0492em;">MySQL knows that the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_453">E</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0454em;">clause applies not only to the </span><span class="stl_170 stl_171 stl_28">fil</span><span class="stl_170 stl_171 stl_453">m</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0414em;">table but to the &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:32.3221em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0709em;">film_actor </span><span class="stl_154 stl_32 stl_83" style="word-spacing:0.183em;">table as well because the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.0709em;">USING </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1824em;">clause forces the two columns to &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:33.3721em;"><span class="stl_154 stl_32 stl_55">match. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4999em;top:34.9221em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.0728em;">If you’re used to another database server that can’t do this, you might have been &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:36.0215em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0387em;">advised to “help the optimizer” by manually specifying the </span><span class="stl_170 stl_171 stl_28">WHER</span><span class="stl_170 stl_171 stl_292">E</span><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0424em;">clause for both &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:37.0715em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">tables, like this: &nbsp;</span></div>
+					<div class="stl_01" style="left:8.917em;top:38.8377em;"><span class="stl_397 stl_171 stl_28" style="word-spacing:0em;">... WHERE film.film_id &gt; 500 AND film_actor.film_id &gt; 500 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:40.014em;"><span class="stl_154 stl_32 stl_83" style="word-spacing:0.0024em;">This is unnecessary in MySQL. It just makes your queries harder to maintain. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.6036em;"><span class="stl_167 stl_32 stl_28">7</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.5125em;z-index:5;"><span class="stl_168 stl_32 stl_52" style="word-spacing:0.194em;">We </span><span class="stl_168 stl_32 stl_28">a</span><span class="stl_168 stl_32 stl_53" style="word-spacing:0.0013em;">gree, a movie without actors is strange, but the Sakila Sample Database lists no actors for </span><span class="stl_229 stl_41 stl_81" style="word-spacing:0.0116em;">Slacker Liaisons</span><span class="stl_168 stl_32 stl_81" style="word-spacing:0.0116em;">, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;z-index:118;"><span class="stl_168 stl_32 stl_28">which it describes as </span><span class="stl_168 stl_32 stl_454">“</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">A </span><span class="stl_168 stl_32 stl_455">F</span><span class="stl_168 stl_32 stl_107" style="word-spacing:0.009em;">ast-Paced Tale of a Shark and a Student Who Must Meet a Crocodile in Ancient &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:188;"><span class="stl_168 stl_32 stl_28">China</span><span class="stl_168 stl_32 stl_161">.</span><span class="stl_168 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">210 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 8: Query Performance Optimization &nbsp;</span></div>
+					<a name="232_0" style="position:absolute;left:0em;top:46.6125em;">&nbsp;</a>
+					<a name="232_1" style="position:absolute;left:0em;top:23.6331em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

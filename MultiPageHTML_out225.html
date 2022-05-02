@@ -1,0 +1,68 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_239.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_239.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6.0003em;top:4.3166em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.051em;">resources required by the query. The query will be in the “Sending data” state. When &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:5.3666em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.14em;">the client library fetches the results all at once, it reduces the amount of work the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:6.4166em;"><span class="stl_154 stl_32 stl_137" style="word-spacing:-0.0032em;">server needs to do: the server can finish and clean up the query as quickly as possible. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.9666em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.0859em;">Most client libraries let you treat the result set as though you’re fetching it from the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:9.0166em;z-index:428;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0286em;">server, although in fact you’re just fetching it from the buffer in the library</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0254em;">s </span><span class="stl_154 stl_32 stl_28">m</span><span class="stl_154 stl_32 stl_136">emory. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.0666em;z-index:462;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1376em;">This works fine most of the time, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1354em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1387em;">ot a good idea for huge result sets that &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.1166em;z-index:541;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1034em;">might take a long time to fetch and use a lot of memory. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_204" style="word-spacing:0.0945em;">u can use less memory &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.1666em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.127em;">and start working on the result sooner if you instruct the library not to buffer the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.2166em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0805em;">result. The downside is that the locks and other resources on the server will remain &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.2666em;z-index:749;"><span class="stl_154 stl_32 stl_84" style="word-spacing:0.0046em;">open while your application is interacting with the library.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out225.html#225_0"><span class="stl_166 stl_32 stl_162" style="word-spacing:0.008em;">5 &nbsp;</span></a></sup></div>
+					<div class="stl_01" style="left:6.0003em;top:15.8166em;z-index:779;"><span class="stl_154 stl_32 stl_257" style="word-spacing:0.0152em;">Let’s look at an example using PH</span><span class="stl_154 stl_32 stl_443">P</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">. </span><span class="stl_154 stl_32 stl_323">H</span><span class="stl_154 stl_32 stl_129" style="word-spacing:0.0111em;">ere’s how you usually query MySQL from PHP: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:17.5792em;"><span class="stl_200 stl_171 stl_28">&lt;?php &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:18.4292em;"><span class="stl_200 stl_171 stl_28">$link = mysql_connect('localhost', 'user', 'p4ssword'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:19.2792em;"><span class="stl_200 stl_171 stl_28">$result = mysql_query('SELECT * FROM HUGE_TABLE', $link); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:20.1292em;"><span class="stl_200 stl_171 stl_28">while ( $row = mysql_fetch_array($result) ) { &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:20.9792em;"><span class="stl_200 stl_171 stl_28">// Do something with result &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:21.8292em;"><span class="stl_200 stl_171 stl_28">}</span></div>
+					<div class="stl_01" style="left:7.4169em;top:22.6792em;"><span class="stl_200 stl_171 stl_28">?&gt; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.8166em;"><span class="stl_154 stl_32 stl_74" style="word-spacing:0.1524em;">The code seems to indicate that you fetch rows only when you need them, in the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:24.916em;"><span class="stl_170 stl_171 stl_28">whil</span><span class="stl_170 stl_171 stl_426">e</span><span class="stl_154 stl_32 stl_71" style="word-spacing:0.0453em;">loop. However, the code actually fetches the entire result into a buffer with the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:26.0155em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1377em;">mysql_query() </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1172em;">function call. The </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1377em;">while </span><span class="stl_154 stl_32 stl_222" style="word-spacing:0.1239em;">loop simply iterates through the buffer. In &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:27.1149em;"><span class="stl_154 stl_32 stl_120" style="word-spacing:0.1473em;">contrast, the following code doesn’t buffer the results because it uses </span><span class="stl_170 stl_171 stl_28">mysql_unbuf &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:28.2143em;"><span class="stl_170 stl_171 stl_28">fered_query(</span><span class="stl_170 stl_171 stl_186">)</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">instead of </span><span class="stl_170 stl_171 stl_28">mysql_query()</span><span class="stl_154 stl_32 stl_28">: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:29.9769em;"><span class="stl_200 stl_171 stl_28">&lt;?php &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:30.8269em;"><span class="stl_200 stl_171 stl_28">$link = mysql_connect('localhost', 'user', 'p4ssword'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:31.6769em;"><span class="stl_200 stl_171 stl_28">$result = mysql_unbuffered_query('SELECT * FROM HUGE_TABLE', $link); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:32.5269em;"><span class="stl_200 stl_171 stl_28">while ( $row = mysql_fetch_array($result) ) { &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7708em;top:33.3769em;"><span class="stl_200 stl_171 stl_28">// Do something with result &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:34.2269em;"><span class="stl_200 stl_171 stl_28">}</span></div>
+					<div class="stl_01" style="left:7.4166em;top:35.0769em;"><span class="stl_200 stl_171 stl_28">?&gt; &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:36.2143em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.0915em;">Programming languages have different ways to override buffering. For example, the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:37.3138em;"><span class="stl_154 stl_32 stl_393" style="word-spacing:0.43em;">Perl </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1692em;">DBD::mysql </span><span class="stl_154 stl_32 stl_188" style="word-spacing:0.4072em;">driver requires you to specify the &nbsp;</span></div>
+					<div class="stl_01" style="left:26.5353em;top:37.3138em;z-index:1616;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.407em;">C client library</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.4087em;">s </span><span class="stl_170 stl_171 stl_28">mysql_ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:38.4132em;"><span class="stl_170 stl_171 stl_28">use_resul</span><span class="stl_170 stl_171 stl_186">t</span><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">attribute (the default is </span><span class="stl_170 stl_171 stl_28">mysql_buffer_result</span><span class="stl_154 stl_32 stl_298" style="word-spacing:0.0281em;">). Here’s an example: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:40.1758em;"><span class="stl_200 stl_171 stl_28">#!/usr/bin/perl &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:41.0258em;"><span class="stl_200 stl_171 stl_28">use DBI; &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:41.8758em;"><span class="stl_200 stl_171 stl_28">my $dbh = DBI-&gt;connect('DBI:mysql:;host=localhost', 'user', 'p4ssword'); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:42.7251em;"><span class="stl_200 stl_171 stl_28">my $sth = $dbh-&gt;prepare('SELECT * FROM HUGE_TABLE', { </span><span class="stl_265 stl_173 stl_28">mysql_use_result =&gt; 1 </span><span class="stl_200 stl_171 stl_28">}); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:43.5758em;"><span class="stl_200 stl_171 stl_28">$sth-&gt;execute(); &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4165em;top:44.4258em;"><span class="stl_200 stl_171 stl_28">while ( my $row = $sth-&gt;fetchrow_array() ) { &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:48.2703em;"><span class="stl_167 stl_32 stl_28">5</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1878em;z-index:68;"><span class="stl_168 stl_32 stl_109">Y</span><span class="stl_168 stl_32 stl_28">o</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">u can work around this with </span><span class="stl_211 stl_171 stl_28">SQL_BUFFER_RESULT</span><span class="stl_168 stl_32 stl_101" style="word-spacing:0.0144em;">, which we’ll see a bit later. &nbsp;</span></div>
+					<div class="stl_01" style="left:27.8411em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Query Execution Basics &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1748em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0823em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">203 &nbsp;</span></div>
+					<a name="225_0" style="position:absolute;left:0em;top:48.2215em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_315.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_315.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1406em;">Regardless, you definitely need to do full backups occasionally; we suggest at least &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.3666em;z-index:83;"><span class="stl_154 stl_32 stl_346" style="word-spacing:0.1776em;">weekly. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_65" style="word-spacing:0.1673em;">u can’t expect to recover from a month’s worth of incremental backups. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.4166em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0021em;">Even a week is a lot of work and risk. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:8.3009em;"><span class="stl_180 stl_27 stl_28">Replication &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:10.2007em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1549em;">The biggest advantage to backing up from a replica is that it doesn’t interrupt the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:11.2507em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0074em;">source or place extra load on it. This is a good reason to set up a replica server, even if &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:12.3007em;"><span class="stl_154 stl_32 stl_55" style="word-spacing:0.1048em;">you don’t need it for load balancing or high availability. If money is a concern, you &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:13.3507em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0899em;">can always use the backup replica for other purposes, such as reporting—as long as &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:14.4007em;"><span class="stl_154 stl_32 stl_108" style="word-spacing:0.1085em;">you don’t write to it and thus change the data you’re trying to back up. The replica &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:15.4507em;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.0184em;">doesn’t have to be dedicated to backups; it just has to be able to catch up to the source &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.5007em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0401em;">in time to make your next backup in the event that its other roles make it fall behind &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:17.5507em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0045em;">in replication at times. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:19.1007em;z-index:726;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0098em;">When you make a backup from a replica, it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0076em;">s </span><span class="stl_154 stl_32 stl_28">v</span><span class="stl_154 stl_32 stl_125" style="word-spacing:0.0067em;">ery wise to use GTIDs, as mentioned in &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:20.1507em;"><a href="MultiPageHTML_out249.html#249_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.0936em;">Chapter 9</span></a><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0918em;">. This avoids having to save all the information about the replication pro‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:21.2007em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.098em;">cesses, such as the replica’s position relative to the source. This is useful for cloning &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:22.2507em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0466em;">new replicas, reapplying binary logs to the source to get point-in-time recovery, pro‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:23.3007em;"><span class="stl_154 stl_32 stl_87" style="word-spacing:0.0795em;">moting the replica to a source, and more. Also be sure that no temporary tables are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:24.3507em;"><span class="stl_154 stl_32 stl_73" style="word-spacing:0.0019em;">open if you stop your replica because they might keep you from restarting replication. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:25.9007em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.1275em;">As we mentioned in </span><a href="MultiPageHTML_out255.html#255_0"><span class="stl_184 stl_32 stl_151" style="word-spacing:0.134em;">“Delayed Replication” on page 233 </span></a><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1241em;">in </span><a href="MultiPageHTML_out249.html#249_0"><span class="stl_184 stl_32 stl_24" style="word-spacing:0.1295em;">Chapter 9</span></a><span class="stl_154 stl_32 stl_99" style="word-spacing:0.1304em;">, intentionally &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:26.9507em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.1103em;">delaying replication on one of your replicas can be very useful for recovering from &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:28.0007em;"><span class="stl_154 stl_32 stl_114" style="word-spacing:0.1316em;">some disaster scenarios. Suppose you delay replication by an hour. If an unwanted &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:29.0507em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1797em;">statement runs on the source, you have an hour to notice it and stop the replica &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:30.1007em;z-index:1432;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.1492em;">before it repeats the event from its relay log. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1455em;">u can then promote the replica to &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:31.1507em;"><span class="stl_154 stl_32 stl_77" style="word-spacing:0.0423em;">source and replay some relatively small number of log events, skipping the bad state‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.2007em;"><span class="stl_154 stl_32 stl_88" style="word-spacing:0.0257em;">ments. This can be much faster than the point-in-time recovery technique we discuss &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.2507em;z-index:1608;"><span class="stl_154 stl_32 stl_487">later. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:35.5628em;"><span class="stl_176 stl_32 stl_38" style="word-spacing:0.0361em;">The replica might not have the same data as the source. Many peo‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3994em;top:36.5228em;"><span class="stl_176 stl_32 stl_28" style="word-spacing:0.2121em;">ple assume replicas are exact copies of their source, but in our &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:37.4828em;"><span class="stl_176 stl_32 stl_77" style="word-spacing:0.0539em;">experience, data mismatches on replicas are common, and MySQL &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:38.4428em;"><span class="stl_176 stl_32 stl_95" style="word-spacing:0.0295em;">has no way to detect this problem. The only way to detect it is with &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:39.3924em;z-index:1846;"><span class="stl_176 stl_32 stl_24" style="word-spacing:0.0208em;">a tool like Percona </span><span class="stl_176 stl_32 stl_105">T</span><span class="stl_176 stl_32 stl_28">o</span><span class="stl_176 stl_32 stl_357" style="word-spacing:0.0562em;">olkit’s </span><span class="stl_372 stl_41 stl_42">pt-table-checksum</span><span class="stl_176 stl_32 stl_77" style="word-spacing:0.0188em;">. The best way to pre‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3995em;top:40.408em;"><span class="stl_176 stl_32 stl_77" style="word-spacing:0.1738em;">vent this is to use the </span><span class="stl_212 stl_171 stl_28" style="word-spacing:-0.0814em;">super_read_only </span><span class="stl_176 stl_32 stl_46" style="word-spacing:0.1732em;">flag to ensure that only &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3996em;top:41.368em;"><span class="stl_176 stl_32 stl_74" style="word-spacing:0.0015em;">replication can write to replicas. &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3996em;top:42.6614em;"><span class="stl_176 stl_32 stl_38" style="word-spacing:0.0464em;">Having a replicated copy of your data might help protect you from &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3988em;top:43.6214em;z-index:2064;"><span class="stl_176 stl_32 stl_77" style="word-spacing:0.022em;">problems like disk meltdowns on the source, but there</span><span class="stl_176 stl_32 stl_34">’</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0189em;">s </span><span class="stl_176 stl_32 stl_28">n</span><span class="stl_176 stl_32 stl_28" style="word-spacing:0.0189em;">o guaran‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:11.3988em;top:44.571em;"><span class="stl_176 stl_32 stl_35" style="word-spacing:0.0027em;">tee. Replication is </span><span class="stl_372 stl_41 stl_121" style="word-spacing:0.017em;">not </span><span class="stl_176 stl_32 stl_85" style="word-spacing:0.0097em;">a backup. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">268 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6681em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5756em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="290_0" style="position:absolute;left:0em;top:8.594em;">&nbsp;</a>
+					<a name="290_1" style="position:absolute;left:0em;top:10.4299em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_334.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_334.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3166em;"><span class="stl_154 stl_32 stl_51" style="word-spacing:0.0334em;">Watching the error log is even more important in newer MySQL versions. Even if the &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:5.416em;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.1287em;">server seems to start without trouble, you should run </span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.0456em;">SHOW TABLE STATUS </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1303em;">in each &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:6.466em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0014em;">database, then check the error log again. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:8.3625em;"><span class="stl_159 stl_27 stl_28">Summary &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:10.6327em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1593em;">Everyone knows that they need backups, but not everyone realizes that they need &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:11.6827em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1518em;">recoverable backups. There are many ways to design backups that contradict your &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:12.7327em;"><span class="stl_154 stl_32 stl_189" style="word-spacing:0.1103em;">recovery requirements. </span><span class="stl_154 stl_32 stl_105">T</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1114em;">o </span><span class="stl_154 stl_32 stl_28">h</span><span class="stl_154 stl_32 stl_57" style="word-spacing:0.1135em;">elp avoid this problem, we suggest that you define and &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:13.7827em;"><span class="stl_154 stl_32 stl_72" style="word-spacing:0.0488em;">document your RPO and RTO, and use those requirements when choosing a backup &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:14.8327em;"><span class="stl_154 stl_32 stl_28">system. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:16.3827em;"><span class="stl_154 stl_32 stl_144" style="word-spacing:0.0199em;">It’s also important to test recovery on a routine basis and ensure that it works. It’s easy &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:17.4214em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1007em;">to set up </span><span class="stl_155 stl_41 stl_230" style="word-spacing:0.1157em;">mysqldump </span><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1021em;">and let it run every night without realizing that your data has &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:18.4827em;"><span class="stl_154 stl_32 stl_97" style="word-spacing:0.041em;">grown over time to the point where it might take days or weeks to import again. The &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:19.5327em;"><span class="stl_154 stl_32 stl_102" style="word-spacing:0.0406em;">worst time to find out how long your recovery will take is when you actually need it. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:20.5827em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.1065em;">A backup that completes in hours can literally take weeks to restore, depending on &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:21.6327em;"><span class="stl_154 stl_32 stl_53" style="word-spacing:0.0013em;">your hardware, schema, indexes, and data. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:23.1827em;"><span class="stl_154 stl_32 stl_96" style="word-spacing:0.029em;">Don’t fall into the trap of thinking that a replica is a backup. It’s a less intrusive source &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:24.2327em;z-index:936;"><span class="stl_154 stl_32 stl_132" style="word-spacing:0.1254em;">for taking a backup, but it</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1189em;">s </span><span class="stl_154 stl_32 stl_28">n</span><span class="stl_154 stl_32 stl_73" style="word-spacing:0.1209em;">ot a backup. The same is true of your RAID volume, &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:25.3322em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2388em;">SAN, and filesystem snapshots. Make sure that your backups can pass the </span><span class="stl_170 stl_171 stl_28">DROP &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:26.4316em;z-index:1112;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1606em;">TABLE </span><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1006em;">test (or the “I got hacked” test), as well as the test of losing your data center. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:27.4816em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0916em;">And if you take backups from a replica, be sure that your replicas are consistent by &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:28.581em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1083em;">rebuilding them from your source and enforcing </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1471em;">super_read_only </span><span class="stl_154 stl_32 stl_55" style="word-spacing:0.1159em;">from that point &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:29.631em;"><span class="stl_154 stl_32 stl_446">forward. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.181em;"><span class="stl_154 stl_32 stl_38" style="word-spacing:0.0104em;">Hands down, our preferred way to take backups is to use Percona XtraBackup for raw &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:32.2197em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0947em;">backups and </span><span class="stl_155 stl_41 stl_393" style="word-spacing:0.1141em;">mydumper </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0947em;">for logical backups. Both techniques let you take nonintru‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:33.281em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.2118em;">sive binary (raw) backups of your data, which you can then verify by starting a &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:34.3197em;"><span class="stl_155 stl_41 stl_100" style="word-spacing:0.0515em;">mysqld </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0431em;">instance and checking the tables. Sometimes you can even kill two birds with &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.381em;"><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0007em;">one stone: test recovery every single day by restoring the backup to your development &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:36.431em;z-index:1619;"><span class="stl_154 stl_32 stl_123" style="word-spacing:0.1075em;">or staging server. </span><span class="stl_154 stl_32 stl_109">Y</span><span class="stl_154 stl_32 stl_28">o</span><span class="stl_154 stl_32 stl_54" style="word-spacing:0.1062em;">u can also dump the data from that instance to create a logical &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:37.481em;z-index:1679;"><span class="stl_154 stl_32 stl_85" style="word-spacing:0.0497em;">backup. </span><span class="stl_154 stl_32 stl_52">W</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.04em;">e </span><span class="stl_154 stl_32 stl_28">a</span><span class="stl_154 stl_32 stl_37" style="word-spacing:0.0396em;">lso like to back up binary logs and to keep enough generations of back‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:38.531em;"><span class="stl_154 stl_32 stl_227" style="word-spacing:0.05em;">ups and binary logs that we can perform recovery or set up a new replica even if the &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:39.581em;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0035em;">most recent backup is unusable. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">286 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.6677em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:8.5752em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Chapter 10: Backup and Recovery &nbsp;</span></div>
+					<a name="308_0" style="position:absolute;left:0em;top:8.7141em;">&nbsp;</a>
+					<a name="308_1" style="position:absolute;left:0em;top:31.4103em;">&nbsp;</a>
+					<a name="308_2" style="position:absolute;left:0em;top:32.4603em;">&nbsp;</a>
+					<a name="308_3" style="position:absolute;left:0em;top:16.612em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

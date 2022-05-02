@@ -1,0 +1,69 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_214.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_214.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.5em;top:4.3166em;"><span class="stl_154 stl_32 stl_158" style="word-spacing:0.1055em;">at their leaf nodes. Thus, a secondary index that covers a query avoids another &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5004em;top:5.3666em;z-index:339;"><span class="stl_154 stl_32 stl_33" style="word-spacing:0.0042em;">index lookup in the primary key. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:7.2499em;"><span class="stl_154 stl_32 stl_117" style="word-spacing:0.0463em;">In all of these scenarios, it is typically much less expensive to satisfy a query from an &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:8.2999em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">index instead of looking up the rows. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:9.8385em;"><span class="stl_154 stl_32 stl_126" style="word-spacing:0.0776em;">When you issue a query that is covered by an index (an </span><span class="stl_155 stl_41 stl_115" style="word-spacing:0.0867em;">index-covered query</span><span class="stl_154 stl_32 stl_46" style="word-spacing:0.0809em;">), you’ll &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:10.9494em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0744em;">see “Using index” in the </span><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1901em;">Extra </span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0674em;">column in </span><span class="stl_170 stl_171 stl_28">EXPLAIN</span><span class="stl_154 stl_32 stl_28">.</span><sup style="top: -0.2917em;"><a href="MultiPageHTML_out201.html#201_0"><span class="stl_166 stl_32 stl_28" style="word-spacing:0.2881em;">9 </span></a></sup><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0743em;">For example, the </span><span class="stl_170 stl_171 stl_28">sakila.inven &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:12.0488em;"><span class="stl_170 stl_171 stl_28" style="word-spacing:-0.1407em;">tory </span><span class="stl_154 stl_32 stl_95" style="word-spacing:0.1161em;">table has a multicolumn index on (</span><span class="stl_170 stl_171 stl_28" style="word-spacing:0.1144em;">store_id, film_id</span><span class="stl_154 stl_32 stl_24" style="word-spacing:0.1197em;">). MySQL can use this &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:13.0988em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:-0.0004em;">index for a query that accesses only those two columns, such as the following: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:14.8607em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28" style="word-spacing:0em;">EXPLAIN SELECT store_id, film_id FROM sakila.inventory\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4169em;top:15.7114em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:16.5614em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:17.4114em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:18.2614em;"><span class="stl_200 stl_171 stl_28">table: inventory &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:19.1114em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:19.9614em;"><span class="stl_200 stl_171 stl_28">type: index &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:20.8114em;"><span class="stl_200 stl_171 stl_28">possible_keys: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:21.6614em;"><span class="stl_200 stl_171 stl_28">key: idx_store_id_film_id &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:22.5114em;"><span class="stl_200 stl_171 stl_28">key_len: 3 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:23.3614em;"><span class="stl_200 stl_171 stl_28">ref: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:24.2114em;"><span class="stl_200 stl_171 stl_28">rows: 4581 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:25.0614em;"><span class="stl_200 stl_171 stl_28">filtered: 100.00 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7711em;top:25.9107em;"><span class="stl_200 stl_171 stl_28">Extra: </span><span class="stl_265 stl_173 stl_28">Using index &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9998em;top:27.0488em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0233em;">In most storage engines, an index can cover only queries that access columns that are &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9996em;top:28.0988em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0165em;">part of the index. However, InnoDB can actually take this optimization a little bit fur‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:29.1488em;"><span class="stl_154 stl_32 stl_71" style="word-spacing:0.1656em;">ther. Recall that InnoDB’s secondary indexes hold primary key values at their leaf &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:30.1988em;z-index:1225;"><span class="stl_154 stl_32 stl_39" style="word-spacing:0.0616em;">nodes. This means InnoDB</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0583em;">s </span><span class="stl_154 stl_32 stl_28">s</span><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0647em;">econdary indexes effectively have “extra columns” that &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:31.2488em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">InnoDB can use to cover queries. &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:32.8482em;"><span class="stl_154 stl_32 stl_124" style="word-spacing:0.0075em;">For example, the </span><span class="stl_170 stl_171 stl_28">sakila.acto</span><span class="stl_170 stl_171 stl_305">r</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.0007em;">table uses InnoDB and has an index on </span><span class="stl_170 stl_171 stl_28">last_name</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">, so &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:33.9477em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.1701em;">the index can cover queries that retrieve the primary key column </span><span class="stl_170 stl_171 stl_28">actor_id</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.1706em;">, even &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:34.9977em;"><span class="stl_154 stl_32 stl_43" style="word-spacing:0.0071em;">though that column isn’t technically part of the index: &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:36.7595em;"><span class="stl_200 stl_171 stl_28">mysql&gt; </span><span class="stl_265 stl_173 stl_28">EXPLAIN SELECT actor_id, last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:8.8332em;top:37.6095em;"><span class="stl_200 stl_171 stl_28">-&gt; </span><span class="stl_265 stl_173 stl_28">FROM sakila.actor WHERE last_name = 'HOPPER'\G &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4166em;top:38.4603em;"><span class="stl_200 stl_171 stl_28">*************************** 1. row *************************** &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:39.3103em;"><span class="stl_200 stl_171 stl_28">id: 1 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:40.1603em;"><span class="stl_200 stl_171 stl_28">select_type: SIMPLE &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:41.0103em;"><span class="stl_200 stl_171 stl_28">table: actor &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:41.8603em;"><span class="stl_200 stl_171 stl_28">partitions: NULL &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:42.7103em;"><span class="stl_200 stl_171 stl_28">type: ref &nbsp;</span></div>
+					<div class="stl_01" style="left:7.7707em;top:43.5603em;"><span class="stl_200 stl_171 stl_28">possible_keys: idx_actor_last_name &nbsp;</span></div>
+					<div class="stl_01" style="left:6.095em;top:46.5459em;"><span class="stl_167 stl_32 stl_28">9</span></div>
+					<div class="stl_01" style="left:6.6667em;top:46.4635em;"><span class="stl_168 stl_32 stl_149" style="word-spacing:0.0165em;">It’s easy to confuse “Using index” in the </span><span class="stl_211 stl_171 stl_28">Extr</span><span class="stl_211 stl_171 stl_186">a</span><span class="stl_168 stl_32 stl_48" style="word-spacing:0.0036em;">column with “index” in the </span><span class="stl_211 stl_171 stl_28">typ</span><span class="stl_211 stl_171 stl_275">e</span><span class="stl_168 stl_32 stl_150" style="word-spacing:0.0098em;">column. However, they are &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:47.3545em;z-index:174;"><span class="stl_168 stl_32 stl_36" style="word-spacing:0.0038em;">completely different. The </span><span class="stl_211 stl_171 stl_28">typ</span><span class="stl_211 stl_171 stl_186">e</span><span class="stl_168 stl_32 stl_188" style="word-spacing:-0.0013em;">column has nothing to do with covering indexes; it shows the query</span><span class="stl_168 stl_32 stl_34">’</span><span class="stl_168 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_168 stl_32 stl_28">a</span><span class="stl_168 stl_32 stl_28">ccess &nbsp;</span></div>
+					<div class="stl_01" style="left:6.6667em;top:48.1792em;"><span class="stl_168 stl_32 stl_88" style="word-spacing:0.001em;">type, or how the query will find rows. The MySQL manual calls this the </span><span class="stl_229 stl_41 stl_54" style="word-spacing:0.004em;">join type</span><span class="stl_168 stl_32 stl_54" style="word-spacing:0.004em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:23.2084em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Indexing Strategies for High Performance &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1742em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0817em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">179 &nbsp;</span></div>
+					<a name="201_0" style="position:absolute;left:0em;top:46.4972em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

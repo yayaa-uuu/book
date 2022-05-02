@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--[if IE]>  <html class="stl_ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="MultiPageHTML_out_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_ stl_02">
+			<div class="stl_03">
+				<object data="MultiPageHTML_out_files/img_267.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:42em; height:55.0833em;">
+					<embed src="MultiPageHTML_out_files/img_267.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:6em;top:4.3052em;"><span class="stl_155 stl_41 stl_103" style="word-spacing:0.0119em;">Analytics and reporting &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:5.3666em;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.0363em;">Using a dedicated replica for reporting/analytics (online analytical processing, or &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:6.4166em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.152em;">OLAP) queries is a good strategy for isolating that load away from what your &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4996em;top:7.4666em;"><span class="stl_154 stl_32 stl_122" style="word-spacing:0.0194em;">business needs to serve external customer requests. Replication is a way to power &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:8.5166em;"><span class="stl_154 stl_32 stl_99" style="word-spacing:0.0063em;">that isolation. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:10.1386em;"><span class="stl_155 stl_41 stl_248" style="word-spacing:0.0209em;">High availability and failover &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5em;top:11.1999em;"><span class="stl_154 stl_32 stl_54" style="word-spacing:0.0261em;">Replication can help avoid making MySQL a single point of failure in your appli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5003em;top:12.2499em;"><span class="stl_154 stl_32 stl_35" style="word-spacing:0.1161em;">cation. A good failover system involving replication can help reduce downtime &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:13.2999em;z-index:417;"><span class="stl_154 stl_32 stl_66">significantly. &nbsp;</span></div>
+					<div class="stl_01" style="left:6em;top:14.9219em;"><span class="stl_155 stl_41 stl_345" style="word-spacing:0.0296em;">Testing MySQL upgrades &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4998em;top:15.9833em;"><span class="stl_154 stl_32 stl_162" style="word-spacing:0.1233em;">It’s common practice to set up a replica with an upgraded MySQL version and &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5002em;top:17.0333em;"><span class="stl_154 stl_32 stl_37" style="word-spacing:0.2405em;">use it to ensure that your queries work as expected before upgrading every &nbsp;</span></div>
+					<div class="stl_01" style="left:7.4997em;top:18.0833em;"><span class="stl_154 stl_32 stl_28">instance. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0002em;top:19.9676em;"><span class="stl_180 stl_27 stl_28" style="word-spacing:0em;">How Replication Works &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9997em;top:21.8673em;z-index:642;"><span class="stl_154 stl_32 stl_57" style="word-spacing:0.2166em;">Before we get into the details of setting up replication, let</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2144em;">s </span><span class="stl_154 stl_32 stl_28">q</span><span class="stl_154 stl_32 stl_39" style="word-spacing:0.2179em;">uickly look at how &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0003em;top:22.9173em;"><span class="stl_154 stl_32 stl_222" style="word-spacing:0.0385em;">MySQL actually replicates data. In this explanation, we’re covering the simplest repli‐ &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:23.9673em;"><span class="stl_154 stl_32 stl_48" style="word-spacing:0.0037em;">cation topology, a single source and a single replica. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:25.5173em;"><span class="stl_154 stl_32 stl_36" style="word-spacing:0.0039em;">At a high level, replication is a simple three-part process: &nbsp;</span></div>
+					<div class="stl_01" style="left:6.4431em;top:27.4007em;z-index:899;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2726em;">1. The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_125" style="word-spacing:-0.0008em;">source records changes to its data in its binary log as “binary log events</span><span class="stl_154 stl_32 stl_161">.</span><span class="stl_154 stl_32 stl_161">” &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:28.784em;z-index:928;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">2. The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">&nbsp;</span><span class="stl_154 stl_32 stl_120" style="word-spacing:0.0061em;">replica copies the source</span><span class="stl_154 stl_32 stl_34">’</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0em;">s </span><span class="stl_154 stl_32 stl_28">b</span><span class="stl_154 stl_32 stl_158" style="word-spacing:0.0006em;">inary log events to its own local relay log. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.443em;top:30.1673em;"><span class="stl_154 stl_32 stl_28" style="word-spacing:0.2727em;">3. The</span><span class="stl_154 stl_32 stl_28" style="word-spacing:0.116em;">&nbsp;</span><span class="stl_154 stl_32 stl_97" style="word-spacing:0.119em;">replica replays the events in the relay log, applying the changes to its own &nbsp;</span></div>
+					<div class="stl_01" style="left:7.5001em;top:31.2173em;"><span class="stl_154 stl_32 stl_183">data. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:33.1007em;"><a href="MultiPageHTML_out252.html#252_2"><span class="stl_184 stl_32 stl_28" style="word-spacing:0em;">Figure 9-1 </span></a><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0018em;">illustrates the most basic form of replication in more detail. &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0004em;top:34.6507em;"><span class="stl_154 stl_32 stl_95" style="word-spacing:0.0249em;">This replication architecture decouples the processes of fetching and replaying events &nbsp;</span></div>
+					<div class="stl_01" style="left:6.0001em;top:35.7007em;"><span class="stl_154 stl_32 stl_140" style="word-spacing:0.1278em;">on the replica, which allows them to be asynchronous—that is, the I/O thread can &nbsp;</span></div>
+					<div class="stl_01" style="left:5.9999em;top:36.7507em;"><span class="stl_154 stl_32 stl_78" style="word-spacing:0.0015em;">work independently of the SQL thread. &nbsp;</span></div>
+					<div class="stl_01" style="left:28.2101em;top:50.8098em;"><span class="stl_80 stl_27 stl_28" style="word-spacing:0em;">Replication Overview &nbsp;</span></div>
+					<div class="stl_01" style="left:34.1741em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">|</span></div>
+					<div class="stl_01" style="left:35.0816em;top:50.8098em;"><span class="stl_80 stl_27 stl_28">229 &nbsp;</span></div>
+					<a name="251_0" style="position:absolute;left:0em;top:20.2606em;">&nbsp;</a>
+					<a name="251_1" style="position:absolute;left:0em;top:5.5958em;">&nbsp;</a>
+					<a name="251_2" style="position:absolute;left:0em;top:11.4292em;">&nbsp;</a>
+					<a name="251_3" style="position:absolute;left:0em;top:22.0966em;">&nbsp;</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
